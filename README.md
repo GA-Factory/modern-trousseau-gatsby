@@ -1,97 +1,63 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Modern Trousseau Site
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Ladies and Gentlemen, I congratulate you on nearly reaching the end of SEI 34. You have learned and endured much. It is time to put your skills into a more realistic environment, as we tackle a real-world client project. 
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Before us is the [Modern Trousseau](https://www.moderntrousseau.com/) company. They make really nice wedding dresses for brides to be. Our job is to take this site up to another level. 
 
-## 🚀 Quick start
+## Team
 
-1.  **Create a Gatsby site.**
+The team for this project is your General Assembly class, and your instructors. In an effort to professionalize what we're doing, your instructors will be adhering to roles during this project so you get a better feel for the real world nature of a dev workplace.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+- John Serrao: Product Manager (in charge of sprints, releases and stand up meetings)
+- Erin Kelley: Lead Front-end Dev (in charge of merging front-end code and code reviews)
+- Roger Campbell: Lead Front-end Dev (in charge of merging back-end code and code reviews)
+- Front-end Team: TBD
+- Back-end Team: TBD
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+## Design
 
-1.  **Start developing.**
+The project has been fully designed and we have the comps in [Figma](https://www.figma.com), a web-based design tool:
+<br>
+[https://www.figma.com/file/w42hMiF0R2cAdckfd3jpWh/Modern-Trousseau-Final?node-id=584%3A2396](https://www.figma.com/file/w42hMiF0R2cAdckfd3jpWh/Modern-Trousseau-Final?node-id=584%3A2396)
 
-    Navigate into your new site’s directory and start it up.
+One of your first jobs as a developer is to work with your design team. You want to be present in the conversations such that you can influence the design in a positive way. Designers don't always know the ins-and-outs of developing a website and part of your job is to help educate. It's a delicate dance but a good developer and designer working together will make much stronger products than either one can alone.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## User Stories
 
-1.  **Open the source code and start editing!**
+Our project's user stories are included in this repo, under the 'Projects' tab:
+<br>
+[https://github.com/jserrao/modern-trousseau-gatsby/projects/1](https://github.com/jserrao/modern-trousseau-gatsby/projects/1)
 
-    Your site is now running at `http://localhost:8000`!
+We're also lucky on this project to have user stories, which are a simplistic way to describe website functionality. You'll usually get assets like this from project managers and UX professionals who want to tell you the features they need on a site but don't have the technical depth to know exactly what needs to be built. 
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+There is usually a phase in projects where devs get to ask questions about these user stories. There might be features you don't understand fully or maybe a piece of a design is missing. Your responsibility as a developer is to get in front of that before work actually starts! We'll go through this process to start the project.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Building Issues and Sprint Planning
 
-## 🧐 What's inside?
+Once your user stories are in place, we're going to make issues for our website. We'll subdivide into two teams - front-end and back-end. Each team will translate user stories into actionable tasks that can be executed inside of a sprint. For our project, we're going to use the [Github Issues part of this repo](https://github.com/jserrao/modern-trousseau-gatsby/issues) to create tasks for our teams.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Inside of the issues part of our repo, we have both labels and milestones. Make sure you are putting the right labels on your work (is it a Front-end or Back-end task?).
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Each sprint we plan is typically two week long work periods where all parties on a dev team become responsible for a subset of the larger project. When you're doing sprint planning, what you're really doing is translating a vision into reality.
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+On our project, our sprints will be a bit shorter because of how large our dev team is (a more typical dev team might have 3-4 members, not 10-12). One thing you'll likely see is that dev teams this large require more coordination and slow themselves down. It will be a challenge that should be fun to work through.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## Process
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Once a sprint begins, devs will work with their team lead to work through the issues that have been assigned to them. You will be responsible for the tasks set up at the beginning of the sprint and it's responsibility to manage your time during the sprint period. You are welcome to reach out to your team lead and PM as necessary but your time management is up to you.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+If you find you are falling behind or racing ahead of where you thought you'd be, this is the type of news you want to raise in your daily standup meeting. 
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## Stack
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+For this project, we're using a [serverless Jamstack](https://jamstack.org/). Serverless technology gives us the benefit of SaaS tools and a modern React front-end that will allow our back-end and front-end teams to work in parallel during the project. It's the stack of the 2020's, so learning it will put you ahead of the curve.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+Specifically, we will be using a React-based [Gatsby](https://www.gatsbyjs.org) site for the front-end and the SaaS CMS [Contentful](https://www.contentful.com), deployments are automatically handled through [Netlify](https://netlify.com). This repo is already set up for a baseline Gatsby project, with a Contentful back-end integrated with Netlify for deployments. How nice of your project leads...
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+## Contributing / Branching
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+**Each issue assigned to you should be developed on it's own branch**! Please do not develop on `master` for any reason! This site uses continuous deployment from Github > Netlify on the master branch - if you push to master, you are pushing live! Be careful!
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## Questions
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+Hit us up!
