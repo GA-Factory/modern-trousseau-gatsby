@@ -10,14 +10,14 @@ The team for this project is your General Assembly class, and your instructors. 
 
 - John Serrao: Product Manager (in charge of sprints, releases and stand up meetings)
 
-Front-end Team (Lead: Roger Campbell)
+Front-end Team (Lead: Erin Kelley)
 - Michael Driscoll
 - Jenny Ripper
 - Adam Bates
 - Dilmurod Bukharov 
 - Kelly Collins
 
-Back-end Team (Lead: Erin Kelley)
+Back-end Team (Lead: Roger Campbell)
 - Jose Casado
 - Adam Delesio
 - Comrade Igor
