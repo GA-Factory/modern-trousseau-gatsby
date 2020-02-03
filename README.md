@@ -31,7 +31,7 @@ Integration Specialist
 
 
 - Erin Kelley: Lead Front-end Dev (in charge of merging front-end code and code reviews)
-- Roger Campbell: Lead Front-end Dev (in charge of merging back-end code and code reviews)
+- Roger Campbell: Lead Back-end Dev (in charge of merging back-end code and code reviews)
 - Front-end Team: TBD
 - Back-end Team: TBD
 
