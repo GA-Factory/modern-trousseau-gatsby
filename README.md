@@ -10,7 +10,7 @@ The team for this project is your General Assembly class, and your instructors. 
 
 - John Serrao: Product Manager (in charge of sprints, releases and stand up meetings)
 - Erin Kelley: Lead Front-end Dev (in charge of merging front-end code and code reviews)
-- Roger Campbell: Lead Front-end Dev (in charge of merging back-end code and code reviews)
+- Roger Campbell: Lead Back-end Dev (in charge of merging back-end code and code reviews)
 - Front-end Team: TBD
 - Back-end Team: TBD
 
