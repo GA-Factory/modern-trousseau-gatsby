@@ -1,115 +1,106 @@
-import styled from 'styled-components';
+const variables = { 
+    colors: {
+      primaryPink: `#FAE5DC`,
+      lightPink: `rgba(249, 218, 205, 0.4)`,
+      nearBlack: `#441F0E`,
+      darkGray: `rgba(68, 31, 14, 0.1)`,
+      backgroundGray: `#E5E5E5`,
+      boxShadowGray: `rgba(0, 0, 0, 0.25)`,
+    },
+    breakpoints: {
+      mobile: '400px',
+      phablet: '550px',
+      tablet: '768px',
+      laptop: '1000px',
+      desktop: '1200px',
+      hd: '1600px'
+    },
+    zIndex: {
+      zIndexNegative: '-10',
+      zIndex00: '0',
+      zIndex01: '10',
+      zIndex02: '20',
+      zIndex03: '30',
+      zIndex04: '40',
+      zIndex05: '50',
+      zIndex06: '60',
+      zIndex07: '70',
+      zIndex08: '80',
+      zIndex09: '90'
+    },
+    fontStyles: {
+        h1Styles: {
+            fontStyle: 'Playfair Display',
+            fontWeight: 'Bold Italic',
+            fontSize: 45,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        h2Styles: {
+            fontStyle: 'Playfair Display',
+            fontWeight: 'Bold',
+            fontSize: 40,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        h3Styles: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Medium',
+            fontSize: 24,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        h4Styles: {
+            fontStyle: 'Raleway',
+            fontWeight: 'ExtraBold',
+            fontSize: 30,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        h5Styles: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Bold',
+            fontSize: 24,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        Body1MobileText: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Regular',
+            fontSize: 16,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        Body2MobileText: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Regular',
+            fontSize: 11,
+            lineHeight: 'Auto',
+            LetterSpacing: '0%',
+        },
+        Body1DesktopText: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Regular',
+            fontSize: 20,
+            lineHeight: 18,
+            LetterSpacing: '0.1px',
+        },
+        Body2DesktopText: {
+            fontStyle: 'Raleway',
+            fontWeight: 'Regular',
+            fontSize: 30,
+            lineHeight: 24,
+            LetterSpacing: '0.1px',
+        },
+        Body3DesktopText: {
+            fontStyle: 'Playfair Display',
+            fontWeight: 'Regular',
+            fontSize: 17,
+            lineHeight: 22,
+            LetterSpacing: '0.1px',
+        } 
 
-export const PrimaryPink = {
-    color: '#FAE5DC',
-}
+    }
+  }
 
-export const LightPink = {
-    color: rgba(249, 218, 205, 0.4),
-}
-
-export const NearBlack = {
-    color: '#441F0E',
-}
-
-export const DarkGray = {
-    color: rgba(68, 31, 14, 0.1),
-}
-
-export const BackgroundGray = {
-    color: '#E5E5E5',
-}
-
-export const BoxShadowGray = {
-    color: rgba(0, 0, 0, 0.25),
-}
-
-export const h1Styles = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Playfair Display',
-    fontWeight: 'Bold Italic',
-    fontSize: 45,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const h2Styles = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Playfair Display',
-    fontWeight: 'Bold',
-    fontSize: 40,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const h3Styles = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Medium',
-    fontSize: 24,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const h4Styles = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'ExtraBold',
-    fontSize: 30,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const h5Styles = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Bold',
-    fontSize: 24,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const Body1MobileText = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Regular',
-    fontSize: 16,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const Body2MobileText = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Regular',
-    fontSize: 11,
-    lineHeight: 'Auto',
-    LetterSpacing: '0%',
-}
-
-export const Body1DesktopText = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Regular',
-    fontSize: 20,
-    lineHeight: 18,
-    LetterSpacing: '0.1px',
-}
-
-export const Body2DesktopText = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Raleway',
-    fontWeight: 'Regular',
-    fontSize: 30,
-    lineHeight: 24,
-    LetterSpacing: '0.1px',
-}
-
-export const Body3DesktopText = {
-    color: rgba(0, 0, 0, 0.08),
-    fontStyle: 'Playfair Display',
-    fontWeight: 'Regular',
-    fontSize: 17,
-    lineHeight: 22,
-    LetterSpacing: '0.1px',
-}
+  export default variables

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Layout from '../global/Layout';
 import Image from '../components/Image';
+import PrimaryPink from '../styled-components'
+
 
 const Page = styled.div`
   width: 100%;
@@ -30,6 +32,10 @@ const Label = styled.p`
 
 const IndexPage = () => (
   <Layout>
+  <h1 style={{
+    fontSize: 80,
+    backgroundColor: 'PrimaryPink'
+  }}>sdgdshu</h1>
     <Page>
       <Image />
       <Heading>GatsbyJS + Storybook: YAY</Heading>
