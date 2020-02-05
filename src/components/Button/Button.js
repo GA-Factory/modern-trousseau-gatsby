@@ -1,16 +1,16 @@
 import React from "react";
 import "./Button.css";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Button = styled.button`
   background-color: #fae5dc;
-  color: ${props => props.color};
-  font-weight: ${props => props.weight};
-  box-shadow: ${props => props.shadow};
-  padding: ${props => props.padding};
-  width: ${props => props.width};
-  font-size: ${props => props.size};
-  line-height: ${props => props.height};
+  color: ${props => props.ftcolor};
+  font-weight: ${props => props.ftweight};
+  box-shadow: ${props => props.ftshadow};
+  padding: ${props => props.ftpadding};
+  width: ${props => props.ftwidth};
+  font-size: ${props => props.ftsize};
+  line-height: ${props => props.ftheight};
   
 `
 
