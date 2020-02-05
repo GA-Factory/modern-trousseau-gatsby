@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ThemeProvider } from "styled-components"
 
 import Layout from '../global/Layout';
 import Image from '../components/Image';
-import PrimaryPink from '../styles/styled-components'
+import variables from "../styles/styled-components"
 
 
 const Page = styled.div`
@@ -31,13 +32,17 @@ const Label = styled.p`
 `;
 
 const IndexPage = () => (
-  <Layout>
-    <Page>
-      <Image />
-      <Heading>GatsbyJS + Storybook: YAY</Heading>
-      <Label>It Works</Label>
-    </Page>
-  </Layout>
+  <ThemeProvider theme={variables}>
+    <>
+      <Layout>
+        <Page>
+          <Image />
+          <Heading>GatsbyJS + Storybook: YAY</Heading>
+          <Label>It Works</Label>
+        </Page>
+      </Layout>
+    </>
+  </ThemeProvider>
 );
 
 export default IndexPage;
