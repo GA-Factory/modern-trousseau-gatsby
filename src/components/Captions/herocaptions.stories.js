@@ -4,7 +4,7 @@ import HeroCaption from './herocaptions'
 
 storiesOf('HeroCaption', module)
   .add('Design And Made With Love', () => (
-    <HeroCaption title="Design And Made With Love" description="French and Italian laces and silks... " />
+    <HeroCaption title="Design And Made With Love" description="French and Italian laces and silks..." />
   ));
   storiesOf('HeroCaption', module)
   .add('Tailored to You', () => (
@@ -12,5 +12,5 @@ storiesOf('HeroCaption', module)
   ));
   storiesOf('HeroCaption', module)
   .add('Flagship Boutiques', () => (
-    <HeroCaption title="Flagship Boutiques" description="" />
+    <HeroCaption title="Flagship Boutiques" description="Exclusively shop our gowns..." />
   ));
