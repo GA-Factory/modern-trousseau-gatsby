@@ -1,48 +1,62 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "gatsby": "^2.19.12",
-    "gatsby-image": "^2.2.39",
-    "gatsby-plugin-manifest": "^2.2.39",
-    "gatsby-plugin-offline": "^3.0.32",
-    "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-sharp": "^2.4.3",
-    "gatsby-source-contentful": "^2.1.85",
-    "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "@storybook/react": "^5.3.12",
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "name": "gatsby-starter-storybook",
+  "description": "Gatsby Storybook Starter",
+  "version": "1.1.0",
+  "author": "Marko Radak <mail@markoradak.com>",
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "storybook": "start-storybook"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/markoradak/gatsby-starter-storybook"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "keywords": [
+    "gatsby",
+    "storybook",
+    "styled-components",
+    "reset-css",
+    "eslint",
+    "netlify"
+  ],
+  "scripts": {
+    "start": "run-p start:**",
+    "start:gatsby": "gatsby develop -H 0.0.0.0 -o",
+    "storybook": "start-storybook -p 9000 -c .storybook",
+    "build": "run-p 'build:!(storybook)'",
+    "build:gatsby": "gatsby build",
+    "build:storybook": "build-storybook -c .storybook -o storybook",
+    "serve": "gatsby serve -o -p 8080",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.6",
+    "gatsby-image": "^2.2.17",
+    "gatsby-plugin-manifest": "^2.2.14",
+    "gatsby-plugin-offline": "^3.0.2",
+    "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.2.19",
+    "gatsby-plugin-styled-components": "^3.1.4",
+    "gatsby-source-filesystem": "^2.1.21",
+    "gatsby-transformer-sharp": "^2.2.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2",
+    "styled-reset-advanced": "^1.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-notes": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "yarn-run-all": "^3.1.1",
+    "prettier": "1.19.1"
   }
 }
