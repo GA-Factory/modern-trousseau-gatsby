@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Layout from '../global/Layout';
 import Image from '../components/Image';
-import PrimaryPink from '../styled-components'
+import PrimaryPink from '../styles/styled-components'
 
 
 const Page = styled.div`
