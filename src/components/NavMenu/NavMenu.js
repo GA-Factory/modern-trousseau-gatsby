@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import "./NavMenu.css";
 
 const NavMenu = props => (
@@ -7,6 +7,7 @@ const NavMenu = props => (
     className={props.isVisible ? "primary-pink nav-container" : "primary-pink nav-container is-visible"}
   >
     <nav>
+    <BrowserRouter>
       <ul>
         <li>
           <Link to="#">
@@ -38,6 +39,7 @@ const NavMenu = props => (
           </Link>
         </li>
       </ul>
+      </BrowserRouter>
     </nav>
   </div>
 );
