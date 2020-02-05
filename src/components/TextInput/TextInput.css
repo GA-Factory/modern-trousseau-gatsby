@@ -1,0 +1,13 @@
+.text-input {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(228, 224, 222);
+  padding: 5px 0px;
+  outline-color: rgb(249, 228, 221);
+  font-size: 18px;
+}
+
+.label-name {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
