@@ -1,0 +1,13 @@
+
+
+.text-area {
+    width: 400px;
+    height: 150px;
+    background-color: rgb(227,224,222);
+    color: rgb(94,91,90);
+    font-size: 25px;
+}
+
+.text-area-title {
+    font-size: 30px;
+}
