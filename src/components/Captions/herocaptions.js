@@ -29,7 +29,7 @@ const CaptionSubText = styled.span`
   color: #ffffff;
 `
 
-const ImageCaptions = props => {
+const HeroCaption = props => {
   return (
     <CaptionContainer>
       <CaptionTitle>{props.title}</CaptionTitle>
@@ -38,4 +38,4 @@ const ImageCaptions = props => {
   )
 };
 
-export default ImageCaptions;
+export default HeroCaption;
