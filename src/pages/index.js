@@ -32,10 +32,6 @@ const Label = styled.p`
 
 const IndexPage = () => (
   <Layout>
-  <h1 style={{
-    fontSize: 80,
-    backgroundColor: 'PrimaryPink'
-  }}>sdgdshu</h1>
     <Page>
       <Image />
       <Heading>GatsbyJS + Storybook: YAY</Heading>
