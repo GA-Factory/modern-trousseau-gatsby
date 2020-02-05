@@ -4,10 +4,14 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background-color: #fae5dc;
-  color: #441f0e;
-  font-weight: bold;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 11px;
+  color: ${props => props.color};
+  font-weight: ${props => props.weight};
+  box-shadow: ${props => props.shadow};
+  padding: ${props => props.padding};
+  width: ${props => props.width};
+  font-size: ${props => props.size};
+  line-height: ${props => props.height};
+  
 `
 
 const PinkButton = props => {
