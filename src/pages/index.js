@@ -32,8 +32,8 @@ const IndexPage = () => (
   <Layout>
     <Page>
       <Image />
-      <Heading>GatsbyJS + Storybook</Heading>
-      <Label>Starter</Label>
+      <Heading>GatsbyJS + Storybook: YAY</Heading>
+      <Label>It Works</Label>
     </Page>
   </Layout>
 );
