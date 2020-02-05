@@ -1,21 +1,16 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Button from "./Button";
+import PinkButton from "./Button";
 import "./Button.css";
 
 storiesOf("Button", module)
-  .add("Light Pink", () => <Button label="Book Now" type="light-pink" />)
+  .add("Browse Now", () => <PinkButton label="Browse Now" type="light-pink" />)
+  .add("Book Now", () => <PinkButton label="Book Now" type="light-pink" />)
+  .add("Visit Us", () => <PinkButton label="Visit Us" type="light-pink" />)
+  .add("View Dress", () => <PinkButton label="View Dress" type="light-pink" />)
+  .add("Submit", () => <PinkButton label="SUBMIT" type="light-pink" />)
 
-  .add("Dark Pink", () => <Button label="DONE" type="dark-pink" />)
 
-  .add("Red", () => (
-    <Button label="Browse Dresses" type="red" large />
-  ))
 
-  .add("Grey", () => (
-    <Button label="Modern Trousseau Bride" type="grey" large />
-  ))
 
-  .add("White", () => (
-    <Button label="Book Appointment" type="white" large />
-  ));
+
