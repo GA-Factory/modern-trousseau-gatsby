@@ -19,7 +19,7 @@ const Container = styled.div`
   width: 100%;
   height: 200px;
   padding: 20px 20px 20px 40px;
-  justify-content: space-around
+  justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 280px;
