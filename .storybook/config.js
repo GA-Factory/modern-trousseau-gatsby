@@ -1,10 +1,8 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import styled { ThemeProvider }from 'styled-components';
+import styled from 'styled-components';
 import GlobalStyle from '../src/global/GlobalStyle';
-import variables from '../src/styles/styled-components'
-import { ThemeProvider } from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,12 +13,10 @@ const Wrapper = styled.div`
 `;
 
 const Decorator = storyFn => (
-  <ThemeProvider theme={variables}>
-      <Wrapper>
-        <GlobalStyle />
-        {storyFn()}
-      </Wrapper>
-  </ThemeProvider>
+  <Wrapper>
+    <GlobalStyle />
+    {storyFn()}
+  </Wrapper>
 );
 
 addDecorator(Decorator);
