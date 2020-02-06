@@ -1,0 +1,11 @@
+.designerContainer {
+    display: flex;
+}
+
+.designerParagraph {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
