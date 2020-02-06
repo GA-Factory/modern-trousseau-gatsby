@@ -1,7 +1,6 @@
 // owner-quote.js
 import React from "react";
 import ownerPicture from "../../assets/images/owner-quote-callie-photo.png";
-
 import styled from "styled-components";
 
 const OwnerCard = styled.div`
@@ -10,33 +9,32 @@ const OwnerCard = styled.div`
 
 const OwnerQuoteSection = styled.div`
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 420px;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
-`;
-
-const OwnerFontWriting = styled.h1`
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 40px;
-  text-align: center;
-
   color: #000000;
 `;
+
+const NameDescription = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
+
 // This is a functional component - just sent up a little differently as an arrow function!
 const OwnerQuote = props => (
   <OwnerCard>
     <img src={ownerPicture} alt="callie" />
     <OwnerQuoteSection>
-      <h1>
-        "The look on a bride's face when she finds her dress - that is priceless
-        and incredibly rewarding."
-      </h1>
-      <h1>Callie Tein | Designer</h1>
+      <h1>{props.quote}</h1>
+      <NameDescription>
+        {props.name} | {props.role}
+      </NameDescription>
     </OwnerQuoteSection>
   </OwnerCard>
 );
