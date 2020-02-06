@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Layout from '../global/Layout';
 import Image from '../components/Image';
+import PrimaryPink from '../styles/styled-components'
+
 
 const Page = styled.div`
   width: 100%;
@@ -32,8 +34,8 @@ const IndexPage = () => (
   <Layout>
     <Page>
       <Image />
-      <Heading>GatsbyJS + Storybook</Heading>
-      <Label>Starter</Label>
+      <Heading>GatsbyJS + Storybook: YAY</Heading>
+      <Label>It Works</Label>
     </Page>
   </Layout>
 );

@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+}
+
+.rest {
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+}
