@@ -1,8 +1,8 @@
 .component-collection {
-    width: 900px;
+    width: 480px;
     height: 350px;
     background-color: rgb(246, 230, 222);
-    padding: 30px;
+    padding: 20px;
 }
 
 .image {
@@ -17,14 +17,21 @@
     font-weight: bold;
 }
 
-@media only screen and (max-width: 450px) {
+.third {
+    visibility: hidden;
+}
+.fourth {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 480px) {
     .component-collection {
-        width: 400px;
+        width: 960px;
     }
     .third {
-        display: none;
+        visibility: visible;
     }
     .fourth {
-        display: none;
+        visibility: visible;
     }
  }
