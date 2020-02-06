@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <ThemeProvider theme={styled-components}>
+        {/* <ThemeProvider theme={styled-components}> */}
           <>
             <Helmet>
               <title>{data.site.siteMetadata.title}</title>
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
             <GlobalStyle />
             <>{children}</>
           </>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </>
     )}
   />
