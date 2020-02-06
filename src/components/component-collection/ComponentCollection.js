@@ -50,19 +50,15 @@ const ComponentCollection = ({ images }) => (
     <Container>
       <GownImageMobile
         src={images[0]}
-        className="image first"
       ></GownImageMobile>
       <GownImageMobile
         src={images[1]}
-        className="image second"
       ></GownImageMobile>
       <GownImageScreen
         src={images[2]}
-        className="image third"
       ></GownImageScreen>
       <GownImageScreen
         src={images[3]}
-        className="image fourth"
       ></GownImageScreen>
       <Title>Fall Collection 2020</Title>
     </Container>
