@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "./GlobalStyle";
 import variables from "../styles/styled-components";
+import '../styles/fonts.css'
 
 
 const Layout = ({ children }) => (

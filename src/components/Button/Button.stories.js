@@ -12,7 +12,7 @@ storiesOf("Button", module)
       padding={`${"5px 0"}`}
       width={`${"88px"}`}
       desktopwidth={`${"126px"}`}
-      family={`${"'Playfair Display'"}`}
+      family={`${"'Sahitya'"}`}
       color={`${"#441F0E"}`}
     />
   ))
@@ -26,7 +26,7 @@ storiesOf("Button", module)
       padding={`${"5px 0"}`}
       width={`${"88px"}`}
       desktopwidth={`${"126px"}`}
-      family={`${"'Playfair Display'"}`}
+      family={`${"'Sahitya'"}`}
       color={`${"#441F0E"}`}
     />
   ))
@@ -40,7 +40,7 @@ storiesOf("Button", module)
       padding={`${"5px 0"}`}
       width={`${"88px"}`}
       desktopwidth={`${"126px"}`}
-      family={`${"'Playfair Display'"}`}
+      family={`${"'Sahitya'"}`}
     />
   ))
 
@@ -59,7 +59,7 @@ storiesOf("Button", module)
       desktopfontsize={`${"12px"}`}
       desktopweight={`${"600"}`}
       desktopcolor={`${"#000000"}`}
-      family={`${"'Playfair Display'"}`}
+      family={`${"'Sahitya'"}`}
       color={`${"#441F0E"}`}
     />
   ))
