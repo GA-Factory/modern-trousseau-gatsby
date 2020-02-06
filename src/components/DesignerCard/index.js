@@ -3,9 +3,9 @@ import './index.css';
 
 const Designer = (props) => (
     <div className="designerContainer">
-        <img src={props.src} alt={props.alt} height={props.height} width={props.width} />
+        <img src={props.src} alt={props.alt} height={props.height} width={props.width} left={props.left} top={props.top} />
         <div className="designerParagraph">
-            <p>{props.text}</p>
+            <p>{props.text}</p> <br></br>
             <p>{props.name} | {props.title}</p>
         </div>
     </div>

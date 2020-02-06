@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+
 .designerContainer {
     display: flex;
 }
 
 .designerParagraph {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    line-height: 15px;
+    width: 161px;
+    height: 97px;
+    left: 177px;
+    top: 1159px;
     text-align: center;
     padding: 10px;
     display: flex;
