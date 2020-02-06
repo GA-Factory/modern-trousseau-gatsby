@@ -18,18 +18,9 @@ const OwnerCard = styled.div`
 const OwnerQuoteSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: normal;
-
-  @media only screen and (min-width: 480px) {
-    font-size: 11px;
-    line-height: 15px;
-    text-align: center;
-    color: #0f1f2f;
-  }
+  color: #0f1f2f;
 
   @media only screen and (min-width: 768px) {
     font-size: 30px;
@@ -53,7 +44,7 @@ const NameDescription = styled.div`
 // This is a functional component - just sent up a little differently as an arrow function!
 const OwnerQuote = props => (
   <OwnerCard>
-    <img src={ownerPicture} alt="callie" />
+    <img src={ownerPicture} alt={props.name} />
     <OwnerQuoteSection>
       {props.quote}
       <NameDescription>
