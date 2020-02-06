@@ -1,0 +1,25 @@
+.some{
+    flex-direction: row;
+}
+
+#fb{
+    width: 26px;
+    padding-right: 6px;
+}
+
+#in{
+    width: 26px;
+    padding-right: 6px;
+}
+
+#pi{
+    width: 26px;
+    padding-right: 6px;
+}
+
+.con{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
