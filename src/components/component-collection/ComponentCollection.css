@@ -1,37 +1,48 @@
 .component-collection {
-    width: 480px;
-    height: 350px;
+    width: 100%;
+    height: 180px;
     background-color: rgb(246, 230, 222);
-    padding: 20px;
 }
 
 .image {
-    width: 170px;
-    height: 220px;
-    margin: 30px 20px 0 20px;
+    width: 120px;
+    height: 140px;
+    margin: 5px;
 }
 
 .collection-title {
     text-align: center;
-    margin-top: 20px;
+
     font-weight: bold;
 }
 
+.first {
+    margin-left: 40px;
+}
+
 .third {
-    visibility: hidden;
+    display: none;
 }
 .fourth {
-    visibility: hidden;
+    display: none;
 }
 
 @media only screen and (min-width: 480px) {
     .component-collection {
-        width: 960px;
+        width: 100%;
+        height: 260px;
     }
+
+    .image {
+        width: 150px;
+        height: 200px;
+        margin: 20px;
+    }
+
     .third {
-        visibility: visible;
+        display: inline-block;
     }
     .fourth {
-        visibility: visible;
+        display: inline-block;
     }
  }
