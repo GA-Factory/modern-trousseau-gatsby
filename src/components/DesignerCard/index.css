@@ -19,3 +19,21 @@
     justify-content: space-around;
     margin: 10px;
 }
+
+
+@media screen and (min-width: 600px) {
+    .designerParagraph {
+        width: 834.05px;
+        height: 109px;
+        left: 412.05px;
+        top: 1245px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .designerImage{
+        width: 249.45px;
+        height: 266px;
+        left: 114px;
+        top: 1203px;
+    }
+  }
