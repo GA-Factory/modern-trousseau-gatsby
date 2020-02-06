@@ -1,16 +1,30 @@
 .component-collection {
-    width: 800px;
-    height: 300px;
+    width: 1000px;
+    height: 350px;
     background-color: rgb(246, 230, 222);
+    padding: 30px;
 }
 
 .image {
     width: 170px;
     height: 220px;
     border: 1px solid black;
-    margin: 30px 15px 15px 15px;
+    margin: 30px 30px 0 30px;
 }
 
 .collection-title {
     text-align: center;
+    margin-top: 20px;
 }
+
+@media only screen and (max-width: 400px) {
+    .component-collection {
+        width: 400px;
+    }
+    .third {
+      visibility: hidden;
+    }
+    .fourth {
+        visibility: hidden;
+      }
+ }
