@@ -9,13 +9,21 @@ import { ThemeProvider } from "styled-components";
 const Container = styled.div`
     width: 100%;
     height: 180px;
-    background-color: ${props => props.theme.colors.primaryPink}
+    background-color: ${props => props.theme.colors.primaryPink};
+    @media (min-width: ${props => props.theme.breakpoints.laptop}){
+        background-color: red;
+        height: 300px
+    }
 `
 
 const GownImageMobile = styled.img`
     width: 120px;
     height: 140px;
     margin: 5px;
+    @media (min-width: ${props => props.theme.breakpoints.laptop}){
+        display: inline-block;
+        width: 240px
+    }
 `
 
 const GownImageScreen = styled.img`
@@ -33,17 +41,6 @@ const Title = styled.p `
     font-weight: bold;
     font-family: ${props => props.theme.fontStyles.h1Styles.fontStyle}
 `
-/* const image = styled. `
-         width: 150px;
-         height: 200px;
-         margin: 20px;
-     ` */
-
-/* @media only screen and (min-width: 480px) 
-    component-collection 
-        width: 100%;
-        height: 260px;
-    ` */
 
 const ComponentCollection = ({images}) => (
     <>
