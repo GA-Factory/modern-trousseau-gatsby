@@ -23,8 +23,7 @@ const CaptionTitle = styled.h4`
   color: #fff;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 30px;
-    line-height: 35px;
+    ${props => props.theme.fontStyles.h4Styles}
   }
 `
 
