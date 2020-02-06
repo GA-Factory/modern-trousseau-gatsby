@@ -15,18 +15,37 @@ const Button = styled.button`
   line-height: ${props => props.height};
 
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     padding: ${props => props.desktoppadding};
     width: ${props => props.desktopwidth};
     font-weight: ${props => props.desktopweight};
     font-size: ${props => props.desktopfontsize};
     line-height: ${props => props.desktopheight};
-    color: ${props => props.desktopcolor}
+    color: ${props => props.desktopcolor};
   }
-`
+`;
 
 const PinkButton = props => {
-  return <Button weight={props.weight} family={props.family} fontsize={props.fontsize} height={props.height} padding={props.padding} width={props.width} shadow={props.shadow} desktopwidth={props.desktopwidth} desktoppadding={props.desktoppadding} desktopheight={props.desktopheight} desktopfontsize={props.desktopfontsize} desktopweight={props.desktopweight} desktopcolor={props.desktopcolor} color={props.color}>{props.label}</Button>;
+  return (
+    <Button
+      weight={props.weight}
+      family={props.family}
+      fontsize={props.fontsize}
+      height={props.height}
+      padding={props.padding}
+      width={props.width}
+      shadow={props.shadow}
+      desktopwidth={props.desktopwidth}
+      desktoppadding={props.desktoppadding}
+      desktopheight={props.desktopheight}
+      desktopfontsize={props.desktopfontsize}
+      desktopweight={props.desktopweight}
+      desktopcolor={props.desktopcolor}
+      color={props.color}
+    >
+      {props.label}
+    </Button>
+  );
 };
 
 export default PinkButton;
