@@ -6,26 +6,40 @@ const CaptionContainer = styled.div`
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 420px;
+  width: 320px;
   text-align: left;
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 480px;
+  }
 `
 
 const CaptionTitle = styled.h4`
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 35px;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 21px;
   color: #fff;
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    font-size: 30px;
+    line-height: 35px;
+  }
 `
 
 const CaptionSubText = styled.span`
   font-family: inherit;
   font-style: inherit;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 14px;
   color: #fff;
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    font-size: 15px;
+    line-height: 18px;
+  }
 `
 
 const HeroCaption = props => {
