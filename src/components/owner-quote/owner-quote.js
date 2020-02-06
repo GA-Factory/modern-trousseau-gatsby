@@ -3,6 +3,14 @@ import React from "react";
 import ownerPicture from "../../assets/images/owner-quote-callie-photo.png";
 import styled from "styled-components";
 
+// @media only screen and (min-width : 480px) {
+// }
+// @media only screen and (min-width : 768px) {
+// }
+// @media only screen and (min-width : 1224px) {
+// /* Styles */
+// }
+
 const OwnerCard = styled.div`
   display: flex;
 `;
@@ -15,15 +23,31 @@ const OwnerQuoteSection = styled.div`
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 40px;
-  color: #000000;
+
+  @media only screen and (min-width: 480px) {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: #0f1f2f;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+  }
 `;
 
 const NameDescription = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+
+  @media only screen and (min-width: 480px) {
+    justify-content: center;
+  }
+  @media only screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 // This is a functional component - just sent up a little differently as an arrow function!
@@ -31,7 +55,7 @@ const OwnerQuote = props => (
   <OwnerCard>
     <img src={ownerPicture} alt="callie" />
     <OwnerQuoteSection>
-      <h1>{props.quote}</h1>
+      {props.quote}
       <NameDescription>
         {props.name} | {props.role}
       </NameDescription>
