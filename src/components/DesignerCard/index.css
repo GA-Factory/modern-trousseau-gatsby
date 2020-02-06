@@ -23,6 +23,8 @@
 
 @media screen and (min-width: 600px) {
     .designerParagraph {
+        padding: 30px;
+        margin: 50px;
         width: 834.05px;
         height: 109px;
         left: 412.05px;
@@ -30,10 +32,14 @@
         font-size: 30px;
         line-height: 40px;
     }
-    .designerImage{
+    .designerImage {
         width: 249.45px;
         height: 266px;
         left: 114px;
         top: 1203px;
+    }
+    .designerTitle{
+        text-align: right;
+        margin: 20px;
     }
   }
