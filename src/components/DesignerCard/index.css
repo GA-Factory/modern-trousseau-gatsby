@@ -14,8 +14,8 @@
     left: 177px;
     top: 1159px;
     text-align: center;
-    padding: 10px;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    margin: 10px;
 }
