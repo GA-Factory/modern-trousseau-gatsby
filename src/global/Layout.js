@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
+import { variables } from '../styles/styled-components'
 
 import GlobalStyle from "./GlobalStyle";
 
@@ -19,7 +20,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        {/* <ThemeProvider theme={styled-components}> */}
+        <ThemeProvider theme={variables}>
           <>
             <Helmet>
               <title>{data.site.siteMetadata.title}</title>
@@ -31,7 +32,7 @@ const Layout = ({ children }) => (
             <GlobalStyle />
             <>{children}</>
           </>
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
       </>
     )}
   />
