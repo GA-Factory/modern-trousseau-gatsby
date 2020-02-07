@@ -47,6 +47,41 @@ const slideData = [
   }
 ];
 
+const slidedata1 = [
+  {
+  image: imageFile1,
+  index: 1
+},
+  {
+  image: imageFile2,
+  index: 2
+},
+  {
+  image: imageFile3,
+  index: 3
+},
+  {
+  image: imageFile4,
+  index: 4
+},
+  {
+  image: imageFile5,
+  index: 5
+},
+  {
+  image: imageFile6,
+  index: 6
+},
+  {
+  image: imageFile7,
+  index: 7
+},
+  {
+  image: imageFile8,
+  index: 8
+}
+]
+
 storiesOf("Collection List", module).add("Collection List", () => (
   <CollectionList slideData={slideData} title="Classics"></CollectionList>
 ));
