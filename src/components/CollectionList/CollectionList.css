@@ -1,0 +1,54 @@
+.slide {
+    height: 268px;
+    width: 280px;
+    margin-right: 0;
+    border-top: 4px solid rgb(246, 230, 222);
+    border-right: 195px solid rgb(246, 230, 222);
+  }
+  
+  .title {
+    width: 287px;
+    background-color: rgb(246, 230, 222);
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .card {
+    display: flex;
+  }
+  
+  .slide-container {
+    display: flex;
+    flex-direction: row;
+    height: 268px;
+    width: 280px;
+    background-color: rgb(246, 230, 222);
+    margin-right: 0;
+  }
+  
+  .button {
+    background-color: rgb(246, 230, 222);
+    border: 0;
+    margin: 0;
+    font-size: 20px;
+    height: 276px;
+  }
+  
+  .slide-img {
+    height: 210px;
+    width: 132px;
+    margin: 3px;
+    margin-bottom: 0;
+  }
+  
+  .slide-text {
+    text-align: center;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  .button-icon {
+    margin-bottom: 35px;
+  }
