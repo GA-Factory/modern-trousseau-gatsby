@@ -149,7 +149,7 @@ const ScreenReview1 = styled.div`
     display: inline-block;
     margin-left: 16px;
     position: absolute;
-    top: 39%;
+    top: 35%;
     width: 189px;
   }
 `;
@@ -159,7 +159,7 @@ const ScreenReview2 = styled.div`
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   position: absolute;
-  top: 45%;
+  top: 42%;
   margin-left: 6px;
   width: 193px;
 `;
@@ -169,7 +169,7 @@ const ScreenReview3 = styled.div`
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   position: absolute;
-  top: 40%;
+  top: 36%;
   margin-left: 6px;
   width: 175px;
 `;
