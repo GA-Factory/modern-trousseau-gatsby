@@ -5,7 +5,7 @@ export default createGlobalStyle`
   ${reset};
 
   body {
-    font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', sans-serif;
-    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
   }
-`;
+`
