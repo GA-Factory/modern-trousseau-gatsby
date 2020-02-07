@@ -4,67 +4,69 @@ import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 
 const BridalReviews = styled.div`
-display: flex;
-flex-direction: column;
+/* display: flex;
+flex-direction: column; */
 width: 100%;
-background-color: ${props => props.theme.colors.primaryPink};
+background-color: ${props => props.theme.colors.backgroundGray};
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  height: 360px;
-  padding: 30px 10px 10px 10px;
+  height: 300px;
+  /* padding: 30px 10px 10px 10px; */
 }
 `;
 
 const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 200px;
-  padding: 20px 20px 20px 40px;
+  /* display: flex; */
+  /* width: 100%; */
+  height: 240px;
+  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
-  background-color: ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 280px;
-    padding: 10px 10px 10px 10px;
+    height: 480px;
+    /* padding: 10px 10px 10px 10px; */
   }
 `;
 
 const ReviewContainer1 = styled.div`
-  display: flex;
-  width: 100%;
-  height: 200px;
-  padding: 20px 20px 20px 40px;
+  /* display: flex; */
+  /* width: 100%; */
+  height: 208.55px;
+  width: 296px;
+  border: 1px solid black;
+  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
-  background-color: ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 280px;
-    padding: 10px 10px 10px 10px;
+    height: 236.84px;
+    /* padding: 10px 10px 10px 10px; */
   }
 `;
 
 const ReviewContainer2 = styled.div`
-  display: flex;
-  width: 100%;
+  /* display: flex; */
+  /* width: 100%; */
   height: 200px;
-  padding: 20px 20px 20px 40px;
+  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   display: none;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 280px;
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
   }
 `;
 
 const ReviewContainer3 = styled.div`
-  display: flex;
-  width: 100%;
+  /* display: flex; */
+  /* width: 100%; */
   height: 200px;
-  padding: 20px 20px 20px 40px;
+  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   display: none;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 280px;
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
   }
 `;
 
@@ -83,8 +85,10 @@ const GownImageMobile1 = styled.img`
 const GownImageScreen1 = styled.img`
   width: 120px;
   height: 150px;
-  display: none;
+  border: 1px solid black;
+  /* display: none; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    margin-top: 100px;
     display: inline-block;
     width: 190.72px;
     height: 236.85px;
@@ -94,7 +98,8 @@ const GownImageScreen1 = styled.img`
 const GownImageScreen2 = styled.img`
   width: 120px;
   height: 150px;
-  display: none;
+  border: 1px solid black;
+  /* display: none; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 208px;
@@ -118,17 +123,17 @@ const ComponentCollection = ({ images }) => (
   <>
     <BridalReviews>
       <Container>
-        {/* <ReviewContainer1> */}
-            <GownImageScreen1 src={images[0]}></GownImageScreen1>
-        {/* </ReviewContainer1> */}
+        <ReviewContainer1>
+            <GownImageMobile1 src={images[0]}></GownImageMobile1>
+            {/* <p>fggdf</p> */}
+        </ReviewContainer1>
         <ReviewContainer2>
-            <GownImageMobile1 src={images[1]}></GownImageMobile1>
+            <GownImageScreen1 src={images[1]}></GownImageScreen1>
         </ReviewContainer2>
         <ReviewContainer3>
             <GownImageScreen2 src={images[2]}></GownImageScreen2>
         </ReviewContainer3>
       </Container>
-      {/* <Title>Fall Collection 2020</Title> */}
     </BridalReviews>
   </>
 );
