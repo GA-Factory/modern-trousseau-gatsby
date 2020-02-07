@@ -23,7 +23,7 @@ const Container = styled.div`
   }
 `;
 
-const ReviewContainer1 = styled.div`
+const ReviewContainerMobile = styled.div`
   display: flex;
   height: 208.55px;
   width: 296px;
@@ -39,7 +39,7 @@ const ReviewContainer1 = styled.div`
   }
 `;
 
-const ReviewContainer2 = styled.div`
+const ReviewContainerDesktop = styled.div`
   height: 200px;
   justify-content: space-around;
   display: none;
@@ -53,80 +53,24 @@ const ReviewContainer2 = styled.div`
   }
 `;
 
-const ReviewContainer3 = styled.div`
-  height: 200px;
-  justify-content: space-around;
-  display: none;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: flex;
-    height: 240px;
-    width: 405px;
-    justify-content: space-around;
-    margin-top: 40px;
-  }
-`;
-
-const GownImageMobile1 = styled.img`
+const GownImage = styled.img`
   width: 148px;
   height: 208.55;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
-    width: 170px;
-    height: 236.84px;
+    width: 189px;
+    height: 238px;
   }
 `;
 
-const GownImageScreen1 = styled.img`
-  width: 120px;
-  height: 150px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 190.72px;
-    height: 236.85px;
-  }
-`;
-
-const GownImageScreen2 = styled.img`
-  width: 120px;
-  height: 150px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 208px;
-    height: 239px;
-  }
-`;
-
-const ImageAccompaniment1 = styled.div`
+const ImageAccompaniment = styled.div`
   height: 208.55px;
   width: 296px;
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 240px;
-    width: 235px;
-  }
-`;
-
-const ImageAccompaniment2 = styled.div`
-  height: 208.55px;
-  width: 296px;
-  justify-content: space-around;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 240px;
-    width: 214.28px;
-  }
-`;
-
-const ImageAccompaniment3 = styled.div`
-  height: 208.55px;
-  width: 296px;
-  justify-content: space-around;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 240px;
-    width: 197px;
+    width: 215px;
   }
 `;
 
@@ -194,9 +138,9 @@ const ComponentCollection = ({ images }) => (
   <>
     <BridalReviews>
       <Container>
-        <ReviewContainer1>
-          <GownImageMobile1 src={images[0]}></GownImageMobile1>
-          <ImageAccompaniment1>
+        <ReviewContainerMobile>
+          <GownImage src={images[0]}></GownImage>
+          <ImageAccompaniment>
             <MobileReview1>
               "From start to finish, my dress was high quality, hassle-free, and
               ready when promised.”<br></br> - Modern Trousseau Bride
@@ -225,12 +169,12 @@ const ComponentCollection = ({ images }) => (
                 color={`${"#441F0E"}`}
                 />
                 </ViewDress>
-          </ImageAccompaniment1>
+          </ImageAccompaniment>
           <MobileReviewSliderButton>&#10095;</MobileReviewSliderButton>
-        </ReviewContainer1>
-        <ReviewContainer2>
-          <GownImageScreen1 src={images[1]}></GownImageScreen1>
-          <ImageAccompaniment2>
+        </ReviewContainerMobile>
+        <ReviewContainerDesktop>
+          <GownImage src={images[1]}></GownImage>
+          <ImageAccompaniment>
             <ViewDress>
               <ScreenReview2>
                 "From start to finish, my dress was high quality, hassle-free,
@@ -254,11 +198,11 @@ const ComponentCollection = ({ images }) => (
                 color={`${"#441F0E"}`}
               />
             </ViewDress>
-          </ImageAccompaniment2>
-        </ReviewContainer2>
-        <ReviewContainer3>
-          <GownImageScreen2 src={images[2]}></GownImageScreen2>
-          <ImageAccompaniment3>
+          </ImageAccompaniment>
+        </ReviewContainerDesktop>
+        <ReviewContainerDesktop>
+          <GownImage src={images[2]}></GownImage>
+          <ImageAccompaniment>
             <ViewDress>
               <ScreenReview3>
                 "Everything about the dress was perfect - the quality, fit, and
@@ -283,8 +227,8 @@ const ComponentCollection = ({ images }) => (
                 color={`${"#441F0E"}`}
               />
             </ViewDress>
-          </ImageAccompaniment3>
-        </ReviewContainer3>
+          </ImageAccompaniment>
+        </ReviewContainerDesktop>
       </Container>
     </BridalReviews>
   </>
