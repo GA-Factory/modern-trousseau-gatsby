@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const CaptionContainer = styled.div`
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 320px;
+  max-width: 100%;
   text-align: left;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -15,7 +15,7 @@ const CaptionContainer = styled.div`
 `
 
 const CaptionTitle = styled.h4`
-  font-family: 'Raleway';
+  font-family:'Raleway';
   font-style: normal;
   font-weight: bolder;
   font-size: 18px;
@@ -34,6 +34,7 @@ const CaptionSubText = styled.span`
   font-size: 12px;
   line-height: 14px;
   color: #fff;
+  display: block;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-size: 15px;
