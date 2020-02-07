@@ -5,6 +5,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/global/GlobalStyle';
 import variables from '../src/styles/styled-components'
 
+import variables from '../src/styles/styled-components';
+
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
@@ -15,10 +17,10 @@ const Wrapper = styled.div`
 
 const Decorator = storyFn => (
   <ThemeProvider theme={variables}>
-      <Wrapper>
-        <GlobalStyle />
-        {storyFn()}
-      </Wrapper>
+    <Wrapper>
+    <GlobalStyle />
+    {storyFn()}
+    </Wrapper>
   </ThemeProvider>
 );
 
