@@ -14,7 +14,7 @@ const Button = styled.button`
   line-height: ${props => props.height};
 
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
-    font-family: "Raleway";
+    font-family: 'Raleway';
     padding: ${props => props.desktoppadding};
     width: ${props => props.desktopwidth};
     font-weight: ${props => props.desktopweight};
