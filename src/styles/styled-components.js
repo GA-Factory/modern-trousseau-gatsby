@@ -1,8 +1,8 @@
 const variables = { 
     colors: {
-      primaryPink: `#FAE5DC`,
-      lightPink: `rgba(249, 218, 205, 0.4)`,
-      nearBlack: `#441F0E`,
+      primaryPink: '#FAE5DC',
+      lightPink: 'rgba(249, 218, 205, 0.4)',
+      nearBlack: '#441F0E',
       darkGray: `rgba(68, 31, 14, 0.1)`,
       backgroundGray: `#E5E5E5`,
       boxShadowGray: `rgba(0, 0, 0, 0.25)`,
@@ -31,9 +31,10 @@ const variables = {
     fontStyles: {
         h1Styles: {
             fontFamily: 'Playfair Display',
-            fontWeight: 'Bold Italic',
+            fontWeight: 'bold',
+            fontStyle: 'italic',
             fontSize: 45,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         h2Styles: {
