@@ -33,6 +33,10 @@ const CardParagraph = styled.div`
   line-height: inherit;
 `;
 
+// const Icon = styled.fa`
+//   background-color: red;
+// `;
+
 const Card = props => {
   return (
     <CardContainer>
