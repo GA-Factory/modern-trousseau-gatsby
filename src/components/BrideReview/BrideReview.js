@@ -74,51 +74,39 @@ const ImageAccompaniment = styled.div`
   }
 `;
 
-const MobileReview1 = styled.div`
+const ReviewMobile = styled.div`
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   margin: 0 0 18px 6px;
   position: relative;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
+  top: 22%;
+  margin-left: 2px;
+  width: 189px;
   }
 `;
 
-const ScreenReview1 = styled.div`
-  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
-  text-align: center;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    position: absolute;
-    top: 35%;
-    width: 189px;
-  }
-`;
-
-const ScreenReview2 = styled.div`
+const ReviewDesktop = styled.div`
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   position: absolute;
   top: 42%;
   margin-left: 2px;
-  width: 193px;
+  width: 189px;
 `;
 
-const ScreenReview3 = styled.div`
-  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
-  text-align: center;
-  position: absolute;
-  top: 35%;
-  margin-left: 2px;
-  width: 175px;
+const ViewDressMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    margin-top: 120px;
+  }
 `;
 
-const ViewDress = styled.div`
+const ViewDressDesktop = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -141,16 +129,11 @@ const ComponentCollection = ({ images }) => (
         <ReviewContainerMobile>
           <GownImage src={images[0]}></GownImage>
           <ImageAccompaniment>
-            <MobileReview1>
+            <ReviewMobile>
               "From start to finish, my dress was high quality, hassle-free, and
               ready when promised.”<br></br> - Modern Trousseau Bride
-            </MobileReview1>
-            <ViewDress>
-              <ScreenReview1>
-                "They made me feel like a queen and I was extremely impressed
-                with the quality of their gowns. Plus, I loved that they
-                actually take your measurements and make it YOUR size."
-              </ScreenReview1>
+            </ReviewMobile>
+            <ViewDressMobile>
               <PinkButton
                 label="View Dress"
                 fontsize={`${"14px"}`}
@@ -168,18 +151,18 @@ const ComponentCollection = ({ images }) => (
                 family={`${"'Sahitya'"}`}
                 color={`${"#441F0E"}`}
                 />
-                </ViewDress>
+                </ViewDressMobile>
           </ImageAccompaniment>
           <MobileReviewSliderButton>&#10095;</MobileReviewSliderButton>
         </ReviewContainerMobile>
         <ReviewContainerDesktop>
           <GownImage src={images[1]}></GownImage>
           <ImageAccompaniment>
-            <ViewDress>
-              <ScreenReview2>
+            <ViewDressDesktop>
+              <ReviewDesktop>
                 "From start to finish, my dress was high quality, hassle-free,
                 and ready when promised.”
-              </ScreenReview2>
+              </ReviewDesktop>
               <PinkButton
                 label="View Dress"
                 fontsize={`${"14px"}`}
@@ -197,18 +180,18 @@ const ComponentCollection = ({ images }) => (
                 family={`${"'Sahitya'"}`}
                 color={`${"#441F0E"}`}
               />
-            </ViewDress>
+            </ViewDressDesktop>
           </ImageAccompaniment>
         </ReviewContainerDesktop>
         <ReviewContainerDesktop>
           <GownImage src={images[2]}></GownImage>
           <ImageAccompaniment>
-            <ViewDress>
-              <ScreenReview3>
+            <ViewDressDesktop>
+              <ReviewDesktop>
                 "Everything about the dress was perfect - the quality, fit, and
                 overall look was impeccable. Thank you for your amazing customer
                 service and beautiful product."
-              </ScreenReview3>
+              </ReviewDesktop>
               <PinkButton
                 label="View Dress"
                 fontsize={`${"14px"}`}
@@ -226,7 +209,7 @@ const ComponentCollection = ({ images }) => (
                 family={`${"'Sahitya'"}`}
                 color={`${"#441F0E"}`}
               />
-            </ViewDress>
+            </ViewDressDesktop>
           </ImageAccompaniment>
         </ReviewContainerDesktop>
       </Container>
