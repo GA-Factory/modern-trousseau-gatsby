@@ -22,6 +22,11 @@ const Title = styled.div`
   text-align: center;
   color: #0f1f2f;
   margin: 15px auto 15px;
+  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
+    font-size: 40px;
+    line-height: 53px;
+    color: #000000;
+  }
 `;
 
 const SingleCard = styled.div`
