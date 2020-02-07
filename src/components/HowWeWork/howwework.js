@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: 'Playfair Display';
+  font-family: ${props => props.theme.fontStyles.h1Styles.fontFamily};
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
