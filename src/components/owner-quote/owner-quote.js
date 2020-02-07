@@ -2,30 +2,21 @@
 import React from "react";
 import ownerPicture from "../../assets/images/owner-quote-callie-photo.png";
 import styled from "styled-components";
-import variables from "../../styles/styled-components.js";
-import "../../styles/fonts.css";
-
-// @media only screen and (min-width : 480px) {
-// }
-// @media only screen and (min-width : 768px) {
-// }
-// @media only screen and (min-width : 1224px) {
-// /* Styles */
-// }
 
 const OwnerCard = styled.div`
   display: flex;
   padding: 38px;
+  font-family: "Playfair Display";
 `;
 
 const OwnerPhoto = styled.img`
   display: block;
-  width: 133px;
-  height: 125px;
+  width: 8.3125em;
+  height: 7.8125em;
 
   @media only screen and (min-width: 768px) {
-    width: 249.45px;
-    height: 266px;
+    width: 15.5625em;
+    height: 16.625em;
   }
 `;
 const OwnerQuoteSection = styled.div`
@@ -33,9 +24,9 @@ const OwnerQuoteSection = styled.div`
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  color: variables.colors.nearBlack;
-  font-size: 12px;
-  lineheight: 15px;
+  color: ${props => props.theme.colors.nearBlack};
+  font-size: 20px;
+  line-height: 25px;
   padding: 10px;
 
   @media only screen and (min-width: 768px) {
