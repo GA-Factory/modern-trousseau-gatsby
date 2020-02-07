@@ -11,7 +11,7 @@ const BridalReviews = styled.div`
     height: 300px;
   }
 `;
-//
+
 const Container = styled.div`
   display: flex;
   height: 240px;
@@ -24,10 +24,8 @@ const Container = styled.div`
 
 const ReviewContainer1 = styled.div`
   display: flex;
-  /* justify-content: space-around; */
   height: 208.55px;
   width: 296px;
-  /* border: 1px solid black; */
   justify-content: space-around;
   margin: 15px 5px 5px 5px;
   background-color: ${props => props.theme.colors.backgroundGray};
@@ -46,7 +44,6 @@ const ReviewContainer2 = styled.div`
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    /* border: 1px solid black; */
     height: 240px;
     width: 405px;
     justify-content: space-around;
@@ -61,7 +58,6 @@ const ReviewContainer3 = styled.div`
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    /* border: 1px solid black; */
     height: 240px;
     width: 405px;
     justify-content: space-around;
@@ -72,7 +68,6 @@ const ReviewContainer3 = styled.div`
 const GownImageMobile1 = styled.img`
   width: 148px;
   height: 208.55;
-  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 170px;
@@ -83,7 +78,6 @@ const GownImageMobile1 = styled.img`
 const GownImageScreen1 = styled.img`
   width: 120px;
   height: 150px;
-  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 190.72px;
@@ -94,7 +88,6 @@ const GownImageScreen1 = styled.img`
 const GownImageScreen2 = styled.img`
   width: 120px;
   height: 150px;
-  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 208px;
@@ -105,7 +98,6 @@ const GownImageScreen2 = styled.img`
 const ImageAccompaniment1 = styled.div`
   height: 208.55px;
   width: 296px;
-  /* border: 1px solid black; */
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -117,7 +109,6 @@ const ImageAccompaniment1 = styled.div`
 const ImageAccompaniment2 = styled.div`
   height: 208.55px;
   width: 296px;
-  /* border: 1px solid black; */
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -129,7 +120,6 @@ const ImageAccompaniment2 = styled.div`
 const ImageAccompaniment3 = styled.div`
   height: 208.55px;
   width: 296px;
-  /* border: 1px solid black; */
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -155,35 +145,32 @@ const ScreenReview1 = styled.div`
   text-align: center;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* text-align: center; */
     display: inline-block;
     margin-left: 16px;
-    position: relative;
+    position: absolute;
+    top: 39%;
     width: 189px;
-    border: 1px solid black;
   }
 `;
 
 const ScreenReview2 = styled.div`
   font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
-  /* font-size: 16px; */
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 45%;
   margin-left: 6px;
   width: 193px;
-  border: 1px solid black;
 `;
 
 const ScreenReview3 = styled.div`
   font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
-  /* font-size: 16px; */
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 40%;
   margin-left: 6px;
   width: 175px;
-  border: 1px solid black;
 `;
 
 const ComponentCollection = ({ images }) => (
@@ -206,7 +193,7 @@ const ComponentCollection = ({ images }) => (
               style={{
                 border: "1px solid black",
                 display: "block",
-                margin: "auto"
+                margin: "auto",
               }}
             >
               View Dress
@@ -219,7 +206,7 @@ const ComponentCollection = ({ images }) => (
           <ImageAccompaniment2>
             <ScreenReview2>
               "From start to finish, my dress was high quality, hassle-free, and
-              ready when promised.” - Modern Trousseau Bride
+              ready when promised.”
             </ScreenReview2>
             <button
               style={{
@@ -230,7 +217,6 @@ const ComponentCollection = ({ images }) => (
             >
               View Dress
             </button>
-            {/* <Button></Button> */}
           </ImageAccompaniment2>
         </ReviewContainer2>
         <ReviewContainer3>
@@ -250,7 +236,6 @@ const ComponentCollection = ({ images }) => (
             >
               View Dress
             </button>
-            {/* <Button></Button> */}
           </ImageAccompaniment3>
         </ReviewContainer3>
       </Container>
