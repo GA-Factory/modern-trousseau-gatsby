@@ -2,71 +2,62 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
+import Button from '../Button/Button'
 
 const BridalReviews = styled.div`
-/* display: flex;
-flex-direction: column; */
 width: 100%;
 background-color: ${props => props.theme.colors.backgroundGray};
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
   height: 300px;
-  /* padding: 30px 10px 10px 10px; */
 }
 `;
 
 const Container = styled.div`
-  /* display: flex; */
-  /* width: 100%; */
+  display: flex;
   height: 240px;
-  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 480px;
-    /* padding: 10px 10px 10px 10px; */
+    height: 400px;
   }
 `;
 
 const ReviewContainer1 = styled.div`
-  /* display: flex; */
-  /* width: 100%; */
+  display: flex;
   height: 208.55px;
   width: 296px;
   border: 1px solid black;
-  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 236.84px;
-    /* padding: 10px 10px 10px 10px; */
+    height: 240px;
+    width: 405px;
   }
 `;
 
 const ReviewContainer2 = styled.div`
-  /* display: flex; */
-  /* width: 100%; */
   height: 200px;
-  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   display: none;
-  background-color: ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 280px;
-    /* padding: 10px 10px 10px 10px; */
+    display: inline-block;
+    border: 1px solid black;
+    height: 240px;
+    width: 405px;
   }
 `;
 
 const ReviewContainer3 = styled.div`
-  /* display: flex; */
-  /* width: 100%; */
   height: 200px;
-  /* padding: 20px 20px 20px 40px; */
   justify-content: space-around;
   display: none;
-  background-color: ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 280px;
-    /* padding: 10px 10px 10px 10px; */
+    display: inline-block;
+    border: 1px solid black;
+    height: 240px;
+    width: 405px;
   }
 `;
 
@@ -74,7 +65,6 @@ const GownImageMobile1 = styled.img`
   width: 148px;
   height: 208.55;
   border: 1px solid black;
-  /* z-index: 1; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 170px;
@@ -86,9 +76,7 @@ const GownImageScreen1 = styled.img`
   width: 120px;
   height: 150px;
   border: 1px solid black;
-  /* display: none; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    margin-top: 100px;
     display: inline-block;
     width: 190.72px;
     height: 236.85px;
@@ -99,7 +87,6 @@ const GownImageScreen2 = styled.img`
   width: 120px;
   height: 150px;
   border: 1px solid black;
-  /* display: none; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 208px;
@@ -107,17 +94,22 @@ const GownImageScreen2 = styled.img`
   }
 `;
 
-// const Title = styled.p`
-//   text-align: center;
-//   font-weight: bold;
-//   margin-bottom: 8px;
-//   font-family: ${props => props.theme.fontStyles.h1Styles.fontStyle};
-//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-//     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-//     font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
-//     margin-top: 10px
-//   }
-// `;
+const ImageAccompaniment = styled.div`
+  height: 208.55px;
+  width: 296px;
+  border: 1px solid black;
+  justify-content: space-around;
+  background-color: ${props => props.theme.colors.backgroundGray};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    height: 240px;
+    width: 405px;
+  }
+`;
+
+const Review1 = styled.div`
+
+
+`
 
 const ComponentCollection = ({ images }) => (
   <>
@@ -125,7 +117,13 @@ const ComponentCollection = ({ images }) => (
       <Container>
         <ReviewContainer1>
             <GownImageMobile1 src={images[0]}></GownImageMobile1>
-            {/* <p>fggdf</p> */}
+            <ImageAccompaniment>
+            <Review1>From start to finish, my dress was high quality, hassle-free, and ready when promised.” - Modern Trousseau Bride</Review1>
+            <button style={{
+                border: '1px solid black'
+            }}>View Dress</button>
+            {/* <Button></Button> */}
+            </ImageAccompaniment>
         </ReviewContainer1>
         <ReviewContainer2>
             <GownImageScreen1 src={images[1]}></GownImageScreen1>
