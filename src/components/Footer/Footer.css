@@ -1,15 +1,12 @@
-.footer {
+
+.footer{
     display: flex;
     flex-direction: column;
-    
-    margin: auto;
 }
 
-.rest {
-    text-align: center;
-}
-
-.social-media {
-    display: flex;
-    flex-direction: row;
+@media only screen and (min-width: 600px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+    }
 }
