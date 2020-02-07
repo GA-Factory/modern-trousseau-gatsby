@@ -3,9 +3,17 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
+<<<<<<< HEAD
 import variables from "../styles/styled-components";
 
 import GlobalStyle from "./GlobalStyle";
+=======
+
+import GlobalStyle from "./GlobalStyle";
+import variables from "../styles/styled-components";
+import '../styles/fonts.css'
+
+>>>>>>> develop
 
 const Layout = ({ children }) => (
   <StaticQuery
