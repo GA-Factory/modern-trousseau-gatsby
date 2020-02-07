@@ -15,10 +15,10 @@ const Wrapper = styled.div`
 
 const Decorator = storyFn => (
   <ThemeProvider theme={variables}>
-      <Wrapper>
-        <GlobalStyle />
-        {storyFn()}
-      </Wrapper>
+    <Wrapper>
+    <GlobalStyle />
+    {storyFn()}
+    </Wrapper>
   </ThemeProvider>
 );
 

@@ -130,7 +130,7 @@ const ImageAccompaniment3 = styled.div`
 `;
 
 const MobileReview1 = styled.div`
-  font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
+  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   margin: 0 0 18px 6px;
@@ -141,7 +141,7 @@ const MobileReview1 = styled.div`
 `;
 
 const ScreenReview1 = styled.div`
-  font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
+  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   display: none;
@@ -155,7 +155,7 @@ const ScreenReview1 = styled.div`
 `;
 
 const ScreenReview2 = styled.div`
-  font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
+  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   position: absolute;
@@ -165,7 +165,7 @@ const ScreenReview2 = styled.div`
 `;
 
 const ScreenReview3 = styled.div`
-  font-style: ${props => props.theme.fontStyles.Body3DesktopText.fontStyle};
+  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
   text-align: center;
   position: absolute;
