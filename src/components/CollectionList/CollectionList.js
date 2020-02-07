@@ -1,22 +1,75 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./CollectionList.css";
 
-const Slide = ({ property }) => {
+import styled from "styled-components";
+
+const Card = styled.div`
+  display: flex;
+  width: 375px;
+`;
+
+const Slide = styled.div`
+  height: 268px;
+  width: 100%;
+  margin-right: 0;
+  border-top: 4px solid rgb(246, 230, 222);
+  border-right: 195px solid rgb(246, 230, 222);
+`;
+
+const Title = styled.div``;
+
+const SlideContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 268px;
+  width: 280px;
+  background-color: rgb(246, 230, 222);
+  margin-right: 0;
+`;
+
+const Button = styled.div`
+  background-color: rgb(246, 230, 222);
+  border: 0;
+  margin: 0;
+  font-size: 20px;
+  height: 276px;
+`;
+
+const SlideImage = styled.img`
+  height: 220px;
+  width: 152px;
+  margin: 3px;
+  margin-bottom: 0;
+`;
+
+const SlideText = styled.p`
+  text-align: center;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+`;
+
+const ButtonIcon = styled.p`
+  margin-top: 100px;
+  border: 1px solid black;
+`;
+
+const Slider = ({ property }) => {
   const { title, imga, imgb, labela, labelb, index } = property;
   return (
-    <div id={`slide-${index}`} className="slide">
-      <div className="slide-container">
+    <Slide id={`slide-${index}`}>
+      <SlideContainer>
         <div className="image-1">
-          <img src={imga} className="slide-img" />
-          <p className="slide-text">{`${labela}`}</p>
+          <SlideImage src={imga} />
+          <SlideText>{`${labela}`}</SlideText>
         </div>
         <div className="image-2">
-          <img src={imgb} className="slide-img" />
-          <p className="slide-text">{`${labelb}`}</p>
+          <SlideImage src={imgb} />
+          <SlideText>{`${labelb}`}</SlideText>
         </div>
-      </div>
-    </div>
+      </SlideContainer>
+    </Slide>
   );
 };
 
@@ -63,17 +116,17 @@ class CollectionList extends React.Component {
     const { properties, property } = this.state;
     return (
       <div>
-        <div className="card">
-          <button className="button" onClick={() => this.prevProperty()}>
-          <p className='button-icon'>&#10094;</p>
-          </button>
-          <div className="slide">
-            <Slide property={property} />
-          </div>
-          <button className="button" onClick={() => this.nextProperty()}>
-            <p className='button-icon'>&#10095;</p>
-          </button>
-        </div>
+        <Card>
+          <Button onClick={() => this.prevProperty()}>
+            <ButtonIcon>&#10094;</ButtonIcon>
+          </Button>
+          {/* <div className="slide"> */}
+            <Slider property={property} />
+          {/* </div> */}
+          <Button onClick={() => this.nextProperty()}>
+            <ButtonIcon>&#10095;</ButtonIcon>
+          </Button>
+        </Card>
       </div>
     );
   }
