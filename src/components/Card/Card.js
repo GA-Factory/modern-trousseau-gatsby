@@ -14,7 +14,7 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 14px 24px;
+  padding: 14px 20px;
 `;
 
 const CardTitle = styled.div`
@@ -34,6 +34,7 @@ const CardParagraph = styled.div`
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
+  color: ${props => props.theme.colors.nearBlack};
 `;
 
 const Card = props => {

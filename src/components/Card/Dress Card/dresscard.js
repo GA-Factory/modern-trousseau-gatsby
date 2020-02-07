@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Dress from "../../../assets/images/Tassel.svg"
 
 const CardContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
@@ -13,7 +14,7 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 14px 24px;
+  padding: 14px 20px;
 `;
 
 const CardTitle = styled.span`
@@ -33,6 +34,7 @@ const CardParagraph = styled.div`
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
+  color: ${props => props.theme.colors.nearBlack};
 `;
 
 const Image = styled.img`
@@ -42,7 +44,7 @@ const Image = styled.img`
 const DressCard = props => {
   return (
     <CardContainer>
-      <Image src={props.src} alt="Dress Icon" />
+      <Image src={Dress} alt="Dress Icon" />
       <CardParagraph>
         <CardTitle>{props.title}</CardTitle>
         {props.paragraph}
