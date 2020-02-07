@@ -28,6 +28,7 @@ const ReviewContainer1 = styled.div`
   width: 296px;
   justify-content: space-around;
   margin: 15px 5px 5px 5px;
+  padding-left:5px;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 240px;
