@@ -7,7 +7,6 @@ import DressCard from "./dresscard";
 storiesOf("DressCard", module)
   .add("DressCard", () => (
     <DressCard
-	//   icon={["far", "hand-pointer"]}
 	  src={Dress}
       type="dress"
       title="Create Your Dream Dress"

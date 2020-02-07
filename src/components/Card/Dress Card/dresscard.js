@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 14px 24px;
@@ -24,6 +25,8 @@ const CardParagraph = styled.div`
   margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -35,10 +38,11 @@ const CardParagraph = styled.div`
 const Image = styled.img`
   display: block;
 `;
+
 const DressCard = props => {
   return (
     <CardContainer>
-      <Image src={props.src} />
+      <Image src={props.src} alt="Dress Icon" />
       <CardParagraph>
         <CardTitle>{props.title}</CardTitle>
         {props.paragraph}
