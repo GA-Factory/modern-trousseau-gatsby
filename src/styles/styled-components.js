@@ -93,7 +93,7 @@ const variables = {
             LetterSpacing: '0.1px',
         },
         Body3DesktopText: {
-            fontStyle: 'Playfair Display',
+            fontStyle: 'Playfair',
             fontWeight: 'Regular',
             fontSize: 17,
             lineHeight: 22,

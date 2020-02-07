@@ -174,6 +174,13 @@ const ScreenReview3 = styled.div`
   width: 175px;
 `;
 
+const MobileReviewSliderButton = styled.button`
+  padding-bottom: 20px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`
+
 const ComponentCollection = ({ images }) => (
   <>
     <BridalReviews>
@@ -201,6 +208,9 @@ const ComponentCollection = ({ images }) => (
             </button>
             <Button />
           </ImageAccompaniment1>
+          <MobileReviewSliderButton>
+          &#10095;
+          </MobileReviewSliderButton>
         </ReviewContainer1>
         <ReviewContainer2>
           <GownImageScreen1 src={images[1]}></GownImageScreen1>
