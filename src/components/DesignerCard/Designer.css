@@ -3,16 +3,19 @@
 
 .designerContainer {
     display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .designerParagraph {
     font-family: 'Playfair Display', serif;
     font-size: 11px;
     line-height: 15px;
-    width: 161px;
+    width: 50%;
     height: 97px;
-    left: 177px;
-    top: 1159px;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -20,23 +23,22 @@
     margin: 10px;
 }
 
+.designerImage {
+    max-width: 100%;
+    width: 125px;
+    height: 133px;
+    display: block; 
+}
 
-@media screen and (min-width: 600px) {
+@media (min-width: 768px) {
     .designerParagraph {
-        padding: 30px;
-        margin: 50px;
-        width: 834.05px;
-        height: 109px;
-        left: 412.05px;
-        top: 1245px;
         font-size: 30px;
         line-height: 40px;
     }
     .designerImage {
-        width: 249.45px;
+        width: 250px;
         height: 266px;
-        left: 114px;
-        top: 1203px;
+        display: block;
     }
     .designerTitle{
         text-align: right;
