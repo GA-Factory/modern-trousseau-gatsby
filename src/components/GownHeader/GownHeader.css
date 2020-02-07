@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+.GownHead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #FAE5DC;
+    width: 170px;
+    height: 50px;
+}
+
+.GownFont {
+    width: 86px;
+    height: 26px;
+    left: 138px;
+    top: 122px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.GownSlider {
+    left: 3.85%;
+    right: 3.85%;
+    top: 15.35%;
+    bottom: 61.5%;
+}
+
+.underline {
+    width: 151px;
+    height: 0px;
+    border: 0.5px solid #000000;
+}
