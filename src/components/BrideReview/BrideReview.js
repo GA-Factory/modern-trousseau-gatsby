@@ -11,7 +11,7 @@ const BridalReviews = styled.div`
     height: 300px;
   }
 `;
-// 
+//
 const Container = styled.div`
   display: flex;
   height: 240px;
@@ -121,8 +121,8 @@ const ImageAccompaniment2 = styled.div`
   justify-content: space-around;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-      height: 240px;
-      width: 214.28px;
+    height: 240px;
+    width: 214.28px;
   }
 `;
 
@@ -159,8 +159,8 @@ const ScreenReview1 = styled.div`
     display: inline-block;
     margin-left: 16px;
     position: relative;
-    height: 240px;
     width: 189px;
+    border: 1px solid black;
   }
 `;
 
@@ -172,6 +172,7 @@ const ScreenReview2 = styled.div`
   position: relative;
   margin-left: 6px;
   width: 193px;
+  border: 1px solid black;
 `;
 
 const ScreenReview3 = styled.div`
@@ -182,6 +183,7 @@ const ScreenReview3 = styled.div`
   position: relative;
   margin-left: 6px;
   width: 175px;
+  border: 1px solid black;
 `;
 
 const ComponentCollection = ({ images }) => (
@@ -209,7 +211,7 @@ const ComponentCollection = ({ images }) => (
             >
               View Dress
             </button>
-            <Button/>
+            <Button />
           </ImageAccompaniment1>
         </ReviewContainer1>
         <ReviewContainer2>
@@ -223,7 +225,7 @@ const ComponentCollection = ({ images }) => (
               style={{
                 border: "1px solid black",
                 display: "block",
-                margin: "auto",
+                margin: "auto"
               }}
             >
               View Dress
