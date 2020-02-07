@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+// import "./Card.css";
 import Icons from "../Icons/FAIcon";
 import styled from "styled-components";
 
