@@ -4,9 +4,25 @@
     flex-direction: column;
 }
 
+.spacing-1{
+    margin-bottom: 30px;
+}
+
+.spacing-2{
+    margin-bottom: 29.2px;
+}
+
 @media only screen and (min-width: 600px){
     .footer{
         display: flex;
         flex-direction: row;
     }
+
+    .spacing-1{
+        margin-right: 244px;
+    } 
+
+    .spacing-2{
+        margin-right: 274px;
+    } 
 }
