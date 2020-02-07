@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "../Icons/FAIcon";
 import styled from "styled-components";
+import './Card.css'
 
 const CardContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
