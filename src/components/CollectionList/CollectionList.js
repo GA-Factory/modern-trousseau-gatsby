@@ -42,6 +42,11 @@ const Button = styled.div`
   height: 276px;
 `;
 
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const SlideImage = styled.img`
   height: 220px;
   width: 152px;
@@ -68,14 +73,14 @@ const Slider = ({ property }) => {
   return (
     <Slide id={`slide-${index}`}>
       <SlideContainer>
-        <div className="image-1">
+        <ImageContainer>
           <SlideImage src={imga} />
           <SlideText>{`${labela}`}</SlideText>
-        </div>
-        <div className="image-2">
+        </ImageContainer>
+        <ImageContainer>
           <SlideImage src={imgb} />
           <SlideText>{`${labelb}`}</SlideText>
-        </div>
+        </ImageContainer>
       </SlideContainer>
     </Slide>
   );
