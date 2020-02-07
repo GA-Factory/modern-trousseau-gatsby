@@ -6,14 +6,19 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   width: 375px;
+  justify-content: space-around;
+  background-color: rgb(246, 230, 222);
+  border: 1px solid red;
 `;
 
 const Slide = styled.div`
   height: 268px;
   width: 100%;
   margin-right: 0;
-  border-top: 4px solid rgb(246, 230, 222);
-  border-right: 195px solid rgb(246, 230, 222);
+  background-color: rgb(246, 230, 222);
+  /* border-top: 4px solid rgb(246, 230, 222);
+  border-right: 195px solid rgb(246, 230, 222); */
+  border: 1px solid green;
 `;
 
 const Title = styled.div``;
@@ -21,10 +26,12 @@ const Title = styled.div``;
 const SlideContainer = styled.div`
   display: flex;
   flex-direction: row;
+  /* justify-content: space-around */
   height: 268px;
-  width: 280px;
+  width: 100%;
   background-color: rgb(246, 230, 222);
-  margin-right: 0;
+  margin: 8px 0 0 15px;
+  border: 1px solid blue;
 `;
 
 const Button = styled.div`
@@ -48,6 +55,7 @@ const SlideText = styled.p`
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
+  border: 1px solid black;
 `;
 
 const ButtonIcon = styled.p`
