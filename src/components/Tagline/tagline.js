@@ -5,8 +5,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-around;
+  align-items: center;
   text-align: center;
+  width: 100%;
 `;
 
 const Headline = styled.h1`
@@ -37,12 +38,23 @@ const Slogan = styled.div`
   }
 `;
 
+const HR = styled.hr`
+  border: 0.5px solid #0f1f2f;
+  width: 90%;
+  margin-top: 20px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border: 1px solid #000000;
+    margin-top: 35px;
+  }
+`;
+
 const Tagline = props => {
   return (
     <>
       <Container>
         <Headline>{props.headline}</Headline>
         <Slogan>{props.slogan}</Slogan>
+        <HR />
       </Container>
     </>
   );
