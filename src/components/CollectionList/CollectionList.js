@@ -13,7 +13,7 @@ const Card = styled.div`
 
 const Slide = styled.div`
   height: 268px;
-  width: 100%;
+  width: 90%;
   margin-right: 0;
   background-color: rgb(246, 230, 222);
   /* border-top: 4px solid rgb(246, 230, 222);
@@ -30,7 +30,7 @@ const SlideContainer = styled.div`
   height: 268px;
   width: 100%;
   background-color: rgb(246, 230, 222);
-  margin: 8px 0 0 15px;
+  margin: 8px 0 0 5px;
   border: 1px solid blue;
 `;
 
@@ -59,7 +59,7 @@ const SlideText = styled.p`
 `;
 
 const ButtonIcon = styled.p`
-  margin-top: 100px;
+  margin-top: 110px;
   border: 1px solid black;
 `;
 
