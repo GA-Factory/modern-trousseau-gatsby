@@ -12,72 +12,80 @@ import imageFile6 from "../../assets/images/Trending-Now-2.jpeg";
 import imageFile7 from "../../assets/images/Classics-1.jpeg";
 import imageFile8 from "../../assets/images/Classics-2.jpeg";
 
+// const slideData = [
+//   {
+//     title: "Fall 2020 Collection",
+//     imga: imageFile1,
+//     imgb: imageFile2,
+//     labela: "LUCA",
+//     labelb: "VIDA",
+//     index: 0
+//   },
+//   {
+//     title: "Fall 2020 Collection",
+//     imga: imageFile3,
+//     imgb: imageFile4,
+//     labela: "AlWAYS",
+//     labelb: "BELIZE",
+//     index: 1
+//   },
+//   {
+//     title: "Fall 2020 Collection",
+//     imga: imageFile5,
+//     imgb: imageFile6,
+//     labela: "ALICE",
+//     labelb: "EVELYN",
+//     index: 2
+//   },
+//   {
+//     title: "Fall 2020 Collection",
+//     imga: imageFile7,
+//     imgb: imageFile8,
+//     labela: "AINSLEY",
+//     labelb: "ANNIE",
+//     index: 3
+//   }
+// ];
+
 const slideData = [
   {
-    title: "Fall 2020 Collection",
-    imga: imageFile1,
-    imgb: imageFile2,
-    labela: "LUCA",
-    labelb: "VIDA",
-    index: 0
-  },
-  {
-    title: "Fall 2020 Collection",
-    imga: imageFile3,
-    imgb: imageFile4,
-    labela: "AlWAYS",
-    labelb: "BELIZE",
-    index: 1
-  },
-  {
-    title: "Fall 2020 Collection",
-    imga: imageFile5,
-    imgb: imageFile6,
-    labela: "ALICE",
-    labelb: "EVELYN",
-    index: 2
-  },
-  {
-    title: "Fall 2020 Collection",
-    imga: imageFile7,
-    imgb: imageFile8,
-    labela: "AINSLEY",
-    labelb: "ANNIE",
-    index: 3
-  }
-];
-
-const slidedata1 = [
-  {
   image: imageFile1,
+  label: "LUCA",
   index: 1
 },
   {
   image: imageFile2,
+  label: "VIDA",
   index: 2
 },
   {
   image: imageFile3,
+  label: "ALWAYS",
   index: 3
 },
   {
   image: imageFile4,
+  label: "BELIZE",
   index: 4
 },
   {
   image: imageFile5,
+  label: "ALICE",
   index: 5
 },
   {
   image: imageFile6,
+  label: "EVELYN",
   index: 6
 },
   {
   image: imageFile7,
+  label: "AINSLEY",
   index: 7
 },
   {
   image: imageFile8,
+  label: "ANNIE",
   index: 8
 }
 ]

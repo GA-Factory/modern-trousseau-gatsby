@@ -12,27 +12,14 @@ const Card = styled.div`
 `;
 
 const Slide = styled.div`
+  display: flex;
   height: 268px;
-  width: 90%;
-  margin-right: 0;
+  padding-top: 8px;
   background-color: rgb(246, 230, 222);
-  /* border-top: 4px solid rgb(246, 230, 222);
-  border-right: 195px solid rgb(246, 230, 222); */
   border: 1px solid green;
 `;
 
 const Title = styled.div``;
-
-const SlideContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-around */
-  height: 268px;
-  width: 100%;
-  background-color: rgb(246, 230, 222);
-  margin: 8px 0 0 5px;
-  border: 1px solid blue;
-`;
 
 const Button = styled.div`
   background-color: rgb(246, 230, 222);
@@ -45,7 +32,7 @@ const Button = styled.div`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 const SlideImage = styled.img`
   height: 220px;
@@ -69,19 +56,17 @@ const ButtonIcon = styled.p`
 `;
 
 const Slider = ({ property }) => {
-  const { title, imga, imgb, labela, labelb, index } = property;
+  const { image, label, index } = property;
   return (
     <Slide id={`slide-${index}`}>
-      <SlideContainer>
-        <ImageContainer>
-          <SlideImage src={imga} />
-          <SlideText>{`${labela}`}</SlideText>
-        </ImageContainer>
-        <ImageContainer>
-          <SlideImage src={imgb} />
-          <SlideText>{`${labelb}`}</SlideText>
-        </ImageContainer>
-      </SlideContainer>
+      <ImageContainer>
+        <SlideImage src={image} />
+        <SlideText>{`${label}`}</SlideText>
+      </ImageContainer>
+      <ImageContainer>
+        <SlideImage src={image} />
+        <SlideText>{`${label}`}</SlideText>
+      </ImageContainer>
     </Slide>
   );
 };
@@ -133,9 +118,7 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
-          {/* <div className="slide"> */}
-            <Slider property={property} />
-          {/* </div> */}
+          <Slider property={property} />
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
