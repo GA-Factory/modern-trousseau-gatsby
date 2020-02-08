@@ -14,46 +14,46 @@ import imageFile8 from "../../assets/images/Classics-2.jpeg";
 
 const slideData = [
   {
-  image: imageFile1,
-  label: "LUCA",
-  index: 0
-},
+    image: imageFile1,
+    label: "LUCA",
+    index: 0
+  },
   {
-  image: imageFile2,
-  label: "VIDA",
-  index: 1
-},
+    image: imageFile2,
+    label: "VIDA",
+    index: 1
+  },
   {
-  image: imageFile3,
-  label: "ALWAYS",
-  index: 2
-},
+    image: imageFile3,
+    label: "ALWAYS",
+    index: 2
+  },
   {
-  image: imageFile4,
-  label: "BELIZE",
-  index: 3
-},
+    image: imageFile4,
+    label: "BELIZE",
+    index: 3
+  },
   {
-  image: imageFile5,
-  label: "ALICE",
-  index: 4
-},
+    image: imageFile5,
+    label: "ALICE",
+    index: 4
+  },
   {
-  image: imageFile6,
-  label: "EVELYN",
-  index: 5
-},
+    image: imageFile6,
+    label: "EVELYN",
+    index: 5
+  },
   {
-  image: imageFile7,
-  label: "AINSLEY",
-  index: 6
-},
+    image: imageFile7,
+    label: "AINSLEY",
+    index: 6
+  },
   {
-  image: imageFile8,
-  label: "ANNIE",
-  index: 7
-}
-]
+    image: imageFile8,
+    label: "ANNIE",
+    index: 7
+  }
+];
 
 storiesOf("Collection List", module).add("Collection List", () => (
   <CollectionList slideData={slideData} title="Classics"></CollectionList>

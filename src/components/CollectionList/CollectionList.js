@@ -3,34 +3,30 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 
-
 const MobileCard = styled.div`
   display: flex;
   width: 375px;
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
-  /* border: 1px solid red; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
 `;
 
 const DesktopCard = styled.div`
-    display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    border: 1px solid blueviolet;
     width: 100%;
-    height: 421px;
+    height: 440px;
   }
 `;
 
 const Slide = styled.div`
   display: flex;
   height: 268px;
-  padding-top: 8px;
+  padding-top: 12px;
   background-color: ${props => props.theme.colors.primaryPink};
-  /* border: 1px solid green; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
     display: none;
@@ -41,6 +37,10 @@ const Title = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
+    font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
   }
 `;
 
@@ -80,14 +80,12 @@ const SlideText = styled.p`
   font-style: ${props => props.theme.fontStyles.Body1MobileText.fontStyle};
   font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
   font-size: 14px;
-  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
   }
 `;
 
 const ButtonIcon = styled.p`
   margin-top: 110px;
-  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -98,17 +96,23 @@ const DesktopImage = styled.img`
   height: 421px;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    border: 1px solid black;
+    display: flex;
+    font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
+    font-size: ${props => props.theme.fontStyles.Body1DesktopText.fontSize};
   }
 `;
 
 const DesktopText = styled.p`
-text-align: center;
-`
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 800;
+  font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
+  font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
+`;
 
 const DesktopImageContainer = styled.div`
-`
+  height: 440px;
+`;
 
 const SliderA = ({ propertyA }) => {
   const { image, label, index } = propertyA;
@@ -210,7 +214,6 @@ class CollectionList extends React.Component {
   };
 
   render() {
-    
     const { propertyA, propertyB } = this.state;
     return (
       <div>
@@ -227,16 +230,16 @@ class CollectionList extends React.Component {
         <Title>Fall 2020 Collection</Title>
         <DesktopCard>
           <DesktopImageContainer>
-          <DesktopImage src={this.state.properties[0].image}></DesktopImage>
-          <DesktopText>{this.state.properties[0].label}</DesktopText>
+            <DesktopImage src={this.state.properties[0].image}></DesktopImage>
+            <DesktopText>{this.state.properties[0].label}</DesktopText>
           </DesktopImageContainer>
           <DesktopImageContainer>
-          <DesktopImage src={this.state.properties[1].image}></DesktopImage>
-          <DesktopText>{this.state.properties[1].label}</DesktopText>
+            <DesktopImage src={this.state.properties[1].image}></DesktopImage>
+            <DesktopText>{this.state.properties[1].label}</DesktopText>
           </DesktopImageContainer>
           <DesktopImageContainer>
-          <DesktopImage src={this.state.properties[2].image}></DesktopImage>
-          <DesktopText>{this.state.properties[2].label}</DesktopText>
+            <DesktopImage src={this.state.properties[2].image}></DesktopImage>
+            <DesktopText>{this.state.properties[2].label}</DesktopText>
           </DesktopImageContainer>
         </DesktopCard>
       </div>
