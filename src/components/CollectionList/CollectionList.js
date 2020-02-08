@@ -9,7 +9,7 @@ const MobileCard = styled.div`
   width: 375px;
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
-  border: 1px solid red;
+  /* border: 1px solid red; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -30,7 +30,7 @@ const Slide = styled.div`
   height: 268px;
   padding-top: 8px;
   background-color: ${props => props.theme.colors.primaryPink};
-  border: 1px solid green;
+  /* border: 1px solid green; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
     display: none;
@@ -80,14 +80,14 @@ const SlideText = styled.p`
   font-style: ${props => props.theme.fontStyles.Body1MobileText.fontStyle};
   font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
   font-size: 14px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
   }
 `;
 
 const ButtonIcon = styled.p`
   margin-top: 110px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
