@@ -51,42 +51,42 @@ const slideData = [
   {
   image: imageFile1,
   label: "LUCA",
-  index: 1
+  index: 0
 },
   {
   image: imageFile2,
   label: "VIDA",
-  index: 2
+  index: 1
 },
   {
   image: imageFile3,
   label: "ALWAYS",
-  index: 3
+  index: 2
 },
   {
   image: imageFile4,
   label: "BELIZE",
-  index: 4
+  index: 3
 },
   {
   image: imageFile5,
   label: "ALICE",
-  index: 5
+  index: 4
 },
   {
   image: imageFile6,
   label: "EVELYN",
-  index: 6
+  index: 5
 },
   {
   image: imageFile7,
   label: "AINSLEY",
-  index: 7
+  index: 6
 },
   {
   image: imageFile8,
   label: "ANNIE",
-  index: 8
+  index: 7
 }
 ]
 
