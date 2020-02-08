@@ -18,8 +18,9 @@ const MobileCard = styled.div`
 const DesktopCard = styled.div`
     display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
     border: 1px solid blueviolet;
-    width: 300px;
+    width: 100%;
     height: 500px;
   }
 `;
@@ -97,6 +98,7 @@ const Image1 = styled.img`
   height: 421px;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
     border: 1px solid black;
   }
 `;
@@ -106,6 +108,7 @@ const Image2 = styled.img`
   height: 421px;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
     border: 1px solid black;
   }
 `;
@@ -115,6 +118,7 @@ const Image3 = styled.img`
   height: 421px;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
     border: 1px solid black;
   }
 `;
@@ -147,6 +151,7 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      properties: this.props.slideData,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1]
     };
@@ -232,11 +237,11 @@ class CollectionList extends React.Component {
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
+        <Title>{}}</Title>
         <DesktopCard>
-          <Title></Title>
-          <Image1 src=""></Image1>
-          <Image2 src=""></Image2>
-          <Image3 src=""></Image3>
+          <Image1 src={this.state.properties[0].image}></Image1>
+          <Image2 src={this.state.properties[1].image}></Image2>
+          <Image3 src={this.state.properties[2].image}></Image3>
         </DesktopCard>
       </div>
     );
