@@ -18,10 +18,10 @@ const MobileCard = styled.div`
 const DesktopCard = styled.div`
     display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
+    display: flex;
     border: 1px solid blueviolet;
     width: 100%;
-    height: 500px;
+    height: 421px;
   }
 `;
 
@@ -93,7 +93,7 @@ const ButtonIcon = styled.p`
   }
 `;
 
-const Image1 = styled.img`
+const DesktopImage = styled.img`
   width: 307px;
   height: 421px;
   display: none;
@@ -103,25 +103,12 @@ const Image1 = styled.img`
   }
 `;
 
-const Image2 = styled.img`
-  width: 307px;
-  height: 421px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    border: 1px solid black;
-  }
-`;
+const DesktopText = styled.p`
+text-align: center;
+`
 
-const Image3 = styled.img`
-  width: 307px;
-  height: 421px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    border: 1px solid black;
-  }
-`;
+const DesktopImageContainer = styled.div`
+`
 
 const SliderA = ({ propertyA }) => {
   const { image, label, index } = propertyA;
@@ -237,11 +224,20 @@ class CollectionList extends React.Component {
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
-        <Title>{}}</Title>
+        <Title>Fall 2020 Collection</Title>
         <DesktopCard>
-          <Image1 src={this.state.properties[0].image}></Image1>
-          <Image2 src={this.state.properties[1].image}></Image2>
-          <Image3 src={this.state.properties[2].image}></Image3>
+          <DesktopImageContainer>
+          <DesktopImage src={this.state.properties[0].image}></DesktopImage>
+          <DesktopText>{this.state.properties[0].label}</DesktopText>
+          </DesktopImageContainer>
+          <DesktopImageContainer>
+          <DesktopImage src={this.state.properties[1].image}></DesktopImage>
+          <DesktopText>{this.state.properties[1].label}</DesktopText>
+          </DesktopImageContainer>
+          <DesktopImageContainer>
+          <DesktopImage src={this.state.properties[2].image}></DesktopImage>
+          <DesktopText>{this.state.properties[2].label}</DesktopText>
+          </DesktopImageContainer>
         </DesktopCard>
       </div>
     );
