@@ -55,14 +55,38 @@ const ButtonIcon = styled.p`
   border: 1px solid black;
 `;
 
-const Slider = ({ property }) => {
-  const { image, label, index } = property;
+// const Slider = ({ property }) => {
+//   const { image, label, index } = property;
+//   return (
+//     <Slide id={`slide-${index}`}>
+//       <ImageContainer>
+//         <SlideImage src={image} />
+//         <SlideText>{`${label}`}</SlideText>
+//       </ImageContainer>
+//       <ImageContainer>
+//         <SlideImage src={image} />
+//         <SlideText>{`${label}`}</SlideText>
+//       </ImageContainer>
+//     </Slide>
+//   );
+// };
+
+const SliderA = ({ propertyA }) => {
+  const { image, label, index } = propertyA;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
         <SlideText>{`${label}`}</SlideText>
       </ImageContainer>
+    </Slide>
+  );
+};
+
+const SliderB = ({ propertyB }) => {
+  const { image, label, index } = propertyB;
+  return (
+    <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
         <SlideText>{`${label}`}</SlideText>
@@ -75,50 +99,108 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      properties: this.props.slideData,
-      property: this.props.slideData[0]
+      // properties: this.props.slideData,
+      // property: this.props.slideData[0],
+      propertyA: this.props.slideData[0],
+      propertyB: this.props.slideData[1]
     };
   }
 
   prevProperty = () => {
-    if (this.state.property.index >= 0) {
-      const newIndex = this.state.property.index - 1;
+    if (this.state.propertyA.index >= 0 && this.state.propertyB >= 0) {
+      const newIndexA = this.state.propertyA.index - 1;
+      const newIndexB = this.state.propertyB.index - 1;
       this.setState({
-        property: this.props.slideData[newIndex]
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB]
       });
     }
-    if (this.state.property.index == 0) {
-      const newIndex = this.props.slideData.length - 1;
+    if (this.state.propertyA.index == 0 && this.state.propertyB.index >= 0) {
+      const newIndexA = this.props.slideData.length - 1;
+      const newIndexB = this.props.slideData.index - 1;
       this.setState({
-        property: this.props.slideData[newIndex]
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB]
+      });
+    }
+    if (this.state.propertyA.index >= 0 && this.state.propertyB.index == 0) {
+      const newIndexA = this.props.slideData.index - 1;
+      const newIndexB = this.props.slideData.length - 1;
+      this.setState({
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB]
       });
     }
   };
 
+  // prevProperty = () => {
+  //   if (this.state.property.index >= 0) {
+  //     const newIndex = this.state.property.index - 1;
+  //     this.setState({
+  //       property: this.props.slideData[newIndex]
+  //     });
+  //   }
+  //   if (this.state.property.index == 0) {
+  //     const newIndex = this.props.slideData.length - 1;
+  //     this.setState({
+  //       property: this.props.slideData[newIndex]
+  //     });
+  //   }
+  // };
+
+  // nextProperty = () => {
+  //   if (this.state.property.index >= 0) {
+  //     const newIndex = this.state.property.index + 1;
+  //     this.setState({
+  //       property: this.props.slideData[newIndex]
+  //     });
+  //   }
+  //   if (this.state.property.index == this.props.slideData.length - 1) {
+  //     const newIndex = 0;
+  //     this.setState({
+  //       property: this.props.slideData[newIndex]
+  //     });
+  //   }
+  // };
+
   nextProperty = () => {
-    if (this.state.property.index >= 0) {
-      const newIndex = this.state.property.index + 1;
+    if (this.state.propertyA.index >= 0 && this.state.propertyB.index >= 0) {
+      const newIndexA = this.state.propertyA.index + 1;
+      const newIndexB = this.state.propertyB.index + 1;
       this.setState({
-        property: this.props.slideData[newIndex]
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB]
       });
     }
-    if (this.state.property.index == this.props.slideData.length - 1) {
-      const newIndex = 0;
+    if (this.state.propertyB.index == this.props.slideData.length - 1 && this.state.propertyA.index >= 0) {
+      const newIndexA = this.state.propertyA.index + 1;
+      const newIndexB = 0;
       this.setState({
-        property: this.props.slideData[newIndex]
+        property: this.props.slideData[newIndexA],
+        property: this.props.slideData[newIndexB]
+      });
+    }
+    if (this.state.propertyA.index == this.props.slideData.length - 1 && this.state.propertyB.index >= 0) {
+      const newIndexA = 0;
+      const newIndexB = this.state.propertyB.index + 1;
+      this.setState({
+        property: this.props.slideData[newIndexA],
+        property: this.props.slideData[newIndexB]
       });
     }
   };
 
   render() {
-    const { properties, property } = this.state;
+    const { propertyA, propertyB } = this.state;
     return (
       <div>
         <Card>
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
-          <Slider property={property} />
+          {/* <Slider property={property} /> */}
+        <SliderA propertyA={propertyA}/>
+        <SliderB propertyB={propertyB}/>
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
