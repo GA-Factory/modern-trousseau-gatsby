@@ -7,7 +7,7 @@ const Card = styled.div`
   display: flex;
   width: 375px;
   justify-content: space-around;
-  background-color: rgb(246, 230, 222);
+  background-color: ${props => props.theme.colors.primaryPink};
   border: 1px solid red;
 `;
 
@@ -15,14 +15,14 @@ const Slide = styled.div`
   display: flex;
   height: 268px;
   padding-top: 8px;
-  background-color: rgb(246, 230, 222);
+  background-color: ${props => props.theme.colors.primaryPink};
   border: 1px solid green;
 `;
 
 const Title = styled.div``;
 
 const Button = styled.div`
-  background-color: rgb(246, 230, 222);
+  background-color: ${props => props.theme.colors.primaryPink};
   border: 0;
   margin: 0;
   font-size: 20px;
@@ -44,9 +44,10 @@ const SlideImage = styled.img`
 const SlideText = styled.p`
   text-align: center;
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: bold;
+  font-family: ${props => props.theme.fontStyles.Body1MobileText.fontFamily};
+  font-style: ${props => props.theme.fontStyles.Body1MobileText.fontStyle};
+  font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
+  font-size: 14px;
   border: 1px solid black;
 `;
 
