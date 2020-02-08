@@ -55,22 +55,6 @@ const ButtonIcon = styled.p`
   border: 1px solid black;
 `;
 
-// const Slider = ({ property }) => {
-//   const { image, label, index } = property;
-//   return (
-//     <Slide id={`slide-${index}`}>
-//       <ImageContainer>
-//         <SlideImage src={image} />
-//         <SlideText>{`${label}`}</SlideText>
-//       </ImageContainer>
-//       <ImageContainer>
-//         <SlideImage src={image} />
-//         <SlideText>{`${label}`}</SlideText>
-//       </ImageContainer>
-//     </Slide>
-//   );
-// };
-
 const SliderA = ({ propertyA }) => {
   const { image, label, index } = propertyA;
   return (
@@ -99,8 +83,6 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // properties: this.props.slideData,
-      // property: this.props.slideData[0],
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1]
     };
@@ -134,36 +116,6 @@ class CollectionList extends React.Component {
       });
     }
   };
-
-  // prevProperty = () => {
-  //   if (this.state.property.index >= 0) {
-  //     const newIndex = this.state.property.index - 1;
-  //     this.setState({
-  //       property: this.props.slideData[newIndex]
-  //     });
-  //   }
-  //   if (this.state.property.index == 0) {
-  //     const newIndex = this.props.slideData.length - 1;
-  //     this.setState({
-  //       property: this.props.slideData[newIndex]
-  //     });
-  //   }
-  // };
-
-  // nextProperty = () => {
-  //   if (this.state.property.index >= 0) {
-  //     const newIndex = this.state.property.index + 1;
-  //     this.setState({
-  //       property: this.props.slideData[newIndex]
-  //     });
-  //   }
-  //   if (this.state.property.index == this.props.slideData.length - 1) {
-  //     const newIndex = 0;
-  //     this.setState({
-  //       property: this.props.slideData[newIndex]
-  //     });
-  //   }
-  // };
 
   nextProperty = () => {
     if (
@@ -211,7 +163,6 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
-          {/* <Slider property={property} /> */}
           <SliderA propertyA={propertyA} />
           <SliderB propertyB={propertyB} />
           <Button onClick={() => this.nextProperty()}>
