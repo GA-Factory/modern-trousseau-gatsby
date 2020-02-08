@@ -186,8 +186,6 @@ class CollectionList extends React.Component {
         propertyA: this.props.slideData[newIndexA],
         propertyB: this.props.slideData[newIndexB]
       });
-      console.log(this.state.propertyA.index);
-      console.log(this.state.propertyB.index);
     }
     if (
       this.state.propertyA.index != this.props.slideData.length - 1 &&
