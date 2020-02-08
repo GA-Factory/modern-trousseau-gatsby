@@ -107,10 +107,16 @@ class CollectionList extends React.Component {
   }
 
   prevProperty = () => {
-    if (this.state.propertyA.index >= 0 && this.state.propertyB >= 0) {
-      console.log(this.state.propertyA.index);
-      console.log(this.state.propertyB.index);
+    if (this.state.propertyA.index > 0 && this.state.propertyB.index > 0) {
       const newIndexA = this.state.propertyA.index - 1;
+      const newIndexB = this.state.propertyB.index - 1;
+      this.setState({
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB]
+      });
+    }
+    if (this.state.propertyA.index == 0 && this.state.propertyB != 0) {
+      const newIndexA = this.props.slideData.length - 1;
       const newIndexB = this.state.propertyB.index - 1;
       this.setState({
         propertyA: this.props.slideData[newIndexA],
@@ -119,16 +125,8 @@ class CollectionList extends React.Component {
       console.log(this.state.propertyA.index);
       console.log(this.state.propertyB.index);
     }
-    if (this.state.propertyA.index == 0 && this.state.propertyB.index >= 0) {
-      const newIndexA = this.props.slideData.length - 1;
-      const newIndexB = this.props.slideData.index - 1;
-      this.setState({
-        propertyA: this.props.slideData[newIndexA],
-        propertyB: this.props.slideData[newIndexB]
-      });
-    }
-    if (this.state.propertyA.index >= 0 && this.state.propertyB.index == 0) {
-      const newIndexA = this.props.slideData.index - 1;
+    if (this.state.propertyA.index != 0 && this.state.propertyB.index == 0) {
+      const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.props.slideData.length - 1;
       this.setState({
         propertyA: this.props.slideData[newIndexA],
