@@ -4,8 +4,6 @@ import { action } from '@storybook/addon-actions';
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/global/GlobalStyle';
 
-import variables from '../src/styles/styled-components';
-
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
