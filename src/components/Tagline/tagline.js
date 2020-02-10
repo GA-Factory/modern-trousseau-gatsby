@@ -25,7 +25,7 @@ const Headline = styled.h1`
 `;
 
 const Slogan = styled.div`
-  font-family: 'Raleway' !important;
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
