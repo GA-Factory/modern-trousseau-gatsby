@@ -95,6 +95,9 @@ const SearchMenu = styled.div`
   }
 `;
 
+const SearchMenuItems = styled.p`
+`
+
 const SearchMenuContainer = styled.div`
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
@@ -160,10 +163,10 @@ const GownsPage = () => (
     <NavMenu></NavMenu>
     <SearchMenuContainer>
     <SearchMenu>
-      <p>Search by Category</p>
-      <p>Search by Silhouette</p>
-      <p>Search by Details</p>
-      <p>View Collection</p>
+      <SearchMenuItems>Search by Category</SearchMenuItems>
+      <SearchMenuItems>Search by Silhouette</SearchMenuItems>
+      <SearchMenuItems>Search by Details</SearchMenuItems>
+      <SearchMenuItems>View Collection</SearchMenuItems>
     </SearchMenu>
     </SearchMenuContainer>
     <CollectionsContainer>
