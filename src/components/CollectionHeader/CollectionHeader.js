@@ -9,6 +9,12 @@ import "../CollectionHeader/CollectionHeader.css"
 library.add(faArrowLeft)
 let icon = (faArrowLeft)
 
+const collectionHeader = "Spring 2020 Collection"
+
+const tempQuoteText = "2020 has me thinking, what isn't possible? ...brides will notice a distinct flavor to my Spring 2020 collection."
+
+const designerFooter = "Callie Tein | Designer"
+
 
 class CollectionHeader extends React.Component {
     
@@ -20,12 +26,16 @@ class CollectionHeader extends React.Component {
           <a className="collection-arrow">
               <FontAwesomeIcon icon={icon}/>
           </a>
-          <h5 className="collection-title">Spring 2020 Collection</h5>    
-          </div>
+          <h5 className="collection-title">{collectionHeader}</h5>    
+          <div className="collection-blank"></div>
+        </div>
+        
           <div className="collection-content">
-              <p classname="collection-quote">"2020 has me thinking, what isn't <br/> possible? ...brides will notice a distinct flavor to<br/> my Spring 2020 collection."</p>
+              <p className="collection-quote">
+              {tempQuoteText}
+              </p>
               <p className="collection-footer">
-                  Callie Tein | Designer
+             {designerFooter}
               </p>
           </div>
           </div>
