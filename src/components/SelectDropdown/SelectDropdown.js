@@ -16,14 +16,19 @@
 // export default SelectDropdown;
 
 import React, { Component } from "react";
-import DropdownItem from "./DropdownItem";
+import { Link } from "gatsby";
+import styled from "styled-components";
+
+const DropdownItem = styled(Link)`
+  width: 100%;
+`;
 
 class SelectDropdown extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      id: null,
+      id: 0,
       title: this.props.title,
       list: this.props.option,
       active: false
@@ -31,26 +36,41 @@ class SelectDropdown extends Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
-    this.setState(prevState => {
-      this.active = !prevState.active;
-    });
-  }
+  // Toggles menu open/close state
+  toggle = () => {
+    this.setState(prevState => ({
+      active: !prevState.active
+    }));
+  };
 
   render() {
     console.log(this.state);
-    return (
-      <>
-        <p onClick={this.toggle}>{this.state.title}</p>
-        <ul title={this.title} onClick={this.toggle}>
-          {this.state.active === true &&
-            this.state.list.map(item => {
-              <DropdownItem name={item} />;
-            })}
-        </ul>
-      </>
-    );
+    const fullList = this.state.list.map(item, index => {
+      <li key={index}>{item}</li>;
+    });
+
+    return <div>{fullList}</div>;
   }
 }
 
 export default SelectDropdown;
+
+{
+  /* <p onClick={this.toggle}> {this.state.title}</p> */
+}
+
+// <DropdownItem to="/" />
+
+// {
+//     (this.state.active === true && console.log("True statement Firing!"),
+//     this.state.list.map(item => {
+//       // <DropdownItem to="/" key={Math.random(0, 100000)} name={item}>
+//       //   {item}
+//       //   <p>hello</p>
+//       // </DropdownItem>;
+
+//       {
+//         item;
+//       }
+//     }))
+//   }
