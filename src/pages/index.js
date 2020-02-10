@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../styles/fonts.css'
 
 import Layout from '../global/Layout';
 import Tagline from '../components/Tagline/tagline';
