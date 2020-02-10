@@ -14,7 +14,7 @@ const GownHeader = props => {
       <div className="text-icon-wrapper">
         <h5 className="GownFont">GOWNS</h5>
         <div className="GownSlider">
-        <FontAwesomeIcon icon={props.icon}/>
+          <FontAwesomeIcon icon={props.icon} />
         </div>
       </div>
       <div className="underline"></div>

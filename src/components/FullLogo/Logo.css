@@ -1,56 +1,56 @@
-.logo{
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    justify-content: center;
-    align-items: baseline;
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .logo-word-modern {
-    font-family: Raleway, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 44px;
-    letter-spacing: 0.1px;
-    color: #25282B;
-    margin: 0;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 44px;
+  letter-spacing: 0.1px;
+  color: #25282b;
+  margin: 0;
 }
 
 .logo-word-trousseau {
-    font-family: Playfair display;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 44px;
-    letter-spacing: 0.1px;
-    color: #25282B;
-    margin: 0 0 0 15px;
+  font-family: Playfair display;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: 0.1px;
+  color: #25282b;
+  margin: 0 0 0 15px;
 }
 
 .tagline {
-    font-family: Raleway, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 19px;
-    letter-spacing: 0.1px;
-    color: #25282B;
-    margin: auto;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  letter-spacing: 0.1px;
+  color: #25282b;
+  margin: auto;
 }
 
 .logo-tag {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .notag {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
-    .logo-word-modern {
-        font-size: 24px;
-    }
-    .logo-word-trousseau {
-        font-size: 24px;
-    }
+  .logo-word-modern {
+    font-size: 24px;
+  }
+  .logo-word-trousseau {
+    font-size: 24px;
+  }
 }

@@ -110,7 +110,7 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
-width: 100%;
+  width: 100%;
   height: 440px;
 `;
 
