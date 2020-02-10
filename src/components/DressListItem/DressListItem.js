@@ -13,26 +13,3 @@ export default () => (
     </div>
   </div>
 );
-
-// const DesktopCard = styled.div`
-//   display: none;
-//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-//     background-color: red;
-//   }
-// `;
-
-// const DressListItem = props => (
-//   <div>
-//     <div className="primary-pink">
-//       <div className="dress-list-item-container">
-//         <img src={props.image1} alt="image" />
-//       </div>
-
-//       <h5 className="dress-name">{props.dressname}</h5>
-//     </div>
-//   </div>
-// );
-
-// export default DressListItem;
-
-// ${props => props.theme.colors.primaryPink}
