@@ -23,6 +23,7 @@ class SelectDropdown extends Component {
     super(props);
 
     this.state = {
+      id: null,
       title: this.props.title,
       list: this.props.option,
       active: false
@@ -40,7 +41,7 @@ class SelectDropdown extends Component {
     console.log(this.state);
     return (
       <>
-        {this.state.title}
+        <p onClick={this.toggle}>{this.state.title}</p>
         <ul title={this.title} onClick={this.toggle}>
           {this.state.active === true &&
             this.state.list.map(item => {
