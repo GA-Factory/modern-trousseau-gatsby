@@ -5,6 +5,7 @@ import '../styles/fonts.css'
 import Layout from '../global/Layout';
 import Tagline from '../components/Tagline/tagline';
 import Footer from '../components/Footer/Footer';
+import Button from '../components/Button/Button'
 
 const Page = styled.div`
   width: 1440px;
