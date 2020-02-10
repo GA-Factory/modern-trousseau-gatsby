@@ -91,8 +91,8 @@ const ButtonIcon = styled.p`
 `;
 
 const DesktopImage = styled.img`
-  width: 307px;
-  height: 421px;
+  width: 100%;
+  height: 80%;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -110,6 +110,7 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
+width: 100%;
   height: 440px;
 `;
 
