@@ -73,15 +73,12 @@ const SlideImage = styled.img`
   }
 `;
 
-const SlideText = styled.p`
+const MobileSlideText = styled.p`
   text-align: center;
   margin: 10px 0 0 0;
-  font-family: ${props => props.theme.fontStyles.Body1MobileText.fontFamily};
-  font-style: ${props => props.theme.fontStyles.Body1MobileText.fontStyle};
+  font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
   font-size: 14px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  }
 `;
 
 const ButtonIcon = styled.p`
@@ -115,24 +112,24 @@ const DesktopImageContainer = styled.div`
 `;
 
 const SliderA = ({ propertyA }) => {
-  const { image, label, index } = propertyA;
+  const { image, mobileLabel, index } = propertyA;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
-        <SlideText>{`${label}`}</SlideText>
+        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
       </ImageContainer>
     </Slide>
   );
 };
 
 const SliderB = ({ propertyB }) => {
-  const { image, label, index } = propertyB;
+  const { image, mobileLabel, index } = propertyB;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
-        <SlideText>{`${label}`}</SlideText>
+        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
       </ImageContainer>
     </Slide>
   );
@@ -229,15 +226,15 @@ class CollectionList extends React.Component {
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
-            <DesktopText>{this.state.properties[0].label}</DesktopText>
+            <DesktopText>{this.state.properties[0].desktopLabel}</DesktopText>
           </DesktopImageContainer>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[1].image}></DesktopImage>
-            <DesktopText>{this.state.properties[1].label}</DesktopText>
+            <DesktopText>{this.state.properties[1].desktopLabel}</DesktopText>
           </DesktopImageContainer>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[2].image}></DesktopImage>
-            <DesktopText>{this.state.properties[2].label}</DesktopText>
+            <DesktopText>{this.state.properties[2].desktopLabel}</DesktopText>
           </DesktopImageContainer>
         </DesktopCard>
       </div>

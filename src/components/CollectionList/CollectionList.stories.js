@@ -15,42 +15,50 @@ import imageFile8 from "../../assets/images/Classics-2.jpeg";
 const slideData = [
   {
     image: imageFile1,
-    label: "LUCA",
+    mobileLabel: "LUCA",
+    desktopLabel: "Luca",
     index: 0
   },
   {
     image: imageFile2,
-    label: "VIDA",
+    mobileLabel: "VIDA",
+    desktopLabel: "Vida",
     index: 1
   },
   {
     image: imageFile3,
-    label: "ALWAYS",
+    mobileLabel: "ALWAYS",
+    desktopLabel: "Always",
     index: 2
   },
   {
     image: imageFile4,
-    label: "BELIZE",
+    mobileLabel: "BELIZE",
+    desktopLabel: "Belize",
     index: 3
   },
   {
     image: imageFile5,
-    label: "ALICE",
+    mobileLabel: "ALICE",
+    desktopLabel: "Alice",
     index: 4
   },
   {
     image: imageFile6,
-    label: "EVELYN",
+    mobileLabel: "EVELYN",
+    desktopLabel: "Evelyn",
     index: 5
   },
   {
     image: imageFile7,
-    label: "AINSLEY",
+    mobileLabel: "AINSLEY",
+    desktopLabel: "Ainsley",
     index: 6
   },
   {
     image: imageFile8,
-    label: "ANNIE",
+    mobileLabel: "ANNIE",
+    desktopLabel: "Annie",
     index: 7
   }
 ];
