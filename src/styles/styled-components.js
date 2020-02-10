@@ -31,38 +31,59 @@ const variables = {
     fontStyles: {
         h1Styles: {
             fontFamily: 'Playfair Display',
+<<<<<<< HEAD
             fontWeight: 'Bold', 
             fontStyle: 'Italic',
+=======
+            fontWeight: 'bold',
+            fontStyle: 'italic',
+>>>>>>> develop
             fontSize: 45,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         h2Styles: {
             fontFamily: 'Playfair Display',
+<<<<<<< HEAD
             fontWeight: 'Bold',
+=======
+            fontWeight: 'bold',
+>>>>>>> develop
             fontSize: 40,
             lineHeight: 'Auto',
             LetterSpacing: '0%',
         },
         h3Styles: {
             fontFamily: 'Raleway',
+<<<<<<< HEAD
             fontWeight: 'Medium',
+=======
+            fontWeight: 'medium',
+>>>>>>> develop
             fontSize: 24,
             lineHeight: 'Auto',
             LetterSpacing: '0%',
         },
         h4Styles: {
             fontFamily: 'Raleway',
+<<<<<<< HEAD
             fontWeight: 'ExtraBold',
+=======
+            fontWeight: 'bolder',
+>>>>>>> develop
             fontSize: 30,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         h5Styles: {
             fontFamily: 'Raleway',
+<<<<<<< HEAD
             fontWeight: 'Bold',
+=======
+            fontWeight: 'bold',
+>>>>>>> develop
             fontSize: 24,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         Body1MobileText: {
