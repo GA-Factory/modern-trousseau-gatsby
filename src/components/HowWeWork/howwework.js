@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: ${props => props.theme.fontStyles.h1Styles.fontFamily};
+  font-family: 'Playfair Display', serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -26,7 +26,7 @@ const Title = styled.div`
     font-size: 40px;
     line-height: 53px;
     color: #000000;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', serif;
   }
 `;
 
