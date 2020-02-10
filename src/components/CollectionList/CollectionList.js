@@ -17,7 +17,9 @@ const DesktopCard = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    width: 100%;
+    width: 67%;
+    margin-left: 16.5%;
+    margin-right: 16.5%;
     height: 440px;
   }
 `;

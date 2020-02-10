@@ -79,8 +79,10 @@ const CollectionTitle = styled.p`
 background-color: ${props => props.theme.colors.primaryPink};
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
    margin-top: 20px;
+   background-color: white;
+   margin-left: 16.5%
   }
-`;
+`
 
 const GownsPage = () => (
   <Layout>
