@@ -14,7 +14,7 @@ class CollectionHeader extends React.Component {
     
    render() {
        
-      return (
+      return ( 
          <div className="collection-card"> 
          <div className="collect-header">   
           <a className="collection-arrow">
@@ -35,5 +35,5 @@ class CollectionHeader extends React.Component {
 
 export default CollectionHeader;
 
-// {/* <FontAwesomeIcon icon = {['fas', 'arrow-left']} size = 'xs'/> */}
+
 

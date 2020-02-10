@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 @media only screen and (min-width: 600px){
 .collection-card{
 width: 375px;
-height: 180px;
+height: 200px;
 background-color: #FAE5DC;
 }
 .collect-header{
@@ -24,13 +26,12 @@ font-weight: none;
 
 .collection-title {
 height: 26;
-font-style: Raleway;
+font-family: 'Raleway', sans-serif;
 font-weight: bold;
-font-size: 22px;
+font-size: 20px;
 line-height: 21px;
 text-align: center;
 color: #000000;
-font-family: Raleway
 }
 .collection-content {
 text-align: center;
@@ -39,11 +40,12 @@ margin-top: 15px;
 .collection-quote p{   
 font-size: 15px;    
 text-align: center;
-font-family: Raleway;
+font-family: 'Raleway', sans-serif;
 }
 .collection-footer{
 margin-top: 17px;    
 text-align: center;    
 font-size: 15px;    
+font-family: 'Raleway', sans-serif;
 }
 }
