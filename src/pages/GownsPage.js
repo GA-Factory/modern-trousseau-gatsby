@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-// import Logo from '../components/FullLogo/Logo.js'
-// import CollectionList from '../components/CollectionList/CollectionList'
+import Logo from '../components/FullLogo/Logo'
+import Icons from '../components/Icons/FAIcon'
+import CollectionList from '../components/CollectionList/CollectionList'
 
 // import { slideData } from '../components/CollectionList/CollectionList.stories'
 import Layout from '../global/Layout';
@@ -61,8 +62,13 @@ import Layout from '../global/Layout';
 
 const GownsPage = () => (
     <Layout>
-        {/* <Logo></Logo> */}
-        {/* <CollectionList slideData={slideData}></CollectionList> */}
+        <Icons name={['fas', 'bars']} size = '7x' 
+        style={{
+            
+        }}
+            />
+        <Logo notag ></Logo>
+        {/* <CollectionList ></CollectionList> */}
       <h1>WORK IN PROGRESS</h1>
     </Layout>
   );
