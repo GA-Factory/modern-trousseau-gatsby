@@ -41,9 +41,9 @@ export default class ProductSingle extends React.Component {
     this.state = {
       appear: true,
       currentIndex: 0,
-      image: this.props.images.sliderImages.edges[0].node.childImageSharp.fluid,
-      key: this.props.images.sliderImages.edges[0].node.id,
-      lastIndex: this.props.images.sliderImages.edges.length
+      image: this.props.images.edges[0].node.childImageSharp.fluid,
+      key: this.props.images.edges[0].node.id,
+      lastIndex: this.props.images.edges.length
     };
   }
 
@@ -62,9 +62,8 @@ export default class ProductSingle extends React.Component {
     }
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.sliderImages.edges[newIndex].node.childImageSharp
-        .fluid,
-      key: this.props.images.sliderImages.edges[newIndex].node.id
+      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
+      key: this.props.images.edges[newIndex].node.id
     });
   };
 
@@ -78,9 +77,8 @@ export default class ProductSingle extends React.Component {
 
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.sliderImages.edges[newIndex].node.childImageSharp
-        .fluid,
-      key: this.props.images.sliderImages.edges[newIndex].node.id
+      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
+      key: this.props.images.edges[newIndex].node.id
     });
   };
 

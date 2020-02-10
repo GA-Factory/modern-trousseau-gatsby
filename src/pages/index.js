@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import Layout from "../global/Layout";
 // import Image from "../components/Image";
-import SEO from "../components/global/seo";
+import SEO from "../global/seo";
 import Slider from "../components/Slider/Slider";
 import PrimaryPink from "../styles/styled-components";
 
@@ -33,12 +33,12 @@ import PrimaryPink from "../styles/styled-components";
 //   text-transform: uppercase;
 // `;
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
     <h1>Slider Time</h1>
     <p>Try it out...</p>
-    <Slider images={props.data} />
+    <Slider images={props.data.sliderImages} />
   </Layout>
 );
 
