@@ -44,7 +44,7 @@ const IndexPage = props => (
       role="Designer"
     />
     {/* <BrideReview images={images} title="Fall 2020 Collection" /> */}
-    {/* <Footer /> */}
+    <Footer />
   </Layout>
 );
 

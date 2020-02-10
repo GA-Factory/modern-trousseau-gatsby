@@ -12,7 +12,7 @@ const SocialMedia = () => {
     return (
         <>
             <div class="con">
-            <h5>Stay Connected</h5><br />
+            <h5>Stay Connected</h5>
             <div class="some">
             <img  id="fb" src={facebook}></img>
             <img  id="in" src={instagram}></img>
