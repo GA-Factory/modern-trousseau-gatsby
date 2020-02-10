@@ -31,7 +31,8 @@ const variables = {
     fontStyles: {
         h1Styles: {
             fontFamily: 'Playfair Display',
-            fontWeight: 'Bold Italic',
+            fontWeight: 'Bold',
+            fontStyle: 'Italic',
             fontSize: 45,
             lineHeight: 'Auto',
             LetterSpacing: '0%',
