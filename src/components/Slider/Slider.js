@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "gatsby-image";
 import styled from "styled-components";
+import Dot from "./Dots";
 
 const SliderImageContainer = styled.div`
   align-items: center;
@@ -33,6 +34,14 @@ const ChevronRight = styled.svg`
   transition: 0.4s ease-in-out;
   width: 20px;
 `;
+const DotContainer = styled.section`
+  display: flex;
+  border: 1px solid black;
+  height: 30px;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 10px auto;
+`;
 
 export default class ProductSingle extends React.Component {
   constructor(props) {
@@ -43,7 +52,8 @@ export default class ProductSingle extends React.Component {
       currentIndex: 0,
       image: this.props.images.edges[0].node.childImageSharp.fluid,
       key: this.props.images.edges[0].node.id,
-      lastIndex: this.props.images.edges.length
+      lastIndex: this.props.images.edges.length,
+      imageArr: this.props.images.edges
     };
   }
 
@@ -111,6 +121,21 @@ export default class ProductSingle extends React.Component {
             </ChevronRight>
           )}
         </SliderImageContainer>
+        <DotContainer>
+          {console.log(this.state.imageArr)}
+          {this.state.imageArr.map((img, index) => {
+            <>
+              <div>This works</div>
+              <Dot
+                imageIndex={this.state.currentIndex}
+                dotIndex={index}
+                key={this.state.key}
+                activeImage={img}
+              />
+              ;
+            </>;
+          })}
+        </DotContainer>
       </>
     );
   }
