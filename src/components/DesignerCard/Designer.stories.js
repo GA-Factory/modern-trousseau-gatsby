@@ -1,9 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Designer from './Designer';
-import calliePhoto from './images/calliePhoto.png';
 
 storiesOf('Designer', module)
-    .add('Card', () => <Designer src={calliePhoto} alt="designer photo" 
-    text="The look on a bride’s face when she finds her dress – that is priceless and incredibly rewarding." name="Callie Tein" title="Designer" 
-    />);
+    .add('Card', () => (
+<Designer
+  src="https://via.placeholder.com/150"
+  alt="Placeholder"
+  text="Please insert a picture in the source and insert texts about the designer"
+  name="Placeholder"
+  title="Placeholder"
+/>
+));
