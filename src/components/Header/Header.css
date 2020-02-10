@@ -4,10 +4,6 @@
     display: none;
 }
 
-.loop{
-    width: 40px;
-}
-
 .header{
     background-color: #E5E5E5;
     height: 84px;
@@ -23,7 +19,7 @@
 
 
 
-@media only screen and (min-width: 800px){
+@media only screen and (max-width: 800px){
     .header{
         display: flex;
         flex-direction: column;

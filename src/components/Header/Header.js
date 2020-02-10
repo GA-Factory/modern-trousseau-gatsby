@@ -10,12 +10,12 @@ const Header = () => {
     return (
         <>
         <div className="header">
-        <div className="MobNav">
-        <Logo notag/>
-        </div>
-        <div className="Nav">
-        <NavMenu />
-        </div>
+            <div className="MobNav">
+                <Logo notag/>
+            </div>
+            <div className="Nav">
+                <NavMenu />
+            </div>
         </div>
         </>
   )
