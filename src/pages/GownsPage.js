@@ -10,10 +10,6 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { ThemeProvider } from "styled-components";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlidersH, faAlignJustify } from "@fortawesome/free-solid-svg-icons";
-
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
 import imageFile3 from "../assets/images/Spring-2020-1.jpeg";
