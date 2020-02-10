@@ -1,0 +1,15 @@
+.season-collection-text {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin: 5px;
+}
+.dress-list-item-container {
+  display: flex;
+  margin: 0px;
+  padding: 20px;
+  justify-content: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
