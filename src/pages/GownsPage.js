@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Logo from '../components/FullLogo/Logo'
-import Icons from '../components/Icons/FAIcon'
-import CollectionList from '../components/CollectionList/CollectionList'
-import Layout from '../global/Layout';
+import Logo from "../components/FullLogo/Logo";
+import Footer from "../components/Footer/Footer";
+import Icons from "../components/Icons/FAIcon";
+import CollectionList from "../components/CollectionList/CollectionList";
+import Layout from "../global/Layout";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -66,24 +67,28 @@ const cardData = [
   }
 ];
 
+const CollectionTitle = styled.p`
+background-color: ${props => props.theme.colors.primaryPink};
+`
+
 const GownsPage = () => (
-    <Layout>
-        <Icons name={['fas', 'bars']} size = '7x' 
-        style={{
-            
-        }}
-            />
-        <Logo notag ></Logo>
-        <p>Fall 2020 Collection</p>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-        <p>Spring 2020 Collection</p>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-        <p>Trending Now</p>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-        <p>Classics</p>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      <h1>WORK IN PROGRESS</h1>
-    </Layout>
-  );
-  
-  export default GownsPage;
+  <Layout>
+    <Icons name={["fas", "bars"]} size="7x" style={{}} />
+    <Logo notag></Logo>
+    <CollectionTitle>Fall 2020 Collection</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics"
+    style = {{
+
+    }}>
+    </CollectionList>
+    <CollectionTitle>Spring 2020 Collection</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics"></CollectionList>
+    <CollectionTitle>Trending Now</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics"></CollectionList>
+    <CollectionTitle>Classics</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics"></CollectionList>
+    <Footer></Footer>
+  </Layout>
+);
+
+export default GownsPage;

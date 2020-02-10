@@ -141,7 +141,7 @@ class CollectionList extends React.Component {
     this.state = {
       properties: this.props.slideData,
       propertyA: this.props.slideData[0],
-      propertyB: this.props.slideData[1],
+      propertyB: this.props.slideData[1]
     };
   }
 
