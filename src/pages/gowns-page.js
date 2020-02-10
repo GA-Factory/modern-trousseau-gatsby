@@ -6,7 +6,6 @@ import NavMenu from "../components/NavMenu/NavMenu";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
-import Icons from "../components/Icons/FAIcon";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 
@@ -84,7 +83,7 @@ const PageHeader = styled.div`
 const SearchMenu = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 60%;
   margin-left: 20%;
   margin-right: 25%;
   display: none;
