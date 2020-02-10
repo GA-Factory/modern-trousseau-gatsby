@@ -12,7 +12,7 @@ const NavBar = () => (
                 <div className="mobile-style">
                     {/* Replace with burger component when complete */}
                     <Link to="#">
-                        <Icons name={['fas', 'bars']} size="2x" />
+                        <Icons name={['fas', 'bars']} size="lg" />
                     </Link>
                 </div>
                 <div className="mobile-style">
@@ -21,7 +21,7 @@ const NavBar = () => (
                 </div>
                 <div className="mobile-style">
                     <Link to="#">
-                        <Icons name={['fas', 'search']} size="2x" />
+                        <Icons name={['fas', 'search']} size="lg" />
                     </Link>
                 </div>
                 <div className="desktop-style">
