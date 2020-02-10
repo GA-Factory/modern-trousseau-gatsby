@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 0;
 `;
 
 const Title = styled.div`

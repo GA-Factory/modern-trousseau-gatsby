@@ -16,34 +16,35 @@ import Footer from "../components/Footer/Footer";
 
 // const images = [imageFile1, imageFile2, imageFile3];
 
-
 const HeaderBox = styled.div`
   width: 100%;
   background-color: #ffffff;
   margin: 0 auto;
-  padding: 25px 0 0;
+  padding: 20px 0 0;
   display: flex;
   flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const IndexPage = props => (
   <Layout>
-      <PinkBox>
-      <Logo notag />
-      </PinkBox>
-      <Tagline
-        headline="Classic Couture. Custom Fit."
-        slogan="Where customization meets timeline meets budget."
-      />
-      <HowWeWork title="How We Work" />
-      <OwnerQuote
-        quote="The look on a bride's face when she finds her dress - that is priceless
+    <HeaderBox>
+      {/* <Logo notag /> */}
+    </HeaderBox>
+    <Tagline
+      headline="Classic Couture. Custom Fit."
+      slogan="Where customization meets timeline meets budget."
+    />
+    <HowWeWork title="How We Work" />
+    <OwnerQuote
+      quote="The look on a bride's face when she finds her dress - that is priceless
   and incredibly rewarding."
-        name="Callie Tein"
-        role="Designer"
-      />
-      {/* <BrideReview images={images} title="Fall 2020 Collection" /> */}
-      <Footer />
+      name="Callie Tein"
+      role="Designer"
+    />
+    {/* <BrideReview images={images} title="Fall 2020 Collection" /> */}
+    {/* <Footer /> */}
   </Layout>
 );
 

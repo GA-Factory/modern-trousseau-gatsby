@@ -8,9 +8,9 @@ const OwnerCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 38px;
+  padding: 20px;
   font-family: "Playfair Display";
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
 
   @media only screen and (min-width: 600px) {
@@ -34,8 +34,9 @@ const OwnerQuoteSection = styled.div`
   color: ${props => props.theme.colors.nearBlack};
   font-size: 20px;
   line-height: 25px;
-  padding: 25px auto;
+  padding: 0;
   max-width: 90%;
+  text-align: center;
   align-items: center;
 
   @media only screen and (min-width: 600px) {
