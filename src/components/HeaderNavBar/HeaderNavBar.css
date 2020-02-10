@@ -10,4 +10,19 @@
     width: 100vw;
     display: flex;
     flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav-li {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-flow: row;
 }

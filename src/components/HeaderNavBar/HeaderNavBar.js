@@ -8,19 +8,25 @@ const HeaderNavBar = () => (
         <div>
             <nav className="header-nav">
                 <ul>
-                    <li>
+                    <li className="header-nav-li">
                         <p>OUR GOWNS</p>
-                        <span className="dots">&#9679;</span>
                     </li>
-                    <li>
+                    <li className="header-nav-li">
+                        <span className="header-nav-dots">&#183;</span>
+                    </li>
+                    <li className="header-nav-li">
                         <p>VISIT US</p>
-                        <span className="dots">&#9679;</span>
                     </li>
-                    <li>
+                    <li className="header-nav-li">
+                        <span className="header-nav-dots">&#183;</span>
+                    </li>
+                    <li className="header-nav-li">
                         <p>BOOK AN APPOINTMENT</p>
-                        <span className="dots">&#9679;</span>
                     </li>
-                    <li>
+                    <li className="header-nav-li">
+                        <span className="header-nav-dots">&#183;</span>
+                    </li>
+                    <li className="header-nav-li">
                         <p>ABOUT US</p>
                     </li>
                 </ul>
