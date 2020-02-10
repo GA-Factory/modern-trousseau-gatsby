@@ -1,7 +1,6 @@
 import React from "react";
-import Icons from "../Icons/FAIcon";
 import styled from "styled-components";
-import './Card.css'
+import Dress from "../../../assets/images/Tassel.svg"
 
 const CardContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
@@ -18,7 +17,7 @@ const CardContainer = styled.div`
   padding: 14px 20px;
 `;
 
-const CardTitle = styled.div`
+const CardTitle = styled.span`
   font-weight: 600;
   margin-bottom: 5px;
 `;
@@ -38,10 +37,14 @@ const CardParagraph = styled.div`
   color: ${props => props.theme.colors.nearBlack};
 `;
 
-const Card = props => {
+const Image = styled.img`
+  display: block;
+`;
+
+const DressCard = props => {
   return (
     <CardContainer>
-      <Icons name={props.icon} size="3x" />
+      <Image src={Dress} alt="Dress Icon" />
       <CardParagraph>
         <CardTitle>{props.title}</CardTitle>
         {props.paragraph}
@@ -50,4 +53,4 @@ const Card = props => {
   );
 };
 
-export default Card;
+export default DressCard;
