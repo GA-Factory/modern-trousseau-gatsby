@@ -4,10 +4,15 @@ import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenu from "../components/NavMenu/NavMenu";
 import Footer from "../components/Footer/Footer";
+import GownHeader from "../components/GownHeader/GownHeader";
 import Icons from "../components/Icons/FAIcon";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { ThemeProvider } from "styled-components";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSlidersH, faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -17,6 +22,7 @@ import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
 import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
 import imageFile7 from "../assets/images/Classics-1.jpeg";
 import imageFile8 from "../assets/images/Classics-2.jpeg";
+import { faCentercode } from "@fortawesome/free-brands-svg-icons";
 
 const cardData = [
   {
@@ -159,7 +165,8 @@ const GownsPage = () => (
     </PageHeader>
     <LogoContainer>
     <Logo notag></Logo>
-    </LogoContainer>    
+    </LogoContainer>
+    <GownHeader/> 
     <NavMenu></NavMenu>
     <SearchMenuContainer>
     <SearchMenu>
