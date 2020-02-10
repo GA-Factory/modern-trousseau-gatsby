@@ -16,13 +16,15 @@
     .footer{
         display: flex;
         flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
     }
 
-    .spacing-1{
+    /* .spacing-1{
         margin-right: 244px;
     } 
 
     .spacing-2{
         margin-right: 274px;
-    } 
+    }  */
 }
