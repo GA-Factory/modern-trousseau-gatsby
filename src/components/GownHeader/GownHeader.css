@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
 .GownHead {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background: #FAE5DC;
     width: 170px;
     height: 50px;
+    padding: 10px;
 }
 
 .GownFont {
@@ -16,22 +17,18 @@
     left: 138px;
     top: 122px;
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 22px;
     line-height: 26px;
     color: #000000;
 }
 
 .GownSlider {
-    left: 3.85%;
-    right: 3.85%;
-    top: 15.35%;
-    bottom: 61.5%;
+    padding-left: 10px;
 }
 
 .underline {
     width: 151px;
     height: 0px;
-    border: 0.5px solid #000000;
+    border: 0.1px solid #000000;
 }
