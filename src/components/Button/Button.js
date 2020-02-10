@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Button = styled.button`
   background-color: ${props => props.theme.colors.primaryPink};
   color: ${props => props.color};
+  font-family: 'Raleway';
   font-family: ${props => props.family};
   text-align: center;
   font-weight: ${props => props.weight};
