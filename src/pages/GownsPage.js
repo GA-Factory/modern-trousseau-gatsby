@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
+import NavMenu from "../components/NavMenu/NavMenu";
 import Footer from "../components/Footer/Footer";
 import Icons from "../components/Icons/FAIcon";
 import CollectionList from "../components/CollectionList/CollectionList";
@@ -67,26 +68,38 @@ const cardData = [
   }
 ];
 
+const collectionTitle = [
+  "Fall 2020 Collection",
+  "Spring 2020 Collection",
+  "Trending Now",
+  "Classics"
+]
+
 const CollectionTitle = styled.p`
 background-color: ${props => props.theme.colors.primaryPink};
-`
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+   margin-top: 20px;
+  }
+`;
 
 const GownsPage = () => (
   <Layout>
     <Icons name={["fas", "bars"]} size="7x" style={{}} />
     <Logo notag></Logo>
-    <CollectionTitle>Fall 2020 Collection</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics"
-    style = {{
-
-    }}>
+    <Icons name={['fas', 'search']}/>
+    <NavMenu style={{}}></NavMenu>
+    <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics">
     </CollectionList>
-    <CollectionTitle>Spring 2020 Collection</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics"></CollectionList>
-    <CollectionTitle>Trending Now</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics"></CollectionList>
-    <CollectionTitle>Classics</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics"></CollectionList>
+    <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics">
+    </CollectionList>
+    <CollectionTitle>{collectionTitle[2]}</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics">
+    </CollectionList>
+    <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
+    <CollectionList slideData={cardData} title="Classics">
+    </CollectionList>
     <Footer></Footer>
   </Layout>
 );

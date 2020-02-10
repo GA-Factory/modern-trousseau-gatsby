@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 
 const MobileCard = styled.div`
   display: flex;
-  width: 375px;
+  width: 100%;
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -222,7 +222,7 @@ class CollectionList extends React.Component {
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
-        <Title>Fall 2020 Collection</Title>
+        {/* <Title>Fall 2020 Collection</Title> */}
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
