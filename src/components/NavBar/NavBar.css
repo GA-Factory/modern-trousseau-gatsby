@@ -3,9 +3,9 @@
     justify-content: flex-end;
     width: 100vw;
     margin: 0 auto;
+    align-items: center;
     background-color: #E5E5E5;
-    padding: 10px;
-    padding-right: 20px;
+    padding: 10px 20px;
 }
 
 .desktop-style {
@@ -25,7 +25,7 @@
         display: none;
     }
     .mobile-style {
-        padding-top: 30px;
+        padding-top: 15px;
         display: block;
     }
   }

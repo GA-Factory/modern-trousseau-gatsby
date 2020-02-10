@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "../styles/fonts.css";
 
 import Layout from "../global/Layout";
+import NavBar from "../components/NavBar/NavBar";
 import Logo from "../components/FullLogo/Logo";
 import Tagline from "../components/Tagline/tagline";
 import HowWeWork from "../components/HowWeWork/howwework";
@@ -29,9 +30,8 @@ const HeaderBox = styled.div`
 
 const IndexPage = props => (
   <Layout>
-    <HeaderBox>
-      {/* <Logo notag /> */}
-    </HeaderBox>
+    <NavBar />
+    <HeaderBox><Logo notag /></HeaderBox>
     <Tagline
       headline="Classic Couture. Custom Fit."
       slogan="Where customization meets timeline meets budget."
