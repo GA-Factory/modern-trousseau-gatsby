@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Icons from '../Icons/FAIcon';
 import './NavBar.css';
 import logo from './Logo/Logo.png';
+import Logo from '../FullLogo/Logo';
 
 const NavBar = () => (
     <Router>
@@ -16,7 +17,7 @@ const NavBar = () => (
                 </div>
                 <div className="mobile-style">
                     {/* Replace with logo component */}
-                    <img className="mobile-logo" src={logo} alt="Modern trousseau logo" />
+                    <Logo notag />
                 </div>
                 <div className="mobile-style">
                     <Link to="#">
