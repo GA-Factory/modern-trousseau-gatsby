@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Headline = styled.h1`
-  font-family: 'Playfair Display';
+  font-family: 'Playfair display';
   font-style: italic;
   font-weight: bold;
   font-size: 18px;
