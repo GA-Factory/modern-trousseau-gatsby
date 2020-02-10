@@ -18,7 +18,6 @@ import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
 import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
 import imageFile7 from "../assets/images/Classics-1.jpeg";
 import imageFile8 from "../assets/images/Classics-2.jpeg";
-import { faCentercode } from "@fortawesome/free-brands-svg-icons";
 
 const cardData = [
   {
