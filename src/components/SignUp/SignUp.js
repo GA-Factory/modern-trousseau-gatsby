@@ -2,7 +2,6 @@ import React from 'react'
 import './SignUp.css'
 import PinkButton from '../Button/Button';
 
-import PinkButton from "../Button/Button";
 import "./SignUp.css";
 
 class SignUp extends React.Component {
