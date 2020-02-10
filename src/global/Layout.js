@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
 
-import GlobalStyle from './GlobalStyle';
+import variables from "../styles/variables";
+
+import GlobalStyle from "./GlobalStyle";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -16,7 +19,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <>
         <Helmet>
           <title>{data.site.siteMetadata.title}</title>
@@ -26,16 +29,14 @@ const Layout = ({ children }) => (
           />
         </Helmet>
         <GlobalStyle />
-        <>
-          {children}
-        </>
+        <>{children}</>
       </>
     )}
   />
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

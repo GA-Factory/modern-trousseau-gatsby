@@ -1,0 +1,54 @@
+.button {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  font-family: Sahitya;
+  font-size: 14px;
+  border: 1px;
+}
+
+.button-large {
+  font-size: 13px;
+  line-height: 16px;
+  color: black;
+  font-family: Raleway;
+}
+
+.button-light-pink {
+  background-color: #fae5dc;
+  color: #441f0e;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 6px 11px;
+}
+
+.button-dark-pink {
+  background-color: rgba(68, 31, 14, 0.2);
+  padding: 4px, 10px;
+  font-family: Raleway;
+}
+
+.button-red {
+  font-weight: 800;
+  background-color: #441f0e;
+  border: 0.3px solid #441f0e;
+  box-sizing: border-box;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  padding: 8px 27px;
+}
+
+.button-grey {
+  background-color: rgba(227, 224, 222);
+  padding: 3px 9px;
+}
+
+.button-white {
+  padding: 10px 25px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  font-weight: lighter;
+}
