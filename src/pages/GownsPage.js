@@ -73,11 +73,11 @@ const collectionTitle = [
   "Spring 2020 Collection",
   "Trending Now",
   "Classics"
-]
+];
 
 const PageHeader = styled.div`
   display: flex;
-`
+`;
 
 const SearchMenu = styled.div`
   display: flex;
@@ -85,60 +85,67 @@ const SearchMenu = styled.div`
   width: 55%;
   margin-left: 20%;
   margin-right: 25%;
-`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  }
+`;
 
 const IconsContainer = styled.div`
-display: flex;
-justify-content: space-between;
-width: 8%;
-position: absolute;
-right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
+  position: absolute;
+  right: 0;
+`;
+
+const LogoContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  height: 221px;
+  padding-top: 80px;
 `
 
 const CollectionsContainer = styled.div`
-margin-bottom: 20px;
-`
+  margin-bottom: 20px;
+`;
 
 const CollectionTitle = styled.p`
-background-color: ${props => props.theme.colors.primaryPink};
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-   margin-top: 20px;
-   background-color: white;
-   margin-left: 16.5%
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    margin-top: 20px;
+    background-color: white;
+    margin-left: 16.5%;
   }
-`
+`;
 
 const GownsPage = () => (
   <Layout>
     <PageHeader>
-    <Icons name={["fas", "bars"]} size="3x" style={{}} />
-    <IconsContainer>
-    <Icons name={['fas', 'search']} size="2x"/>
-    <Icons name={['fas', 'map-marker-alt']} size="2x"/>
-    <Icons name={['far', 'user']} size = '2x'/>
-    </IconsContainer>
+      <Icons name={["fas", "bars"]} size="3x" style={{}} />
+      <IconsContainer>
+        <Icons name={["fas", "search"]} size="2x" />
+        <Icons name={["fas", "map-marker-alt"]} size="2x" />
+        <Icons name={["far", "user"]} size="2x" />
+      </IconsContainer>
     </PageHeader>
+    <LogoContainer>
     <Logo notag></Logo>
-    <NavMenu style={{}}></NavMenu>
+    </LogoContainer>    
+    <NavMenu></NavMenu>
     <SearchMenu>
-    <p>Search by Category</p>
-    <p>Search by Silhouette</p>
-    <p>Search by Details</p>
-    <p>View Collection</p>
+      <p>Search by Category</p>
+      <p>Search by Silhouette</p>
+      <p>Search by Details</p>
+      <p>View Collection</p>
     </SearchMenu>
     <CollectionsContainer>
-    <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics">
-    </CollectionList>
-    <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics">
-    </CollectionList>
-    <CollectionTitle>{collectionTitle[2]}</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics">
-    </CollectionList>
-    <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
-    <CollectionList slideData={cardData} title="Classics">
-    </CollectionList>
+      <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      <CollectionTitle>{collectionTitle[2]}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
     </CollectionsContainer>
     <Footer></Footer>
   </Layout>
