@@ -1,5 +1,6 @@
 .some{
     flex-direction: row;
+    padding-top: 10px;
 }
 
 #fb{
@@ -20,6 +21,7 @@
 .con{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 

@@ -76,16 +76,12 @@ const collectionTitle = [
   "Classics"
 ];
 
-const PageHeader = styled.div`
-  display: flex;
-`;
-
 const SearchMenu = styled.div`
   display: flex;
   justify-content: space-between;
   width: 60%;
   margin-left: 20%;
-  margin-right: 25%;
+  margin-right: 20%;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-flex;
@@ -107,17 +103,11 @@ const SearchMenuContainer = styled.div`
   }
 `;
 
-const IconsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 8%;
-  position: absolute;
-  right: 0;
-`;
-
 const LogoContainer = styled.div`
+display: none;
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
   background-color: ${props => props.theme.colors.primaryPink};
+  display: block;
   height: 221px;
   padding-top: 80px;
 }
@@ -138,12 +128,12 @@ font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: 800;
   font-weight: 18px;
   padding-left: 10%;
-  border-top: 4px solid #FAE5DC;
+  border-top: 8px solid #FAE5DC;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 20px;
     background-color: white;
-    margin-left: 16.5%;
+    margin-left: 6.5%;
     font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray}
   }
@@ -151,16 +141,12 @@ font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
 
 const GownsPage = () => (
   <Layout>
-    <NavBar></NavBar>
-    <PageHeader>
-      <IconsContainer>
-      </IconsContainer>
-    </PageHeader>
+    <NavBar/>
     <LogoContainer>
-    <Logo notag></Logo>
+    <Logo notag />
     </LogoContainer>
     <GownHeader/> 
-    <NavMenu></NavMenu>
+    <NavMenu />
     <SearchMenuContainer>
     <SearchMenu>
       <SearchMenuItems>Search by Category</SearchMenuItems>
@@ -179,7 +165,7 @@ const GownsPage = () => (
       <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
     </CollectionsContainer>
-    <Footer></Footer>
+    <Footer />
   </Layout>
 );
 
