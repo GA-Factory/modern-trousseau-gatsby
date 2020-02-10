@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenu from "../components/NavMenu/NavMenu";
 import Footer from "../components/Footer/Footer";
+import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import Icons from "../components/Icons/FAIcon";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
-import { ThemeProvider } from "styled-components";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -138,6 +138,8 @@ const CollectionTitle = styled.p`
 font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: 800;
   font-weight: 18px;
+  padding-left: 10%;
+  border-top: 4px solid #FAE5DC;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 20px;
@@ -150,12 +152,9 @@ font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
 
 const GownsPage = () => (
   <Layout>
+    <NavBar></NavBar>
     <PageHeader>
-      <Icons name={["fas", "bars"]} size="3x" />
       <IconsContainer>
-        <Icons name={["fas", "search"]} size="2x" />
-        <Icons name={["fas", "map-marker-alt"]} size="2x" />
-        <Icons name={["far", "user"]} size="2x" />
       </IconsContainer>
     </PageHeader>
     <LogoContainer>
