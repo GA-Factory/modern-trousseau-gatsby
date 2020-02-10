@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
-import NavMenu from "../components/NavMenu/NavMenu";
+import NavMenuMobile from "../components/NavMenu/NavMenuMobile";
+import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
@@ -149,7 +150,8 @@ const GownsPage = () => (
       <Logo notag />
     </LogoContainer>
     <GownHeader icon={icon} open={open}/>
-    <NavMenu />
+    <NavMenuMobile />
+    <NavMenuDesktop />
     <SearchMenuContainer>
       <SearchMenu>
         <SearchMenuItems>Search by Category</SearchMenuItems>
