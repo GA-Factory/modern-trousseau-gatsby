@@ -3,9 +3,7 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from '../components/FullLogo/Logo'
 import Icons from '../components/Icons/FAIcon'
-// import CollectionList from '../components/CollectionList/CollectionList'
-
-// import slideData from '../components/CollectionList/CollectionList.stories'
+import CollectionList, { slideData } from '../components/CollectionList/CollectionList'
 import Layout from '../global/Layout';
 
 const GownsPage = () => (
@@ -16,7 +14,7 @@ const GownsPage = () => (
         }}
             />
         <Logo notag ></Logo>
-        {/* <CollectionList slideData={slideData} title="Classics"></CollectionList> */}
+        <CollectionList slideData={slideData} title="Classics"></CollectionList>
       <h1>WORK IN PROGRESS</h1>
     </Layout>
   );
