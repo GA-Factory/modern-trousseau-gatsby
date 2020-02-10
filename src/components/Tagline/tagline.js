@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Headline = styled.h1`
-  font-family: 'Playfair display';
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: bold;
   font-size: 18px;
@@ -25,7 +25,7 @@ const Headline = styled.h1`
 `;
 
 const Slogan = styled.div`
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
