@@ -72,5 +72,9 @@
         margin: auto;
         font-size: 20px;
     }
+
+    .notag {
+        display: none;
+    }
     
 }
