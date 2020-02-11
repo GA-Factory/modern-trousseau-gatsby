@@ -113,7 +113,7 @@ const LogoContainer = styled.div`
     background-color: ${props => props.theme.colors.primaryPink};
     display: block;
     height: 180px;
-    padding-top: 80px;
+    padding-top: 50px;
   }
 `;
 
@@ -121,6 +121,7 @@ const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border-top: 4px solid ${props => props.theme.colors.backgroundGray};
     border-bottom: 28px solid #e5e5e5;
   }
 `;
