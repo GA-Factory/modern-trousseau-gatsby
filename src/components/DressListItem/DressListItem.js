@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "./DressListItem.css";
 import imageFile1 from "../DressListItem/DressListItemAssets/seraphina.png";
 
