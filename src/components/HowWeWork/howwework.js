@@ -40,8 +40,9 @@ const SingleCard = styled.div`
 
 const CardContainer = styled.div`
   display: flex;
-  flex-flow: column;
+  flex-flow: wrap;
   max-width: 1200px;
+  justify-content: center;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     flex-flow: row;
   }
