@@ -1,6 +1,6 @@
 import React from "react";
 import "./DressListItem.css";
-import imageFile1 from "../DressListItem/DressListItemAssets/seraphina.png";
+import imageFile1 from "../../assets/images/seraphina.png";
 
 export default () => (
   <div className="one-item">

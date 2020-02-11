@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import imageFile1 from "../DressListItem/DressListItemAssets/seraphina.png";
+import imageFile1 from "../../assets/images/seraphina.png";
 
 import DressListItem from "./DressListItem";
 
