@@ -1,12 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './HeaderNavBar.css';
+import Logo from "../FullLogo/Logo";
+
 
 
 const HeaderNavBar = () => (
     <Router>
         <div>
             <nav className="header-nav">
+                <section className="header-nav-logo">
+                    <Logo notag />
+                </section>
                 <ul>
                     <li className="header-nav-li">
                         <p>OUR GOWNS</p>

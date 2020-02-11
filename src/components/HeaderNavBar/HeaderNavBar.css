@@ -9,9 +9,15 @@
     background-color: #FAE5DC;
     width: 100vw;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.header-nav-logo {
+    padding: 30px 20px;
+    margin-top: 30px;
+    font-size: 64px;
 }
 
 .header-nav-li {
