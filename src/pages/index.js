@@ -17,17 +17,6 @@ import Footer from "../components/Footer/Footer";
 
 // const images = [imageFile1, imageFile2, imageFile3];
 
-const HeaderBox = styled.div`
-  width: 100%;
-  background-color: #ffffff;
-  margin: 0 auto;
-  padding: 20px 0 0;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 const IndexPage = props => (
   <Layout>
     <NavBar />
