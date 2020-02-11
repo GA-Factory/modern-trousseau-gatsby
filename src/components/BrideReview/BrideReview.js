@@ -51,7 +51,6 @@ const ReviewContainerMobile = styled.div`
     display: flex;
     height: 240px;
     width: 33%;
-    justify-content: space-around;
     margin-top: 40px;
     border: 1px solid blue;
     margin-bottom: 3.5%;
@@ -68,7 +67,6 @@ const ReviewContainerMidsize = styled.div`
     display: flex;
     height: auto;
     width: 45%;
-    justify-content: space-around;
     margin-bottom: 3.5%;
     border: 1px solid green;
   }
@@ -83,20 +81,8 @@ const ReviewContainerMidsize = styled.div`
 
 const ReviewContainerDesktop = styled.div`
   display: none;
-  /* flex-direction: column;
-  height: 460px;
-  width: 296px;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  background-color: ${props => props.theme.colors.backgroundGray}; */
   @media (min-width: 600px) {
     display: none;
-    /* flex-direction: row;
-    height: 240px;
-    width: 48%;
-    justify-content: space-around;
-    margin-top: 0; */
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -159,9 +145,8 @@ const ReviewMobile = styled.div`
     border: 1px solid orange;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    top: 22%;
-    margin-left: 2px;
-    width: 200%;
+    top: 15%;
+    width: 95%;
     height: auto;
     border: 1px solid orange;
   }
@@ -181,11 +166,8 @@ const ReviewMidsize = styled.span`
 @media (min-width:  ${props => props.theme.breakpoints.tablet}) {
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   text-align: center;
-    margin-left: 0;
     padding-right: 4px;
-    padding-top: 10%;
-    width: 200%;
-    margin-bottom: 20px;
+    width: 100%;
 }
 `
 
@@ -217,6 +199,8 @@ const ViewDressMobile = styled.div`
     border: 1px solid purple;
     width: 50%;
     height: auto;
+    margin-left: 28%;
+    margin-top: 35%
   }
 `;
 
@@ -236,6 +220,9 @@ const ViewDressMidsize = styled.div`
     border: 1px solid violet;
     width: 50%;
     height: auto;
+    margin-top: 0;
+    margin-left: 28%;
+    margin-top: 30%
   }
 `;
 
@@ -247,6 +234,8 @@ const ViewDressDesktop = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border: 1px solid orange;
     display: flex;
+    margin-left: 32%;
+    margin-top: 110%;
     width: 50%;
     height: auto;
   }
@@ -261,7 +250,6 @@ const ButtonPlacerMobile = styled.div`
     margin-top: 5%;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* display: flex; */
     margin-top: 5%;
   }
 `;
@@ -272,11 +260,11 @@ const ComponentCollection = ({ images }) => (
       <ReviewContainerMobile>
         <GownImage src={images[0]} />
         <ImageAccompaniment>
-          <ViewDressMobile>
             <ReviewMobile>
               "From start to finish, my dress was high quality, hassle-free, and
               ready when promised.”<br></br> - Modern Trousseau Bride
             </ReviewMobile>
+          <ViewDressMobile>
             <ButtonPlacerMobile>
               <PinkButton
                 label="View Dress"
@@ -302,11 +290,11 @@ const ComponentCollection = ({ images }) => (
       <ReviewContainerMidsize>
         <GownImage src={images[1]} />
         <ImageAccompaniment>
-          <ViewDressMidsize>
           <ReviewMidsize>
             "From start to finish, my dress was high quality, hassle-free, and
             ready when promised.”
           </ReviewMidsize>
+          <ViewDressMidsize>
             <PinkButton
               label="View Dress"
               fontsize={`${"14px"}`}
@@ -330,12 +318,12 @@ const ComponentCollection = ({ images }) => (
       <ReviewContainerDesktop>
         <GownImage src={images[2]} />
         <ImageAccompaniment>
-          <ViewDressDesktop>
             <ReviewDesktop>
               "Everything about the dress was perfect - the quality, fit, and
               overall look was impeccable. Thank you for your amazing customer
               service and beautiful product."
             </ReviewDesktop>
+          <ViewDressDesktop>
             <PinkButton
               label="View Dress"
               fontsize={`${"14px"}`}
