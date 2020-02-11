@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
-// import NavMenuMobile from "../components/NavMenu/NavMenuMobile";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
@@ -97,13 +96,7 @@ const SearchMenu = styled.div`
   }
 `;
 
-const NavMenuHide = styled.div`
-@media (max-width: ${props => props.theme.breakpoints.tablet}) {
-  height: 0;
-  }
-`;
-
-const SearchMenuItems = styled.p``;
+const SearchMenuItems = styled.a``;
 
 const SearchMenuContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -119,7 +112,7 @@ const LogoContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     background-color: ${props => props.theme.colors.primaryPink};
     display: block;
-    height: 221px;
+    height: 180px;
     padding-top: 80px;
   }
 `;
@@ -141,9 +134,10 @@ const CollectionTitle = styled.p`
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 20px;
+    margin-left: 6.5%;
+    margin-bottom: 6px;
     background-color: white;
     border-top: 8px solid #e5e5e5;
-    margin-left: 6.5%;
     font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
@@ -155,10 +149,8 @@ const GownsPage = () => (
     <LogoContainer>
       <Logo notag />
     </LogoContainer>
-    <GownHeader icon={icon} open={open}/>
-    <NavMenuHide>
+    <GownHeader icon={icon} open={open} />
     <NavMenuDesktop />
-    </NavMenuHide>
     <SearchMenuContainer>
       <SearchMenu>
         <SearchMenuItems>Search by Category</SearchMenuItems>

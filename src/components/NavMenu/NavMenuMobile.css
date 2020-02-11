@@ -49,68 +49,40 @@
   }
   
   @media only screen and (min-width: 735px) {
-      /* .mobile {
+      .mobile {
           display: none;
-      } */
+      }
 
       .nav-container {
-      flex-flow: row;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      height: auto;
-      width: 100%;
-      display: none;
+        display: none;
     }
   
     .nav-container nav {
-      padding: 5px;
-      display: flex;
-      flex-flow: row;
-      justify-content: center;
-      width: 85%;
+        display: none;
     }
   
     .nav-container nav ul {
-      display: flex;
-      flex-flow: row;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+        display: none;
     }
   
     .nav-container .nav-title {
-      font-size: 16px;
-      margin: 0 auto;
+        display: none;
     }
   
     .nav-container .nav-title:hover {
-      text-decoration: underline;
-      cursor: pointer;
+        display: none;
     }
   
     .nav-container nav ul li {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      justify-content: center;
-      align-items: center;
+        display: none;
     }
   
     .nav-container nav ul a {
-      display: flex;
-      flex-flow: row;
-      align-items: center;
+        display: none;
     }
   
     span.dots {
-      padding: 0 2em;
-      font-size: 8px;
-      visibility: visible;
-      display: flex;
+        display: none;
     }
   }
   
