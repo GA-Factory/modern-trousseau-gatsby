@@ -8,9 +8,9 @@ const SingleDot = styled.div`
   margin-right: 5px;
   cursor: pointer;
   border-radius: 50%;
-  /* background: ${props =>
-    props.imageIndex === props.dotIndex ? "black" : "blue"}; */
-    background-color: grey;
+  background: ${props =>
+    props.imageIndex === props.dotIndex ? "black" : "blue"};
+  /* background-color: grey; */
 `;
 
 const Dot = () => {
