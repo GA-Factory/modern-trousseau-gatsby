@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Button = styled.button`
   background-color: ${props => props.theme.colors.primaryPink};
   color: ${props => props.color};
-  font-family: 'Raleway', sans-serif;
   font-family: ${props => props.family};
   text-align: center;
   font-weight: ${props => props.weight};
@@ -15,7 +14,7 @@ const Button = styled.button`
   line-height: ${props => props.height};
 
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway";
     padding: ${props => props.desktoppadding};
     width: ${props => props.desktopwidth};
     font-weight: ${props => props.desktopweight};
