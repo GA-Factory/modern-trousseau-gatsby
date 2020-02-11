@@ -15,12 +15,14 @@
     justify-content: space-between;
     align-items: center;
     flex-basis: calc(100% - 24px);
+    white-space: nowrap;
 }
 
 .collection-arrow{
     margin: 6px 0 0 15px;
     font-weight: none;
     flex-basis: 12px;
+    margin-bottom: 7px;
 }    
 
 .collection-blank {
