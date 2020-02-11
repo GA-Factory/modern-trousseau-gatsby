@@ -11,13 +11,14 @@ class SelectDropdown extends Component {
     super(props);
 
     this.state = {
-      id: 0,
+      id: null,
       title: this.props.title,
       list: this.props.option,
       active: false
     };
     this.toggle = this.toggle.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.select = this.select.bind(this);
   }
 
   // Toggles menu open/close state
@@ -27,15 +28,31 @@ class SelectDropdown extends Component {
     }));
   };
 
-  handleClick = props => {
-    console.log("Linked");
+  select = e => {
+    e.preventDefault();
+    console.log(e);
+    this.setState(() => ({
+      id: this.props.key,
+      title: e.target
+    }));
   };
+
+  handleClick(event) {
+    event.preventDefault();
+    console.log(event);
+    this.setState({ title: event.target.value });
+  }
 
   render() {
     console.log(this.state);
-    let fullList = this.state.list.map((item, index) => {
+    let Dropdown = this.state.list.map((item, index) => {
+      console.log(item);
       return (
-        <li key={index} name={item} onClick={this.handleClick}>
+        <li
+          key={index}
+          title={item}
+          onClick={(this.handleClick, this.select, this.toggle)}
+        >
           {item}
         </li>
       );
@@ -43,19 +60,10 @@ class SelectDropdown extends Component {
 
     return (
       <div>
-        <p onClick={this.toggle}> {this.state.title}</p>
-        <ul>{this.state.active === true && fullList}</ul>
-        {this.state.active === true &&
-          this.state.list.map((item, index) => {
-            <DropdownItem
-              to="/"
-              key={Math.random(0, 100000)}
-              name={item}
-              index={index}
-            >
-              {item}
-            </DropdownItem>;
-          })}
+        <ul>
+          <li onClick={this.toggle}>{this.state.title}</li>
+          {this.state.active === true && Dropdown}
+        </ul>
       </div>
     );
   }
@@ -82,3 +90,15 @@ export default SelectDropdown;
 //       }
 //     }))
 //   }
+
+// {this.state.active === true &&
+//     this.state.list.map((item, index) => {
+//       <DropdownItem
+//         to="/"
+//         key={Math.random(0, 100000)}
+//         name={item}
+//         index={index}
+//       >
+//         <li>{item}</li>
+//       </DropdownItem>;
+//     })}
