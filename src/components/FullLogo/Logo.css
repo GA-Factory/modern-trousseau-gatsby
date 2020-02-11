@@ -5,6 +5,7 @@
 }
 
 .logo-tag {
+  align-items: baseline;
     display: flex;
     flex-direction: column;
     margin: auto;
