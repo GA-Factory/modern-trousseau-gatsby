@@ -5,86 +5,128 @@ import { ThemeProvider } from "styled-components";
 import Button from "../Button/Button";
 import PinkButton from "../Button/Button";
 
-const BridalReviews = styled.div`
-  width: 100%;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 300px;
-  }
-`;
+// const BridalReviews = styled.div`
+//   width: 100%;
+//   background-color: ${props => props.theme.colors.backgroundGray};
+//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+//     height: 300px;
+//   }
+// `;
 
 const Container = styled.div`
   display: flex;
-  height: 240px;
-  justify-content: space-around;
+  flex-direction: row;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
   background-color: ${props => props.theme.colors.backgroundGray};
+  border-bottom: 0.5px solid #0f1f2f;
+  padding: 20px 15px;
+  border: 1px solid black;
+  @media (min-width: 600px) {
+    border: 1px solid black;
+    display: flex;
+    height: 240px;
+    width: 405px;
+    justify-content: space-around;
+    margin-top: 40px;
+    height: 327px;
+  }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border: 1px solid black;
     height: 327px;
   }
 `;
 
 const ReviewContainerMobile = styled.div`
   display: flex;
-  height: 208.55px;
+  flex-direction: column;
+  height: 350px;
   width: 296px;
-  justify-content: space-around;
-  margin: 15px 5px 5px 5px;
-  padding-left: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
   background-color: ${props => props.theme.colors.backgroundGray};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  border: 1px solid blue;
+  @media (min-width: 600px) {
     height: 240px;
     width: 405px;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 0;
+    border: 1px solid blue;
   }
-`;
-
-const ReviewContainerDesktop = styled.div`
-  height: 200px;
-  justify-content: space-around;
-  display: none;
-  background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     height: 240px;
     width: 405px;
     justify-content: space-around;
     margin-top: 40px;
+    border: 1px solid blue;
+  }
+`;
+
+const ReviewContainerMidsize = styled.div`
+  height: 200px;
+  justify-content: space-around;
+  display: none;
+  background-color: ${props => props.theme.colors.backgroundGray};
+  border: 1px solid green;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    height: 240px;
+    width: 405px;
+    justify-content: space-around;
+    margin-top: 40px;
+    border: 1px solid green;
   }
 `;
 
 const GownImage = styled.img`
-  width: 148px;
-  height: 208.55;
+  width: 80%;
+  height: auto;
+  border: 1px solid red; 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 189px;
     height: 238px;
+    border: 1px solid red; 
   }
 `;
 
 const ImageAccompaniment = styled.div`
-  height: 208.55px;
-  width: 296px;
-  justify-content: space-around;
+  height: 208px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: ${props => props.theme.colors.backgroundGray};
+  border: 1px solid yellow;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 240px;
-    width: 215px;
+    width: 215px;    
+    border: 1px solid yellow;
   }
 `;
 
 const ReviewMobile = styled.div`
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
+  font-size: 16px;
+  line-height: 15px;
   text-align: center;
   margin: 0 0 18px 6px;
   position: relative;
+  border: 1px solid orange;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  top: 22%;
-  margin-left: 2px;
-  width: 189px;
+    top: 22%;
+    margin-left: 2px;
+    width: 189px;
+    border: 1px solid orange;
   }
+`;
+const ReviewAuthor = styled.span`
+  margin-top: 10px;
+  display: inherit;
 `;
 
 const ReviewDesktop = styled.div`
@@ -95,23 +137,28 @@ const ReviewDesktop = styled.div`
   top: 42%;
   margin-left: 2px;
   width: 189px;
+  border: 1px solid yellowgreen;
 `;
 
 const ViewDressMobile = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
+  border: 1px solid purple;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 120px;
+    border: 1px solid purple;
   }
 `;
 
-const ViewDressDesktop = styled.div`
+const ViewDressMidsize = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
+  border: 1px solid violet;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 200px;
+    border: 1px solid violet;
   }
 `;
 
@@ -124,7 +171,7 @@ const MobileReviewSliderButton = styled.button`
 
 const ComponentCollection = ({ images }) => (
   <>
-    <BridalReviews>
+    {/* <BridalReviews> */}
       <Container>
         <ReviewContainerMobile>
           <GownImage src={images[0]}></GownImage>
@@ -153,12 +200,12 @@ const ComponentCollection = ({ images }) => (
                 />
                 </ViewDressMobile>
           </ImageAccompaniment>
-          <MobileReviewSliderButton>&#10095;</MobileReviewSliderButton>
+          {/* <MobileReviewSliderButton>&#10095;</MobileReviewSliderButton> */}
         </ReviewContainerMobile>
-        <ReviewContainerDesktop>
+        <ReviewContainerMidsize>
           <GownImage src={images[1]}></GownImage>
           <ImageAccompaniment>
-            <ViewDressDesktop>
+            <ViewDressMidsize>
               <ReviewDesktop>
                 "From start to finish, my dress was high quality, hassle-free,
                 and ready when promised.”
@@ -180,10 +227,10 @@ const ComponentCollection = ({ images }) => (
                 family={`${"'Sahitya'"}`}
                 color={`${"#441F0E"}`}
               />
-            </ViewDressDesktop>
+            </ViewDressMidsize>
           </ImageAccompaniment>
-        </ReviewContainerDesktop>
-        <ReviewContainerDesktop>
+        </ReviewContainerMidsize>
+        {/* <ReviewContainerDesktop>
           <GownImage src={images[2]}></GownImage>
           <ImageAccompaniment>
             <ViewDressDesktop>
@@ -211,9 +258,9 @@ const ComponentCollection = ({ images }) => (
               />
             </ViewDressDesktop>
           </ImageAccompaniment>
-        </ReviewContainerDesktop>
+        </ReviewContainerDesktop> */}
       </Container>
-    </BridalReviews>
+    {/* </BridalReviews> */}
   </>
 );
 
