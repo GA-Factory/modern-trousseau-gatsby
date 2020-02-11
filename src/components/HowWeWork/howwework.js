@@ -22,7 +22,7 @@ const Title = styled.div`
   text-align: center;
   color: #0f1f2f;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0 0 20px;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     font-size: 40px;
     line-height: 53px;

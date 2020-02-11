@@ -17,10 +17,10 @@ import Footer from "../components/Footer/Footer";
 const IndexPage = props => (
   <Layout>
     {/* <NavBar /> */}
-    {/* <Tagline
+    <Tagline
       headline="Classic Couture. Custom Fit."
       slogan="Where customization meets timeline meets budget."
-    /> */}
+    />
     <HowWeWork title="How We Work" />
     <OwnerQuote
       quote="The look on a bride's face when she finds her dress - that is priceless
@@ -28,7 +28,7 @@ const IndexPage = props => (
       name="Callie Tein"
       role="Designer"
     />
-    <BrideReview title="Fall 2020 Collection" />
+    {/* <BrideReview title="Fall 2020 Collection" /> */}
     <Footer />
   </Layout>
 );

@@ -7,72 +7,63 @@ import imageFile1 from "../../assets/images/bridal-review-1.png";
 import imageFile2 from "../../assets/images/bridal-review-2.jpeg";
 import imageFile3 from "../../assets/images/bridal-review-3.jpeg";
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   height: auto;
+  width: 100%;
   max-width: 100%;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.backgroundGray};
   border-bottom: 0.5px solid #0f1f2f;
-  padding: 10px 15px;
-  border: 1px solid black;
+  padding: 35px 40px;
   @media (min-width: 600px) {
-    border: 1px solid black;
     display: flex;
-    height: 240px;
+    height: auto;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 40px;
-    height: 327px;
+    height: auto;
+    padding: 30px 20px;
   }
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    border: 1px solid black;
-    height: 300px;
+  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
+    height: auto;
   }
 `;
 
 const ReviewContainerMobile = styled.div`
   display: flex;
   flex-direction: column;
-  height: 460px;
-  width: 296px;
+  height: auto;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  border: 1px solid blue;
   @media (min-width: 600px) {
     flex-direction: row;
-    height: 240px;
+    height: auto;
     width: 48%;
     justify-content: space-around;
     margin-top: 0;
-    border: 1px solid blue;
   }
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     display: flex;
-    height: 240px;
+    height: auto;
     width: 33%;
-    margin-top: 40px;
-    border: 1px solid blue;
-    margin-bottom: 3.5%;
+    /* margin-top: 40px; */
+    /* border: 1px solid blue; */
   }
 `;
 const ReviewContainerMidsize = styled.div`
-  height: 200px;
+  height: auto;
   justify-content: space-around;
   display: none;
-  background-color: ${props => props.theme.colors.backgroundGray};
   border: 1px solid green;
   @media (min-width: 600px) {
     display: flex;
     height: auto;
-    width: 45%;
-    margin-bottom: 3.5%;
-    border: 1px solid green;
+    width: 48%;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -95,54 +86,46 @@ const ReviewContainerDesktop = styled.div`
   }
 `;
 const GownImage = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
-  border: 1px solid red;
   @media (min-width: 600px) {
     display: inline-block;
-    width: 60%;
+    width: 50%;
     height: 238px;
-    border: 1px solid red;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 50%;
-    height: 240px;
-    border: 1px solid red;
+    height: 250px;
   }
 `;
 const ImageAccompaniment = styled.div`
-  height: 208px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  border: 1px solid yellow;
+  align-items: center;
   @media (min-width: 600px) {
-    height: 240px;
+    height: auto;
     width: 50%;
-    border: 1px solid yellow;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 240px;
+    height: auto;
     width: 100%;
     border: 1px solid yellow;
   }
 `;
 const ReviewMobile = styled.div`
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: 16px;
-  line-height: 15px;
+  font-size: 18px;
+  line-height: 20px;
   text-align: center;
   margin: 0 0 8px 2px;
   position: relative;
-  border: 1px solid orange;
   @media (min-width: 600px) {
-    top: 2%;
-    margin-left: 2px;
+    padding-left: 5px;
     width: 100%;
-    border: 1px solid orange;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     top: 15%;
@@ -152,34 +135,34 @@ const ReviewMobile = styled.div`
   }
 `;
 const ReviewMidsize = styled.span`
-@media (min-width: 600px) {
-  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  text-align: center;
-    margin-left: 2px;
-    padding-right: 4px;
-    padding-top: 10%;
+  @media (min-width: 600px) {
+    font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
+    text-align: center;
+    margin-left: 5px;
+    font-size: 18px;
+    line-height: 22px;
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid brown;
-}
-@media (min-width:  ${props => props.theme.breakpoints.tablet}) {
-  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  text-align: center;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
+    text-align: center;
     padding-right: 4px;
     width: 100%;
-}
-`
+  }
+`;
 const ReviewDesktop = styled.div`
-@media (min-width:  ${props => props.theme.breakpoints.tablet}) {
-  font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
-  text-align: center;
-  position: absolute;
-  top: 39%;
-  margin-left: 2px;
-  width: 15%;
-  border: 1px solid yellowgreen;
-}
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
+    font-size: ${props => props.theme.fontStyles.Body3DesktopText.fontSize};
+    text-align: center;
+    position: absolute;
+    top: 39%;
+    margin-left: 2px;
+    width: 15%;
+    border: 1px solid yellowgreen;
+  }
 `;
 const ViewDressMobile = styled.div`
   display: flex;
@@ -197,7 +180,7 @@ const ViewDressMobile = styled.div`
     width: 50%;
     height: auto;
     margin-left: 28%;
-    margin-top: 35%
+    margin-top: 35%;
   }
 `;
 const ViewDressMidsize = styled.div`
@@ -218,7 +201,7 @@ const ViewDressMidsize = styled.div`
     height: auto;
     margin-top: 0;
     margin-left: 28%;
-    margin-top: 30%
+    margin-top: 30%;
   }
 `;
 const ViewDressDesktop = styled.div`
@@ -247,16 +230,17 @@ const ButtonPlacerMobile = styled.div`
     margin-top: 5%;
   }
 `;
+
 const ComponentCollection = ({ images }) => (
   <>
     <Container>
       <ReviewContainerMobile>
         <GownImage src={imageFile1} />
         <ImageAccompaniment>
-            <ReviewMobile>
-              "From start to finish, my dress was high quality, hassle-free, and
-              ready when promised."<br></br> - Modern Trousseau Bride
-            </ReviewMobile>
+          <ReviewMobile>
+            "From start to finish, my dress was high quality, hassle-free, and
+            ready when promised."<br></br> - Modern Trousseau Bride
+          </ReviewMobile>
           <ViewDressMobile>
             <ButtonPlacerMobile>
               <PinkButton
@@ -311,11 +295,11 @@ const ComponentCollection = ({ images }) => (
       <ReviewContainerDesktop>
         <GownImage src={imageFile3} />
         <ImageAccompaniment>
-            <ReviewDesktop>
-              "Everything about the dress was perfect - the quality, fit, and
-              overall look was impeccable. Thank you for your amazing customer
-              service and beautiful product."
-            </ReviewDesktop>
+          <ReviewDesktop>
+            "Everything about the dress was perfect - the quality, fit, and
+            overall look was impeccable. Thank you for your amazing customer
+            service and beautiful product."
+          </ReviewDesktop>
           <ViewDressDesktop>
             <PinkButton
               label="View Dress"
