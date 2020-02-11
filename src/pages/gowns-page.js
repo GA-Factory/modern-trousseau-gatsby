@@ -118,7 +118,7 @@ const LogoContainer = styled.div`
 `;
 
 const CollectionsContainer = styled.div`
-  border-top: 2px solid #e5e5e5;
+  border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border-bottom: 28px solid #e5e5e5;
