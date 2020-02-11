@@ -11,19 +11,16 @@ import OwnerQuote from "../components/owner-quote/owner-quote";
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
 
-// import imageFile1 from "../../assets/images/bridal-review-1.png";
-// import imageFile2 from "../../assets/images/bridal-review-2.jpeg";
-// import imageFile3 from "../assets/images/bridal-review-3.jpeg";
 
-// const images = [imageFile1, imageFile2, imageFile3];
+
 
 const IndexPage = props => (
   <Layout>
-    <NavBar />
-    <Tagline
+    {/* <NavBar /> */}
+    {/* <Tagline
       headline="Classic Couture. Custom Fit."
       slogan="Where customization meets timeline meets budget."
-    />
+    /> */}
     <HowWeWork title="How We Work" />
     <OwnerQuote
       quote="The look on a bride's face when she finds her dress - that is priceless
@@ -31,7 +28,7 @@ const IndexPage = props => (
       name="Callie Tein"
       role="Designer"
     />
-    {/* <BrideReview images={images} title="Fall 2020 Collection" /> */}
+    <BrideReview title="Fall 2020 Collection" />
     <Footer />
   </Layout>
 );

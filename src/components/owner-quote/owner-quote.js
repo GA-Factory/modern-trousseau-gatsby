@@ -8,14 +8,14 @@ const OwnerCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   font-family: "Playfair Display";
   max-width: 100%;
   margin: 0 auto;
 
   @media only screen and (min-width: 600px) {
     flex-direction: row;
-    max-width: 1000px;
+    max-width: 1200px;
   }
 `;
 

@@ -7,7 +7,6 @@ import SignUp from "../SignUp/SignUp";
 const Footer = () => {
   return (
     <>
-      <hr className="hr-line" />
       <div className="footer">
         <div className="spacing-1">
           <Logo />
