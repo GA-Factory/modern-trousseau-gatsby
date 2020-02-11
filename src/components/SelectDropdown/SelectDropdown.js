@@ -11,13 +11,12 @@ class SelectDropdown extends Component {
     super(props);
 
     this.state = {
-      id: null,
       title: this.props.title,
-      list: this.props.option,
       active: false
     };
+
     this.toggle = this.toggle.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
     this.select = this.select.bind(this);
   }
 
@@ -30,29 +29,17 @@ class SelectDropdown extends Component {
 
   select = e => {
     e.preventDefault();
-    console.log(e);
-    this.setState(() => ({
-      id: this.props.key,
-      title: e.target
-    }));
+    this.setState({
+      title: e.target.title
+    });
+    this.toggle();
   };
 
-  handleClick(event) {
-    event.preventDefault();
-    console.log(event);
-    this.setState({ title: event.target.value });
-  }
-
   render() {
-    console.log(this.state);
-    let Dropdown = this.state.list.map((item, index) => {
-      console.log(item);
+    let selections = this.props.option;
+    let Dropdown = selections.map((item, index) => {
       return (
-        <li
-          key={index}
-          title={item}
-          onClick={(this.handleClick, this.select, this.toggle)}
-        >
+        <li key={index} title={item} onClick={this.select}>
           {item}
         </li>
       );
