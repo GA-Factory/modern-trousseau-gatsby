@@ -66,8 +66,8 @@ const ImageContainer = styled.div`
 `;
 
 const SlideImage = styled.img`
-  height: 220px;
-  width: 152px;
+  height: 80%;
+  width: 90%;
   margin: 3px;
   margin-bottom: 0;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
