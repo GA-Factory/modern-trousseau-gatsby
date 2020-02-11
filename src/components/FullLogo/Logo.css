@@ -43,3 +43,12 @@
 .notag {
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    .logo-word-modern {
+        font-size: 24px;
+    }
+    .logo-word-trousseau {
+        font-size: 24px;
+    }
+}
