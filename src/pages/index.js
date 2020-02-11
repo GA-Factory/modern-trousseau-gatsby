@@ -31,7 +31,6 @@ const HeaderBox = styled.div`
 const IndexPage = props => (
   <Layout>
     <NavBar />
-    <HeaderBox><Logo notag /></HeaderBox>
     <Tagline
       headline="Classic Couture. Custom Fit."
       slogan="Where customization meets timeline meets budget."
