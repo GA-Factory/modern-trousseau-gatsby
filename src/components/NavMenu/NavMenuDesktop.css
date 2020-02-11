@@ -1,3 +1,8 @@
+.desktop {
+    height: 0;
+    display: none;
+}
+
 .nav-container {
     background-color: #fae5dc;
     display: flex;
@@ -49,6 +54,10 @@
   }
   
   @media only screen and (min-width: 735px) {
+      .desktop {
+          display: none;
+      }
+
     .nav-container {
       flex-flow: row;
       justify-content: center;

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
-import NavMenuMobile from "../components/NavMenu/NavMenuMobile";
+// import NavMenuMobile from "../components/NavMenu/NavMenuMobile";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
@@ -97,6 +97,12 @@ const SearchMenu = styled.div`
   }
 `;
 
+const NavMenuHide = styled.div`
+@media (max-width: ${props => props.theme.breakpoints.tablet}) {
+  height: 0;
+  }
+`;
+
 const SearchMenuItems = styled.p``;
 
 const SearchMenuContainer = styled.div`
@@ -150,8 +156,9 @@ const GownsPage = () => (
       <Logo notag />
     </LogoContainer>
     <GownHeader icon={icon} open={open}/>
-    <NavMenuMobile />
+    <NavMenuHide>
     <NavMenuDesktop />
+    </NavMenuHide>
     <SearchMenuContainer>
       <SearchMenu>
         <SearchMenuItems>Search by Category</SearchMenuItems>

@@ -48,11 +48,12 @@
     visibility: visible;
   }
   
-  .mobile {
-      display: none;
-  }
   @media only screen and (min-width: 735px) {
-    .nav-container {
+      /* .mobile {
+          display: none;
+      } */
+
+      .nav-container {
       flex-flow: row;
       justify-content: center;
       align-items: center;

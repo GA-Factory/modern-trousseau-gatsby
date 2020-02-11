@@ -6,7 +6,7 @@ const NavMenuDesktop = props => (
   <div
     className={props.isVisible ? "primary-pink nav-container" : "primary-pink nav-container is-visible"}
   >
-    <nav>
+    <nav className="desktop">
     <BrowserRouter>
       <ul>
         <li>
