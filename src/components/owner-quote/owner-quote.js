@@ -8,24 +8,21 @@ const OwnerCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   font-family: "Playfair Display";
   max-width: 100%;
   margin: 0 auto;
 
   @media only screen and (min-width: 600px) {
     flex-direction: row;
-    max-width: 900px;
+    max-width: 1000px;
   }
 `;
 
 const OwnerPhoto = styled.img`
   display: block;
   width: 250px;
-  margin: 5% auto;
-
-  @media only screen and (min-width: 600px) {
-  }
+  margin: 3% auto;
 `;
 
 const OwnerQuoteSection = styled.div`
@@ -44,6 +41,9 @@ const OwnerQuoteSection = styled.div`
     line-height: 35px;
     padding-left: 25px;
     width: calc(100% - 250px);
+  }
+  @media (min-width: 1000px) {
+    align-items: flex-end;
   }
 `;
 
