@@ -32,9 +32,11 @@ const Title = styled.div`
 `;
 
 const SingleCard = styled.div`
-  padding: 0 10px;
+  padding-bottom: 30px;
+  margin: 0 auto;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     padding: 0;
+    margin: 0;
   }
 `;
 
@@ -44,10 +46,11 @@ const CardContainer = styled.div`
   width: 1200px;
   padding: 20px;
   max-width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
+  @media (min-width: 1100px) {
     flex-flow: row;
+    justify-content: space-between;
   }
 `;
 
