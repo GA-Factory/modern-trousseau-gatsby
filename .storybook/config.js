@@ -25,16 +25,16 @@ const Decorator = storyFn => (
 addDecorator(Decorator);
 
 global.___loader = {
-  enqueue: () => { },
-  hovering: () => { },
+  enqueue: () => {},
+  hovering: () => {}
 };
 
-global.__PATH_PREFIX__ = '';
-window.___navigate = (pathname) => {
-  action('NavigateTo:')(pathname);
+global.__PATH_PREFIX__ = "";
+window.___navigate = pathname => {
+  action("NavigateTo:")(pathname);
 };
 
-const req = require.context('../src/components', true, /\.stories\.js$/);
+const req = require.context("../src/components", true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

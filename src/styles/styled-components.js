@@ -34,7 +34,7 @@ const variables = {
             fontWeight: 'bold',
             fontStyle: 'italic',
             fontSize: 45,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         h2Styles: {
@@ -53,16 +53,16 @@ const variables = {
         },
         h4Styles: {
             fontFamily: 'Raleway',
-            fontWeight: 'bolder',
+            fontWeight: 'ExtraBold',
             fontSize: 30,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         h5Styles: {
             fontFamily: 'Raleway',
-            fontWeight: 'bold',
+            fontWeight: 'Bold',
             fontSize: 24,
-            lineHeight: 'Auto',
+            lineHeight: 'normal',
             LetterSpacing: '0%',
         },
         Body1MobileText: {
