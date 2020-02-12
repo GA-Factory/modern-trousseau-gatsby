@@ -8,13 +8,14 @@ const SingleDot = styled.div`
   margin-right: 5px;
   cursor: pointer;
   border-radius: 50%;
-  background: ${props =>
+  /* background-color: grey; */
+  background-color: ${props =>
     props.imageIndex === props.dotIndex ? "black" : "blue"};
   /* background-color: grey; */
 `;
 
-const Dot = () => {
+const Dots = () => {
   return <SingleDot />;
 };
 
-export default Dot;
+export default Dots;

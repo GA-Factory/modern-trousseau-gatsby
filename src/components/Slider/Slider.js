@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "gatsby-image";
 import styled from "styled-components";
-import Dot from "./Dots";
+import Dots from "./Dots";
 
 const SliderImageContainer = styled.div`
   align-items: center;
@@ -15,7 +15,7 @@ const SliderImage = styled(Image)`
   display: block;
   flex-basis: 750px;
   margin: 25px auto;
-  max-width: 750px;
+  max-width: 400px;
   margin: 25px auto;
 `;
 const ChevronLeft = styled.svg`
@@ -121,12 +121,26 @@ export default class ProductSingle extends React.Component {
             </ChevronRight>
           )}
         </SliderImageContainer>
+        {/* <Dots />
+        <Dots
+          imageIndex={this.state.currentIndex}
+          dotIndex={index}
+          key={this.state.key}
+          activeImage={img}
+        />
+        <Dots
+          imageIndex={this.state.currentIndex}
+          dotIndex={index}
+          key={this.state.key}
+          activeImage={img}
+        /> */}
+
         <DotContainer>
           {console.log(this.state.imageArr)}
           {this.state.imageArr.map((img, index) => {
             <>
               <div>This works</div>
-              <Dot
+              <Dots
                 imageIndex={this.state.currentIndex}
                 dotIndex={index}
                 key={this.state.key}

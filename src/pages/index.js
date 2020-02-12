@@ -7,6 +7,7 @@ import Layout from "../global/Layout";
 // import Image from "../components/Image";
 import SEO from "../global/seo";
 import Slider from "../components/Slider/Slider";
+import Dots from "../components/Slider/Dots";
 import PrimaryPink from "../styles/styled-components";
 
 // const Page = styled.div`
@@ -39,6 +40,12 @@ const IndexPage = props => (
     <h1>Slider Time</h1>
     <p>Try it out...</p>
     <Slider images={props.data.sliderImages} />
+    {/* <Dots
+      imageIndex={props.data.currentIndex}
+      dotIndex={props.data.index}
+      key={props.key}
+      activeImage={props.img}
+    /> */}
   </Layout>
 );
 
