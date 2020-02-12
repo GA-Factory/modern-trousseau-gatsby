@@ -14,9 +14,7 @@ const Container = styled.div`
   background-color: ${props => props.theme.colors.backgroundGray};
   border-bottom: 0.5px solid #0f1f2f;
   padding: 35px 40px;
-  border: 1px solid black;
   @media (min-width: 600px) {
-    border: 1px solid black;
     display: flex;
     height: auto;
     width: 100%;
@@ -25,7 +23,6 @@ const Container = styled.div`
     padding: 30px 20px;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    border: 1px solid black;
   }
 `;
 
@@ -37,21 +34,17 @@ const ReviewContainerMobile = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0;
-  border: 1px solid blue;
   @media (min-width: 600px) {
     flex-direction: row;
     height: auto;
     width: 48%;
     justify-content: space-around;
     margin-top: 0;
-    border: 1px solid blue;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     height: 250px;
     width: 33%;
-    border: 1px solid blue;
-    /* background-color: green; */
   }
 `;
 
@@ -59,20 +52,16 @@ const ReviewContainerMidsize = styled.div`
   height: auto;
   justify-content: space-around;
   display: none;
-  border: 1px solid green;
   @media (min-width: 600px) {
     display: flex;
     height: auto;
     width: 48%;
-    border: 1px solid green;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     height: 240px;
     width: 33%;
     margin-bottom: 8px;
-    border: 1px solid green;
-    /* vertical-align: baseline; */
   }
 `;
 
@@ -85,7 +74,6 @@ const ReviewContainerDesktop = styled.div`
     display: flex;
     width: 33%;
     height: 240px;
-    border: 1px solid lightblue;
     margin-bottom: 5px
   }
 `;
@@ -93,18 +81,15 @@ const ReviewContainerDesktop = styled.div`
 const GownImage = styled.img`
   width: 100%;
   height: auto;
-  border: 1px solid red;
   @media (min-width: 600px) {
     display: inline-block;
     width: 50%;
     height: 238px;
-    border: 1px solid red;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 50%;
     height: 250px;
-    border: 1px solid red;
   }
 `;
 
@@ -115,16 +100,13 @@ const ImageAccompaniment = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow;
   @media (min-width: 600px) {
     height: auto;
     width: 50%;
-    border: 1px solid yellow;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: auto;
     width: 100%;
-    border: 1px solid yellow;
   }
 `;
 
@@ -135,11 +117,10 @@ const ReviewMobile = styled.div`
   text-align: center;
   margin: 0 0 8px 2px;
   position: relative;
-  border: 1px solid orange;
   @media (min-width: 600px) {
     margin-left: 5px;
     width: 100%;
-    border: 1px solid orange;
+
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     top: 15%;
@@ -147,7 +128,6 @@ const ReviewMobile = styled.div`
     height: auto;
     position: relative;
     top: 14px;
-    border: 1px solid orange;
   }
 `;
 
@@ -160,7 +140,6 @@ const ReviewMidsize = styled.span`
     line-height: 22px;
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid brown;
 }
 @media (min-width:  ${props => props.theme.breakpoints.tablet}) {
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
@@ -169,7 +148,6 @@ const ReviewMidsize = styled.span`
     width: 100%;
     position: relative;
     top: 15px;
-    /* background-color: blueviolet; */
 }
 ;`
 
@@ -183,7 +161,6 @@ const ReviewDesktop = styled.div`
   font-size:18px;
   margin-left: 5px;
   width: 17%;
-  border: 1px solid yellowgreen;
 }
 `;
 
@@ -192,17 +169,13 @@ const ViewDressMobile = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border: 1px solid purple;
   @media (min-width: 600px) {
     margin-top: 0;
     flex-direction: column;
-    border: 1px solid purple;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    border: 1px solid purple;
     width: 50%;
     height: auto;
-    /* margin-right: 2%; */
     margin-top: 35%
   }
 `;
@@ -211,16 +184,13 @@ const ViewDressMidsize = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
-  border: 1px solid violet;
   @media (min-width: 600px) {
     flex-direction: column;
     margin-top: 8%;
     margin-left: 12px;
-    border: 1px solid violet;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     flex-direction: column;
-    border: 1px solid violet;
     width: 50%;
     height: auto;
     margin-top: 0;
@@ -253,7 +223,6 @@ const ButtonPlacerMobile = styled.div`
     margin-top: 5%;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* margin-right: 50%; */
   }
 `;
 
