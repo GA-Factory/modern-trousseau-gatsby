@@ -5,6 +5,7 @@ import styled from "styled-components";
 const MobileCard = styled.div`
   display: flex;
   width: 100%;
+  height: 330px
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
