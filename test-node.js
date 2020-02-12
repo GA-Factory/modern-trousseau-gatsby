@@ -34,27 +34,19 @@ exports.createPages = ({ actions }) => {
           `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=gowns`
         ).then((result) => {
         // Now we loop over however many caseStudies Contentful sent back
-        result.data.items.contentType.sys.id.forEach((gowns) => {
-          let matchedGowns = result.data..filter(
-            contentfulGowns => 
-              contentfulGowns.node.bigCaseStudyReference.id === gowns.node.id 
-          )
+        result.data.items.forEach((gowns) => {
+          
           createPage ({
-            path: `src/components/mockComponent.js`,
+            path: `/gowns/${gowns.node.slug}`,
             component: mockComponent,
             context: {
               id: gowns.node.id,
               name: gowns.node.name,
-              slug: gowns.node.slug,
               gownImage: gowns.node.gownImage,
               details: gowns.node.details,
               silhouette: gowns.node.silhouette,
               accessories: gowns.node.accessories,
               collections: gowns.node.collections,
-              designer: gowns.node.designer,
-              designer: gowns.node.designer,
-              designerQuote: gowns.node.designerQuote,
-              designerImage: gowns.node.designerImage,
             }
           })
         })
