@@ -117,6 +117,10 @@ const LogoContainer = styled.div`
   }
 `;
 
+const SliderAdjuster = styled.div`
+  height: 25%;
+`
+
 const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
@@ -161,14 +165,22 @@ const GownsPage = () => (
       </SearchMenu>
     </SearchMenuContainer>
     <CollectionsContainer>
+      <SliderAdjuster>
       <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
+      <SliderAdjuster>
       <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
+      <SliderAdjuster>
       <CollectionTitle>{collectionTitle[2]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
+      <SliderAdjuster>
       <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
     </CollectionsContainer>
     <Footer />
   </Layout>

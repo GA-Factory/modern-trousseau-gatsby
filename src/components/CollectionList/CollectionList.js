@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
 
 const MobileCard = styled.div`
   display: flex;
@@ -24,6 +23,10 @@ const DesktopCard = styled.div`
   }
 `;
 
+const SliderAPlacer = styled.div`
+  padding-left: 3.5%;
+`
+
 const Slide = styled.div`
   display: flex;
   height: 268px;
@@ -32,17 +35,6 @@ const Slide = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
     display: none;
-  }
-`;
-
-const Title = styled.div`
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    margin-bottom: 8px;
-    font-weight: 800;
-    font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
   }
 `;
 
@@ -66,10 +58,11 @@ const ImageContainer = styled.div`
 `;
 
 const SlideImage = styled.img`
-  height: 80%;
+  height: 110%;
   width: 90%;
   margin: 3px;
   margin-bottom: 0;
+  /* height: 100%; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -219,13 +212,14 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
+          <SliderAPlacer>  
           <SliderA propertyA={propertyA} />
+          </SliderAPlacer>
           <SliderB propertyB={propertyB} />
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
-        {/* <Title>Fall 2020 Collection</Title> */}
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
