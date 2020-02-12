@@ -1,0 +1,72 @@
+.carousel {
+    /* margin: 0; */
+    width: 100%;
+    max-width: 600px;
+    max-height: 336px;
+    height: 100%;
+}
+
+.image-car{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.title{
+    font-size: 16px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.text-below{
+    font-size: 0.938em;
+}
+
+.image-footer{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+}
+
+.image-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-slide {
+    width: 100%;
+    height: 100%;
+    transition: background-image .3s ease-in-out;
+    position:relative;
+}
+
+p{
+   
+    color: white;
+}
+
+button{
+    bottom: 29px;
+    right: 28px;
+}
+
+.slide-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    position: fixed;
+    top: 50%;
+}
+
+.slide-arrow.right {
+    right: 1rem;
+}
+
+.slide-arrow.left {
+    left: 1rem;
+}
