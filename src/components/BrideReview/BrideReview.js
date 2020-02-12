@@ -27,8 +27,8 @@ const Container = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border: 1px solid black;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ReviewContainerMobile = styled.div`
@@ -53,9 +53,13 @@ const ReviewContainerMobile = styled.div`
     height: 240px;
     width: 33%;
     border: 1px solid blue;
+    /* background-color: green; */
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 800px) {
+    height: 85%;
+    border: 1px solid blue;
+    /* width: 28%; */
+  } */
 `;
 
 const ReviewContainerMidsize = styled.div`
@@ -76,8 +80,11 @@ const ReviewContainerMidsize = styled.div`
     margin-top: 40px;
     border: 1px solid green;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+    height: 85%;
+    /* width: 28%; */
+    /* margin-bottom: 40px
+  }  */
 `;
 
 const ReviewContainerDesktop = styled.div`
@@ -91,8 +98,10 @@ const ReviewContainerDesktop = styled.div`
     height: 240px;
     border: 1px solid lightblue;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+    height: 85%; */
+    /* width: 28%; */
+  /* } */
 `;
 
 const GownImage = styled.img`
@@ -111,8 +120,10 @@ const GownImage = styled.img`
     height: 250px;
     border: 1px solid red;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) { */
+    /* height: 35%; */
+    /* width: auto; */
+  /* } */
 `;
 
 const ImageAccompaniment = styled.div`
@@ -133,8 +144,8 @@ const ImageAccompaniment = styled.div`
     width: 100%;
     border: 1px solid yellow;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ReviewMobile = styled.div`
@@ -156,8 +167,9 @@ const ReviewMobile = styled.div`
     height: auto;
     border: 1px solid orange;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+    
+  } */
 `;
 
 const ReviewMidsize = styled.span`
@@ -176,9 +188,10 @@ const ReviewMidsize = styled.span`
   text-align: center;
     padding-right: 4px;
     width: 100%;
+    /* background-color: blueviolet; */
 }
-@media (min-width: 987px) {
-  }
+/* @media (min-width: 987px) {
+  } */
 ;`
 
 const ReviewDesktop = styled.div`
@@ -192,8 +205,8 @@ const ReviewDesktop = styled.div`
   width: 15%;
   border: 1px solid yellowgreen;
 }
-@media (min-width: 987px) {
-  }
+/* @media (min-width: 987px) {
+  } */
 `;
 
 const ViewDressMobile = styled.div`
@@ -214,8 +227,8 @@ const ViewDressMobile = styled.div`
     margin-left: 28%;
     margin-top: 35%
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ViewDressMidsize = styled.div`
@@ -238,8 +251,8 @@ const ViewDressMidsize = styled.div`
     margin-left: 28%;
     margin-top: 30%
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ViewDressDesktop = styled.div`
@@ -255,8 +268,8 @@ const ViewDressDesktop = styled.div`
     width: 50%;
     height: auto;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ButtonPlacerMobile = styled.div`
@@ -270,8 +283,8 @@ const ButtonPlacerMobile = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 5%;
   }
-  @media (min-width: 987px) {
-  }
+  /* @media (min-width: 987px) {
+  } */
 `;
 
 const ComponentCollection = ({ images }) => (
