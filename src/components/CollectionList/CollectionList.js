@@ -77,7 +77,7 @@ const MobileSlideText = styled.p`
 `;
 
 const ButtonIcon = styled.p`
-  margin-top: 110px;
+  margin-top: 140px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }

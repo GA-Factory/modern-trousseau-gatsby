@@ -117,13 +117,22 @@ const LogoContainer = styled.div`
   }
 `;
 
+const GownHeaderContainer = styled.div`
+  border-top: 25px solid ${props => props.theme.colors.primaryPink};
+`
+
 const SliderAdjuster = styled.div`
   height: 25%;
+  border-top: 50px solid ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border-top: 0;
+  }
 `
 
 const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
+  border-bottom: 60px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border-top: 4px solid ${props => props.theme.colors.backgroundGray};
     border-bottom: 28px solid #e5e5e5;
@@ -154,7 +163,9 @@ const GownsPage = () => (
     <LogoContainer>
       <Logo notag />
     </LogoContainer>
+    <GownHeaderContainer>
     <GownHeader icon={icon} open={open} />
+    </GownHeaderContainer >   
     <NavMenuDesktop />
     <SearchMenuContainer>
       <SearchMenu>
@@ -165,10 +176,8 @@ const GownsPage = () => (
       </SearchMenu>
     </SearchMenuContainer>
     <CollectionsContainer>
-      <SliderAdjuster>
       <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
       <SliderAdjuster>
       <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
