@@ -34,13 +34,13 @@ exports.createPages = ({ actions }) => {
           `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=gowns`
         ).then((result) => {
         // Now we loop over however many caseStudies Contentful sent back
-        result.data..forEach((gowns) => {
-          let matchedGowns = result.data.allContentfulGowns.edges.filter(
+        result.data.items.contentType.sys.id.forEach((gowns) => {
+          let matchedGowns = result.data..filter(
             contentfulGowns => 
               contentfulGowns.node.bigCaseStudyReference.id === gowns.node.id 
           )
           createPage ({
-            path: `src/components/mockComponent.js'`,
+            path: `src/components/mockComponent.js`,
             component: mockComponent,
             context: {
               id: gowns.node.id,

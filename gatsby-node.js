@@ -54,27 +54,19 @@ const axios = require("axios");
 exports.sourceNodes = ({ action }) => {
   const { createNode } = action;
   return new Promise((resolve, reject) => {
-    // fetch raw data from the randomuser api
-    // const fetchRandomUser = () => axios.get(`https://randomuser.me/api/?results=500`);
-    // await for results
-    // const res = await fetchRandomUser();
 
     axios
       .get(
         `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg`
       )
       .then(res => {
-        // map into these results and create nodes
+
         res.data.results.map((gowns, i) => {
-          // Create your node object
           const userNode = {
-            // Required fields
             id: `${i}`,
             parent: `null`,
             internal: {
-              type: `allContentfulGowns` // name of the graphQL query --> allRandomUser {}
-              // contentDigest will be added just after
-              // but it is required
+              type: `allContentfulGowns` 
             },
             children: [],
             name: gowns.name
