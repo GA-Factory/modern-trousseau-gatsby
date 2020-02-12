@@ -1,10 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Layout from '../global/Layout';
-import Image from '../components/Image';
-import PrimaryPink from '../styles/styled-components'
-
+import Layout from "../global/Layout";
+import Image from "../components/Image";
+import Logo from "../components/FullLogo/Logo";
 
 const Page = styled.div`
   width: 100%;
@@ -34,6 +33,7 @@ const IndexPage = () => (
   <Layout>
     <Page>
       <Image />
+      <Logo />
       <Heading>GatsbyJS + Storybook: YAY</Heading>
       <Label>It Works</Label>
     </Page>
