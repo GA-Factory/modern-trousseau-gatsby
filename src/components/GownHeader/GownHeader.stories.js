@@ -4,11 +4,8 @@ import GownHeader from "./GownHeader";
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 let open = false;
-let icon = (faSlidersH)
+let icon = faSlidersH;
 
-storiesOf("GownHeader", module)
-  .add("GownHeader", () => 
-  <GownHeader
-  icon={icon}
-  open={open}
-  />);
+storiesOf("GownHeader", module).add("GownHeader", () => (
+  <GownHeader icon={icon} open={open} />
+));

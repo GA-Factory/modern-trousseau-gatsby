@@ -1,0 +1,125 @@
+
+ @media only screen and (min-width: 735px) {
+.nav-container {
+    background-color: #fae5dc;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+  }
+  
+  .nav-container nav {
+    text-align: center;
+    padding-top: 4rem;
+    padding: 5px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-container nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-container .nav-title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 29px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  
+  span.dots {
+    display: none;
+    padding: 0 2em;
+    font-size: 8px;
+  }
+  
+  .is-visible {
+    visibility: visible;
+  }
+  
+    .nav-container .nav-title {
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  
+    .nav-container .nav-title:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  
+    .nav-container nav ul li {
+      padding: 0;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .nav-container nav ul a {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+    }
+  
+    span.dots {
+      padding: 0 2em;
+      font-size: 8px;
+      visibility: visible;
+      display: flex;
+    }
+
+}
+    @media only screen and (max-width: 735px) {
+        .nav-container {
+          display: none;
+      }
+    
+      .nav-container nav {
+          display: none;
+      }
+    
+      .nav-container nav ul {
+          display: none;
+      }
+
+      .nav-container nav ul a {
+        display: none;
+      }
+    
+      .nav-container .nav-title {
+          display: none;
+      }
+    
+      .nav-container .nav-title:hover {
+          display: none;
+      }
+    
+      .nav-container nav ul li {
+          display: none;
+      }
+    
+      .nav-container nav ul a {
+          display: none;
+      }
+    
+      span.dots {
+          display: none;
+      }
+    }

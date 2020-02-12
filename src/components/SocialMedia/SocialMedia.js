@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import './SocialMedia.css'
+import "./SocialMedia.css";
 
-import facebook from '../Icons/facebook.png'
-import instagram from '../Icons/instagram.png'
-import pinterest from '../Icons/pinterest.png'
-
-
+import facebook from "../Icons/facebook.png";
+import instagram from "../Icons/instagram.png";
+import pinterest from "../Icons/pinterest.png";
 
 const SocialMedia = () => {
     return (
@@ -23,4 +21,4 @@ const SocialMedia = () => {
     )
 }
 
-export default SocialMedia
+export default SocialMedia;

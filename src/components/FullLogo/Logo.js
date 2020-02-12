@@ -11,12 +11,12 @@ const Logo = props => {
   }
 
   if (props.tagline) {
-      classList += ` tagline`
+    classList += ` tagline`;
   }
 
   if (props.notag) {
-    classList += ` notag` // Note the spacing here since we are adding to the string!
-}
+    classList += ` notag`; // Note the spacing here since we are adding to the string!
+  }
 
   return (
     <>
