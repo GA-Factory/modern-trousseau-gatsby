@@ -7,72 +7,65 @@
 // You can delete this file if you're not using it
 
 const axios = require("axios");
-// const path =
-//   "https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg";
-// const assetsPath =
-//   "https://cdn.contentful.com/spaces/2n4rer1mpqy8/assets/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg";
-
-// axios
-//   .get(path, {})
-//   .then(function(res) {
-//     console.log(res);
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
-
-// axios
-//   .get(assetsPath, {})
-//   .then(function(res) {
-//     console.log(res);
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
-
-// // exports.sourceNodes = async ({ actions }) => {
-//     const { createNode } = actions;
-//     return new Promise((resolve, reject) {
-//         axios.get(`https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg`)
-//     })
-// }
-
-//     const res = await fetchAllData;
-
-//     res.data.results.map((allData, i) => {
-//         const dataNode = {
-//             id : `{i}`,
-//             parent: null,
-//             internal: {
-//                 type: allContentfulGowns
-//             },
-//             children: [],
-//             name: allData.name
-//         }
-//     })
-
-// exports.sourceNodes = ({ action }) => {
-//   const { createNode } = action;
-//   return new Promise((resolve, reject) => {
-
-//     axios
-//       .get(
-//         `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg`
-//       )
-//       .then(res => {
-
-//         res.data.results.map((gowns, i) => {
-//           const userNode = {
-//             id: `${i}`,
-//             parent: `null`,
-//             internal: {
-//               type: `allContentfulGowns` 
-//             },
-//             children: [],
-//             name: gowns.name
-//           };
-//         });
-//         resolve();
-//       });
-//   });
-// };
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *  
+ * ######################################################
+ * BIG CASE STUDY BACKEND CODE
+ * ######################################################
+ * 
+ * We are using the .createPages part of the Gatsby Node API: https://next.gatsbyjs.org/docs/node-apis/#createPages 
+ * What this does is dynamically create pages (surprise) based on the data you feed into it
+ * 
+ * Feed the contentful API call into the promise
+ * Here I'm calling BigCaseStudy, which is a custom content type set up in contentful
+ * This is briefly explained over here: https://www.gatsbyjs.org/packages/gatsby-source-contentful/
+ * 
+ * Also, note the caseStudyIntro field is long text `markdown`
+ * Gatsby returns the long text field as an object
+ * Calling it's name inside of the object returns the HTML
+ * Read more here: https://github.com/gatsbyjs/gatsby/issues/3205
+ */
+// Set Gatsby path up to be used by .createPages
+const path = require('path')
+// Using Node's module export, Gatsby adds in a createPages factory 
+exports.createPages = ({ actions }) => {
+   
+  // We setup the createPage function takes the data from the actions object
+  const { createPage } = actions
+  // Setup a promise to build pages from contentful data model for bigCaseStudies
+  return new Promise((resolve, reject) => {
+    // Setup destination component for the data
+    const mockComponent = path.resolve('src/components/mockComponent.js')
+    resolve(
+        axios
+        .get(
+          `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=gowns`
+        ).then((result) => {
+        // Now we loop over however many caseStudies Contentful sent back
+        result.data.items.forEach((gowns) => {
+          console.log(gowns)
+          createPage ({
+            path: `/gowns/${gowns.fields.slug}`,
+            component: mockComponent,
+            context: {
+              id: gowns.node.id,
+              name: gowns.node.name,
+              gownImage: gowns.node.gownImage,
+              details: gowns.node.details,
+              silhouette: gowns.node.silhouette,
+              accessories: gowns.node.accessories,
+              collections: gowns.node.collections,
+            }
+          })
+        })
+      })
+      // This is the error handling for the calls
+      .catch((errors) => {
+        console.log(errors)
+        reject(errors)
+      })
+        
+    ) // close resolve handler
+  }) // close promise
+}
