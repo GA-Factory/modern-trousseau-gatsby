@@ -15,43 +15,6 @@
 }
 
 .logo-word-modern {
-<<<<<<< HEAD
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 64px;
-  letter-spacing: 0.1px;
-  color: #25282b;
-  margin: 0;
-}
-
-.logo-word-trousseau {
-  font-family: Playfair display;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 64px;
-  letter-spacing: 0.1px;
-  color: #25282b;
-  margin: 0 0 0 15px;
-}
-
-.tagline {
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 19px;
-  letter-spacing: 0.1px;
-  color: #25282b;
-  margin: auto;
-}
-
-.logo-tag {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-=======
     font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -81,21 +44,10 @@
     margin: auto;
 }
 
->>>>>>> ce2bf47d664cb09da177deb1d0d80405759fd738
 .notag {
   display: none;
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 768px) {
-  .logo-word-modern {
-    font-size: 22px;
-  }
-  .logo-word-trousseau {
-    font-size: 22px;
-  }
-}
-=======
 @media only screen and (min-width: 600px){
 
     .logo-word-modern {
@@ -131,4 +83,3 @@
     }
     
 }
->>>>>>> ce2bf47d664cb09da177deb1d0d80405759fd738
