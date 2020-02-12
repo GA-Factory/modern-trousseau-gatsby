@@ -168,7 +168,7 @@ const ReviewMidsize = styled.span`
     padding-right: 4px;
     width: 100%;
     position: relative;
-    top: 5px;
+    top: 15px;
     /* background-color: blueviolet; */
 }
 ;`
@@ -202,7 +202,7 @@ const ViewDressMobile = styled.div`
     border: 1px solid purple;
     width: 50%;
     height: auto;
-    margin-left: 28%;
+    /* margin-right: 2%; */
     margin-top: 35%
   }
 `;
@@ -224,8 +224,8 @@ const ViewDressMidsize = styled.div`
     width: 50%;
     height: auto;
     margin-top: 0;
-    margin-left: 28%;
-    margin-top: 30%
+    margin-right: 4%;
+    margin-top: 50%
   }
 `;
 
@@ -237,8 +237,8 @@ const ViewDressDesktop = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border: 1px solid orange;
     display: flex;
-    margin-left: 32%;
-    margin-top: 110%;
+    margin-left: 60%;
+    margin-top: 215px;
     width: 100%;
     height: auto;
   }
