@@ -27,8 +27,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "gatsby": "^2.15.6",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",
@@ -37,29 +40,32 @@
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.2.19",
     "gatsby-plugin-styled-components": "^3.1.4",
-    "gatsby-source-contentful": "^2.1.85",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-awesome-slider": "^4.0.2",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.1.2",
+    "sharp": "^0.24.0",
     "styled-components": "^4.3.2",
     "styled-reset-advanced": "^1.0.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-actions": "^5.3.12",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addon-notes": "^5.1.11",
     "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11",
+    "@storybook/react": "^5.3.12",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "yarn-run-all": "^3.1.1",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "yarn-run-all": "^3.1.1"
   }
 }
