@@ -1,7 +1,7 @@
-const dotenv = require(`dotenv`)
+const dotenv = require('dotenv');
 
 if (process.env.NODE_ENV !== 'production') {
-  dotenv.config()
+  dotenv.config();
 }
 
 module.exports = {
@@ -22,18 +22,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: 'gatsby-plugin-sharp',
       options: {
         useMozJpeg: false,
         stripMetadata: true,
         defaultQuality: 75,
       },
     }, {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: `2n4rer1mpqy8`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
+        spaceId: '2n4rer1mpqy8',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
      {
       resolve: 'gatsby-source-filesystem',
@@ -50,4 +50,3 @@ module.exports = {
     'gatsby-plugin-styled-components',
   ],
 };
-
