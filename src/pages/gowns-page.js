@@ -91,7 +91,7 @@ const SearchMenu = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-flex;
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
+    font-weight: bold;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;

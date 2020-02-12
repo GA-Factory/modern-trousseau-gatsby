@@ -72,7 +72,7 @@ const MobileSlideText = styled.p`
   text-align: center;
   margin: 10px 0 0 0;
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-  font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
+  font-weight: bold;
   font-size: 14px;
 `;
 
@@ -90,7 +90,7 @@ const DesktopImage = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-size: ${props => props.theme.fontStyles.Body1DesktopText.fontSize};
+    font-size: 20px;
   }
 `;
 
