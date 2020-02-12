@@ -51,28 +51,28 @@ const axios = require("axios");
 //         }
 //     })
 
-exports.sourceNodes = ({ action }) => {
-  const { createNode } = action;
-  return new Promise((resolve, reject) => {
+// exports.sourceNodes = ({ action }) => {
+//   const { createNode } = action;
+//   return new Promise((resolve, reject) => {
 
-    axios
-      .get(
-        `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg`
-      )
-      .then(res => {
+//     axios
+//       .get(
+//         `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg`
+//       )
+//       .then(res => {
 
-        res.data.results.map((gowns, i) => {
-          const userNode = {
-            id: `${i}`,
-            parent: `null`,
-            internal: {
-              type: `allContentfulGowns` 
-            },
-            children: [],
-            name: gowns.name
-          };
-        });
-        resolve();
-      });
-  });
-};
+//         res.data.results.map((gowns, i) => {
+//           const userNode = {
+//             id: `${i}`,
+//             parent: `null`,
+//             internal: {
+//               type: `allContentfulGowns` 
+//             },
+//             children: [],
+//             name: gowns.name
+//           };
+//         });
+//         resolve();
+//       });
+//   });
+// };
