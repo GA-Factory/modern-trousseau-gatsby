@@ -7,41 +7,42 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   height: auto;
+  width: 100%;
   max-width: 100%;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.backgroundGray};
   border-bottom: 0.5px solid #0f1f2f;
-  padding: 10px 15px;
+  padding: 35px 40px;
   border: 1px solid black;
   @media (min-width: 600px) {
     border: 1px solid black;
     display: flex;
-    height: 240px;
+    height: auto;
     width: 100%;
     justify-content: space-around;
     margin-top: 40px;
-    height: 327px;
+    padding: 30px 20px;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border: 1px solid black;
-    height: 300px;
+    /* height: 300px; */
   }
 `;
 
 const ReviewContainerMobile = styled.div`
   display: flex;
   flex-direction: column;
-  height: 460px;
-  width: 296px;
+  height: auto;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: ${props => props.theme.colors.backgroundGray};
+  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid blue;
   @media (min-width: 600px) {
     flex-direction: row;
-    height: 240px;
+    height: auto;
     width: 48%;
     justify-content: space-around;
     margin-top: 0;
@@ -51,23 +52,23 @@ const ReviewContainerMobile = styled.div`
     display: flex;
     height: 240px;
     width: 33%;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     border: 1px solid blue;
-    margin-bottom: 3.5%;
+    /* margin-bottom: 3.5%; */
   }
 `;
 
 const ReviewContainerMidsize = styled.div`
-  height: 200px;
+  height: auto;
   justify-content: space-around;
   display: none;
-  background-color: ${props => props.theme.colors.backgroundGray};
+  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid green;
   @media (min-width: 600px) {
     display: flex;
     height: auto;
-    width: 45%;
-    margin-bottom: 3.5%;
+    width: 48%;
+    /* margin-bottom: 3.5%; */
     border: 1px solid green;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -93,38 +94,39 @@ const ReviewContainerDesktop = styled.div`
 `;
 
 const GownImage = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
   border: 1px solid red;
   @media (min-width: 600px) {
     display: inline-block;
-    width: 60%;
+    width: 50%;
     height: 238px;
     border: 1px solid red;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 50%;
-    height: 240px;
+    height: 250px;
     border: 1px solid red;
   }
 `;
 
 const ImageAccompaniment = styled.div`
-  height: 208px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${props => props.theme.colors.backgroundGray};
+  align-items: center;
+  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid yellow;
   @media (min-width: 600px) {
-    height: 240px;
+    height: auto;
     width: 50%;
     border: 1px solid yellow;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 240px;
+    height: auto;
     width: 100%;
     border: 1px solid yellow;
   }
@@ -132,15 +134,15 @@ const ImageAccompaniment = styled.div`
 
 const ReviewMobile = styled.div`
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
-  font-size: 16px;
-  line-height: 15px;
+  font-size: 18px;
+  line-height: 20px;
   text-align: center;
   margin: 0 0 8px 2px;
   position: relative;
   border: 1px solid orange;
   @media (min-width: 600px) {
-    top: 2%;
-    margin-left: 2px;
+    /* top: 2%; */
+    margin-left: 5px;
     width: 100%;
     border: 1px solid orange;
   }
@@ -156,9 +158,9 @@ const ReviewMidsize = styled.span`
 @media (min-width: 600px) {
   font-family: ${props => props.theme.fontStyles.Body3DesktopText.fontFamily};
   text-align: center;
-    margin-left: 2px;
-    padding-right: 4px;
-    padding-top: 10%;
+    margin-left: 5px;
+    font-size:18px;
+    line-height: 22px;
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid brown;
