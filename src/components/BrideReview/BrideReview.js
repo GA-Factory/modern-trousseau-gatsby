@@ -26,7 +26,8 @@ const Container = styled.div`
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border: 1px solid black;
-    /* height: 300px; */
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -38,7 +39,6 @@ const ReviewContainerMobile = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0;
-  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid blue;
   @media (min-width: 600px) {
     flex-direction: row;
@@ -52,9 +52,9 @@ const ReviewContainerMobile = styled.div`
     display: flex;
     height: 240px;
     width: 33%;
-    /* margin-top: 40px; */
     border: 1px solid blue;
-    /* margin-bottom: 3.5%; */
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -62,13 +62,11 @@ const ReviewContainerMidsize = styled.div`
   height: auto;
   justify-content: space-around;
   display: none;
-  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid green;
   @media (min-width: 600px) {
     display: flex;
     height: auto;
     width: 48%;
-    /* margin-bottom: 3.5%; */
     border: 1px solid green;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -77,6 +75,8 @@ const ReviewContainerMidsize = styled.div`
     width: 33%;
     margin-top: 40px;
     border: 1px solid green;
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -90,6 +90,8 @@ const ReviewContainerDesktop = styled.div`
     width: 33%;
     height: 240px;
     border: 1px solid lightblue;
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -109,6 +111,8 @@ const GownImage = styled.img`
     height: 250px;
     border: 1px solid red;
   }
+  @media (min-width: 987px) {
+  }
 `;
 
 const ImageAccompaniment = styled.div`
@@ -118,7 +122,6 @@ const ImageAccompaniment = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: ${props => props.theme.colors.backgroundGray}; */
   border: 1px solid yellow;
   @media (min-width: 600px) {
     height: auto;
@@ -129,6 +132,8 @@ const ImageAccompaniment = styled.div`
     height: auto;
     width: 100%;
     border: 1px solid yellow;
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -141,7 +146,6 @@ const ReviewMobile = styled.div`
   position: relative;
   border: 1px solid orange;
   @media (min-width: 600px) {
-    /* top: 2%; */
     margin-left: 5px;
     width: 100%;
     border: 1px solid orange;
@@ -151,6 +155,8 @@ const ReviewMobile = styled.div`
     width: 95%;
     height: auto;
     border: 1px solid orange;
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -171,7 +177,9 @@ const ReviewMidsize = styled.span`
     padding-right: 4px;
     width: 100%;
 }
-`
+@media (min-width: 987px) {
+  }
+;`
 
 const ReviewDesktop = styled.div`
 @media (min-width:  ${props => props.theme.breakpoints.tablet}) {
@@ -184,6 +192,8 @@ const ReviewDesktop = styled.div`
   width: 15%;
   border: 1px solid yellowgreen;
 }
+@media (min-width: 987px) {
+  }
 `;
 
 const ViewDressMobile = styled.div`
@@ -203,6 +213,8 @@ const ViewDressMobile = styled.div`
     height: auto;
     margin-left: 28%;
     margin-top: 35%
+  }
+  @media (min-width: 987px) {
   }
 `;
 
@@ -226,6 +238,8 @@ const ViewDressMidsize = styled.div`
     margin-left: 28%;
     margin-top: 30%
   }
+  @media (min-width: 987px) {
+  }
 `;
 
 const ViewDressDesktop = styled.div`
@@ -241,6 +255,8 @@ const ViewDressDesktop = styled.div`
     width: 50%;
     height: auto;
   }
+  @media (min-width: 987px) {
+  }
 `;
 
 const ButtonPlacerMobile = styled.div`
@@ -253,6 +269,8 @@ const ButtonPlacerMobile = styled.div`
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 5%;
+  }
+  @media (min-width: 987px) {
   }
 `;
 
