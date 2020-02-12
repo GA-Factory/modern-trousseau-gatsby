@@ -112,7 +112,7 @@ const LogoContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     background-color: ${props => props.theme.colors.primaryPink};
     display: block;
-    height: 180px;
+    height: 120px;
     padding-top: 50px;
   }
 `;
