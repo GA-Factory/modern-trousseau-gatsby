@@ -14,9 +14,9 @@ const SocialMedia = () => {
             <div class="con">
             <h5>Stay Connected</h5><br />
             <div class="some">
-            <a href="https://www.facebook.com/ModernTrousseau/"><img  id="fb" src={facebook}></img></a>
-            <a href="https://www.instagram.com/moderntrousseaudc/"><img  id="in" src={instagram}></img></a>
-            <a href="https://www.pinterest.com/moderntrousseau/"><img  id="pi" src={pinterest}></img></a>
+            <a href="https://www.facebook.com/ModernTrousseau/" target="_blank"><img  id="fb" src={facebook}></img></a>
+            <a href="https://www.instagram.com/moderntrousseaudc/" target="_blank"><img  id="in" src={instagram}></img></a>
+            <a href="https://www.pinterest.com/moderntrousseau/" target="_blank"><img  id="pi" src={pinterest}></img></a>
             </div>
             </div>
         </>
