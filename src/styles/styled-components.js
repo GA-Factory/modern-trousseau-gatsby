@@ -30,6 +30,7 @@ const variables = {
   },
   fontStyles: {
     h1Styles: {
+<<<<<<< HEAD
       fontStyle: "Playfair Display",
       fontWeight: "Bold Italic",
       fontSize: 45,
@@ -125,5 +126,80 @@ const variables = {
     }
   }
 };
+=======
+      fontFamily: 'Playfair Display',
+      fontWeight: 'bold',
+      fontStyle: 'italic',
+      fontSize: 45,
+      lineHeight: 'normal',
+      LetterSpacing: '0%',
+    },
+    h2Styles: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 'bold',
+      fontSize: 40,
+      lineHeight: 'Auto',
+      LetterSpacing: '0%',
+    },
+    h3Styles: {
+      fontFamily: 'Raleway',
+      fontWeight: 'medium',
+      fontSize: 24,
+      lineHeight: 'Auto',
+      LetterSpacing: '0%',
+    },
+    h4Styles: {
+      fontFamily: 'Raleway',
+      fontWeight: 'ExtraBold',
+      fontSize: 30,
+      lineHeight: 'normal',
+      LetterSpacing: '0%',
+    },
+    h5Styles: {
+      fontFamily: 'Raleway',
+      fontWeight: 'Bold',
+      fontSize: 24,
+      lineHeight: 'normal',
+      LetterSpacing: '0%',
+    },
+    Body1MobileText: {
+      fontFamily: 'Raleway',
+      fontWeight: 'Regular',
+      fontSize: 16,
+      lineHeight: 'Auto',
+      LetterSpacing: '0%',
+    },
+    Body2MobileText: {
+      fontFamily: 'Raleway',
+      fontWeight: 'Regular',
+      fontSize: 11,
+      lineHeight: 'Auto',
+      LetterSpacing: '0%',
+    },
+    Body1DesktopText: {
+      fontFamily: 'Raleway',
+      fontWeight: 'Regular',
+      fontSize: 20,
+      lineHeight: 18,
+      LetterSpacing: '0.1px',
+    },
+    Body2DesktopText: {
+      fontFamily: 'Raleway',
+      fontWeight: 'Regular',
+      fontSize: 30,
+      lineHeight: 24,
+      LetterSpacing: '0.1px',
+    },
+    Body3DesktopText: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 'Regular',
+      fontSize: 17,
+      lineHeight: 22,
+      LetterSpacing: '0.1px',
+    } 
+  }
+}
+
+>>>>>>> develop
 
 export default variables;

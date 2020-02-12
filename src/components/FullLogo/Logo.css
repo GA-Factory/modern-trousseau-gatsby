@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: row;
   margin: auto;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+  align-items: baseline;
+>>>>>>> develop
 }
 
 .logo-tag {
@@ -75,7 +80,49 @@
     font-size: 20px;
   }
 
+<<<<<<< HEAD
   .notag {
     display: none;
   }
 }
+=======
+.notag {
+  display: none;
+}
+
+@media only screen and (min-width: 600px){
+
+    .logo-word-modern {
+        font-family: Raleway, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 44px;
+        letter-spacing: 0.1px;
+        color: #25282B;
+        margin: 0;
+    }
+
+    .logo-word-trousseau {
+        font-family: Playfair display;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        letter-spacing: 0.1px;
+        color: #25282B;
+        margin: 0 0 0 1%;
+        line-height: 0.85;
+    }
+
+    .logo-tag {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        font-size: 20px;
+    }
+
+    .notag {
+        display: none;
+    }
+    
+}
+>>>>>>> develop

@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
 
 const MobileCard = styled.div`
   display: flex;
-  width: 375px;
+  width: 100%;
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -17,10 +16,16 @@ const DesktopCard = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    width: 100%;
+    width: 67%;
+    margin-left: 16.5%;
+    margin-right: 16.5%;
     height: 440px;
   }
 `;
+
+const SliderAPlacer = styled.div`
+  padding-left: 3.5%;
+`
 
 const Slide = styled.div`
   display: flex;
@@ -30,17 +35,6 @@ const Slide = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
     display: none;
-  }
-`;
-
-const Title = styled.div`
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    margin-bottom: 8px;
-    font-weight: 800;
-    font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
   }
 `;
 
@@ -64,10 +58,11 @@ const ImageContainer = styled.div`
 `;
 
 const SlideImage = styled.img`
-  height: 220px;
-  width: 152px;
+  height: 110%;
+  width: 90%;
   margin: 3px;
   margin-bottom: 0;
+  /* height: 100%; */
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -77,25 +72,25 @@ const MobileSlideText = styled.p`
   text-align: center;
   margin: 10px 0 0 0;
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-  font-weight: ${props => props.theme.fontStyles.h5Styles.fontWeight};
+  font-weight: bold;
   font-size: 14px;
 `;
 
 const ButtonIcon = styled.p`
-  margin-top: 110px;
+  margin-top: 140px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
 `;
 
 const DesktopImage = styled.img`
-  width: 307px;
-  height: 421px;
+  width: 100%;
+  height: 90%;
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-size: ${props => props.theme.fontStyles.Body1DesktopText.fontSize};
+    font-size: 20px;
   }
 `;
 
@@ -108,6 +103,7 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
+  width: 100%;
   height: 440px;
 `;
 
@@ -216,13 +212,14 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
+          <SliderAPlacer>  
           <SliderA propertyA={propertyA} />
+          </SliderAPlacer>
           <SliderB propertyB={propertyB} />
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
-        <Title>Fall 2020 Collection</Title>
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
