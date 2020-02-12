@@ -6,8 +6,6 @@ import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faSlidersH);
 
-// let icon = (faSlidersH)
-
 const GownHeader = props => {
   return (
     <div className="GownHead">
