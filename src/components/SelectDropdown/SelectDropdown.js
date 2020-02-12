@@ -1,9 +1,24 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 
-const DropdownItem = styled(Link)`
-  width: 100%;
+const DropdownSection = styled.div``;
+
+const Selected = styled.ul`
+  position: relative;
+  padding: 5px;
+  &:first-child {
+    font-weight: bold;
+    border: 1px black solid;
+  }
+`;
+
+const Items = styled.li`
+  z-index: 1;
+  padding: 5px;
+
+  &:hover {
+    background-color: pink;
+  }
 `;
 
 class SelectDropdown extends Component {
@@ -16,7 +31,6 @@ class SelectDropdown extends Component {
     };
 
     this.toggle = this.toggle.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
     this.select = this.select.bind(this);
   }
 
@@ -39,53 +53,21 @@ class SelectDropdown extends Component {
     let selections = this.props.option;
     let Dropdown = selections.map((item, index) => {
       return (
-        <li key={index} title={item} onClick={this.select}>
+        <Items key={index} title={item} onClick={this.select}>
           {item}
-        </li>
+        </Items>
       );
     });
 
     return (
-      <div>
+      <DropdownSection>
         <ul>
-          <li onClick={this.toggle}>{this.state.title}</li>
+          <Selected onClick={this.toggle}>{this.state.title}</Selected>
           {this.state.active === true && Dropdown}
         </ul>
-      </div>
+      </DropdownSection>
     );
   }
 }
 
 export default SelectDropdown;
-
-{
-  /* <ul>{this.state.active === true && fullList}</ul> */
-}
-
-// <DropdownItem to="/" />
-
-// {
-//     (this.state.active === true && console.log("True statement Firing!"),
-//     this.state.list.map((item, index) => {
-//       // <DropdownItem to="/" key={Math.random(0, 100000)} name={item}>
-//       //   {item}
-//       //   <p>hello</p>
-//       // </DropdownItem>;
-
-//       {
-//         item;
-//       }
-//     }))
-//   }
-
-// {this.state.active === true &&
-//     this.state.list.map((item, index) => {
-//       <DropdownItem
-//         to="/"
-//         key={Math.random(0, 100000)}
-//         name={item}
-//         index={index}
-//       >
-//         <li>{item}</li>
-//       </DropdownItem>;
-//     })}
