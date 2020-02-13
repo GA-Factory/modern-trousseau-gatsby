@@ -12,21 +12,22 @@ const DesktopText = styled.p`
   margin-top: 5px;
   padding-bottom: 15px;
   font-weight: bold;
-  font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
+  font-family: ${props => props.theme.fontStyles.h5Styles.fontStyle};
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     text-transform: uppercase;
     font-weight: bold;
+  }
 `;
 
 const Wrapper = styled.div`
-@media (max-width: ${props => props.theme.breakpoints.tablet}) {
-  background: #fae5dc;
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    background: #fae5dc;
+  }
 `;
 
 const DressListItem = props => (
   <Wrapper>
     <Image src={props.image} alt="image"></Image>
-
     <DesktopText>{props.dressname}</DesktopText>
   </Wrapper>
 );
