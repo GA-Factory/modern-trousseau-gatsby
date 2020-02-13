@@ -5,7 +5,6 @@ import styled from "styled-components";
 const MobileCard = styled.div`
   display: flex;
   width: 100%;
-  height: 330px
   justify-content: space-around;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -104,9 +103,8 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
-  display: grid;
   width: 100%;
-  /* height: auto; */
+  height: 440px;
 `;
 
 const SliderA = ({ propertyA }) => {
