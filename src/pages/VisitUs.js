@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar/NavBar';
 import Layout from '../global/Layout';
+import Footer from '../components/Footer/Footer';
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,7 +21,14 @@ const Title = styled.div`
   font-size: 18px;
   border: 1px solid #080808;
   background: rgba(68, 31, 14, 0.2);
-`
+`;
+
+const Bottom = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+`;
 
 const VisitUs = () => (
     <Layout>
@@ -33,6 +41,11 @@ const VisitUs = () => (
                 </Wrapper>
             </div>
         </main>
+        <footer>
+          <Bottom>
+            <Footer />
+          </Bottom>
+        </footer>
     </Layout>
   );
 
