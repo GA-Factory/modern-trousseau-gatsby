@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
 
 .collection-card{
     width: 375px;
@@ -58,3 +58,62 @@ font-size: 15px;
 font-family: 'Raleway', sans-serif;
 }
 }
+@media only screen and (min-width: 601px){
+
+    .collection-card{
+        width: 375px;
+        height: 190px;
+        background-color: #FAE5DC;
+    }
+    
+    .collect-header{
+        margin-top: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: calc(100% - 24px);
+        white-space: nowrap;
+    }
+    
+    .collection-arrow{
+        margin: 6px 0 0 15px;
+        font-weight: none;
+        flex-basis: 12px;
+        margin-bottom: 7px;
+    }    
+    
+    .collection-blank {
+        height: 12px;
+        flex-basis: 12px;
+    }
+    
+    .collection-title {
+        height: 26px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 21px;
+        text-align: center;
+        color: #000000;
+        margin-left: -15px;
+    }
+    
+    .collection-content {
+    text-align: center;
+    margin-top: 20px;
+    }
+    p.collection-quote {   
+    padding: 0 20px;    
+    font-size: 15px;    
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    }
+    .collection-footer{
+    margin-top: 20px;    
+    text-align: center;    
+    font-size: 15px;    
+    font-family: 'Raleway', sans-serif;
+    }
+    }
+    
