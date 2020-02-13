@@ -158,7 +158,7 @@ const CollectionTitle = styled.p`
   }
 `;
 
-const GownsPage = () => (
+const GownsPage = (props) => (
   <Layout>
     <NavBar />
     <LogoContainer>
@@ -177,7 +177,7 @@ const GownsPage = () => (
       </SearchMenu>
     </SearchMenuContainer>
     <CollectionsContainer>
-      <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulGowns.edges[0].node.name}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       <SliderAdjuster>
       <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
@@ -197,3 +197,36 @@ const GownsPage = () => (
 );
 
 export default GownsPage;
+
+export const carouselImageQuery = graphql`
+query MyQuery {
+  contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
+    id
+  }
+  allContentfulGowns {
+    edges {
+      node {
+        name
+      }
+    }
+  }
+}
+`
+
+
+
+// export const carouselImageQuery = graphql`
+// query MyQuery {
+//   contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
+//     id
+//   }
+//   allContentfulGowns {
+//     edges {
+//       node {
+//         name
+//       }
+//     }
+//   }
+// }
+// `
+// {props.data.allContentfulGowns.edges[0].node.name}
