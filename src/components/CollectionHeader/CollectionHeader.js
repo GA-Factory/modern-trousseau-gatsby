@@ -10,8 +10,7 @@ import "../CollectionHeader/CollectionHeader.css";
 
 
 const CollectionCard = styled.section`
-    // width: 375px;
-    width: 100%
+    width: 100%;
     height: 190px;
     background-color: #FAE5DC;
     display: grid;  
