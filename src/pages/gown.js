@@ -78,18 +78,6 @@ const collectionTitle = [
   "Classics"
 ];
 
-const DressListItemGrid = styled.div`
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: grid;
-    width: 90%;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 33% 33% 33%;
-    justify-items: center;
-    margin-left: 10%;
-  }
-`;
-
 const SearchMenuContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
@@ -106,23 +94,6 @@ const LogoContainer = styled.div`
     display: block;
     height: 120px;
     padding-top: 50px;
-  }
-`;
-
-const SliderAdjuster = styled.div`
-  height: 25%;
-  border-top: 50px solid ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    border-top: 0;
-  }
-`;
-
-const CollectionsContainer = styled.div`
-  border-top: 2px solid #fae5dc;
-  background-color: ${props => props.theme.colors.backgroundGray};
-  border-bottom: 60px solid ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
   }
 `;
 
@@ -168,37 +139,6 @@ const RightArrowContainer = styled.div`
   margin-left: 25px;
 `;
 
-const DesignerQuote = styled.p`
-  background-color: ${props => props.theme.colors.primaryPink};
-  text-align: center;
-  padding: 20px 5% 0 5%;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const QuoteAuthor = styled.p`
-  background-color: ${props => props.theme.colors.primaryPink};
-  text-align: center;
-  padding: 20px 5% 0 5%;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const ButtonContainer = styled.div`
-  background-color: ${props => props.theme.colors.primaryPink};
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    background-color: #e5e5e5;
-    border-top: 20px solid #e5e5e5;
-    border-bottom: 80px solid #e5e5e5;
-  }
-`;
-
 const GownsPage = () => (
   <Layout>
     <NavBar />
@@ -216,33 +156,8 @@ const GownsPage = () => (
           <Icons name={["fas", "arrow-right"]} size="1x" />
         </RightArrowContainer>
       </TitleContainer>
-      <DesignerQuote>
-        Quote from a desiginer that says some stuff! And Also some things!! And
-        it needs to be longer for me to test it!!!
-      </DesignerQuote>
-      <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
-      <DressListItemGrid>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-      </DressListItemGrid>
     </SearchMenuContainer>
-    <CollectionsContainer>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      <SliderAdjuster>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-      <SliderAdjuster>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-    </CollectionsContainer>
-    <ButtonContainer>
+    {/* <ButtonContainer>
       <PinkButton
         label="See More From This Collection"
         width={`${"250px"}`}
@@ -255,7 +170,7 @@ const GownsPage = () => (
         desktopfontsize={`${"14px"}`}
         desktopheight={`${"16px"}`}
       />
-    </ButtonContainer>
+    </ButtonContainer> */}
     <Footer />
   </Layout>
 );
