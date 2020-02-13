@@ -11,18 +11,18 @@ const Logo = props => {
   }
 
   if (props.tagline) {
-      classList += ` tagline`
+    classList += ` tagline`;
   }
 
   if (props.notag) {
-    classList += ` notag` // Note the spacing here since we are adding to the string!
-}
+    classList += ` notag`; // Note the spacing here since we are adding to the string!
+  }
 
   return (
     <>
       <div className="logo-tag">
         <div className="logo">
-          <h1 className="logo-word-modern">Modern</h1>
+          <h1 className="logo-word-modern">MODERN</h1>
           <h1 className="logo-word-trousseau">trousseau</h1>
         </div>
         <div className={classList}>designed & made with love in the usa</div>
