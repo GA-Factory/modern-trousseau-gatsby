@@ -1,6 +1,6 @@
 .textInput {
     background-color: white;
-    width: 155px;
+    width:155px;
     padding: 6px 11px;
     font-family: Raleway;
     font-style: italic;
@@ -8,6 +8,7 @@
     font-size: 14px;
     line-height: 16px;
     margin-right: 5px;
+    border: 1px solid black;
 }
 
 .text-button{
