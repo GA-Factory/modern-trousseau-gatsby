@@ -5,6 +5,8 @@ const Image = styled.img`
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+height: auto;
 `;
 
 const DesktopText = styled.p`
@@ -20,6 +22,8 @@ const DesktopText = styled.p`
 `;
 
 const Wrapper = styled.div`
+width: 100%;
+height: auto;
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     background: #fae5dc;
   }
