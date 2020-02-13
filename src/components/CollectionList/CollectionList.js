@@ -104,8 +104,9 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
+  display: grid;
   width: 100%;
-  height: 440px;
+  /* height: auto; */
 `;
 
 const SliderA = ({ propertyA }) => {
