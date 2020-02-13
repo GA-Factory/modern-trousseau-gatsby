@@ -1,33 +1,26 @@
 import React from "react";
-// import "./DressListItem.css";
 import styled from "styled-components";
 
 const Image = styled.img`
-  margin: 0px;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-    background: #fae5dc;
-  }
 `;
 
 const DesktopText = styled.p`
   text-align: center;
   margin-top: 5px;
   padding-bottom: 15px;
-  font-weight: 800;
+  font-weight: bold;
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-  font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    text-transform: uppercase;
+    font-weight: bold;
 `;
 
 const Wrapper = styled.div`
-@media (max-width: 600px) {
- 
+@media (max-width: ${props => props.theme.breakpoints.tablet}) {
   background: #fae5dc;
-
 `;
 
 const DressListItem = props => (
