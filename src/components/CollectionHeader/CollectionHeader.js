@@ -18,7 +18,7 @@ const CollectionCard = styled.section`
     grid-template-columns: 1fr;
 
     @media (min-width: ${props => props.theme.breakpoints.tablet }) {
-
+    background-color: transparent;
     }
 `;
 
@@ -32,7 +32,9 @@ const CollectHeader = styled.div`
     white-space: nowrap;
 
     @media (min-width: ${props => props.theme.breakpoints.tablet }) {
-
+        text-align: center;
+        justify-content: center;
+    
     }
 `;
 
@@ -43,6 +45,7 @@ const CollectionArrow = styled.p`
     margin-bottom: 7px;
 
     @media (min-width: ${props => props.theme.breakpoints.tablet }) {
+        display: none;
 
     }
 `;   
@@ -87,6 +90,7 @@ text-align: center;
 font-family: 'Raleway', sans-serif;
 
 @media (min-width: ${props => props.theme.breakpoints.tablet }) {
+    display: none;
 
 }
 `;
@@ -97,6 +101,7 @@ font-size: 15px;
 font-family: 'Raleway', sans-serif;
 
 @media (min-width: ${props => props.theme.breakpoints.tablet }) {
+    display: none;
 
 }
 `;
