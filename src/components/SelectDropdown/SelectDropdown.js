@@ -80,12 +80,8 @@ class SelectDropdown extends Component {
       title: this.props.title,
       active: false
     };
-
-    this.toggle = this.toggle.bind(this);
-    this.select = this.select.bind(this);
   }
 
-  // Toggles menu open/close state
   toggle = () => {
     this.setState(prevState => ({
       active: !prevState.active
