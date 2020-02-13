@@ -1,25 +1,26 @@
-.some{
-    flex-direction: row;
+.some {
+  flex-direction: row;
+  padding-top: 10px;
 }
 
-#fb{
-    width: 26px;
-    padding-right: 6px;
+#fb {
+  width: 26px;
+  padding-right: 6px;
 }
 
-#in{
-    width: 26px;
-    padding-right: 6px;
+#in {
+  width: 26px;
+  padding-right: 6px;
 }
 
-#pi{
-    width: 26px;
-    padding-right: 6px;
+#pi {
+  width: 26px;
+  padding-right: 6px;
 }
 
-.con{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-

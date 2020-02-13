@@ -1,14 +1,24 @@
-.logo{
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.logo-tag {
+  align-items: baseline;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: auto;
+    font-size: 12px;
 }
 
 .logo-word-modern {
     font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 44px;
+    font-size: 24px;
     letter-spacing: 0.1px;
     color: #25282B;
     margin: 0;
@@ -18,28 +28,58 @@
     font-family: Playfair display;
     font-style: italic;
     font-weight: bold;
-    font-size: 44px;
+    font-size: 24px;
     letter-spacing: 0.1px;
     color: #25282B;
-    margin: 0 0 0 15px;
+    margin: 0 0 0 1%;
+    line-height: 0.9;
 }
 
 .tagline {
     font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19px;
     letter-spacing: 0.1px;
     color: #25282B;
     margin: auto;
 }
 
-.logo-tag {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+.notag {
+  display: none;
 }
 
-.notag {
-    display: none;
+@media only screen and (min-width: 600px){
+
+    .logo-word-modern {
+        font-family: Raleway, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 44px;
+        letter-spacing: 0.1px;
+        color: #25282B;
+        margin: 0;
+    }
+
+    .logo-word-trousseau {
+        font-family: Playfair display;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        letter-spacing: 0.1px;
+        color: #25282B;
+        margin: 0 0 0 1%;
+        line-height: 0.85;
+    }
+
+    .logo-tag {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        font-size: 20px;
+    }
+
+    .notag {
+        display: none;
+    }
+    
 }
