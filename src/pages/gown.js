@@ -7,8 +7,6 @@ import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
 import Icons from "../components/Icons/FAIcon";
 import PinkButton from "../components/Button/Button";
-import DressListItem from "../components/DressListItem/DressListItem";
-import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
@@ -139,6 +137,40 @@ const RightArrowContainer = styled.div`
   margin-left: 25px;
 `;
 
+const GownImage = styled.img`
+  background-color: ${props => props.theme.colors.primaryPink};
+  display: flex;
+  width: 82.4%;
+  justify-content: center;
+  margin: auto;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    /* display: none; */
+  }
+`;
+
+const Name = styled.p`
+font-size: 22px;
+font-style: normal;
+font-weight: bold;
+margin-left: 8.8%;
+`
+
+const DetailsAndFeaturesContainer = styled.div`
+display: flex;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+margin-left: 8.8%;
+`
+
+const Details = styled.p`
+
+`
+
+const ButtonContainer = styled.p`
+`
+
+
 const GownsPage = () => (
   <Layout>
     <NavBar />
@@ -157,7 +189,13 @@ const GownsPage = () => (
         </RightArrowContainer>
       </TitleContainer>
     </SearchMenuContainer>
-    {/* <ButtonContainer>
+  <GownImage src={cardData[0].image} />
+  <Name>{cardData[0].mobileLabel}</Name>
+  <DetailsAndFeaturesContainer> 
+  <Icons name={['far', 'plus-square']}/>
+  <Details>Details and Features</Details>
+  </DetailsAndFeaturesContainer>
+  <ButtonContainer>
       <PinkButton
         label="See More From This Collection"
         width={`${"250px"}`}
@@ -170,7 +208,7 @@ const GownsPage = () => (
         desktopfontsize={`${"14px"}`}
         desktopheight={`${"16px"}`}
       />
-    </ButtonContainer> */}
+    </ButtonContainer>
     <Footer />
   </Layout>
 );
