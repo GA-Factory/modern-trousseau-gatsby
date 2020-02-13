@@ -193,7 +193,7 @@ const ButtonContainer = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
-    /* width: 100%; */
+    width: 100%;
     text-align: center;
     background-color: #e5e5e5;
     border-top: 20px solid #e5e5e5;
