@@ -76,6 +76,10 @@ const collectionTitle = [
   "Classics"
 ];
 
+const BodyContainer = styled.div`
+background-color: ${props => props.theme.colors.primaryPink};
+`
+
 const SearchMenuContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
@@ -149,27 +153,23 @@ const GownImage = styled.img`
 `;
 
 const Name = styled.p`
-font-size: 22px;
-font-style: normal;
-font-weight: bold;
-margin-left: 8.8%;
-`
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 8.8%;
+`;
 
 const DetailsAndFeaturesContainer = styled.div`
-display: flex;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-margin-left: 8.8%;
-`
+  display: flex;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 8.8%;
+`;
 
-const Details = styled.p`
+const Details = styled.p``;
 
-`
-
-const ButtonContainer = styled.p`
-`
-
+const ButtonContainer = styled.p``;
 
 const GownsPage = () => (
   <Layout>
@@ -178,6 +178,7 @@ const GownsPage = () => (
       <Logo notag />
     </LogoContainer>
     <NavMenuDesktop />
+    <BodyContainer>
     <SearchMenuContainer>
       <TitleContainer>
         <LeftArrowContainer>
@@ -189,13 +190,13 @@ const GownsPage = () => (
         </RightArrowContainer>
       </TitleContainer>
     </SearchMenuContainer>
-  <GownImage src={cardData[0].image} />
-  <Name>{cardData[0].mobileLabel}</Name>
-  <DetailsAndFeaturesContainer> 
-  <Icons name={['far', 'plus-square']}/>
-  <Details>Details and Features</Details>
-  </DetailsAndFeaturesContainer>
-  <ButtonContainer>
+    <GownImage src={cardData[0].image} />
+    <Name>{cardData[0].mobileLabel}</Name>
+    <DetailsAndFeaturesContainer>
+      <Icons name={["far", "plus-square"]} />
+      <Details>Details and Features</Details>
+    </DetailsAndFeaturesContainer>
+    <ButtonContainer>
       <PinkButton
         label="See More From This Collection"
         width={`${"250px"}`}
@@ -209,6 +210,7 @@ const GownsPage = () => (
         desktopheight={`${"16px"}`}
       />
     </ButtonContainer>
+    </BodyContainer>
     <Footer />
   </Layout>
 );
