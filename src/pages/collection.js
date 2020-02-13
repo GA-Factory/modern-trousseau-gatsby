@@ -5,6 +5,7 @@ import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
+import Icons from "../components/Icons/FAIcon";
 import PinkButton from "../components/Button/Button";
 import DressListItem from "../components/DressListItem/DressListItem";
 import CollectionList from "../components/CollectionList/CollectionList";
@@ -144,13 +145,36 @@ const CollectionTitle = styled.p`
   }
 `;
 
+const TitleContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const LeftArrowContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  justify-content: center;
+  padding-top: 8px;
+`;
+
+const RightArrowContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  justify-content: center;
+  padding-top: 8px;
+  margin-left: 20px;
+`;
+
 const DesignerQuote = styled.p`
   background-color: ${props => props.theme.colors.primaryPink};
   text-align: center;
   padding: 20px 5% 0 5%;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-      display: none;
+    display: none;
   }
 `;
 
@@ -160,7 +184,7 @@ const QuoteAuthor = styled.p`
   padding: 20px 5% 0 5%;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-      display: none;
+    display: none;
   }
 `;
 
@@ -177,7 +201,6 @@ const ButtonContainer = styled.div`
   }
 `;
 
-
 const GownsPage = () => (
   <Layout>
     <NavBar />
@@ -186,7 +209,15 @@ const GownsPage = () => (
     </LogoContainer>
     <NavMenuDesktop />
     <SearchMenuContainer>
-      <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+      <TitleContainer>
+        <LeftArrowContainer>
+          <Icons name={["fas", "arrow-left"]} size="1x" />
+        </LeftArrowContainer>
+        <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+        <RightArrowContainer>
+          <Icons name={["fas", "arrow-right"]} size="1x" />
+        </RightArrowContainer>
+      </TitleContainer>
       <DesignerQuote>
         Quote from a desiginer that says some stuff! And Also some things!! And
         it needs to be longer for me to test it!!!
@@ -214,19 +245,19 @@ const GownsPage = () => (
       </SliderAdjuster>
     </CollectionsContainer>
     <ButtonContainer>
-    <PinkButton
-      label="See More From This Collection"
-      width={`${"250px"}`}
-      fontsize={`${"12px"}`}
-      height={`${"14px"}`}
-      weight={`${"800"}`}
-      padding={`${"5px 0"}`}
-      shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
-      color={`${"#000000"}`}
-      desktopfontsize={`${"14px"}`}
-      desktopheight={`${"16px"}`}
+      <PinkButton
+        label="See More From This Collection"
+        width={`${"250px"}`}
+        fontsize={`${"12px"}`}
+        height={`${"14px"}`}
+        weight={`${"800"}`}
+        padding={`${"5px 0"}`}
+        shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
+        color={`${"#000000"}`}
+        desktopfontsize={`${"14px"}`}
+        desktopheight={`${"16px"}`}
       />
-      </ButtonContainer>
+    </ButtonContainer>
     <Footer />
   </Layout>
 );
