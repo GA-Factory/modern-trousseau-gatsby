@@ -81,7 +81,7 @@ const Title = styled.p`
   }
 `;
 
-const ComponentCollection = ({ images }) => (
+const ComponentCollection = ({ images, title }) => (
   <>
     <Collection>
       <Container>
@@ -90,7 +90,7 @@ const ComponentCollection = ({ images }) => (
         <GownImageScreen2 src={images[2]}></GownImageScreen2>
         <GownImageMobile2 src={images[3]}></GownImageMobile2>
       </Container>
-      <Title>Fall Collection 2020</Title>
+      <Title>{title}</Title>
     </Collection>
   </>
 );
