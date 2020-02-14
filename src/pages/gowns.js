@@ -10,14 +10,14 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 
-import imageFile1 from "../assets/images/Fall-2020-1.png";
-import imageFile2 from "../assets/images/Fall-2020-2.png";
-import imageFile3 from "../assets/images/Spring-2020-1.jpeg";
-import imageFile4 from "../assets/images/Spring-2020-2.jpeg";
-import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
-import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
-import imageFile7 from "../assets/images/Classics-1.jpeg";
-import imageFile8 from "../assets/images/Classics-2.jpeg";
+// import imageFile1 from "../assets/images/Fall-2020-1.png";
+// import imageFile2 from "../assets/images/Fall-2020-2.png";
+// import imageFile3 from "../assets/images/Spring-2020-1.jpeg";
+// import imageFile4 from "../assets/images/Spring-2020-2.jpeg";
+// import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
+// import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
+// import imageFile7 from "../assets/images/Classics-1.jpeg";
+// import imageFile8 from "../assets/images/Classics-2.jpeg";
 
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
@@ -46,64 +46,12 @@ export const GownQuery = graphql`
   }
 `;
 
-// const cardData = [
-//   {
-//     image: imageFile1,
-//     mobileLabel: "LUCA",
-//     // desktopLabel: GownQuery.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName,
-//     desktopLabel: "Luca",
-//     index: 0
-//   },
-//   {
-//     image: imageFile2,
-//     mobileLabel: "VIDA",
-//     desktopLabel: "Vida",
-//     index: 1
-//   },
-//   {
-//     image: imageFile3,
-//     mobileLabel: "ALWAYS",
-//     desktopLabel: "Always",
-//     index: 2
-//   },
-//   {
-//     image: imageFile4,
-//     mobileLabel: "BELIZE",
-//     desktopLabel: "Belize",
-//     index: 3
-//   },
-//   {
-//     image: imageFile5,
-//     mobileLabel: "ALICE",
-//     desktopLabel: "Alice",
-//     index: 4
-//   },
-//   {
-//     image: imageFile6,
-//     mobileLabel: "EVELYN",
-//     desktopLabel: "Evelyn",
-//     index: 5
-//   },
-//   {
-//     image: imageFile7,
-//     mobileLabel: "AINSLEY",
-//     desktopLabel: "Ainsley",
-//     index: 6
-//   },
-//   {
-//     image: imageFile8,
-//     mobileLabel: "ANNIE",
-//     desktopLabel: "Annie",
-//     index: 7
-//   }
+// const collectionTitle = [
+//   "Fall 2020 Collection",
+//   "Spring 2020 Collection",
+//   "Trending Now",
+//   "Classics"
 // ];
-
-const collectionTitle = [
-  "Fall 2020 Collection",
-  "Spring 2020 Collection",
-  "Trending Now",
-  "Classics"
-];
 
 const SearchMenu = styled.div`
   display: flex;
@@ -185,53 +133,92 @@ const CollectionTitle = styled.p`
 const GownsPage = props => {
   const cardData = [
     {
-      image: props.data.allContentfulGowns.edges[0].node.collections[0]
-      .gowns[0].gownImage.fluid.src,
-      mobileLabel: "LUCA",
-      desktopLabel: props.data.allContentfulGowns.edges[0].node.collections[0]
-      .gowns[0].name,
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
+          .name,
       index: 0
     },
     {
-      image: imageFile2,
-      mobileLabel: "VIDA",
-      desktopLabel: "Vida",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .name,
       index: 1
     },
     {
-      image: imageFile3,
-      mobileLabel: "ALWAYS",
-      desktopLabel: "Always",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .name,
       index: 2
     },
     {
-      image: imageFile4,
-      mobileLabel: "BELIZE",
-      desktopLabel: "Belize",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .name,
       index: 3
     },
     {
-      image: imageFile5,
-      mobileLabel: "ALICE",
-      desktopLabel: "Alice",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .name,
       index: 4
     },
     {
-      image: imageFile6,
-      mobileLabel: "EVELYN",
-      desktopLabel: "Evelyn",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .name,
       index: 5
     },
     {
-      image: imageFile7,
-      mobileLabel: "AINSLEY",
-      desktopLabel: "Ainsley",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .name,
       index: 6
     },
     {
-      image: imageFile8,
-      mobileLabel: "ANNIE",
-      desktopLabel: "Annie",
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .gownImage.fluid.src,
+      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+      .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .name,
       index: 7
     }
   ];
