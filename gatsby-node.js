@@ -49,13 +49,13 @@ exports.createPages = ({ actions }) => {
             path: `/gowns/${gowns.fields.slug}`,
             component: mockComponent,
             context: {
-              id: gowns.node.id,
-              name: gowns.node.name,
-              gownImage: gowns.node.gownImage,
-              details: gowns.node.details,
-              silhouette: gowns.node.silhouette,
-              accessories: gowns.node.accessories,
-              collections: gowns.node.collections,
+              id: gowns.fields.id,
+              name: gowns.fields.name,
+              gownImage: gowns.fields.gownImage,
+              details: gowns.fields.details,
+              silhouette: gowns.fields.silhouette,
+              accessories: gowns.fields.accessories,
+              collections: gowns.fields.collections,
             }
           })
         })
