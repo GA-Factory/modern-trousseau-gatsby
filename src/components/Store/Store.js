@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { number } from "prop-types";
+import Icons from "../Icons/FAIcon";
 
 const Container = styled.div`
   max-width: 200px;
@@ -15,11 +16,15 @@ const Container = styled.div`
   text-align: center;
 `;
 
-const StoreInfo = styled.ul`
+const StoreInfo = styled.div`
   margin-top: 24px;
 `;
 
-const InfoItem = styled.li`
+const NameMarkerBox = styled.div`
+  flex-direction: column;
+`;
+
+const InfoItem = styled.p`
   margin: 1px 0px;
 `;
 const Store = props => {
@@ -33,7 +38,10 @@ const Store = props => {
       <Container>
         <img src={props.image} />
         <StoreInfo>
-          <InfoItem>{props.name}</InfoItem>
+          <InfoItem>
+            {/* <Icons name={["fas", "map-marker-alt"]} /> */}
+            {props.name}
+          </InfoItem>
           <InfoItem>{props.street}</InfoItem>
           <InfoItem>
             {props.city}, {props.state} {props.zip}
