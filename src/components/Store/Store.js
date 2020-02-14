@@ -2,15 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  max-width: 200px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
 `;
 
 const Store = props => {
+  const StoreIndex = {};
   return (
     <>
       <Container>
@@ -24,9 +28,8 @@ const Store = props => {
           <li>{props.image}</li>
           <li>{props.description}</li>
           <li>{props.hours}</li>
-          {props.twitter}
-          {props.twitter != null && <li>{props.twitter}</li>}
-          <li>{props.instagram}</li>
+          {props.twitter != null && <li>`Twitter: {props.twitter}`</li>}
+          {props.instagram != null && <li>`Instagram: {props.instagram}`</li>}
         </ul>
       </Container>
     </>
