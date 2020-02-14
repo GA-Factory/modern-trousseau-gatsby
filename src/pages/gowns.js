@@ -165,23 +165,20 @@ export const carouselImageQuery =
   //   const { allContentfulGowns } = 
   graphql`
   query MyQuery {
-    contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
-      id
-    }
     allContentfulGowns {
       edges {
         node {
           name
-          gownImage {
-            file {
-              url
-              fileName
-            }
-          }
         }
       }
     }
+    allContentfulCollection {
+      nodes {
+        collectionName
+      }
+    }
   }
+  
   `
   
   // const { fileName } = props.data.allContentfulGowns.edges[0].node.gownImage.file
@@ -207,18 +204,18 @@ export const carouselImageQuery =
     </SearchMenuContainer>
     {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
     <CollectionsContainer>
-      <CollectionTitle>{props.data.allContentfulGowns.edges[0].node.name}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulCollection.nodes[0].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       <SliderAdjuster>
-      <CollectionTitle>{props.fileName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-      <SliderAdjuster>
-      <CollectionTitle>{collectionTitle[2]}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulCollection.nodes[1].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       </SliderAdjuster>
       <SliderAdjuster>
-      <CollectionTitle>{collectionTitle[3]}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulCollection.nodes[2].collectionName}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
+      <SliderAdjuster>
+      <CollectionTitle>{props.data.allContentfulCollection.nodes[3].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       </SliderAdjuster>
     </CollectionsContainer>
