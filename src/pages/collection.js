@@ -145,6 +145,18 @@ const CollectionTitle = styled.p`
   }
 `;
 
+const DesktopCollectionTitle = styled.p`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    text-align: center;
+    background-color: white;
+    border-top: 8px solid #e5e5e5;
+    border-bottom: 20px solid #e5e5e5;
+    font-weight: 22px;
+    background-color: ${props => props.theme.colors.backgroundGray};
+  }
+`;
+
 const TitleContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   display: flex;
@@ -152,6 +164,16 @@ const TitleContainer = styled.div`
   justify-content: center;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
+  }
+`;
+
+const DesktopCollectionTitleContainer = styled.p`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;
 
@@ -223,6 +245,9 @@ const GownsPage = () => (
         it needs to be longer for me to test it!!!
       </DesignerQuote>
       <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
+        <DesktopCollectionTitleContainer>
+          <DesktopCollectionTitle>Fall 2020</DesktopCollectionTitle>
+        </DesktopCollectionTitleContainer>
       <DressListItemGrid>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
