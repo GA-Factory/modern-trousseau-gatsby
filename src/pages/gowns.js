@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -24,20 +24,18 @@ import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 let open = false;
 let icon = faSlidersH;
 
-export const GownQuery = 
-  graphql`
+export const GownQuery = graphql`
   query MyQuery {
-    allContentfulGowns {
-      group(field: id) {
-        nodes {
+    allContentfulGowns(limit: 400, sort: { fields: name }) {
+      edges {
+        node {
           collections {
             collectionName
             gowns {
+              name
               gownImage {
-                title
-                file {
-                  fileName
-                  url
+                fluid {
+                  src
                 }
               }
             }
@@ -46,59 +44,59 @@ export const GownQuery =
       }
     }
   }
-  `
+`;
 
-const cardData = [
-  {
-    image: imageFile1,
-    mobileLabel: "LUCA",
-    // desktopLabel: GownQuery.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName,
-    desktopLabel: "Luca",
-    index: 0
-  },
-  {
-    image: imageFile2,
-    mobileLabel: "VIDA",
-    desktopLabel: "Vida",
-    index: 1
-  },
-  {
-    image: imageFile3,
-    mobileLabel: "ALWAYS",
-    desktopLabel: "Always",
-    index: 2
-  },
-  {
-    image: imageFile4,
-    mobileLabel: "BELIZE",
-    desktopLabel: "Belize",
-    index: 3
-  },
-  {
-    image: imageFile5,
-    mobileLabel: "ALICE",
-    desktopLabel: "Alice",
-    index: 4
-  },
-  {
-    image: imageFile6,
-    mobileLabel: "EVELYN",
-    desktopLabel: "Evelyn",
-    index: 5
-  },
-  {
-    image: imageFile7,
-    mobileLabel: "AINSLEY",
-    desktopLabel: "Ainsley",
-    index: 6
-  },
-  {
-    image: imageFile8,
-    mobileLabel: "ANNIE",
-    desktopLabel: "Annie",
-    index: 7
-  }
-];
+// const cardData = [
+//   {
+//     image: imageFile1,
+//     mobileLabel: "LUCA",
+//     // desktopLabel: GownQuery.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName,
+//     desktopLabel: "Luca",
+//     index: 0
+//   },
+//   {
+//     image: imageFile2,
+//     mobileLabel: "VIDA",
+//     desktopLabel: "Vida",
+//     index: 1
+//   },
+//   {
+//     image: imageFile3,
+//     mobileLabel: "ALWAYS",
+//     desktopLabel: "Always",
+//     index: 2
+//   },
+//   {
+//     image: imageFile4,
+//     mobileLabel: "BELIZE",
+//     desktopLabel: "Belize",
+//     index: 3
+//   },
+//   {
+//     image: imageFile5,
+//     mobileLabel: "ALICE",
+//     desktopLabel: "Alice",
+//     index: 4
+//   },
+//   {
+//     image: imageFile6,
+//     mobileLabel: "EVELYN",
+//     desktopLabel: "Evelyn",
+//     index: 5
+//   },
+//   {
+//     image: imageFile7,
+//     mobileLabel: "AINSLEY",
+//     desktopLabel: "Ainsley",
+//     index: 6
+//   },
+//   {
+//     image: imageFile8,
+//     mobileLabel: "ANNIE",
+//     desktopLabel: "Annie",
+//     index: 7
+//   }
+// ];
 
 const collectionTitle = [
   "Fall 2020 Collection",
@@ -145,7 +143,7 @@ const LogoContainer = styled.div`
 
 const GownHeaderContainer = styled.div`
   border-top: 25px solid ${props => props.theme.colors.primaryPink};
-`
+`;
 
 const SliderAdjuster = styled.div`
   height: 25%;
@@ -153,7 +151,7 @@ const SliderAdjuster = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border-top: 0;
   }
-`
+`;
 
 const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
@@ -182,86 +180,137 @@ const CollectionTitle = styled.p`
     font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
-  `;
+`;
 
-
-// export const GownQuery = 
-//   graphql`
-//   query MyQuery {
-//     allContentfulGowns {
-//       group(field: id) {
-//         nodes {
-//           collections {
-//             collectionName
-//             gowns {
-//               gownImage {
-//                 title
-//                 file {
-//                   fileName
-//                   url
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   `
-
-
-  
-  const GownsPage = (props) => (
-  <Layout>
-    <NavBar />
-    <LogoContainer>
-      <Logo notag />
-    </LogoContainer>
-    <GownHeaderContainer>
-    <GownHeader icon={icon} open={open} />
-    </GownHeaderContainer >   
-    <NavMenuDesktop />
-    <SearchMenuContainer>
-      <SearchMenu>
-        <SearchMenuItems>Search by Category</SearchMenuItems>
-        <SearchMenuItems>Search by Silhouette</SearchMenuItems>
-        <SearchMenuItems>Search by Details</SearchMenuItems>
-        <SearchMenuItems>View Collection</SearchMenuItems>
-      </SearchMenu>
-    </SearchMenuContainer>
-    {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
-    <CollectionsContainer>
-      <CollectionTitle>{props.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulGowns.group[1].nodes[0].collections[0].collectionName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-      <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulGowns.group[2].nodes[0].collections[0].collectionName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-      <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulGowns.group[3].nodes[0].collections[0].collectionName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-    </CollectionsContainer>
-    <Footer />
-  </Layout>
-);
+const GownsPage = props => {
+  const cardData = [
+    {
+      image: props.data.allContentfulGowns.edges[0].node.collections[0]
+      .gowns[0].gownImage.fluid.src,
+      mobileLabel: "LUCA",
+      desktopLabel: props.data.allContentfulGowns.edges[0].node.collections[0]
+      .gowns[0].name,
+      index: 0
+    },
+    {
+      image: imageFile2,
+      mobileLabel: "VIDA",
+      desktopLabel: "Vida",
+      index: 1
+    },
+    {
+      image: imageFile3,
+      mobileLabel: "ALWAYS",
+      desktopLabel: "Always",
+      index: 2
+    },
+    {
+      image: imageFile4,
+      mobileLabel: "BELIZE",
+      desktopLabel: "Belize",
+      index: 3
+    },
+    {
+      image: imageFile5,
+      mobileLabel: "ALICE",
+      desktopLabel: "Alice",
+      index: 4
+    },
+    {
+      image: imageFile6,
+      mobileLabel: "EVELYN",
+      desktopLabel: "Evelyn",
+      index: 5
+    },
+    {
+      image: imageFile7,
+      mobileLabel: "AINSLEY",
+      desktopLabel: "Ainsley",
+      index: 6
+    },
+    {
+      image: imageFile8,
+      mobileLabel: "ANNIE",
+      desktopLabel: "Annie",
+      index: 7
+    }
+  ];
+  return (
+    <Layout>
+      <NavBar />
+      <LogoContainer>
+        <Logo notag />
+      </LogoContainer>
+      <GownHeaderContainer>
+        <GownHeader icon={icon} open={open} />
+      </GownHeaderContainer>
+      <NavMenuDesktop />
+      <SearchMenuContainer>
+        <SearchMenu>
+          <SearchMenuItems>Search by Category</SearchMenuItems>
+          <SearchMenuItems>Search by Silhouette</SearchMenuItems>
+          <SearchMenuItems>Search by Details</SearchMenuItems>
+          <SearchMenuItems>View Collection</SearchMenuItems>
+        </SearchMenu>
+      </SearchMenuContainer>
+      {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
+      <CollectionsContainer>
+        <CollectionTitle>
+          {
+            props.data.allContentfulGowns.edges[0].node.collections[0]
+              .collectionName
+          }
+        </CollectionTitle>
+        <CollectionList slideData={cardData} title="Classics"></CollectionList>
+        <SliderAdjuster>
+          <CollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[1].node.collections[0]
+                .collectionName
+            }
+          </CollectionTitle>
+          <CollectionList
+            slideData={cardData}
+            title="Classics"
+          ></CollectionList>
+        </SliderAdjuster>
+        <SliderAdjuster>
+          <CollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[2].node.collections[0]
+                .collectionName
+            }
+          </CollectionTitle>
+          <CollectionList
+            slideData={cardData}
+            title="Classics"
+          ></CollectionList>
+        </SliderAdjuster>
+        <SliderAdjuster>
+          <CollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[3].node.collections[0]
+                .collectionName
+            }
+          </CollectionTitle>
+          <CollectionList
+            slideData={cardData}
+            title="Classics"
+          ></CollectionList>
+        </SliderAdjuster>
+      </CollectionsContainer>
+      <Footer />
+    </Layout>
+  );
+};
 
 export default GownsPage;
-
-
-
-
 
 //-------------------------------------------
 
 //  DATA I NEED IS FETCHED WITH QUERY BELOW
 
-
-// export const carouselImageQuery = 
+// export const carouselImageQuery =
 // graphql`
 // query MyQuery {
 //   allContentfulGowns {
