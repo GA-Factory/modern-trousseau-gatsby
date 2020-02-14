@@ -14,24 +14,23 @@ import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
 
 const ImageQuery = styled(Img)`
-display: block;
+  display: block;
   width: 50%;
   height: 600px;
 `;
 
 const IndexPage = props => {
-  const data = useStaticQuery(graphql`
-    query contentfulGowns {
-      contentfulGowns(name: {eq: "Serapina"}) {
-        name
-        gownImage {
-          fluid(quality: 85) {
-            src
-            srcSet
-            sizes
-            base64
-            srcSetWebp
-            srcWebp
+  const collectioninfo = useStaticQuery(graphql`
+    query contentfulCollection {
+      contentfulCollection(collectionName: { eq: "Fall 2020" }) {
+        collectionName
+        gowns {
+          name
+          gownImage {
+            file {
+              fileName
+              url
+            }
           }
         }
       }
@@ -51,9 +50,9 @@ const IndexPage = props => {
         name="Callie Tein"
         role="Designer"
       />
-      <ComponentCollection title="Fall 2020 Collection"></ComponentCollection>
+      <ComponentCollection title="props.data.contentfulCollection.collectionName"></ComponentCollection>
       {/* <BrideReview title="Fall 2020 Collection" /> */}
-      <ImageQuery fluid={data.contentfulGowns.gownImage.fluid} />
+      {/* <ImageQuery fluid={data.contentfulGowns.gownImage.fluid} /> */}
       <Footer />
     </Layout>
   );
