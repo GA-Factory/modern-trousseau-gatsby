@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
+
+import imageFile1 from "../../assets/images/fall-collection-1.png"
+import imageFile2 from "../../assets/images/fall-collection-2.png";
+import imageFile3 from "../../assets/images/fall-collection-3.png";
+import imageFile4 from "../../assets/images/fall-collection-4.png";
 
 const Collection = styled.div`
 display: flex;
@@ -85,10 +89,10 @@ const ComponentCollection = ({ images }) => (
   <>
     <Collection>
       <Container>
-        <GownImageScreen1 src={images[0]}></GownImageScreen1>
-        <GownImageMobile1 src={images[1]}></GownImageMobile1>
-        <GownImageScreen2 src={images[2]}></GownImageScreen2>
-        <GownImageMobile2 src={images[3]}></GownImageMobile2>
+        <GownImageScreen1 src={imageFile1}></GownImageScreen1>
+        <GownImageMobile1 src={imageFile2}></GownImageMobile1>
+        <GownImageScreen2 src={imageFile3}></GownImageScreen2>
+        <GownImageMobile2 src={imageFile4}></GownImageMobile2>
       </Container>
       <Title>Fall Collection 2020</Title>
     </Collection>
