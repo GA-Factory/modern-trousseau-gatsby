@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
+import { useStaticQuery, graphql } from "gatsby"
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -156,9 +157,37 @@ const CollectionTitle = styled.p`
     font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
-`;
+  `;
 
-const GownsPage = (props) => (
+
+export const carouselImageQuery = 
+// () => {
+  //   const { allContentfulGowns } = 
+  graphql`
+  query MyQuery {
+    contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
+      id
+    }
+    allContentfulGowns {
+      edges {
+        node {
+          name
+          gownImage {
+            file {
+              url
+              fileName
+            }
+          }
+        }
+      }
+    }
+  }
+  `
+  
+  // const { fileName } = props.data.allContentfulGowns.edges[0].node.gownImage.file
+  
+  const GownsPage = (props) => (
+  // console.log(props.data.allContentfulGowns.edges[0].node.name)
   <Layout>
     <NavBar />
     <LogoContainer>
@@ -181,7 +210,7 @@ const GownsPage = (props) => (
       <CollectionTitle>{props.data.allContentfulGowns.edges[0].node.name}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       <SliderAdjuster>
-      <CollectionTitle>{collectionTitle[1]}</CollectionTitle>
+      <CollectionTitle>{props.fileName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       </SliderAdjuster>
       <SliderAdjuster>
@@ -199,28 +228,29 @@ const GownsPage = (props) => (
 
 export default GownsPage;
 
-export const carouselImageQuery = graphql`
-query MyQuery {
-  contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
-    id
-  }
-  allContentfulGowns {
-    edges {
-      node {
-        name
-        gownImage {
-          file {
-            url
-            fileName
-          }
-        }
-      }
-    }
-  }
-}
-`
+//  export const carouselImageQuery = graphql`
+//  query MyQuery {
+//    contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
+//      id
+//    }
+//    allContentfulGowns {
+//      edges {
+//        node {
+//          name
+//          gownImage {
+//            file {
+//              url
+//              fileName
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+// `
 
-
+// ----------------------------------
+// CODE BELOW GETS A PIECE OF DATA
 
 // export const carouselImageQuery = graphql`
 // query MyQuery {
