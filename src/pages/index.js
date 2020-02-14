@@ -21,15 +21,17 @@ const ImageQuery = styled(Img)`
 
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
-    query contentfulCollection {
+    query contentfulGowns {
       contentfulCollection(collectionName: { eq: "Fall 2020" }) {
         collectionName
         gowns {
-          name
           gownImage {
-            file {
-              fileName
-              url
+            fluid {
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+              tracedSVG
             }
           }
         }
@@ -50,7 +52,9 @@ const IndexPage = props => {
         name="Callie Tein"
         role="Designer"
       />
-      <ComponentCollection title="props.data.contentfulCollection.collectionName"></ComponentCollection>
+      <ComponentCollection
+        title={props.data.contentfulCollection.collectionName} data={props.data}
+      ></ComponentCollection>
       {/* <BrideReview title="Fall 2020 Collection" /> */}
       {/* <ImageQuery fluid={data.contentfulGowns.gownImage.fluid} /> */}
       <Footer />
