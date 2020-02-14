@@ -1,3 +1,9 @@
+const dotenv = require(`dotenv`)
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Storybook Starter',
@@ -14,7 +20,23 @@ module.exports = {
         display: 'standalone',
         icon: 'src/assets/logos/icon.png',
       },
-    }, {
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    }, 
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `2n4rer1mpqy8`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    }, 
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/`,
