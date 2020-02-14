@@ -123,6 +123,8 @@ const TitleContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  border-top: 20px solid ${props => props.theme.colors.primaryPink};
+  border-bottom: 20px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -141,6 +143,12 @@ const RightArrowContainer = styled.div`
   margin-left: 25px;
 `;
 
+const ImageAndDetailsContainer = styled.div`
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: row;
+  }
+`
+
 const GownImage = styled.img`
   background-color: ${props => props.theme.colors.primaryPink};
   display: flex;
@@ -156,7 +164,10 @@ const Name = styled.p`
   font-size: 22px;
   font-style: normal;
   font-weight: bold;
-  margin-left: 8.8%;
+  margin: 10px 0 10px 8.8%;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    /* display: none; */
+  }
 `;
 
 const DetailsAndFeaturesContainer = styled.div`
@@ -164,12 +175,19 @@ const DetailsAndFeaturesContainer = styled.div`
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  margin-left: 8.8%;
+  margin: 0 0 36px 8.8%;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    /* display: none; */
+  }
 `;
 
 const Details = styled.p``;
 
-const ButtonContainer = styled.p``;
+const ButtonContainer = styled.p`
+  display: flex;
+  justify-content: center;
+  border-bottom: 48px solid ${props => props.theme.colors.primaryPink};
+`;
 
 const GownsPage = () => (
   <Layout>
@@ -190,12 +208,14 @@ const GownsPage = () => (
         </RightArrowContainer>
       </TitleContainer>
     </SearchMenuContainer>
+    <ImageAndDetailsContainer>
     <GownImage src={cardData[0].image} />
     <Name>{cardData[0].mobileLabel}</Name>
     <DetailsAndFeaturesContainer>
       <Icons name={["far", "plus-square"]} />
       <Details>Details and Features</Details>
     </DetailsAndFeaturesContainer>
+    </ImageAndDetailsContainer>
     <ButtonContainer>
       <PinkButton
         label="See More From This Collection"
