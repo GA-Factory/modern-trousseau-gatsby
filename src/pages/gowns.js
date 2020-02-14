@@ -10,15 +10,6 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 
-// import imageFile1 from "../assets/images/Fall-2020-1.png";
-// import imageFile2 from "../assets/images/Fall-2020-2.png";
-// import imageFile3 from "../assets/images/Spring-2020-1.jpeg";
-// import imageFile4 from "../assets/images/Spring-2020-2.jpeg";
-// import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
-// import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
-// import imageFile7 from "../assets/images/Classics-1.jpeg";
-// import imageFile8 from "../assets/images/Classics-2.jpeg";
-
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 let open = false;
@@ -45,13 +36,6 @@ export const GownQuery = graphql`
     }
   }
 `;
-
-// const collectionTitle = [
-//   "Fall 2020 Collection",
-//   "Spring 2020 Collection",
-//   "Trending Now",
-//   "Classics"
-// ];
 
 const SearchMenu = styled.div`
   display: flex;
