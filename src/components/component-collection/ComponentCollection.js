@@ -78,7 +78,7 @@ const Title = styled.p`
   font-family: ${props => props.theme.fontStyles.h1Styles.fontStyle};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-    font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
+    font-size: 24px;
     margin-top: 10px;
   }
 `;
