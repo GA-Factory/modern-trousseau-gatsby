@@ -226,6 +226,7 @@ export default GownsPage;
 
 
 // export const carouselImageQuery = 
+// graphql`
 // query MyQuery {
 //   allContentfulGowns {
 //     group(field: id) {
@@ -246,3 +247,4 @@ export default GownsPage;
 //     }
 //   }
 // }
+// `
