@@ -74,6 +74,7 @@ const MobileSlideText = styled.p`
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: bold;
   font-size: 14px;
+  text-transform: uppercase;
 `;
 
 const ButtonIcon = styled.p`
