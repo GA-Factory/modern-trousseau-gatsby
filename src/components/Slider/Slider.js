@@ -121,20 +121,6 @@ export default class ProductSingle extends React.Component {
             </ChevronRight>
           )}
         </SliderImageContainer>
-        {/* <Dots />
-        <Dots
-          imageIndex={this.state.currentIndex}
-          dotIndex={index}
-          key={this.state.key}
-          activeImage={img}
-        />
-        <Dots
-          imageIndex={this.state.currentIndex}
-          dotIndex={index}
-          key={this.state.key}
-          activeImage={img}
-        /> */}
-
         <DotContainer>
           {console.log(this.state.imageArr)}
           {this.state.imageArr.map((img, index) => {
