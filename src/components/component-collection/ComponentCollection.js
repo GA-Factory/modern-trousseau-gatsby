@@ -1,7 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
 
 const Collection = styled.div`
 display: flex;
@@ -81,16 +79,16 @@ const Title = styled.p`
   }
 `;
 
-const ComponentCollection = ({ images, title }) => (
+const ComponentCollection = props => (
   <>
     <Collection>
       <Container>
-        <GownImageScreen1 src={images[0]}></GownImageScreen1>
-        <GownImageMobile1 src={images[1]}></GownImageMobile1>
-        <GownImageScreen2 src={images[2]}></GownImageScreen2>
-        <GownImageMobile2 src={images[3]}></GownImageMobile2>
+        <GownImageScreen1 src={props.gownimage[0]}></GownImageScreen1>
+        <GownImageMobile1 src={props.gownimage[1]}></GownImageMobile1>
+        <GownImageScreen2 src={props.gownimage[2]}></GownImageScreen2>
+        <GownImageMobile2 src={props.gownimage[3]}></GownImageMobile2>
       </Container>
-      <Title>{title}</Title>
+      <Title>{props.title}</Title>
     </Collection>
   </>
 );
