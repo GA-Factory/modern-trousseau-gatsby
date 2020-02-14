@@ -176,6 +176,7 @@ const GownsPage = (props) => (
         <SearchMenuItems>View Collection</SearchMenuItems>
       </SearchMenu>
     </SearchMenuContainer>
+    {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
     <CollectionsContainer>
       <CollectionTitle>{props.data.allContentfulGowns.edges[0].node.name}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
@@ -207,6 +208,12 @@ query MyQuery {
     edges {
       node {
         name
+        gownImage {
+          file {
+            url
+            fileName
+          }
+        }
       }
     }
   }
