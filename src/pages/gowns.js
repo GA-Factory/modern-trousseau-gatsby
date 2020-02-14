@@ -163,10 +163,22 @@ const CollectionTitle = styled.p`
 export const carouselImageQuery = 
   graphql`
   query MyQuery {
-    allContentfulCollection(sort: {fields: id}) {
-      nodes {
-        id
-        collectionName
+    allContentfulGowns {
+      group(field: id) {
+        nodes {
+          collections {
+            collectionName
+            gowns {
+              gownImage {
+                title
+                file {
+                  fileName
+                  url
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -195,18 +207,18 @@ export const carouselImageQuery =
     </SearchMenuContainer>
     {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
     <CollectionsContainer>
-      <CollectionTitle>{props.data.allContentfulCollection.nodes[0].collectionName}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulCollection.nodes[1].collectionName}</CollectionTitle>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
-      </SliderAdjuster>
-      <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulCollection.nodes[2].collectionName}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulGowns.group[1].nodes[0].collections[0].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       </SliderAdjuster>
       <SliderAdjuster>
-      <CollectionTitle>{props.data.allContentfulCollection.nodes[3].collectionName}</CollectionTitle>
+      <CollectionTitle>{props.data.allContentfulGowns.group[2].nodes[0].collections[0].collectionName}</CollectionTitle>
+      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      </SliderAdjuster>
+      <SliderAdjuster>
+      <CollectionTitle>{props.data.allContentfulGowns.group[3].nodes[0].collections[0].collectionName}</CollectionTitle>
       <CollectionList slideData={cardData} title="Classics"></CollectionList>
       </SliderAdjuster>
     </CollectionsContainer>
