@@ -1,5 +1,64 @@
 import React from "react";
-import "./Logo.css";
+// import "./Logo.css";
+
+import styled from "styled-components";
+
+
+const TitleModern = styled.h1`
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    color: #25282B;
+    margin: 0;
+    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 44px;
+    }
+`;
+
+const TitleTrousseau = styled.h1`
+    font-family: Playfair display;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    color: #25282B;
+    margin: 0 0 0 1%;
+    line-height: 0.9;
+    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 44px;
+      line-height: 0.85;
+    }
+`;
+
+const LogoDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: baseline;
+`;
+
+const LogoTag = styled.div`
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 12px;
+    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 20px;
+    }
+`;
+
+const TagLine = styled.div`
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    color: #25282B;
+    margin: auto;
+`;
 
 const Logo = props => {
   let classList = "logo-tag";
@@ -20,13 +79,13 @@ const Logo = props => {
 
   return (
     <>
-      <div className="logo-tag">
-        <div className="logo">
-          <h1 className="logo-word-modern">MODERN</h1>
-          <h1 className="logo-word-trousseau">trousseau</h1>
-        </div>
-        <div className={classList}>designed & made with love in the usa</div>
-      </div>
+      <LogoTag>
+        <LogoDiv>
+          <TitleModern>{props.title1}</TitleModern>
+          <TitleTrousseau>{props.title2}</TitleTrousseau>
+        </LogoDiv>
+      <TagLine className={classList}>{props.tagline}</TagLine>
+      </LogoTag>
     </>
   );
 };
