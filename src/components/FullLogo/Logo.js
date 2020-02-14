@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Logo.css";
 
 import styled from "styled-components";
 
@@ -74,7 +73,7 @@ const Logo = props => {
   }
 
   if (props.notag) {
-    classList += ` notag`; // Note the spacing here since we are adding to the string!
+    classList += ` notag`;
   }
 
   return (
