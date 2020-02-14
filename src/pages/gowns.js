@@ -24,10 +24,35 @@ import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 let open = false;
 let icon = faSlidersH;
 
+export const GownQuery = 
+  graphql`
+  query MyQuery {
+    allContentfulGowns {
+      group(field: id) {
+        nodes {
+          collections {
+            collectionName
+            gowns {
+              gownImage {
+                title
+                file {
+                  fileName
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `
+
 const cardData = [
   {
     image: imageFile1,
     mobileLabel: "LUCA",
+    // desktopLabel: GownQuery.data.allContentfulGowns.group[0].nodes[0].collections[0].collectionName,
     desktopLabel: "Luca",
     index: 0
   },
@@ -160,34 +185,33 @@ const CollectionTitle = styled.p`
   `;
 
 
-export const carouselImageQuery = 
-  graphql`
-  query MyQuery {
-    allContentfulGowns {
-      group(field: id) {
-        nodes {
-          collections {
-            collectionName
-            gowns {
-              gownImage {
-                title
-                file {
-                  fileName
-                  url
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  `
-  
-  // const { fileName } = props.data.allContentfulGowns.edges[0].node.gownImage.file
+// export const GownQuery = 
+//   graphql`
+//   query MyQuery {
+//     allContentfulGowns {
+//       group(field: id) {
+//         nodes {
+//           collections {
+//             collectionName
+//             gowns {
+//               gownImage {
+//                 title
+//                 file {
+//                   fileName
+//                   url
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   `
+
+
   
   const GownsPage = (props) => (
-  // console.log(props.data.allContentfulGowns.edges[0].node.name)
   <Layout>
     <NavBar />
     <LogoContainer>
