@@ -161,24 +161,15 @@ const CollectionTitle = styled.p`
 
 
 export const carouselImageQuery = 
-// () => {
-  //   const { allContentfulGowns } = 
   graphql`
   query MyQuery {
-    allContentfulGowns {
-      edges {
-        node {
-          name
-        }
-      }
-    }
-    allContentfulCollection {
+    allContentfulCollection(sort: {fields: id}) {
       nodes {
+        id
         collectionName
       }
     }
   }
-  
   `
   
   // const { fileName } = props.data.allContentfulGowns.edges[0].node.gownImage.file
@@ -225,42 +216,33 @@ export const carouselImageQuery =
 
 export default GownsPage;
 
-//  export const carouselImageQuery = graphql`
-//  query MyQuery {
-//    contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
-//      id
-//    }
-//    allContentfulGowns {
-//      edges {
-//        node {
-//          name
-//          gownImage {
-//            file {
-//              url
-//              fileName
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-// `
 
-// ----------------------------------
-// CODE BELOW GETS A PIECE OF DATA
 
-// export const carouselImageQuery = graphql`
+
+
+//-------------------------------------------
+
+//  DATA I NEED IS FETCHED WITH QUERY BELOW
+
+
+// export const carouselImageQuery = 
 // query MyQuery {
-//   contentfulGowns(gownImage: {file: {details: {image: {}}, fileName: {}}}) {
-//     id
-//   }
 //   allContentfulGowns {
-//     edges {
-//       node {
-//         name
+//     group(field: id) {
+//       nodes {
+//         collections {
+//           collectionName
+//           gowns {
+//             gownImage {
+//               title
+//               file {
+//                 fileName
+//                 url
+//               }
+//             }
+//           }
+//         }
 //       }
 //     }
 //   }
 // }
-// `
-// {props.data.allContentfulGowns.edges[0].node.name}
