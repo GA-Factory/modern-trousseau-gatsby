@@ -78,6 +78,9 @@ const collectionTitle = [
 
 const BodyContainer = styled.div`
 background-color: ${props => props.theme.colors.primaryPink};
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  background-color: ${props => props.theme.colors.backgroundGray}
+}
 `
 
 const SearchMenuContainer = styled.div`
@@ -126,14 +129,29 @@ const TitleContainer = styled.div`
   border-top: 20px solid ${props => props.theme.colors.primaryPink};
   border-bottom: 20px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    /* border: 0;
+    background-color: ${props => props.theme.colors.backgroundGray} */
     display: none;
   }
 `;
+
+const DesktopCollectionTitleContainer = styled.p`
+display: none;
+ @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: ${props => props.theme.colors.backgroundGray};
+ }
+`
 
 const LeftArrowContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   justify-content: center;
   padding-top: 8px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const RightArrowContainer = styled.div`
@@ -141,11 +159,14 @@ const RightArrowContainer = styled.div`
   justify-content: center;
   padding-top: 8px;
   margin-left: 25px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const ImageAndDetailsContainer = styled.div`
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: row;
+    display: flex;
   }
 `
 
@@ -156,9 +177,20 @@ const GownImage = styled.img`
   justify-content: center;
   margin: auto;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* display: none; */
+    background-color: ${props => props.theme.colors.backgroundGray};
+    width: 50%;
+    padding-left: 10%;
+    padding-top: 5px;
   }
 `;
+
+const DesktopFlexColumn = styled.div`
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+`
 
 const Name = styled.p`
   font-size: 22px;
@@ -166,7 +198,52 @@ const Name = styled.p`
   font-weight: bold;
   margin: 10px 0 10px 8.8%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* display: none; */
+    border: 1px solid black;
+    width: 80%;
+    padding-left: 15%;
+    margin-bottom: 12%;
+    /* text-align: center; */
+  }
+`;
+
+const Brief = styled.p`
+display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: 54%;
+    margin-left: 8%;
+    margin-bottom: 12%;
+    font-family: Raleway;
+    font-style: 800;
+    font-weight: bold;
+    font-size: 14px;
+  }
+`;
+
+const DetailsFeatures = styled.p`
+display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: 54%;
+    margin-left: 8%;
+    margin-bottom: 4%;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+  }
+`;
+
+const Description = styled.p`
+display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: 54%;
+    margin-left: 8%;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
   }
 `;
 
@@ -177,17 +254,46 @@ const DetailsAndFeaturesContainer = styled.div`
   font-size: 20px;
   margin: 0 0 36px 8.8%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* display: none; */
+    border: 1px solid red;
+    width: 40%;
+    display: none;
   }
 `;
 
-const Details = styled.p``;
+const Details = styled.p`
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+}`;
 
-const ButtonContainer = styled.p`
+const MobileButtonContainer = styled.p`
   display: flex;
   justify-content: center;
   border-bottom: 48px solid ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  display: none;
+}
 `;
+
+const DifferentAnglesContainer = styled.div`
+display: none;
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  border: 3px solid red;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 10%;
+  border-bottom: 200px solid ${props => props.theme.colors.backgroundGray};
+}
+`
+
+const DifferentAngles = styled.img`
+display: none;
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  display: inline-block;
+  width: 24%;
+  height: 300px;
+  margin: 0 13px;
+  border: 2px solid blue;
+}
+`
 
 const GownsPage = () => (
   <Layout>
@@ -207,16 +313,24 @@ const GownsPage = () => (
           <Icons name={["fas", "arrow-right"]} size="1x" />
         </RightArrowContainer>
       </TitleContainer>
+      <DesktopCollectionTitleContainer>
+        <CollectionTitle>Fall 2020</CollectionTitle>
+      </DesktopCollectionTitleContainer>
     </SearchMenuContainer>
     <ImageAndDetailsContainer>
     <GownImage src={cardData[0].image} />
+    <DesktopFlexColumn>
     <Name>{cardData[0].mobileLabel}</Name>
+    <Brief>Stuff</Brief>
+    <DetailsFeatures>Details and Features</DetailsFeatures>
+    <Description>Description with a whole bunch of stuff describing the gown</Description>
+    </DesktopFlexColumn>
     <DetailsAndFeaturesContainer>
       <Icons name={["far", "plus-square"]} />
       <Details>Details and Features</Details>
     </DetailsAndFeaturesContainer>
     </ImageAndDetailsContainer>
-    <ButtonContainer>
+    <MobileButtonContainer>
       <PinkButton
         label="See More From This Collection"
         width={`${"250px"}`}
@@ -229,7 +343,12 @@ const GownsPage = () => (
         desktopfontsize={`${"14px"}`}
         desktopheight={`${"16px"}`}
       />
-    </ButtonContainer>
+    </MobileButtonContainer>
+    <DifferentAnglesContainer>
+    <DifferentAngles src={cardData[1].image} />
+    <DifferentAngles src={cardData[2].image} />
+    <DifferentAngles src={cardData[3].image} />
+    </DifferentAnglesContainer>
     </BodyContainer>
     <Footer />
   </Layout>
