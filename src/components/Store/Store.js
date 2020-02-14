@@ -14,17 +14,20 @@ const Store = props => {
   return (
     <>
       <Container>
-        {props.name}
-        {props.city}
-        {props.state}
-        {props.zip}
-        {props.phone}
-        {props.email}
-        {props.image}
-        {props.description}
-        {props.hours}
-        {props.twitter}
-        {props.instagram}
+        <ul>
+          <li>{props.name}</li>
+          <li>{props.city}</li>
+          <li>{props.state}</li>
+          <li>{props.zip}</li>
+          <li>{props.phone}</li>
+          <li>{props.email}</li>
+          <li>{props.image}</li>
+          <li>{props.description}</li>
+          <li>{props.hours}</li>
+          {props.twitter}
+          {props.twitter != null && <li>{props.twitter}</li>}
+          <li>{props.instagram}</li>
+        </ul>
       </Container>
     </>
   );
