@@ -1,41 +1,73 @@
 import React from 'react';
+import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import './HeaderNavBar.css';
-import Logo from "../FullLogo/Logo";
+import Logo from '../FullLogo/Logo';
 
+const HeaderNav = styled.nav`
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #FAE5DC;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const HeaderLogo = styled.div`
+    padding: 30px 20px;
+    margin-top: 30px;
+    font-size: 64px;
+`;
+
+const UL = styled.ul`
+    display: flex;
+    flex-flow: row;
+`;
+
+const LiHeader = styled.li`
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+`;
 
 
 const HeaderNavBar = () => (
     <Router>
         <div>
-            <nav className="header-nav">
-                <section className="header-nav-logo">
+            <HeaderNav>
+                <HeaderLogo>
                     <Logo notag tagline title1="MODERN" title2="trousseau" />
-                </section>
-                <ul>
-                    <li className="header-nav-li">
+                </HeaderLogo>
+                <UL>
+                    <LiHeader>
                         <p>OUR GOWNS</p>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <span className="header-nav-dots">&#183;</span>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <p>VISIT US</p>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <span className="header-nav-dots">&#183;</span>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <p>BOOK AN APPOINTMENT</p>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <span className="header-nav-dots">&#183;</span>
-                    </li>
-                    <li className="header-nav-li">
+                    </LiHeader>
+                    <LiHeader>
                         <p>ABOUT US</p>
-                    </li>
-                </ul>
-            </nav>
+                    </LiHeader>
+                </UL>
+            </HeaderNav>
         </div>
     </Router>
 );
