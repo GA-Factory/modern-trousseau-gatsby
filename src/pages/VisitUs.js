@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import NavBar from '../components/NavBar/NavBar';
 import Layout from '../global/Layout';
 import Footer from '../components/Footer/Footer';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ const Title = styled.div`
   margin: 20px;
   padding: 05px;
   font-family: Raleway;
+  text-align: center;
   font-weight: bold;
   font-size: 18px;
   border: 1px solid #080808;
@@ -30,9 +32,18 @@ const Bottom = styled.div`
 
 `;
 
+const Nav = styled.nav`
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+`;
+
 const VisitUs = () => (
     <Layout>
         <NavBar />
+        <Nav>
+          <HeaderNavBar />
+        </Nav>
         <main>
             <div>
                 <Wrapper>

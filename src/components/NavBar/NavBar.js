@@ -17,7 +17,7 @@ const NavBar = () => (
                 </div>
                 <div className="mobile-style">
                     {/* Replace with logo component */}
-                    <Logo notag />
+                    <Logo notag tagline title1="MODERN" title2="trousseau" />
                 </div>
                 <div className="mobile-style">
                     <Link to="#">

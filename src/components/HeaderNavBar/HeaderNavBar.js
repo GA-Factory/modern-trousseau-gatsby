@@ -10,7 +10,7 @@ const HeaderNavBar = () => (
         <div>
             <nav className="header-nav">
                 <section className="header-nav-logo">
-                    <Logo notag />
+                    <Logo notag tagline title1="MODERN" title2="trousseau" />
                 </section>
                 <ul>
                     <li className="header-nav-li">
