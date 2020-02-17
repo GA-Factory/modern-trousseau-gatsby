@@ -1,44 +1,83 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import "../styles/fonts.css";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Layout from '../global/Layout';
-import Image from '../components/Image';
-import Logo from '../components/FullLogo/Logo';
+import Layout from "../global/Layout";
+import NavBar from "../components/NavBar/NavBar";
+import Tagline from "../components/Tagline/tagline";
+import HowWeWork from "../components/HowWeWork/howwework";
+import OwnerQuote from "../components/owner-quote/owner-quote";
+import ComponentCollection from "../components/component-collection/ComponentCollection";
+import BrideReview from "../components/BrideReview/BrideReview";
+import Footer from "../components/Footer/Footer";
 
-
-const Page = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const ImageQuery = styled(Img)`
+  display: block;
+  width: 50%;
+  height: 600px;
 `;
 
-const Heading = styled.h1`
-  font-size: 24px;
-  color: #555;
-  margin-top: 60px;
-`;
-
-const Label = styled.p`
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-`;
-
-const IndexPage = () => (
-  <Layout>
-    <Page>
-      <Image />
-      <Logo />
-      <Heading>GatsbyJS + Storybook: YAY</Heading>
-      <Label>It Works</Label>
-    </Page>
-  </Layout>
-);
+const IndexPage = props => {
+  const collectioninfo = useStaticQuery(graphql`
+    query contentfulGowns {
+      contentfulCollection(collectionName: { eq: "Fall 2020" }) {
+        collectionName
+        gowns {
+          gownImage {
+            fluid {
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+              tracedSVG
+            }
+          }
+        }
+      }
+    }
+  `);
+  return (
+    <Layout>
+      <NavBar />
+      <Tagline
+        headline="Classic Couture. Custom Fit."
+        slogan="Where customization meets timeline meets budget."
+      />
+      <HowWeWork title="How We Work" />
+      <OwnerQuote
+        quote="The look on a bride's face when she finds her dress - that is priceless
+  and incredibly rewarding."
+        name="Callie Tein"
+        role="Designer"
+      />
+      <ComponentCollection
+        title={props.data.contentfulCollection.collectionName} data={props.data}
+      ></ComponentCollection>
+      {/* <BrideReview title="Fall 2020 Collection" /> */}
+      {/* <ImageQuery fluid={data.contentfulGowns.gownImage.fluid} /> */}
+      <Footer />
+    </Layout>
+  );
+};
 
 export default IndexPage;
+
+// export const data = graphql`
+// query contentfulGowns {
+//   contentfulGowns(name: {eq: "Gracie"}) {
+//     name
+//     gownImage {
+//       fluid {
+//         src
+//         srcSet
+//         sizes
+//         base64
+//         srcSetWebp
+//         srcWebp
+//       }
+//     }
+//   }
+// }
+// `

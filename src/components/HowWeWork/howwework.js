@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 15px 0;
 `;
 
@@ -21,7 +21,8 @@ const Title = styled.div`
   line-height: 24px;
   text-align: center;
   color: #0f1f2f;
-  margin: 15px auto 15px;
+  margin: 0 auto;
+  padding: 0 0 20px;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     font-size: 40px;
     line-height: 53px;
@@ -31,19 +32,25 @@ const Title = styled.div`
 `;
 
 const SingleCard = styled.div`
-  margin-bottom: 30px;
-  padding: 0 10px;
+  padding-bottom: 30px;
+  margin: 0 auto;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
-    padding: 0 30px;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const CardContainer = styled.div`
   display: flex;
-  flex-flow: column;
-  max-width: 1200px;
-  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
+  flex-flow: wrap;
+  width: 1200px;
+  padding: 20px;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  @media (min-width: 1100px) {
     flex-flow: row;
+    justify-content: space-between;
   }
 `;
 
@@ -57,6 +64,7 @@ const HowWeWork = props => {
             <Card
               icon={["far", "heart"]}
               type="heart"
+              size='3x'
               title="Get Inspired"
               paragraph="Each design evokes classic couture while expressing a vision of modern style & sophistication."
             />
@@ -64,6 +72,7 @@ const HowWeWork = props => {
           <SingleCard>
             <Card
               icon={["fas", "calendar-day"]}
+              size='3x'
               type="calendar"
               title="Book With Us"
               paragraph="Spend an hour with us to create a truly unique, personalized & flattering wedding dress."

@@ -6,11 +6,13 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Storybook Starter',
+    title: "Gatsby Storybook Starter",
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: 'Gatsby Storybook Starter',
         short_name: 'Gatsby Storybook Starter',
@@ -40,8 +42,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/`,
-        name: 'src',
-      },
+        name: "src"
+      }
     },
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
