@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 import NavBar from '../components/NavBar/NavBar';
 import Layout from '../global/Layout';
 import Footer from '../components/Footer/Footer';
 import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+
 
 const Wrapper = styled.div`
   display: flex;
