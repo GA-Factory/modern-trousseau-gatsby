@@ -304,7 +304,7 @@ const GownsPage = () => (
   <Layout>
     <NavBar />
     <LogoContainer>
-      <Logo notag />
+    <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
     </LogoContainer>
     <NavMenuDesktop />
     <BodyContainer>
