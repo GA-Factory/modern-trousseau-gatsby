@@ -350,7 +350,7 @@ const GownsPage = () => (
     </ImageAndDetailsContainer>
     <MobileButtonContainer>
       <PinkButton
-        label="See More From This Collection"
+        label="BOOK AN APPOINTMENT"
         width={`${"250px"}`}
         fontsize={`${"12px"}`}
         height={`${"14px"}`}
