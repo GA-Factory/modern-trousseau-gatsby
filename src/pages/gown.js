@@ -152,16 +152,6 @@ const LeftArrowContainer = styled.div`
   }
 `;
 
-const RightArrowContainer = styled.div`
-  background-color: ${props => props.theme.colors.primaryPink};
-  justify-content: center;
-  padding-top: 8px;
-  margin-left: 25px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
 const ImageAndDetailsContainer = styled.div`
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -199,7 +189,6 @@ const Name = styled.p`
     width: 80%;
     padding-left: 15%;
     margin-bottom: 12%;
-    /* text-align: center; */
   }
 `;
 
@@ -294,7 +283,7 @@ display: none;
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
   display: inline-block;
   width: 24%;
-  height: 300px;
+  height: auto;
   margin: 0 26px 0 0;
 }
 `
@@ -313,9 +302,6 @@ const GownsPage = () => (
           <Icons name={["fas", "arrow-left"]} size="1x" />
         </LeftArrowContainer>
         <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
-        {/* <RightArrowContainer>
-          <Icons name={["fas", "arrow-right"]} size="1x" />
-        </RightArrowContainer> */}
       </TitleContainer>
       <DesktopCollectionTitleContainer>
         <CollectionTitle>Fall 2020</CollectionTitle>
