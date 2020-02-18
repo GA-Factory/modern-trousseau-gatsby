@@ -73,6 +73,14 @@ Specifically, we will be using a React-based [Gatsby](https://www.gatsbyjs.org) 
 
 **Each issue assigned to you should be developed on it's own branch**! Please do not develop on `master` for any reason! This site uses continuous deployment from Github > Netlify on the master branch - if you push to master, you are pushing live! Be careful!
 
+## Presentation
+
+To conclude this project, the front end and back end teams will present to the instructors and one another on the last day of class. Each team will give an overview of what was accomplished within the scope of the project, with each team member speaking for about five minutes to demonstrate:
+
+* The feature of the application they are most proud of
+* What they learned over the course of the project
+* If they were to work on the project beyond this course, what they would work on next
+
 ## Questions
 
 Hit us up!
