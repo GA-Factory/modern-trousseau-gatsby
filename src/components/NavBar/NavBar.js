@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import Icons from "../Icons/FAIcon";
 import "./NavBar.css";
-import logo from "./Logo/Logo.png";
 import Logo from "../FullLogo/Logo";
 
-const NavBar = () => (
+const NavBar = props => {
   <>
       <nav className="nav-bar">
         <div className="mobile-style">
@@ -40,6 +39,6 @@ const NavBar = () => (
         </div>
       </nav>
   </>
-);
+};
 
 export default NavBar;

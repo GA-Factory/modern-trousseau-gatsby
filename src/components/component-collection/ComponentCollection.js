@@ -118,7 +118,7 @@ const ImgGrow = styled(Img)`
 
 const ImgGrowLast = styled(Img)`
   display: none;
-  @media (min-width: ${props => props.theme.breakpoints.laptop}) {
+  @media (min-width: 1110px) {
     display: block;
     width: 260px;
     height: 267px;
