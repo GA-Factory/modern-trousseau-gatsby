@@ -16,7 +16,7 @@ const DesktopText = styled.p`
   padding-bottom: 15px;
   font-weight: bold;
   font-family: ${props => props.theme.fontStyles.h5Styles.fontStyle};
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (max-width: 600px) {
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -25,7 +25,7 @@ const DesktopText = styled.p`
 const Wrapper = styled.div`
 width: 100%;
 height: auto;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (max-width: 600px) {
     background: #fae5dc;
   }
 `;

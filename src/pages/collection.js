@@ -80,7 +80,7 @@ const collectionTitle = [
 
 const DressListItemGrid = styled.div`
   display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: grid;
     width: 90%;
     grid-template-columns: 30% 30% 30%;
@@ -90,8 +90,21 @@ const DressListItemGrid = styled.div`
   }
 `;
 
+const MobileNavBarContainer = styled.div`
+ @media (min-width: 600px) {
+    display: none;
+  }
+`
+
+const DesktopNavBarContainer = styled.div`
+    display: none;
+ @media (min-width: 768px) {
+   display: flex;
+  }
+`
+
 const SearchMenuContainer = styled.div`
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     width: 100%;
     border-top: 24px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -101,7 +114,7 @@ const SearchMenuContainer = styled.div`
 
 const LogoContainer = styled.div`
   display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     background-color: ${props => props.theme.colors.primaryPink};
     display: block;
     height: 120px;
@@ -112,7 +125,7 @@ const LogoContainer = styled.div`
 const SliderAdjuster = styled.div`
   height: 25%;
   border-top: 50px solid ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     border-top: 0;
   }
 `;
@@ -121,7 +134,7 @@ const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
   border-bottom: 60px solid ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: none;
   }
 `;
@@ -135,7 +148,7 @@ const CollectionTitle = styled.p`
   border-top: 8px solid #fae5dc;
   background-color: ${props => props.theme.colors.primaryPink};
   text-align: center;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     text-align: center;
     background-color: white;
     border-top: 8px solid #e5e5e5;
@@ -147,12 +160,15 @@ const CollectionTitle = styled.p`
 
 const DesktopCollectionTitle = styled.p`
   display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: white;
     border-top: 8px solid #e5e5e5;
     border-bottom: 20px solid #e5e5e5;
-    font-weight: 22px;
+    font-size: 24px;
+    font-weight: bold;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;
@@ -162,18 +178,8 @@ const TitleContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: none;
-  }
-`;
-
-const DesktopCollectionTitleContainer = styled.p`
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;
 
@@ -195,7 +201,7 @@ const DesignerQuote = styled.p`
   text-align: center;
   padding: 20px 5% 0 5%;
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: none;
   }
 `;
@@ -205,7 +211,7 @@ const QuoteAuthor = styled.p`
   text-align: center;
   padding: 20px 5% 0 5%;
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: none;
   }
 `;
@@ -213,7 +219,7 @@ const QuoteAuthor = styled.p`
 const ButtonContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: 600px) {
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -225,7 +231,12 @@ const ButtonContainer = styled.div`
 
 const GownsPage = () => (
   <Layout>
+    <MobileNavBarContainer>
     <NavBar />
+  </MobileNavBarContainer> 
+  <DesktopNavBarContainer>
+    <NavBar />
+  </DesktopNavBarContainer>       
     <LogoContainer>
       <Logo notag />
     </LogoContainer>
@@ -245,9 +256,7 @@ const GownsPage = () => (
         it needs to be longer for me to test it!!!
       </DesignerQuote>
       <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
-        <DesktopCollectionTitleContainer>
-          <DesktopCollectionTitle>Fall 2020</DesktopCollectionTitle>
-        </DesktopCollectionTitleContainer>
+          <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
       <DressListItemGrid>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
