@@ -133,8 +133,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
           .name,
@@ -144,8 +145,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
           .name,
@@ -155,8 +157,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
           .name,
@@ -166,8 +169,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
           .name,
@@ -177,8 +181,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
           .name,
@@ -188,8 +193,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
           .name,
@@ -199,8 +205,9 @@ const GownsPage = props => {
       image:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
           .gownImage.fluid.src,
-      mobileLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-      .name,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .name,
       desktopLabel:
         props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
           .name,
@@ -211,7 +218,7 @@ const GownsPage = props => {
     <Layout>
       <NavBar />
       <LogoContainer>
-      <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
+        <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
       <GownHeaderContainer>
         <GownHeader icon={icon} open={open} />
@@ -227,23 +234,23 @@ const GownsPage = props => {
       </SearchMenuContainer>
       {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
-      <Link to='/collection'>
-        <CollectionTitle>
-          {
-            props.data.allContentfulGowns.edges[0].node.collections[0]
-            .collectionName
-          }
-        </CollectionTitle>
-          </Link>
+        <Link to="/collection">
+          <CollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[0].node.collections[0]
+                .collectionName
+            }
+          </CollectionTitle>
+        </Link>
         <CollectionList slideData={cardData} title="Classics"></CollectionList>
         <SliderAdjuster>
-        <Link to='/collection'>
-          <CollectionTitle>
-            {
-              props.data.allContentfulGowns.edges[1].node.collections[0]
-                .collectionName
-            }
-          </CollectionTitle>
+          <Link to="/collection">
+            <CollectionTitle>
+              {
+                props.data.allContentfulGowns.edges[1].node.collections[0]
+                  .collectionName
+              }
+            </CollectionTitle>
           </Link>
           <CollectionList
             slideData={cardData}
@@ -251,13 +258,13 @@ const GownsPage = props => {
           ></CollectionList>
         </SliderAdjuster>
         <SliderAdjuster>
-        <Link to='/collection'>
-          <CollectionTitle>
-            {
-              props.data.allContentfulGowns.edges[2].node.collections[0]
-                .collectionName
-            }
-          </CollectionTitle>
+          <Link to="/collection">
+            <CollectionTitle>
+              {
+                props.data.allContentfulGowns.edges[2].node.collections[0]
+                  .collectionName
+              }
+            </CollectionTitle>
           </Link>
           <CollectionList
             slideData={cardData}
@@ -265,13 +272,13 @@ const GownsPage = props => {
           ></CollectionList>
         </SliderAdjuster>
         <SliderAdjuster>
-        <Link to='/collection'>
-          <CollectionTitle>
-            {
-              props.data.allContentfulGowns.edges[3].node.collections[0]
-                .collectionName
-            }
-          </CollectionTitle>
+          <Link to="/collection">
+            <CollectionTitle>
+              {
+                props.data.allContentfulGowns.edges[3].node.collections[0]
+                  .collectionName
+              }
+            </CollectionTitle>
           </Link>
           <CollectionList
             slideData={cardData}

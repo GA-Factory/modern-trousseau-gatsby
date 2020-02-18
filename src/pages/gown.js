@@ -77,11 +77,11 @@ const collectionTitle = [
 ];
 
 const BodyContainer = styled.div`
-background-color: ${props => props.theme.colors.primaryPink};
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  background-color: ${props => props.theme.colors.backgroundGray}
-}
-`
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    background-color: ${props => props.theme.colors.backgroundGray};
+  }
+`;
 
 const SearchMenuContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -134,14 +134,14 @@ const TitleContainer = styled.div`
 `;
 
 const DesktopCollectionTitleContainer = styled.p`
-display: none;
- @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: ${props => props.theme.colors.backgroundGray};
- }
-`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: ${props => props.theme.colors.backgroundGray};
+  }
+`;
 
 const LeftArrowContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
@@ -163,10 +163,10 @@ const RightArrowContainer = styled.div`
 `;
 
 const ImageAndDetailsContainer = styled.div`
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
   }
-`
+`;
 
 const GownImage = styled.img`
   background-color: ${props => props.theme.colors.primaryPink};
@@ -183,12 +183,12 @@ const GownImage = styled.img`
 `;
 
 const DesktopFlexColumn = styled.div`
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-`
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 const Name = styled.p`
   font-size: 22px;
@@ -204,7 +204,7 @@ const Name = styled.p`
 `;
 
 const Brief = styled.p`
-display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 54%;
@@ -218,7 +218,7 @@ display: none;
 `;
 
 const DetailsFeatures = styled.p`
-display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 54%;
@@ -232,7 +232,7 @@ display: none;
 `;
 
 const Description = styled.p`
-display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 54%;
@@ -258,8 +258,9 @@ const DetailsAndFeaturesContainer = styled.div`
 `;
 
 const Details = styled.p`
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-}`;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  }
+`;
 
 const DesktopButtonContainer = styled.p`
   display: none;
@@ -267,7 +268,7 @@ const DesktopButtonContainer = styled.p`
     display: flex;
     margin-left: 8%;
     margin-top: 24%;
-}
+  }
 `;
 
 const MobileButtonContainer = styled.p`
@@ -275,29 +276,29 @@ const MobileButtonContainer = styled.p`
   justify-content: center;
   border-bottom: 48px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  display: none;
-}
+    display: none;
+  }
 `;
 
 const DifferentAnglesContainer = styled.div`
-display: none;
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  display: flex;
-  margin-top: 30px;
-  margin-left: 10%;
-  border-bottom: 200px solid ${props => props.theme.colors.backgroundGray};
-}
-`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10%;
+    border-bottom: 200px solid ${props => props.theme.colors.backgroundGray};
+  }
+`;
 
 const DifferentAngles = styled.img`
-display: none;
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  display: inline-block;
-  width: 24%;
-  height: 300px;
-  margin: 0 26px 0 0;
-}
-`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: 24%;
+    height: 300px;
+    margin: 0 26px 0 0;
+  }
+`;
 
 const GownsPage = () => (
   <Layout>
@@ -307,66 +308,68 @@ const GownsPage = () => (
     </LogoContainer>
     <NavMenuDesktop />
     <BodyContainer>
-    <SearchMenuContainer>
-      <TitleContainer>
-        <LeftArrowContainer>
-          <Icons name={["fas", "arrow-left"]} size="1x" />
-        </LeftArrowContainer>
-        <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
-        <RightArrowContainer>
-          <Icons name={["fas", "arrow-right"]} size="1x" />
-        </RightArrowContainer>
-      </TitleContainer>
-      <DesktopCollectionTitleContainer>
-        <CollectionTitle>Fall 2020</CollectionTitle>
-      </DesktopCollectionTitleContainer>
-    </SearchMenuContainer>
-    <ImageAndDetailsContainer>
-    <GownImage src={cardData[0].image} />
-    <DesktopFlexColumn>
-    <Name>{cardData[0].mobileLabel}</Name>
-    <Brief>Stuff</Brief>
-    <DetailsFeatures>Details and Features</DetailsFeatures>
-    <Description>Description with a whole bunch of stuff describing the gown</Description>
-    <DesktopButtonContainer>
-      <PinkButton
-        label="See More From This Collection"
-        width={`${"250px"}`}
-        fontsize={`${"12px"}`}
-        height={`${"14px"}`}
-        weight={`${"800"}`}
-        padding={`${"5px 0"}`}
-        shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
-        color={`${"#000000"}`}
-        desktopfontsize={`${"14px"}`}
-        desktopheight={`${"16px"}`}
-      />
-    </DesktopButtonContainer>
-    </DesktopFlexColumn>
-    <DetailsAndFeaturesContainer>
-      <Icons name={["far", "plus-square"]} />
-      <Details>Details and Features</Details>
-    </DetailsAndFeaturesContainer>
-    </ImageAndDetailsContainer>
-    <MobileButtonContainer>
-      <PinkButton
-        label="See More From This Collection"
-        width={`${"250px"}`}
-        fontsize={`${"12px"}`}
-        height={`${"14px"}`}
-        weight={`${"800"}`}
-        padding={`${"5px 0"}`}
-        shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
-        color={`${"#000000"}`}
-        desktopfontsize={`${"14px"}`}
-        desktopheight={`${"16px"}`}
-      />
-    </MobileButtonContainer>
-    <DifferentAnglesContainer>
-    <DifferentAngles src={cardData[1].image} />
-    <DifferentAngles src={cardData[2].image} />
-    <DifferentAngles src={cardData[3].image} />
-    </DifferentAnglesContainer>
+      <SearchMenuContainer>
+        <TitleContainer>
+          <LeftArrowContainer>
+            <Icons name={["fas", "arrow-left"]} size="1x" />
+          </LeftArrowContainer>
+          <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+          <RightArrowContainer>
+            <Icons name={["fas", "arrow-right"]} size="1x" />
+          </RightArrowContainer>
+        </TitleContainer>
+        <DesktopCollectionTitleContainer>
+          <CollectionTitle>Fall 2020</CollectionTitle>
+        </DesktopCollectionTitleContainer>
+      </SearchMenuContainer>
+      <ImageAndDetailsContainer>
+        <GownImage src={cardData[0].image} />
+        <DesktopFlexColumn>
+          <Name>{cardData[0].mobileLabel}</Name>
+          <Brief>Stuff</Brief>
+          <DetailsFeatures>Details and Features</DetailsFeatures>
+          <Description>
+            Description with a whole bunch of stuff describing the gown
+          </Description>
+          <DesktopButtonContainer>
+            <PinkButton
+              label="See More From This Collection"
+              width={`${"250px"}`}
+              fontsize={`${"12px"}`}
+              height={`${"14px"}`}
+              weight={`${"800"}`}
+              padding={`${"5px 0"}`}
+              shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
+              color={`${"#000000"}`}
+              desktopfontsize={`${"14px"}`}
+              desktopheight={`${"16px"}`}
+            />
+          </DesktopButtonContainer>
+        </DesktopFlexColumn>
+        <DetailsAndFeaturesContainer>
+          <Icons name={["far", "plus-square"]} />
+          <Details>Details and Features</Details>
+        </DetailsAndFeaturesContainer>
+      </ImageAndDetailsContainer>
+      <MobileButtonContainer>
+        <PinkButton
+          label="See More From This Collection"
+          width={`${"250px"}`}
+          fontsize={`${"12px"}`}
+          height={`${"14px"}`}
+          weight={`${"800"}`}
+          padding={`${"5px 0"}`}
+          shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
+          color={`${"#000000"}`}
+          desktopfontsize={`${"14px"}`}
+          desktopheight={`${"16px"}`}
+        />
+      </MobileButtonContainer>
+      <DifferentAnglesContainer>
+        <DifferentAngles src={cardData[1].image} />
+        <DifferentAngles src={cardData[2].image} />
+        <DifferentAngles src={cardData[3].image} />
+      </DifferentAnglesContainer>
     </BodyContainer>
     <Footer />
   </Layout>

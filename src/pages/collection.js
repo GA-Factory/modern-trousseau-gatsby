@@ -92,17 +92,17 @@ const DressListItemGrid = styled.div`
 `;
 
 const MobileNavBarContainer = styled.div`
- @media (min-width: 600px) {
+  @media (min-width: 600px) {
     display: none;
   }
-`
+`;
 
 const DesktopNavBarContainer = styled.div`
-    display: none;
- @media (min-width: 768px) {
-   display: flex;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
   }
-`
+`;
 
 const SearchMenuContainer = styled.div`
   @media (min-width: 600px) {
@@ -233,11 +233,11 @@ const ButtonContainer = styled.div`
 const GownsPage = () => (
   <Layout>
     <MobileNavBarContainer>
-    <NavBar />
-  </MobileNavBarContainer> 
-  <DesktopNavBarContainer>
-    <NavBar />
-  </DesktopNavBarContainer>       
+      <NavBar />
+    </MobileNavBarContainer>
+    <DesktopNavBarContainer>
+      <NavBar />
+    </DesktopNavBarContainer>
     <LogoContainer>
       <Logo notag />
     </LogoContainer>
@@ -257,34 +257,34 @@ const GownsPage = () => (
         it needs to be longer for me to test it!!!
       </DesignerQuote>
       <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
-          <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
+      <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
       <DressListItemGrid>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
-        <Link to='/gown'>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
         </Link>
       </DressListItemGrid>
     </SearchMenuContainer>
