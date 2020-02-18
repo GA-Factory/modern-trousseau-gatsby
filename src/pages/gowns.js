@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
+import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
@@ -226,44 +227,52 @@ const GownsPage = props => {
       </SearchMenuContainer>
       {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
+      <Link to='/collection'>
         <CollectionTitle>
           {
             props.data.allContentfulGowns.edges[0].node.collections[0]
-              .collectionName
+            .collectionName
           }
         </CollectionTitle>
+          </Link>
         <CollectionList slideData={cardData} title="Classics"></CollectionList>
         <SliderAdjuster>
+        <Link to='/collection'>
           <CollectionTitle>
             {
               props.data.allContentfulGowns.edges[1].node.collections[0]
                 .collectionName
             }
           </CollectionTitle>
+          </Link>
           <CollectionList
             slideData={cardData}
             title="Classics"
           ></CollectionList>
         </SliderAdjuster>
         <SliderAdjuster>
+        <Link to='/collection'>
           <CollectionTitle>
             {
               props.data.allContentfulGowns.edges[2].node.collections[0]
                 .collectionName
             }
           </CollectionTitle>
+          </Link>
           <CollectionList
             slideData={cardData}
             title="Classics"
           ></CollectionList>
         </SliderAdjuster>
         <SliderAdjuster>
+        <Link to='/collection'>
           <CollectionTitle>
             {
               props.data.allContentfulGowns.edges[3].node.collections[0]
                 .collectionName
             }
           </CollectionTitle>
+          </Link>
           <CollectionList
             slideData={cardData}
             title="Classics"
