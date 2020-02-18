@@ -8,6 +8,7 @@ storiesOf("Cards", module)
     <Card
       icon={["far", "heart"]}
       type="heart"
+      size='7x'
       title="Get Inspired"
       paragraph="Each design evokes classic couture while expressing a vision of modern style & sophistication."
     />
@@ -16,6 +17,7 @@ storiesOf("Cards", module)
     <Card
       icon={["fas", "calendar-day"]}
       type="calendar"
+      size = 'md'
       title="Book With Us"
       paragraph="Spend an hour with us to create a truly unique, personalized & flattering wedding dress."
     />

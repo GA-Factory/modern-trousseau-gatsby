@@ -98,6 +98,11 @@ const Review1 = styled.div`
     position: relative;
     top: 14px;
   }
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: 50%;
+    height: 250px;
+  }
 `;
 
 const ViewDress1 = styled.div`
@@ -264,6 +269,26 @@ const ButtonPlacer3 = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-bottom: 9%;
   }
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border: 1px solid orange;
+    display: flex;
+    margin-left: 32%;
+    margin-top: 110%;
+    width: 50%;
+    height: auto;
+  }
+`;
+const ButtonPlacerMobile = styled.div`
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 600px) {
+    display: flex;
+    margin-top: 5%;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    margin-top: 5%;
+  }
 `;
 
 const ComponentCollection = ({ images }) => (
@@ -362,5 +387,4 @@ const ComponentCollection = ({ images }) => (
     </Container>
   </>
 );
-
 export default ComponentCollection;
