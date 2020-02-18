@@ -6,7 +6,7 @@ const MobileCard = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  padding: 0 12px;
+  padding: 0 12px 0 0;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
@@ -26,11 +26,11 @@ const DesktopCard = styled.div`
 
 const SliderAPlacer = styled.div`
   padding-left: 3.5%;
-`
+`;
 
 const Slide = styled.div`
   display: flex;
-  height: 268px;
+  height: 100%;
   padding-top: 12px;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -39,7 +39,19 @@ const Slide = styled.div`
   }
 `;
 
-const Button = styled.div`
+const ButtonA = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  border: 0;
+  margin: 0;
+  font-size: 20px;
+  height: 276px;
+  padding-right: 12px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const ButtonB = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   border: 0;
   margin: 0;
@@ -79,7 +91,7 @@ const MobileSlideText = styled.p`
 `;
 
 const ButtonIcon = styled.p`
-  margin-top: 140px;
+  margin-top: 2000%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -108,30 +120,6 @@ const DesktopImageContainer = styled.div`
   width: 100%;
   height: auto;
 `;
-
-const SliderA = ({ propertyA }) => {
-  const { image, mobileLabel, index } = propertyA;
-  return (
-    <Slide id={`slide-${index}`}>
-      <ImageContainer>
-        <SlideImage src={image} />
-        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
-      </ImageContainer>
-    </Slide>
-  );
-};
-
-const SliderB = ({ propertyB }) => {
-  const { image, mobileLabel, index } = propertyB;
-  return (
-    <Slide id={`slide-${index}`}>
-      <ImageContainer>
-        <SlideImage src={image} />
-        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
-      </ImageContainer>
-    </Slide>
-  );
-};
 
 class CollectionList extends React.Component {
   constructor(props) {
@@ -206,21 +194,47 @@ class CollectionList extends React.Component {
     }
   };
 
+
+  
   render() {
+
+    const SliderA = ({ propertyA }) => {
+      const { image, mobileLabel, index } = propertyA;
+      return (
+        <Slide id={`slide-${index}`}>
+          <ButtonA onClick={() => this.prevProperty()}>
+            <ButtonIcon>&#10094;</ButtonIcon>
+          </ButtonA>
+          <ImageContainer>
+            <SlideImage src={image} />
+            <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+          </ImageContainer>
+        </Slide>
+      );
+    };
+    
+    const SliderB = ({ propertyB }) => {
+      const { image, mobileLabel, index } = propertyB;
+      return (
+        <Slide id={`slide-${index}`}>
+          <ImageContainer>
+            <SlideImage src={image} />
+            <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+          </ImageContainer>
+          <ButtonB onClick={() => this.nextProperty()}>
+            <ButtonIcon>&#10095;</ButtonIcon>
+          </ButtonB>
+        </Slide>
+      );
+    };
     const { propertyA, propertyB } = this.state;
     return (
       <div>
         <MobileCard>
-          <Button onClick={() => this.prevProperty()}>
-            <ButtonIcon>&#10094;</ButtonIcon>
-          </Button>
-          <SliderAPlacer>  
-          <SliderA propertyA={propertyA} />
+          <SliderAPlacer>
+            <SliderA propertyA={propertyA} />
           </SliderAPlacer>
           <SliderB propertyB={propertyB} />
-          <Button onClick={() => this.nextProperty()}>
-            <ButtonIcon>&#10095;</ButtonIcon>
-          </Button>
         </MobileCard>
         <DesktopCard>
           <DesktopImageContainer>
