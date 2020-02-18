@@ -129,8 +129,6 @@ const TitleContainer = styled.div`
   border-top: 20px solid ${props => props.theme.colors.primaryPink};
   border-bottom: 20px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* border: 0;
-    background-color: ${props => props.theme.colors.backgroundGray} */
     display: none;
   }
 `;
@@ -198,7 +196,6 @@ const Name = styled.p`
   font-weight: bold;
   margin: 10px 0 10px 8.8%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    border: 1px solid black;
     width: 80%;
     padding-left: 15%;
     margin-bottom: 12%;
@@ -264,6 +261,15 @@ const Details = styled.p`
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
 }`;
 
+const DesktopButtonContainer = styled.p`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    margin-left: 8%;
+    margin-top: 24%;
+}
+`;
+
 const MobileButtonContainer = styled.p`
   display: flex;
   justify-content: center;
@@ -276,7 +282,6 @@ const MobileButtonContainer = styled.p`
 const DifferentAnglesContainer = styled.div`
 display: none;
 @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  border: 3px solid red;
   display: flex;
   margin-top: 30px;
   margin-left: 10%;
@@ -290,8 +295,7 @@ display: none;
   display: inline-block;
   width: 24%;
   height: 300px;
-  margin: 0 13px;
-  border: 2px solid blue;
+  margin: 0 26px 0 0;
 }
 `
 
@@ -324,6 +328,20 @@ const GownsPage = () => (
     <Brief>Stuff</Brief>
     <DetailsFeatures>Details and Features</DetailsFeatures>
     <Description>Description with a whole bunch of stuff describing the gown</Description>
+    <DesktopButtonContainer>
+      <PinkButton
+        label="See More From This Collection"
+        width={`${"250px"}`}
+        fontsize={`${"12px"}`}
+        height={`${"14px"}`}
+        weight={`${"800"}`}
+        padding={`${"5px 0"}`}
+        shadow={`${"0px 4px 4px rgba(0, 0, 0, 0.25)"}`}
+        color={`${"#000000"}`}
+        desktopfontsize={`${"14px"}`}
+        desktopheight={`${"16px"}`}
+      />
+    </DesktopButtonContainer>
     </DesktopFlexColumn>
     <DetailsAndFeaturesContainer>
       <Icons name={["far", "plus-square"]} />
