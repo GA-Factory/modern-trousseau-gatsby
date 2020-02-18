@@ -15,7 +15,9 @@ const MobileCard = styled.div`
 const DesktopCard = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 67%;
     margin-left: 16.5%;
     margin-right: 16.5%;
