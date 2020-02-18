@@ -313,9 +313,9 @@ const GownsPage = () => (
           <Icons name={["fas", "arrow-left"]} size="1x" />
         </LeftArrowContainer>
         <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
-        <RightArrowContainer>
+        {/* <RightArrowContainer>
           <Icons name={["fas", "arrow-right"]} size="1x" />
-        </RightArrowContainer>
+        </RightArrowContainer> */}
       </TitleContainer>
       <DesktopCollectionTitleContainer>
         <CollectionTitle>Fall 2020</CollectionTitle>
