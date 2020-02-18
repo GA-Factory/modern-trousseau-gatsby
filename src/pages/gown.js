@@ -312,7 +312,7 @@ const GownsPage = () => (
         <GownImage src={cardData[0].image} />
         <DesktopFlexColumn>
           <Name>{cardData[0].mobileLabel}</Name>
-          <Brief>Stuff</Brief>
+          <Brief>Floral Beaded Lace and Tulle Dress</Brief>
           <DetailsFeatures>Details and Features</DetailsFeatures>
           <Description>
             Details and features: A figure-hugging gown adorned with ornate
