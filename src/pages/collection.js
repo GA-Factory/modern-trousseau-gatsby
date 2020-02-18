@@ -10,6 +10,7 @@ import PinkButton from "../components/Button/Button";
 import DressListItem from "../components/DressListItem/DressListItem";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
+import { Link } from "gatsby";
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -258,15 +259,33 @@ const GownsPage = () => (
       <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
           <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
       <DressListItemGrid>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to='/gown'>
         <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
       </DressListItemGrid>
     </SearchMenuContainer>
     <CollectionsContainer>
