@@ -6,6 +6,7 @@ const MobileCard = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
+  padding: 0 16px;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
