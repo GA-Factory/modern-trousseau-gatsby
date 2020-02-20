@@ -11,6 +11,15 @@ import ComponentCollection from "../components/component-collection/ComponentCol
 import CollectionList from "../components/CollectionList/CollectionList";
 import StoreCollection from "../components/VisitUs-collection/VisitUs-collection";
 
+const Main = styled.div`
+  position: relative;
+  min-height: 100vh;
+`;
+
+const StoreContent = styled.div`
+  padding-bottom: 5rem;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -35,6 +44,7 @@ const Bottom = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 5rem;
 `;
 
 const Nav = styled.nav`
@@ -84,20 +94,22 @@ const VisitUs = props => {
       <Nav>
         <HeaderNavBar />
       </Nav>
-      <main>
+      <Main>
         <div>
           <Wrapper>
             <Title>MODERN TROUSSEAU RETAILERS</Title>
             <p>VISIT A FLAGSHIP</p>
           </Wrapper>
         </div>
-        <StoreCollection data={props.data} />
-      </main>
-      <footer>
-        <Bottom>
-          <Footer />
-        </Bottom>
-      </footer>
+        <StoreContent>
+          <StoreCollection data={props.data} />
+        </StoreContent>
+        <footer>
+          <Bottom>
+            <Footer />
+          </Bottom>
+        </footer>
+      </Main>
     </Layout>
   );
 };
