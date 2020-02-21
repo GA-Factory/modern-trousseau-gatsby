@@ -50,6 +50,7 @@ const StoreCollection = (props) => {
         <VisitGrid key={index}>
             <div>
                 {/* <ImgStyle fluid={stores.image.fluid.src} /> */}
+                <img fluid={stores.image.fluid} alt="Store Front" />
                 <p>Modern Trousseu {stores.city}</p>
                 <p>{stores.streetAddress.streetAddress}</p>
                 <p>{stores.city}, {stores.state} {stores.zip} </p>
@@ -63,13 +64,7 @@ const StoreCollection = (props) => {
     <>
             <Collection>
                 <Container>
-                    {/* <ImgStyle fluid={nodes[0].image.fluid} />
-                    <City>{nodes[0].city}</City>
-                    <p>{nodes[0].streetAddress.streetAddress}</p>
-                    <p>{nodes[0].city}</p>
-                    <p>{nodes[0].zip}</p>
-                    <p>{nodes[0].state}</p>
-                    <p>{nodes[0].email}</p> */}
+                    {/* <ImgStyle fluid={nodes[0].image.fluid} /> */}
                     <div>{store}</div>
                 </Container>
             </Collection>
