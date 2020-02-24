@@ -5,7 +5,8 @@ import "./NavBar.css";
 import Logo from "../FullLogo/Logo";
 
 const NavBar = props => {
-  <>
+  return (
+    <>
       <nav className="nav-bar">
         <div className="mobile-style">
           {/* Replace with burger component when complete */}
@@ -38,7 +39,8 @@ const NavBar = props => {
           </Link>
         </div>
       </nav>
-  </>
+    </>
+  );
 };
 
 export default NavBar;

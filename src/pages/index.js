@@ -60,7 +60,7 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      {/* <NavBar /> */}
+      <NavBar />
       <HeaderNavBar />
       {/* <Slider data={props.data} /> */}
       <Tagline

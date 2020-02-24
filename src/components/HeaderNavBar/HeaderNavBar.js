@@ -17,7 +17,7 @@ const HeaderNav = styled.nav`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  display: none;
+  display: flex;
   @media (min-width: 810px) {
     padding: 0;
     height: auto;
