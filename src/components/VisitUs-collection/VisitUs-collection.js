@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
+
 const Collection = styled.div`
   display: flex;
   width: 100%;
@@ -26,8 +27,9 @@ const Container = styled.div`
 `;
 
 const ImgStyle = styled(Img)`
-  height: 170px;
-  width: 145px;
+  width: 413.56px;
+  height: 223px;
+  margin: auto;
 `;
 
 const VisitGrid = styled.div`
@@ -49,8 +51,8 @@ const StoreCollection = (props) => {
   const store = nodes.map((stores, index) => (
         <VisitGrid key={index}>
             <div>
-                {/* <ImgStyle fluid={stores.image.fluid.src} /> */}
-                <img fluid={stores.image.fluid} alt="Store Front" />
+                {stores.image ? <ImgStyle fluid={stores.image.fluid} /> : null}
+                {/* <img src={stores.image.fluid} alt="Store Front" /> */}
                 <p>Modern Trousseu {stores.city}</p>
                 <p>{stores.streetAddress.streetAddress}</p>
                 <p>{stores.city}, {stores.state} {stores.zip} </p>
@@ -64,7 +66,6 @@ const StoreCollection = (props) => {
     <>
             <Collection>
                 <Container>
-                    {/* <ImgStyle fluid={nodes[0].image.fluid} /> */}
                     <div>{store}</div>
                 </Container>
             </Collection>
