@@ -295,7 +295,7 @@ const DifferentAngles = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: inline-block;
     width: 24%;
-    height: 300px;
+    height: auto;
     margin: 0 26px 0 0;
   }
 `;
