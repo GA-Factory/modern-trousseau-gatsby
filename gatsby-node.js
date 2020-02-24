@@ -1,57 +1,48 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const axios = require("axios");
-
-// Set Gatsby path up to be used by .createPages
-const path = require('path')
+const path = require('path'); // gatsby path up to be used by .createPages
 
 // Using Node's module export, Gatsby adds in a createPages factory 
-exports.createPages = ({ actions }) => {
-   
-  // We setup the createPage function takes the data from the actions object
+exports.createPages = async ({ actions }) => {
   const { createPage } = actions
 
-  // Setup a promise to build pages from contentful data model for gowns
-  return new Promise((resolve, reject) => {
-    
-    // Setup destination component for the data
-    const mockComponent = path.resolve('src/components/mockComponent.js')
-    resolve(
-        axios
-        .get(
-          `https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=gowns`
-        ).then((result) => {
+  // Use await to get all the gowns via Axios
+  const allGowns = await axios.get(`https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=gowns`)
 
-        // Now we loop over however many gowns Contentful sent back
-        result.data.items.forEach((gowns) => {
-          console.log(gowns)
-          createPage ({
-            path: `/gowns/${gowns.fields.slug}`,
-            component: mockComponent,
-            context: {
-              id: gowns.fields.id,
-              name: gowns.fields.name,
-              gownImage: gowns.fields.gownImage,
-              details: gowns.fields.details,
-              silhouette: gowns.fields.silhouette,
-              accessories: gowns.fields.accessories,
-              collections: gowns.fields.collections,
-            }
-          })
-        })
-      })
-      // This is the error handling for the calls
-      .catch((errors) => {
-        console.log(errors)
-        reject(errors)
-      })
-        
-    ) // close resolve handler
-  }) // close promise
+  // Loop over all the gowns, however many we get from contentful
+  allGowns.data.items.forEach((gowns) => {
+    createPage ({
+      path: `/gowns/${gowns.fields.slug}`,
+      component: path.resolve('src/components/mockComponent.js'),
+      context: {
+        name: gowns.fields.name,
+        gownImage: gowns.fields.gownImage,
+        details: gowns.fields.details,
+        silhouette: gowns.fields.silhouette,
+        accessories: gowns.fields.accessories,
+        collections: gowns.fields.collections,
+      }
+    })
+  })
+
+  // axios call for stores
+  const allStores = await axios.get(`https://cdn.contentful.com/spaces/2n4rer1mpqy8/entries/?access_token=zmHoMF9Kow4AAaDPjwNMu5-BNtdMiVJ_yrC9K1RHFyg&content_type=store`)
+
+  // Output each store
+  allStores.data.items.forEach((store) => {
+    createPage ({
+      path: `/store/${store.fields.slug}`,
+      component: path.resolve('src/components/mockComponent.js'),
+      context: {
+        name: store.fields.name,
+        streetAddress: store.fields.streetAddress,
+        city: store.fields.city,
+        state: store.fields.state,
+        zip: store.fields.zip,
+        phoneNumber: store.fields.phoneNumber,
+      }
+    })
+  })
+
 }
+
+
