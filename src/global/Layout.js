@@ -3,18 +3,11 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
-<<<<<<< HEAD
 
 import GlobalStyle from "./GlobalStyle";
 import variables from "../styles/styled-components";
 import '../styles/fonts.css'
 
-=======
-
-import variables from "../styles/variables";
-
-import GlobalStyle from "./GlobalStyle";
->>>>>>> slider
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,7 +22,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-<<<<<<< HEAD
         <ThemeProvider theme={variables}>
           <>
             <Helmet>
@@ -43,17 +35,6 @@ const Layout = ({ children }) => (
             <>{children}</>
           </>
         </ThemeProvider>
-=======
-        <Helmet>
-          <title>{data.site.siteMetadata.title}</title>
-          <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content="default"
-          />
-        </Helmet>
-        <GlobalStyle />
-        <>{children}</>
->>>>>>> slider
       </>
     )}
   />
