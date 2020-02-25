@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Icons from '../Icons/FAIcon';
+
 
 
 const Collection = styled.div`
@@ -29,7 +31,7 @@ const Container = styled.div`
 const ImgStyle = styled(Img)`
   width: 413.56px;
   height: 223px;
-  margin: auto;
+  margin: 10px auto;
 `;
 
 const VisitGrid = styled.div`
@@ -38,7 +40,7 @@ const VisitGrid = styled.div`
     padding: 10px;
     margin: 50px;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -52,8 +54,8 @@ const StoreCollection = (props) => {
         <VisitGrid key={index}>
             <div>
                 {stores.image ? <ImgStyle fluid={stores.image.fluid} /> : null}
-                {/* <img src={stores.image.fluid} alt="Store Front" /> */}
-                <p>Modern Trousseu {stores.city}</p>
+                <div>
+                <p><Icons name={['fas', 'map-marker-alt']} size='xs'/> Modern Trousseau {stores.city}</p></div>
                 <p>{stores.streetAddress.streetAddress}</p>
                 <p>{stores.city}, {stores.state} {stores.zip} </p>
                 <p>{stores.phoneNumber}</p>

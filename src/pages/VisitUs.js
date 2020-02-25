@@ -7,13 +7,14 @@ import Layout from "../global/Layout";
 import Footer from "../components/Footer/Footer";
 import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
 // eslint-disable-next-line max-len
-import ComponentCollection from "../components/component-collection/ComponentCollection";
-import CollectionList from "../components/CollectionList/CollectionList";
 import StoreCollection from "../components/VisitUs-collection/VisitUs-collection";
 
+
 const Main = styled.div`
-  position: relative;
   min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
 `;
 
 const StoreContent = styled.div`
@@ -44,7 +45,6 @@ const Bottom = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 5rem;
 `;
 
 const Nav = styled.nav`
@@ -90,26 +90,20 @@ const VisitUs = props => {
 
   return (
     <Layout>
-      <NavBar />
-      <Nav>
-        <HeaderNavBar />
-      </Nav>
       <Main>
-        <div>
-          <Wrapper>
-            <Title>MODERN TROUSSEAU RETAILERS</Title>
-            <p>VISIT A FLAGSHIP</p>
-          </Wrapper>
-        </div>
+        <NavBar />
+        <Nav>
+          <HeaderNavBar />
+        </Nav>
+        <Wrapper>
+          <Title>MODERN TROUSSEAU RETAILERS</Title>
+          <p>VISIT A FLAGSHIP</p>
+        </Wrapper>
         <StoreContent>
           <StoreCollection data={props.data} />
         </StoreContent>
-        <footer>
-          <Bottom>
-            <Footer />
-          </Bottom>
-        </footer>
-      </Main>
+        <Footer />
+        </Main>
     </Layout>
   );
 };
