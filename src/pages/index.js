@@ -69,8 +69,7 @@ const IndexPage = props => {
       />
       <HowWeWork title="How We Work" />
       <OwnerQuote
-        quote="The look on a bride's face when she finds her dress - that is priceless
-  and incredibly rewarding."
+        quote="The look on a bride's face when she finds her dress - that is priceless and incredibly rewarding."
         name="Callie Tein"
         role="Designer"
       />
