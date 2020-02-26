@@ -39,28 +39,40 @@ const Slide = styled.div`
   }
 `;
 
-const ButtonA = styled.div`
+
+const Button = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   border: 0;
   margin: 0;
   font-size: 20px;
   height: 276px;
-  padding-right: 12px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
 `;
 
-const ButtonB = styled.div`
-  background-color: ${props => props.theme.colors.primaryPink};
-  border: 0;
-  margin: 0;
-  font-size: 20px;
-  height: 276px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
+// const ButtonA = styled.div`
+//   background-color: ${props => props.theme.colors.primaryPink};
+//   border: 0;
+//   margin: 0;
+//   font-size: 20px;
+//   height: 276px;
+//   padding-right: 12px;
+//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+//     display: none;
+//   }
+// `;
+
+// const ButtonB = styled.div`
+//   background-color: ${props => props.theme.colors.primaryPink};
+//   border: 0;
+//   margin: 0;
+//   font-size: 20px;
+//   height: 276px;
+//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+//     display: none;
+//   }
+// `;
 
 const ImageContainer = styled.div`
   display: flex;
@@ -125,9 +137,6 @@ const SliderA = ({ propertyA }) => {
   const { image, mobileLabel, index } = propertyA;
   return (
     <Slide id={`slide-${index}`}>
-      <ButtonA onClick={() => this.prevProperty()}>
-        <ButtonIcon>&#10094;</ButtonIcon>
-      </ButtonA>
       <ImageContainer>
         <SlideImage src={image} />
         <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
@@ -156,9 +165,6 @@ const SliderC = ({ propertyC }) => {
         <SlideImage src={image} />
         <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
       </ImageContainer>
-      <ButtonB onClick={() => this.nextProperty()}>
-        <ButtonIcon>&#10095;</ButtonIcon>
-      </ButtonB>
     </Slide>
   );
 };
@@ -259,11 +265,17 @@ class CollectionList extends React.Component {
     return (
       <div>
         <MobileCard>
+        <Button onClick={() => this.prevProperty()}>
+        <ButtonIcon>&#10094;</ButtonIcon>
+          </Button>
           <SliderAPlacer>
             <SliderA propertyA={propertyA} />
           </SliderAPlacer>
           <SliderB propertyB={propertyB} />
           <SliderC propertyC={propertyC} />
+          <Button onClick={() => this.nextProperty()}>
+            <ButtonIcon>&#10095;</ButtonIcon>
+          </Button>
         </MobileCard>
         <DesktopCard>
           <DesktopImageContainer>
