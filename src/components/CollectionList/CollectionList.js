@@ -121,40 +121,123 @@ const DesktopImageContainer = styled.div`
   height: auto;
 `;
 
+const SliderA = ({ propertyA }) => {
+  const { image, mobileLabel, index } = propertyA;
+  return (
+    <Slide id={`slide-${index}`}>
+      <ButtonA onClick={() => this.prevProperty()}>
+        <ButtonIcon>&#10094;</ButtonIcon>
+      </ButtonA>
+      <ImageContainer>
+        <SlideImage src={image} />
+        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+      </ImageContainer>
+    </Slide>
+  );
+};
+
+const SliderB = ({ propertyB }) => {
+  const { image, mobileLabel, index } = propertyB;
+  return (
+    <Slide id={`slide-${index}`}>
+      <ImageContainer>
+        <SlideImage src={image} />
+        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+      </ImageContainer>
+    </Slide>
+  );
+};
+
+const SliderC = ({ propertyC }) => {
+  const { image, mobileLabel, index } = propertyC;
+  return (
+    <Slide id={`slide-${index}`}>
+      <ImageContainer>
+        <SlideImage src={image} />
+        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+      </ImageContainer>
+      <ButtonB onClick={() => this.nextProperty()}>
+        <ButtonIcon>&#10095;</ButtonIcon>
+      </ButtonB>
+    </Slide>
+  );
+};
+
 class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       properties: this.props.slideData,
       propertyA: this.props.slideData[0],
-      propertyB: this.props.slideData[1]
+      propertyB: this.props.slideData[1],
+      propertyC: this.props.slideData[2]
     };
   }
 
   prevProperty = () => {
-    if (this.state.propertyA.index > 0 && this.state.propertyB.index > 0) {
+    if (this.state.propertyA.index > 0 && this.state.propertyB.index > 0 && this.state.propertyC.index > 0) {
       const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.state.propertyB.index - 1;
+      const newIndexC = this.state.propertyC.index - 1;
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
       this.setState({
         propertyA: this.props.slideData[newIndexA],
-        propertyB: this.props.slideData[newIndexB]
+        propertyB: this.props.slideData[newIndexB],
+        propertyC: this.props.slideData[newIndexC]
       });
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
     }
-    if (this.state.propertyA.index == 0 && this.state.propertyB != 0) {
+    if (this.state.propertyA.index == 0 && this.state.propertyB.index != 0 && this.state.propertyC.index != 0) {
       const newIndexA = this.props.slideData.length - 1;
       const newIndexB = this.state.propertyB.index - 1;
+      const newIndexC = this.state.propertyC.index - 1;
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
       this.setState({
         propertyA: this.props.slideData[newIndexA],
-        propertyB: this.props.slideData[newIndexB]
+        propertyB: this.props.slideData[newIndexB],
+        propertyC: this.props.slideData[newIndexC]
       });
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
     }
-    if (this.state.propertyA.index != 0 && this.state.propertyB.index == 0) {
+    if (this.state.propertyA.index != 0 && this.state.propertyB.index == 0 && this.state.propertyC.index != 0) {
       const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.props.slideData.length - 1;
+      const newIndexC = this.state.propertyC.index - 1;
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
       this.setState({
         propertyA: this.props.slideData[newIndexA],
-        propertyB: this.props.slideData[newIndexB]
+        propertyB: this.props.slideData[newIndexB],
+        propertyC: this.props.slideData[newIndexC]
       });
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
+    }
+    if (this.state.propertyA.index != 0 && this.state.propertyB.index != 0 && this.state.propertyC.index == 0) {
+      const newIndexA = this.state.propertyA.index - 1;
+      const newIndexB = this.state.propertyB.index - 1;
+      const newIndexC = this.props.slideData.length - 1;
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
+      this.setState({
+        propertyA: this.props.slideData[newIndexA],
+        propertyB: this.props.slideData[newIndexB],
+        propertyC: this.props.slideData[newIndexC]
+      });
+      // console.log(this.state.propertyA.index)
+      // console.log(this.state.propertyB.index)
+      // console.log(this.state.propertyC.index)
     }
   };
 
@@ -194,47 +277,16 @@ class CollectionList extends React.Component {
     }
   };
 
-
-  
   render() {
-
-    const SliderA = ({ propertyA }) => {
-      const { image, mobileLabel, index } = propertyA;
-      return (
-        <Slide id={`slide-${index}`}>
-          <ButtonA onClick={() => this.prevProperty()}>
-            <ButtonIcon>&#10094;</ButtonIcon>
-          </ButtonA>
-          <ImageContainer>
-            <SlideImage src={image} />
-            <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
-          </ImageContainer>
-        </Slide>
-      );
-    };
-    
-    const SliderB = ({ propertyB }) => {
-      const { image, mobileLabel, index } = propertyB;
-      return (
-        <Slide id={`slide-${index}`}>
-          <ImageContainer>
-            <SlideImage src={image} />
-            <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
-          </ImageContainer>
-          <ButtonB onClick={() => this.nextProperty()}>
-            <ButtonIcon>&#10095;</ButtonIcon>
-          </ButtonB>
-        </Slide>
-      );
-    };
-    const { propertyA, propertyB } = this.state;
+    const { propertyA, propertyB, propertyC } = this.state;
     return (
       <div>
         <MobileCard>
-          <SliderAPlacer>
+          {/* <SliderAPlacer> */}
             <SliderA propertyA={propertyA} />
-          </SliderAPlacer>
+          {/* </SliderAPlacer> */}
           <SliderB propertyB={propertyB} />
+          <SliderC propertyC={propertyC} />
         </MobileCard>
         <DesktopCard>
           <DesktopImageContainer>
