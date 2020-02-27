@@ -9,7 +9,7 @@ const MobileCard = styled.div`
     width: 100%;
     justify-content: space-around;
     padding: 0 12px 0 0;
-    background-color: ${props => props.theme.colors.primaryPink};
+    background-color: #E5E5E5;
   }
 `;
 
@@ -35,14 +35,15 @@ const Slide = styled.div`
     display: flex;
     height: 100%;
     padding-top: 12px;
-    background-color: ${props => props.theme.colors.primaryPink};
+    background-color: #E5E5E5;
   }
 `;
 
 const Button = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    background-color: ${props => props.theme.colors.primaryPink};
+    display: flex;
+    background-color: #E5E5E5;
     border: 0;
     margin: 0;
     font-size: 20px;
@@ -61,6 +62,7 @@ const ImageContainer = styled.div`
 const SlideImage = styled.img`
     display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
     height: auto;
     width: 100%;
     margin-bottom: 0;
@@ -79,6 +81,7 @@ const MobileSlideText = styled.p`
 const ButtonIcon = styled.p`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
     margin-top: 2000%;
   }
 `;
@@ -289,7 +292,7 @@ class CollectionList extends React.Component {
           </Button>
         </MobileCard>
 
-        
+
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
