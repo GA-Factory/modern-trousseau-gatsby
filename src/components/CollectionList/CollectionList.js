@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 
-const MobileCard = styled.div`
+const DesktopCard = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -13,11 +13,9 @@ const MobileCard = styled.div`
   }
 `;
 
-const DesktopCard = styled.div`
+const MobileCard = styled.div`
     display: flex;
-    width: 50%;
-    /* margin-left: 16.5%;
-    margin-right: 16.5%; */
+    width: 100%;
     height: 100%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
@@ -69,7 +67,7 @@ const SlideImage = styled.img`
   }
 `;
 
-const MobileSlideText = styled.p`
+const DesktopSlideText = styled.p`
   text-align: center;
   margin: 10px 0 0 0;
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
@@ -86,18 +84,19 @@ const ButtonIcon = styled.p`
   }
 `;
 
-const DesktopImage = styled.img`
+const MobileImage = styled.img`
     width: 100%;
     display: flex;
+    background-color: ${props => props.theme.colors.primaryPink};
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
     font-size: 20px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /*height: 90%; */
     display: none;
   }
 `;
 
-const DesktopText = styled.p`
+const MobileText = styled.p`
+  background-color: ${props => props.theme.colors.primaryPink};
   text-align: center;
   margin-top: 16px;
   font-weight: 800;
@@ -105,9 +104,11 @@ const DesktopText = styled.p`
   font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
 `;
 
-const DesktopImageContainer = styled.div`
+const MobileImageContainer = styled.div`
   width: 50%;
   height: auto;
+  background-color: ${props => props.theme.colors.primaryPink};
+
 `;
 
 const SliderA = ({ propertyA }) => {
@@ -116,7 +117,7 @@ const SliderA = ({ propertyA }) => {
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
-        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
@@ -128,7 +129,7 @@ const SliderB = ({ propertyB }) => {
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
-        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
@@ -140,7 +141,7 @@ const SliderC = ({ propertyC }) => {
     <Slide id={`slide-${index}`}>
       <ImageContainer>
         <SlideImage src={image} />
-        <MobileSlideText>{`${mobileLabel}`}</MobileSlideText>
+        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
@@ -149,7 +150,6 @@ const SliderC = ({ propertyC }) => {
 class CollectionList extends React.Component {
   constructor(props) {
     super(props);
-    // this.prevProperty = this.prevProperty.bind(this)
     this.state = {
       properties: this.props.slideData,
       propertyA: this.props.slideData[0],
@@ -280,7 +280,7 @@ class CollectionList extends React.Component {
     const { propertyA, propertyB, propertyC } = this.state;
     return (
       <div>
-        <MobileCard>
+        <DesktopCard>
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
@@ -290,31 +290,28 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
-        </MobileCard>
-
-
-        <DesktopCard>
-          <DesktopImageContainer>
-            <DesktopImage src={this.state.properties[0].image}></DesktopImage>
-            <DesktopText>{this.state.properties[0].desktopLabel}</DesktopText>
-          </DesktopImageContainer>
-          <DesktopImageContainer>
-            <DesktopImage src={this.state.properties[1].image}></DesktopImage>
-            <DesktopText>{this.state.properties[1].desktopLabel}</DesktopText>
-          </DesktopImageContainer>
-
-
-          {/* <DesktopImageContainer>
-            <DesktopImage src={this.state.properties[2].image}></DesktopImage>
-            <DesktopText>{this.state.properties[2].desktopLabel}</DesktopText>
-          </DesktopImageContainer> */}
         </DesktopCard>
+
+
+        <MobileCard>
+          <MobileImageContainer>
+            <MobileImage src={this.state.properties[0].image}></MobileImage>
+            <MobileText>{this.state.properties[0].desktopLabel}</MobileText>
+          </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.properties[1].image}></MobileImage>
+            <MobileText>{this.state.properties[1].desktopLabel}</MobileText>
+          </MobileImageContainer>
+        </MobileCard>
       </div>
     );
   }
 }
 
 export default CollectionList;
+
+
+
 
 // import React from "react";
 // import ReactDOM from "react-dom";

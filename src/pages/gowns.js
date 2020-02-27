@@ -107,7 +107,7 @@ const CollectionTitle = styled.p`
     margin-top: 20px;
     /* margin-left: 6.5%; */
     margin-bottom: 6px;
-    padding-left: 1%;
+    padding-left: 2.5%;
     background-color: white;
     border-top: 8px solid #e5e5e5;
     font-weight: 22px;
