@@ -3,24 +3,24 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 const MobileCard = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 0 12px 0 0;
-  background-color: ${props => props.theme.colors.primaryPink};
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 12px 0 0;
+    background-color: ${props => props.theme.colors.primaryPink};
   }
 `;
 
 const DesktopCard = styled.div`
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     width: 67%;
     margin-left: 16.5%;
     margin-right: 16.5%;
     height: 100%;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
   }
 `;
 
@@ -29,42 +29,41 @@ const SliderAPlacer = styled.div`
 `;
 
 const Slide = styled.div`
-  display: flex;
-  height: 100%;
-  padding-top: 12px;
-  background-color: ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 100%;
     display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    height: 100%;
+    padding-top: 12px;
+    background-color: ${props => props.theme.colors.primaryPink};
   }
 `;
 
-
 const Button = styled.div`
-  background-color: ${props => props.theme.colors.primaryPink};
-  border: 0;
-  margin: 0;
-  font-size: 20px;
-  height: 100%;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
+    background-color: ${props => props.theme.colors.primaryPink};
+    border: 0;
+    margin: 0;
+    font-size: 20px;
+    height: 100%;
   }
 `;
 
 const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
 const SlideImage = styled.img`
-  height: auto;
-  width: 100%;
-  margin-bottom: 0;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    height: auto;
+    width: 100%;
+    margin-bottom: 0;
   }
 `;
 
@@ -78,9 +77,9 @@ const MobileSlideText = styled.p`
 `;
 
 const ButtonIcon = styled.p`
-  margin-top: 2000%;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
+    margin-top: 2000%;
   }
 `;
 
@@ -152,12 +151,16 @@ class CollectionList extends React.Component {
       properties: this.props.slideData,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1],
-      propertyC: this.props.slideData[2],
+      propertyC: this.props.slideData[2]
     };
   }
 
   prevProperty = () => {
-    if (this.state.propertyA.index > 0 && this.state.propertyB.index > 0 && this.state.propertyC.index > 0) {
+    if (
+      this.state.propertyA.index > 0 &&
+      this.state.propertyB.index > 0 &&
+      this.state.propertyC.index > 0
+    ) {
       const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.state.propertyB.index - 1;
       const newIndexC = this.state.propertyC.index - 1;
@@ -167,7 +170,11 @@ class CollectionList extends React.Component {
         propertyC: this.props.slideData[newIndexC]
       });
     }
-    if (this.state.propertyA.index == 0 && this.state.propertyB.index != 0 && this.state.propertyC.index != 0) {
+    if (
+      this.state.propertyA.index == 0 &&
+      this.state.propertyB.index != 0 &&
+      this.state.propertyC.index != 0
+    ) {
       const newIndexA = this.props.slideData.length - 1;
       const newIndexB = this.state.propertyB.index - 1;
       const newIndexC = this.state.propertyC.index - 1;
@@ -177,7 +184,11 @@ class CollectionList extends React.Component {
         propertyC: this.props.slideData[newIndexC]
       });
     }
-    if (this.state.propertyA.index != 0 && this.state.propertyB.index == 0 && this.state.propertyC.index != 0) {
+    if (
+      this.state.propertyA.index != 0 &&
+      this.state.propertyB.index == 0 &&
+      this.state.propertyC.index != 0
+    ) {
       const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.props.slideData.length - 1;
       const newIndexC = this.state.propertyC.index - 1;
@@ -187,7 +198,11 @@ class CollectionList extends React.Component {
         propertyC: this.props.slideData[newIndexC]
       });
     }
-    if (this.state.propertyA.index != 0 && this.state.propertyB.index != 0 && this.state.propertyC.index == 0) {
+    if (
+      this.state.propertyA.index != 0 &&
+      this.state.propertyB.index != 0 &&
+      this.state.propertyC.index == 0
+    ) {
       const newIndexA = this.state.propertyA.index - 1;
       const newIndexB = this.state.propertyB.index - 1;
       const newIndexC = this.props.slideData.length - 1;
@@ -263,18 +278,18 @@ class CollectionList extends React.Component {
     return (
       <div>
         <MobileCard>
-        <Button onClick={() => this.prevProperty()}>
-        <ButtonIcon>&#10094;</ButtonIcon>
+          <Button onClick={() => this.prevProperty()}>
+            <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
-          {/* <SliderAPlacer> */}
-            <SliderA propertyA={propertyA} />
-          {/* </SliderAPlacer> */}
+          <SliderA propertyA={propertyA} />
           <SliderB propertyB={propertyB} />
           <SliderC propertyC={propertyC} />
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
         </MobileCard>
+
+        
         <DesktopCard>
           <DesktopImageContainer>
             <DesktopImage src={this.state.properties[0].image}></DesktopImage>
@@ -295,15 +310,6 @@ class CollectionList extends React.Component {
 }
 
 export default CollectionList;
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import ReactDOM from "react-dom";
