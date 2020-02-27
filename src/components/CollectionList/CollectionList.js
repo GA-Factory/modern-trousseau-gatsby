@@ -15,9 +15,9 @@ const MobileCard = styled.div`
 
 const DesktopCard = styled.div`
     display: flex;
-    width: 67%;
-    margin-left: 16.5%;
-    margin-right: 16.5%;
+    width: 50%;
+    /* margin-left: 16.5%;
+    margin-right: 16.5%; */
     height: 100%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
@@ -46,7 +46,7 @@ const Button = styled.div`
     background-color: #E5E5E5;
     border: 0;
     margin: 0;
-    font-size: 20px;
+    font-size: 36px;
     height: 100%;
   }
 `;
@@ -82,18 +82,18 @@ const ButtonIcon = styled.p`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    margin-top: 2000%;
+    margin-top: 1300%;
   }
 `;
 
 const DesktopImage = styled.img`
-  width: 100%;
-  height: 90%;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 100%;
     display: flex;
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
     font-size: 20px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    /*height: 90%; */
+    display: none;
   }
 `;
 
@@ -106,7 +106,7 @@ const DesktopText = styled.p`
 `;
 
 const DesktopImageContainer = styled.div`
-  width: 100%;
+  width: 50%;
   height: auto;
 `;
 
@@ -302,10 +302,12 @@ class CollectionList extends React.Component {
             <DesktopImage src={this.state.properties[1].image}></DesktopImage>
             <DesktopText>{this.state.properties[1].desktopLabel}</DesktopText>
           </DesktopImageContainer>
-          <DesktopImageContainer>
+
+
+          {/* <DesktopImageContainer>
             <DesktopImage src={this.state.properties[2].image}></DesktopImage>
             <DesktopText>{this.state.properties[2].desktopLabel}</DesktopText>
-          </DesktopImageContainer>
+          </DesktopImageContainer> */}
         </DesktopCard>
       </div>
     );

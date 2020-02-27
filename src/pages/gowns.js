@@ -100,14 +100,14 @@ const CollectionTitle = styled.p`
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: 800;
   font-weight: 18px;
-  padding-left: 8.1%;
+  /* padding-left: 8.1%; */
   border-top: 8px solid #fae5dc;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 20px;
-    margin-left: 6.5%;
+    /* margin-left: 6.5%; */
     margin-bottom: 6px;
-    padding-left: 10%;
+    padding-left: 1%;
     background-color: white;
     border-top: 8px solid #e5e5e5;
     font-weight: 22px;
