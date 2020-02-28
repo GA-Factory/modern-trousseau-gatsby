@@ -251,6 +251,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug1}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>
@@ -276,6 +277,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug2}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>
@@ -301,6 +303,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug3}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>

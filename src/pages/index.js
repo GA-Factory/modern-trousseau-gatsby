@@ -38,7 +38,7 @@ const IndexPage = props => {
           }
         }
       }
-      allContentfulTestimonial {
+      allContentfulTestimonial(limit: 3) {
         nodes {
           image {
             fluid {
@@ -51,9 +51,9 @@ const IndexPage = props => {
             }
           }
           comment {
-            id
             comment
           }
+          slug
         }
       }
     }
@@ -81,10 +81,13 @@ const IndexPage = props => {
         data={props.data}
         image1={props.data.allContentfulTestimonial.nodes[0].image.fluid}
         review1={props.data.allContentfulTestimonial.nodes[0].comment.comment}
+        slug1={props.data.allContentfulTestimonial.nodes[0].slug}
         image2={props.data.allContentfulTestimonial.nodes[1].image.fluid}
         review2={props.data.allContentfulTestimonial.nodes[1].comment.comment}
+        slug2={props.data.allContentfulTestimonial.nodes[1].slug}
         image3={props.data.allContentfulTestimonial.nodes[2].image.fluid}
         review3={props.data.allContentfulTestimonial.nodes[2].comment.comment}
+        slug3={props.data.allContentfulTestimonial.nodes[2].slug}
       />
       <Footer />
     </Layout>
