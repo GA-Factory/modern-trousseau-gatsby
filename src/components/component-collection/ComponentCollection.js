@@ -11,7 +11,7 @@ const Collection = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 360px;
-    padding: 30px 10px 10px 10px;
+    padding: 35px 10px 35px 10px;
   }
 `;
 
@@ -74,7 +74,6 @@ const GownImageScreen2 = styled.img`
 const Title = styled.p`
   text-align: center;
   font-weight: bold;
-  margin-bottom: 15px;
   font-family: ${props => props.theme.fontStyles.h1Styles.fontStyle};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
