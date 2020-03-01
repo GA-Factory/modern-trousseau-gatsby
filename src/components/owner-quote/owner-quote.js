@@ -8,7 +8,7 @@ const OwnerCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 25px;
   font-family: "Playfair Display";
   max-width: 100%;
   margin: 0 auto;

@@ -5,6 +5,12 @@ const Image = styled.img`
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+height: auto;
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 `;
 
 const DesktopText = styled.p`
@@ -13,14 +19,20 @@ const DesktopText = styled.p`
   padding-bottom: 15px;
   font-weight: bold;
   font-family: ${props => props.theme.fontStyles.h5Styles.fontStyle};
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (max-width: 600px) {
     text-transform: uppercase;
     font-weight: bold;
   }
 `;
 
 const Wrapper = styled.div`
+width: 100%;
+height: auto;
+<<<<<<< HEAD
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+=======
+  @media (max-width: 600px) {
+>>>>>>> develop
     background: #fae5dc;
   }
 `;
