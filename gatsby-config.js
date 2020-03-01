@@ -45,11 +45,11 @@ module.exports = {
         name: "src"
       }
     },
-    'gatsby-plugin-root-import',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components',
-  ],
+    "gatsby-plugin-root-import",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-offline",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-styled-components"
+  ]
 };

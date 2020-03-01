@@ -22,11 +22,12 @@ const Title = styled.div`
   text-align: center;
   color: #0f1f2f;
   margin: 0 auto;
-  padding: 0 0 20px;
+  padding: 0 0 5px;
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
     font-size: 40px;
     line-height: 53px;
     color: #000000;
+    padding: 0 0 15px;
     font-family: 'Playfair Display', serif;
   }
 `;

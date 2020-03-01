@@ -19,7 +19,7 @@ const DesktopCard = styled.div`
     width: 67%;
     margin-left: 16.5%;
     margin-right: 16.5%;
-    height: 440px;
+    height: 100%;
   }
 `;
 
@@ -105,7 +105,7 @@ const DesktopText = styled.p`
 
 const DesktopImageContainer = styled.div`
   width: 100%;
-  height: 440px;
+  height: auto;
 `;
 
 const SliderA = ({ propertyA }) => {
