@@ -9,7 +9,6 @@ const Collection = styled.div`
   height: 100%;
   display: flex;
   width: 100%;
-  overflow: auto;
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}) {
     height: 360px;
     padding: 30px 10px 10px 10px;
@@ -52,9 +51,6 @@ const VisitGrid = styled.div`
     font-weight: bold;
     font-size: 12px;
 `;
-const Store = styled.div`
-  height: 100%;
-`;
 
 const StoreCollection = (props) => {
   const { nodes } = props.data.allContentfulStore;
@@ -77,7 +73,7 @@ const StoreCollection = (props) => {
     <>
             <Collection>
                 <Container>
-                    <Store>{store}</Store>
+                    <div>{store}</div>
                 </Container>
             </Collection>
     </>

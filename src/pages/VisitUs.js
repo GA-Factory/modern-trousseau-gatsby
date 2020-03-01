@@ -10,16 +10,14 @@ import StoreCollection from "../components/VisitUs-collection/VisitUs-collection
 
 
 const Main = styled.div`
-  /* min-height: 100vh;
-  display: block;
-  position: relative;
-  padding-bottom: 100px; */
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 `;
 
 const StoreContent = styled.div`
-  /* padding-bottom: 5rem; */
+  height: 100vh;
   flex: 1 0 auto;
 `;
 
@@ -41,13 +39,6 @@ const Title = styled.div`
   font-size: 18px;
   border: 1px solid #080808;
   background: rgba(68, 31, 14, 0.2);
-`;
-
-const Bottom = styled.div`
-  /* position: absolute;
-  bottom: 0;
-  width: 100%; */
-  flex-shrink: 0;
 `;
 
 const Nav = styled.nav`
@@ -105,10 +96,8 @@ const VisitUs = props => {
         <StoreContent>
           <StoreCollection data={props.data} />
         </StoreContent>
-        <Bottom>
-          <Footer />
-        </Bottom>
       </Main>
+      <Footer />
     </Layout>
   );
 };
