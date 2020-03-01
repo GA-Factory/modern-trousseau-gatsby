@@ -6,19 +6,21 @@ import NavBar from "../components/NavBar/NavBar";
 import Layout from "../global/Layout";
 import Footer from "../components/Footer/Footer";
 import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-// eslint-disable-next-line max-len
 import StoreCollection from "../components/VisitUs-collection/VisitUs-collection";
 
 
 const Main = styled.div`
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: block;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 100px; */
+  display: flex;
+  flex-direction: column;
 `;
 
 const StoreContent = styled.div`
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
+  flex: 1 0 auto;
 `;
 
 const Wrapper = styled.div`
@@ -42,9 +44,10 @@ const Title = styled.div`
 `;
 
 const Bottom = styled.div`
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
+  flex-shrink: 0;
 `;
 
 const Nav = styled.nav`
@@ -102,8 +105,10 @@ const VisitUs = props => {
         <StoreContent>
           <StoreCollection data={props.data} />
         </StoreContent>
-        <Footer />
-        </Main>
+        <Bottom>
+          <Footer />
+        </Bottom>
+      </Main>
     </Layout>
   );
 };
