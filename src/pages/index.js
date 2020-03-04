@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../global/Layout";
 import NavBar from "../components/NavBar/NavBar";
 import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-// import Slider from "../components/Slider/Slider";
+import Slider from "../components/Slider/Slider";
 import Tagline from "../components/Tagline/tagline";
 import HowWeWork from "../components/HowWeWork/howwework";
 import OwnerQuote from "../components/owner-quote/owner-quote";
@@ -54,6 +54,16 @@ const IndexPage = props => {
             comment
           }
           slug
+        }
+      }
+      contentfulAsset(file: {fileName: {eq: "Charleston photo.png"}}) {
+        fluid(maxWidth: 1000) {
+          tracedSVG
+          srcWebp
+          srcSetWebp
+          srcSet
+          src
+          base64
         }
       }
     }

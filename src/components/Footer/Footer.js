@@ -5,7 +5,6 @@ import SignUp from "../SignUp/SignUp";
 
 import styled from "styled-components";
 
-
 const HrLine = styled.hr`
   border: 0.5px solid #0f1f2f;
   width: 100%;
@@ -28,7 +27,7 @@ const FooterDiv = styled.div`
     max-width: 100%;
     margin: 0 auto;
     padding: 20px 20px 30px;
-    }
+  }
 `;
 
 const Spacing1 = styled.div`
@@ -51,7 +50,12 @@ const Footer = () => {
       <HrLine />
       <FooterDiv>
         <Spacing1>
-          <Logo tagline title1="MODERN" title2="trousseau" tagline="designed & made with love in the usa" />
+          <Logo
+            tagline
+            title1="MODERN"
+            title2="trousseau"
+            tagline="designed & made with love in the usa"
+          />
         </Spacing1>
         <Spacing2>
           <SignUp />
