@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 import Icons from "../Icons/FAIcon";
 import "./NavBar.css";
-import logo from "./Logo/Logo.png";
 import Logo from "../FullLogo/Logo";
 
-const NavBar = () => (
-  <>
+const NavBar = props => {
+  return (
+    <>
       <nav className="nav-bar">
         <div className="mobile-style">
           {/* Replace with burger component when complete */}
@@ -39,7 +39,8 @@ const NavBar = () => (
           </Link>
         </div>
       </nav>
-  </>
-);
+    </>
+  );
+};
 
 export default NavBar;

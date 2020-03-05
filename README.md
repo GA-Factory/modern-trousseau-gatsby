@@ -8,26 +8,17 @@ Before us is the [Modern Trousseau](https://www.moderntrousseau.com/) company. T
 
 The team for this project is your General Assembly class, and your instructors. In an effort to professionalize what we're doing, your instructors will be adhering to roles during this project so you get a better feel for the real world nature of a dev workplace.
 
+
+
+Team
 - John Serrao: Product Manager (in charge of sprints, releases and stand up meetings)
-
-Front-end Team (Lead: Erin Kelley)
-- Michael Driscoll
-- Jenny Ripper
-- Adam Bates
-- Dilmurod Bukharov 
-- Kelly Collins
-
-Back-end Team (Lead: Roger Campbell)
-- Jose Casado
-- Adam Delesio
-- Comrade Igor
-- Mamady
-
-Testing (Lead: Karadi)
-- Alex Garcia
-
-Integration Specialist
-- Robert Baer
+- Michael Driscoll (5-15 hr/wk)
+- Jenny Ripper (20 hr/wk)
+- Dilmurod Bukharov (25 hr/wk)
+- Kelly Collins (5-10 hr/wk)
+- Comrade Igor (none)
+- Alex Garcia (none)
+- Robert Baer (25 hr/wk)
 
 ## Design
 

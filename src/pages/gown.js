@@ -152,6 +152,7 @@ const LeftArrowContainer = styled.div`
   }
 `;
 
+<<<<<<< HEAD
 const RightArrowContainer = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   justify-content: center;
@@ -162,6 +163,8 @@ const RightArrowContainer = styled.div`
   }
 `;
 
+=======
+>>>>>>> develop
 const ImageAndDetailsContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -199,7 +202,10 @@ const Name = styled.p`
     width: 80%;
     padding-left: 15%;
     margin-bottom: 12%;
+<<<<<<< HEAD
     /* text-align: center; */
+=======
+>>>>>>> develop
   }
 `;
 
@@ -304,7 +310,11 @@ const GownsPage = () => (
   <Layout>
     <NavBar />
     <LogoContainer>
+<<<<<<< HEAD
     <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
+=======
+      <Logo notag />
+>>>>>>> develop
     </LogoContainer>
     <NavMenuDesktop />
     <BodyContainer>
@@ -314,9 +324,12 @@ const GownsPage = () => (
             <Icons name={["fas", "arrow-left"]} size="1x" />
           </LeftArrowContainer>
           <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+<<<<<<< HEAD
           <RightArrowContainer>
             <Icons name={["fas", "arrow-right"]} size="1x" />
           </RightArrowContainer>
+=======
+>>>>>>> develop
         </TitleContainer>
         <DesktopCollectionTitleContainer>
           <CollectionTitle>Fall 2020</CollectionTitle>
@@ -326,6 +339,7 @@ const GownsPage = () => (
         <GownImage src={cardData[0].image} />
         <DesktopFlexColumn>
           <Name>{cardData[0].mobileLabel}</Name>
+<<<<<<< HEAD
           <Brief>Stuff</Brief>
           <DetailsFeatures>Details and Features</DetailsFeatures>
           <Description>
@@ -335,6 +349,19 @@ const GownsPage = () => (
             <PinkButton
               label="See More From This Collection"
               width={`${"250px"}`}
+=======
+          <Brief>Floral Beaded Lace and Tulle Dress</Brief>
+          <DetailsFeatures>Details and Features</DetailsFeatures>
+          <Description>
+            Details and features: A figure-hugging gown adorned with ornate
+            floral applique. The illusion sheer bodice, allover lace, and tulle
+            enhance this romantic look.
+          </Description>
+          <DesktopButtonContainer>
+            <PinkButton
+              label="BOOK AN APPOINTMENT"
+              width={`${"225px"}`}
+>>>>>>> develop
               fontsize={`${"12px"}`}
               height={`${"14px"}`}
               weight={`${"800"}`}
@@ -353,7 +380,11 @@ const GownsPage = () => (
       </ImageAndDetailsContainer>
       <MobileButtonContainer>
         <PinkButton
+<<<<<<< HEAD
           label="See More From This Collection"
+=======
+          label="Book Appointment"
+>>>>>>> develop
           width={`${"250px"}`}
           fontsize={`${"12px"}`}
           height={`${"14px"}`}
