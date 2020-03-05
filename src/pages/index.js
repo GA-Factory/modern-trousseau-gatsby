@@ -56,16 +56,6 @@ const IndexPage = props => {
           slug
         }
       }
-      contentfulAsset(file: {fileName: {eq: "Charleston photo.png"}}) {
-        fluid(maxWidth: 1000) {
-          tracedSVG
-          srcWebp
-          srcSetWebp
-          srcSet
-          src
-          base64
-        }
-      }
     }
   `);
   return (

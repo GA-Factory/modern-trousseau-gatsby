@@ -31,48 +31,6 @@ const Container = styled.div`
   }
 `;
 
-const GownImageMobile1 = styled.img`
-  width: 148px;
-  height: 157px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 260px;
-    height: 267px;
-  }
-`;
-
-const GownImageMobile2 = styled.img`
-  width: 148px;
-  height: 157px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 250px;
-    height: 267px;
-  }
-`;
-
-const GownImageScreen1 = styled.img`
-  width: 120px;
-  height: 150px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 200px;
-    height: 267px;
-  }
-`;
-
-const GownImageScreen2 = styled.img`
-  width: 120px;
-  height: 150px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 260px;
-    height: 267px;
-  }
-`;
-
 const Title = styled.h3`
   text-align: center;
   font-weight: bold;
