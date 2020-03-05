@@ -326,12 +326,8 @@ const GownsPage = props => {
     <Layout>
       <NavBar />
       <LogoContainer>
-<<<<<<< HEAD
-      <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>      </LogoContainer>
-=======
         <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
->>>>>>> develop
       <GownHeaderContainer>
         <GownHeader icon={icon} open={open} />
       </GownHeaderContainer>
