@@ -33,7 +33,6 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
         }
@@ -47,12 +46,27 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
           comment {
             id
             comment
+          }
+        }
+      }
+      allContentfulCarousel(limit: 3) {
+        nodes {
+          slideDescription
+          slideTitle
+          buttonLabel
+          slideImage {
+            fluid {
+              base64
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+            }
           }
         }
       }
