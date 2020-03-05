@@ -205,8 +205,10 @@ class CollectionList extends React.Component {
     }
   };
 
-  render() {
+  render(props) {
     const { propertyA, propertyB } = this.state;
+    // const { nodes } = props;
+    // console.log(nodes)
     return (
       <div>
         <MobileCard>
