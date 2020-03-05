@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import "../styles/fonts.css";
-import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../global/Layout";
@@ -15,11 +13,6 @@ import ComponentCollection from "../components/component-collection/ComponentCol
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
 
-const ImageQuery = styled(Img)`
-  display: block;
-  width: 50%;
-  height: 600px;
-`;
 
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
@@ -33,7 +26,6 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
         }
@@ -47,13 +39,31 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
           comment {
             comment
           }
           slug
+        }
+      }
+      allContentfulCarousel(limit: 3) {
+        edges {
+          node {
+            slideImage {
+              fluid {
+                base64
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
+                tracedSVG
+              }
+            }
+            slideTitle
+            buttonLabel
+            slideDescription
+          }
         }
       }
     }
