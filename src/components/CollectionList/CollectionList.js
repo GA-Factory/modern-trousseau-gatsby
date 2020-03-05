@@ -112,41 +112,41 @@ const MobileImageContainer = styled.div`
 
 `;
 
-const SliderA = ({ propertyA }) => {
-  const { image, mobileLabel, index } = propertyA;
-  return (
-    <Slide id={`slide-${index}`}>
-      <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
-      </ImageContainer>
-    </Slide>
-  );
-};
+// const SliderA = ({ propertyA }) => {
+//   const { image, mobileLabel, index } = propertyA;
+//   return (
+//     <Slide id={`slide-${index}`}>
+//       <ImageContainer>
+//         <SlideImage src={image} />
+//         <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+//       </ImageContainer>
+//     </Slide>
+//   );
+// };
 
-const SliderB = ({ propertyB }) => {
-  const { image, mobileLabel, index } = propertyB;
-  return (
-    <Slide id={`slide-${index}`}>
-      <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
-      </ImageContainer>
-    </Slide>
-  );
-};
+// const SliderB = ({ propertyB }) => {
+//   const { image, mobileLabel, index } = propertyB;
+//   return (
+//     <Slide id={`slide-${index}`}>
+//       <ImageContainer>
+//         <SlideImage src={image} />
+//         <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+//       </ImageContainer>
+//     </Slide>
+//   );
+// };
 
-const SliderC = ({ propertyC }) => {
-  const { image, mobileLabel, index } = propertyC;
-  return (
-    <Slide id={`slide-${index}`}>
-      <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
-      </ImageContainer>
-    </Slide>
-  );
-};
+// const SliderC = ({ propertyC }) => {
+//   const { image, mobileLabel, index } = propertyC;
+//   return (
+//     <Slide id={`slide-${index}`}>
+//       <ImageContainer>
+//         <SlideImage src={image} />
+//         <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+//       </ImageContainer>
+//     </Slide>
+//   );
+// };
 
 class CollectionList extends React.Component {
   constructor(props) {
@@ -285,9 +285,9 @@ class CollectionList extends React.Component {
           <Button onClick={() => this.prevProperty()}>
             <ButtonIcon>&#10094;</ButtonIcon>
           </Button>
-          <SliderA propertyA={propertyA} />
+          {/* <SliderA propertyA={propertyA} />
           <SliderB propertyB={propertyB} />
-          <SliderC propertyC={propertyC} />
+          <SliderC propertyC={propertyC} /> */}
           <Button onClick={() => this.nextProperty()}>
             <ButtonIcon>&#10095;</ButtonIcon>
           </Button>
@@ -296,12 +296,12 @@ class CollectionList extends React.Component {
 
         <MobileCard>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[0].image}></MobileImage>
-            <MobileText>{this.state.properties[0].desktopLabel}</MobileText>
+            {/* <MobileImage src={this.state.properties[0].image}></MobileImage>
+            <MobileText>{this.state.properties[0].desktopLabel}</MobileText> */}
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[1].image}></MobileImage>
-            <MobileText>{this.state.properties[1].desktopLabel}</MobileText>
+            {/* <MobileImage src={this.state.properties[1].image}></MobileImage>
+            <MobileText>{this.state.properties[1].desktopLabel}</MobileText> */}
           </MobileImageContainer>
         </MobileCard>
       </div>

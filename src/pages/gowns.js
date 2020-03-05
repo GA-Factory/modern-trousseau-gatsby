@@ -32,7 +32,6 @@ export const GownQuery = graphql`
                 srcSet
                 srcSetWebp
                 srcWebp
-                tracedSVG
                 }
               }
             }
