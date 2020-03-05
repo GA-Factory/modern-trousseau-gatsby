@@ -296,12 +296,12 @@ class CollectionList extends React.Component {
 
         <MobileCard>
           <MobileImageContainer>
-            {/* <MobileImage src={this.state.properties[0].image}></MobileImage>
-            <MobileText>{this.state.properties[0].desktopLabel}</MobileText> */}
+            <MobileImage src={this.state.properties[0].image}></MobileImage>
+            <MobileText>{this.state.properties[0].desktopLabel}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            {/* <MobileImage src={this.state.properties[1].image}></MobileImage>
-            <MobileText>{this.state.properties[1].desktopLabel}</MobileText> */}
+            <MobileImage src={this.state.properties[1].image}></MobileImage>
+            <MobileText>{this.state.properties[1].desktopLabel}</MobileText>
           </MobileImageContainer>
         </MobileCard>
       </div>
