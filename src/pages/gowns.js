@@ -97,15 +97,11 @@ const CollectionsContainer = styled.div`
 `;
 
 const CollectionTitle = styled.p`
-  font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
-  font-weight: 800;
-  font-weight: 18px;
-  /* padding-left: 8.1%; */
-  border-top: 8px solid #fae5dc;
-  background-color: ${props => props.theme.colors.primaryPink};
+display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    font-weight: 800;
+    display: flex;
     margin-top: 20px;
-    /* margin-left: 6.5%; */
     margin-bottom: 6px;
     padding-left: 2.5%;
     background-color: white;

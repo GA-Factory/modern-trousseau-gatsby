@@ -85,11 +85,12 @@ const ButtonIcon = styled.p`
 `;
 
 const MobileImage = styled.img`
-    width: 100%;
+    width: 94%;
     display: flex;
     background-color: ${props => props.theme.colors.primaryPink};
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
     font-size: 20px;
+    margin: 3%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
