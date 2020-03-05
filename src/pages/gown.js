@@ -152,6 +152,16 @@ const LeftArrowContainer = styled.div`
   }
 `;
 
+const RightArrowContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryPink};
+  justify-content: center;
+  padding-top: 8px;
+  margin-left: 25px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
 const ImageAndDetailsContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
@@ -189,6 +199,7 @@ const Name = styled.p`
     width: 80%;
     padding-left: 15%;
     margin-bottom: 12%;
+    /* text-align: center; */
   }
 `;
 
@@ -293,7 +304,7 @@ const GownsPage = () => (
   <Layout>
     <NavBar />
     <LogoContainer>
-      <Logo notag />
+    <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
     </LogoContainer>
     <NavMenuDesktop />
     <BodyContainer>
@@ -303,6 +314,9 @@ const GownsPage = () => (
             <Icons name={["fas", "arrow-left"]} size="1x" />
           </LeftArrowContainer>
           <CollectionTitle>{collectionTitle[0]}</CollectionTitle>
+          <RightArrowContainer>
+            <Icons name={["fas", "arrow-right"]} size="1x" />
+          </RightArrowContainer>
         </TitleContainer>
         <DesktopCollectionTitleContainer>
           <CollectionTitle>Fall 2020</CollectionTitle>
@@ -312,17 +326,15 @@ const GownsPage = () => (
         <GownImage src={cardData[0].image} />
         <DesktopFlexColumn>
           <Name>{cardData[0].mobileLabel}</Name>
-          <Brief>Floral Beaded Lace and Tulle Dress</Brief>
+          <Brief>Stuff</Brief>
           <DetailsFeatures>Details and Features</DetailsFeatures>
           <Description>
-            Details and features: A figure-hugging gown adorned with ornate
-            floral applique. The illusion sheer bodice, allover lace, and tulle
-            enhance this romantic look.
+            Description with a whole bunch of stuff describing the gown
           </Description>
           <DesktopButtonContainer>
             <PinkButton
-              label="BOOK AN APPOINTMENT"
-              width={`${"225px"}`}
+              label="See More From This Collection"
+              width={`${"250px"}`}
               fontsize={`${"12px"}`}
               height={`${"14px"}`}
               weight={`${"800"}`}
@@ -341,7 +353,7 @@ const GownsPage = () => (
       </ImageAndDetailsContainer>
       <MobileButtonContainer>
         <PinkButton
-          label="Book Appointment"
+          label="See More From This Collection"
           width={`${"250px"}`}
           fontsize={`${"12px"}`}
           height={`${"14px"}`}

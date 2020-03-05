@@ -10,6 +10,10 @@ import PinkButton from "../components/Button/Button";
 import DressListItem from "../components/DressListItem/DressListItem";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
+import { useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
+
+// import cardData from "./Gowns"
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
 import imageFile2 from "../assets/images/Fall-2020-2.png";
@@ -19,6 +23,8 @@ import imageFile5 from "../assets/images/Trending-Now-1.jpeg";
 import imageFile6 from "../assets/images/Trending-Now-2.jpeg";
 import imageFile7 from "../assets/images/Classics-1.jpeg";
 import imageFile8 from "../assets/images/Classics-2.jpeg";
+
+
 
 const cardData = [
   {
@@ -91,17 +97,17 @@ const DressListItemGrid = styled.div`
 `;
 
 const MobileNavBarContainer = styled.div`
- @media (min-width: 600px) {
+  @media (min-width: 600px) {
     display: none;
   }
-`
+`;
 
 const DesktopNavBarContainer = styled.div`
-    display: none;
- @media (min-width: 768px) {
-   display: flex;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
   }
-`
+`;
 
 const SearchMenuContainer = styled.div`
   @media (min-width: 600px) {
@@ -229,16 +235,16 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const GownsPage = () => (
+const CollectionPage = () => (
   <Layout>
     <MobileNavBarContainer>
-    <NavBar />
-  </MobileNavBarContainer> 
-  <DesktopNavBarContainer>
-    <NavBar />
-  </DesktopNavBarContainer>       
+      <NavBar />
+    </MobileNavBarContainer>
+    <DesktopNavBarContainer>
+      <NavBar />
+    </DesktopNavBarContainer>
     <LogoContainer>
-      <Logo notag />
+    <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
     </LogoContainer>
     <NavMenuDesktop />
     <SearchMenuContainer>
@@ -256,17 +262,35 @@ const GownsPage = () => (
         it needs to be longer for me to test it!!!
       </DesignerQuote>
       <QuoteAuthor>-Person J. Somebody</QuoteAuthor>
-          <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
+      <DesktopCollectionTitle>Fall 2020 Collection</DesktopCollectionTitle>
       <DressListItemGrid>
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
-        <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
+        <Link to="/gown">
+          <DressListItem image={imageFile1} dressname={"Seraphina"} />
+        </Link>
       </DressListItemGrid>
     </SearchMenuContainer>
     <CollectionsContainer>
@@ -296,4 +320,4 @@ const GownsPage = () => (
   </Layout>
 );
 
-export default GownsPage;
+export default CollectionPage;
