@@ -130,90 +130,90 @@ const GownsPage = props => {
           .name,
       index: 0
     },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-    //       .name,
-    //   index: 1
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-    //       .name,
-    //   index: 2
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-    //       .name,
-    //   index: 3
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-    //       .name,
-    //   index: 4
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-    //       .name,
-    //   index: 5
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-    //       .name,
-    //   index: 6
-    // },
-    // {
-    //   image:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-    //       .gownImage.fluid.src,
-    //   mobileLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-    //       .name,
-    //   desktopLabel:
-    //     props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-    //       .name,
-    //   index: 7
-    // }
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
+          .name,
+      index: 1
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
+          .name,
+      index: 2
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
+          .name,
+      index: 3
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
+          .name,
+      index: 4
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
+          .name,
+      index: 5
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
+          .name,
+      index: 6
+    },
+    {
+      image:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .gownImage.fluid.src,
+      mobileLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .name,
+      desktopLabel:
+        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
+          .name,
+      index: 7
+    }
   ];
 
 

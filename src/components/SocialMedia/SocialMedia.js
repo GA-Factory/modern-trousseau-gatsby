@@ -9,9 +9,9 @@ import pinterest from "../Icons/pinterest.png";
 const SocialMedia = () => {
     return (
         <>
-            <div class="con">
+            <div className="con">
             <h5>Stay Connected</h5>
-            <div class="some">
+            <div className="some">
             <a href="https://www.facebook.com/ModernTrousseau/" target="_blank"><img  id="fb" src={facebook}></img></a>
             <a href="https://www.instagram.com/moderntrousseaudc/" target="_blank"><img  id="in" src={instagram}></img></a>
             <a href="https://www.pinterest.com/moderntrousseau/" target="_blank"><img  id="pi" src={pinterest}></img></a>
