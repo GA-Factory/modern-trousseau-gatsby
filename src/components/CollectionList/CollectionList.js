@@ -277,15 +277,8 @@ class CollectionList extends React.Component {
     }
   };
 
-<<<<<<< HEAD
-  render(props) {
-    const { propertyA, propertyB } = this.state;
-    // const { nodes } = props;
-    // console.log(nodes)
-=======
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
->>>>>>> develop
     return (
       <div>
         <DesktopCard>
