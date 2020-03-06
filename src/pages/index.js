@@ -14,6 +14,7 @@ import OwnerQuote from "../components/owner-quote/owner-quote";
 import ComponentCollection from "../components/component-collection/ComponentCollection";
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
+import AboutUs from "../components/AboutUs/AboutUs"
 
 const ImageQuery = styled(Img)`
   display: block;
@@ -78,6 +79,7 @@ const IndexPage = props => {
         title={props.data.contentfulCollection.collectionName}
         data={props.data}
       ></ComponentCollection>
+      <AboutUs />
       <BrideReview
         data={props.data}
         image1={props.data.allContentfulTestimonial.nodes[0].image.fluid}
