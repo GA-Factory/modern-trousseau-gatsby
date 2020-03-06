@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "gatsby-image";
+import Img from "gatsby-image";
 import styled from "styled-components";
 import Dots from "./Dots";
 
@@ -11,11 +11,12 @@ const SliderImageContainer = styled.div`
   max-width: 800px;
   padding-top: 25px;
 `;
-const SliderImage = styled(Image)`
+const SliderImage = styled(Img)`
   display: block;
   flex-basis: 750px;
   margin: 25px auto;
-  max-width: 400px;
+  max-width: 100%;
+  height: 300px;
   margin: 25px auto;
 `;
 const ChevronLeft = styled.svg`
@@ -50,10 +51,12 @@ export default class ProductSingle extends React.Component {
     this.state = {
       appear: true,
       currentIndex: 0,
-      image: this.props.images.edges[0].node.childImageSharp.fluid,
-      key: this.props.images.edges[0].node.id,
-      lastIndex: this.props.images.edges.length,
-      imageArr: this.props.images.edges
+      description: this.props.data.allContentfulCarousel.nodes[0].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[0].slideTitle,
+      image: this.props.data.allContentfulCarousel.nodes[0].slideImage.fluid,
+      key: this.props.data.allContentfulCarousel.nodes[0].id,
+      lastIndex: this.props.data.allContentfulCarousel.nodes.length,
+      imageArr: this.props.data.allContentfulCarousel.nodes
     };
   }
 
@@ -72,8 +75,10 @@ export default class ProductSingle extends React.Component {
     }
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
-      key: this.props.images.edges[newIndex].node.id
+      image: this.props.data.allContentfulCarousel.nodes[newIndex].slideImage.fluid,
+      description: this.props.data.allContentfulCarousel.nodes[newIndex].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[newIndex].slideTitle,
+      key: this.props.data.allContentfulCarousel.nodes[newIndex].id
     });
   };
 
@@ -87,8 +92,10 @@ export default class ProductSingle extends React.Component {
 
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
-      key: this.props.images.edges[newIndex].node.id
+      image: this.props.data.allContentfulCarousel.nodes[newIndex].slideImage.fluid,
+      description: this.props.data.allContentfulCarousel.nodes[newIndex].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[newIndex].slideTitle,
+      key: this.props.data.allContentfulCarousel.nodes[newIndex].id
     });
   };
 
