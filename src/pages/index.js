@@ -3,7 +3,9 @@ import styled from "styled-components";
 import "../styles/fonts.css";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
+
 import Layout from "../global/Layout";
+import NavBar from "../components/NavBar/NavBar";
 import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
 // import Slider from "../components/Slider/Slider";
 import Tagline from "../components/Tagline/tagline";
@@ -58,6 +60,7 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
+      <NavBar />
       <HeaderNavBar />
       {/* <Slider data={props.data} /> */}
       <Tagline
