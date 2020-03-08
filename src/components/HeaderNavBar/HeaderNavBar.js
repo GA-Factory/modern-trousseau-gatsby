@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Logo from "../FullLogo/Logo";
 
-
 const HeaderNav = styled.nav`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -30,7 +29,7 @@ const HeaderLogo = styled.div`
   font-size: 64px;
   display: none;
   @media (min-width: 810px) {
-    display:block;
+    display: block;
   }
 `;
 
@@ -61,6 +60,12 @@ const LiHeader = styled.li`
   }
 `;
 
+const DotSpan = styled.span`
+  @media (min-width: 300px) {
+    opacity: 0;
+  }
+`;
+
 const HeaderNavBar = props => {
   return (
     <>
@@ -75,7 +80,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <DotSpan>&#183;</DotSpan>
           </LiHeader>
           <LiHeader>
             <Link to="/visit">
