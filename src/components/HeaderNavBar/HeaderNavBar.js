@@ -6,8 +6,8 @@ import Logo from "../FullLogo/Logo";
 const HeaderNav = styled.nav`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 20px;
   text-align: center;
   background-color: #fae5dc;
   width: 100%;
