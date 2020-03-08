@@ -88,7 +88,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <DotSpan>&#183;</DotSpan>
           </LiHeader>
           <LiHeader>
             <Link to="book-appointment">
@@ -96,7 +96,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <DotSpan>&#183;</DotSpan>
           </LiHeader>
           <LiHeader>
             <Link to="/about">
