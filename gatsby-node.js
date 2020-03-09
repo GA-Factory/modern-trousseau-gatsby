@@ -12,7 +12,7 @@ exports.createPages = async ({ actions }) => {
   allGowns.data.items.forEach((gowns) => {
     createPage ({
       path: `/gowns/${gowns.fields.slug}`,
-      component: path.resolve('src/components/mockComponent.js'),
+      component: path.resolve('src/components/MockComponent/MockComponent.js'),
       context: {
         name: gowns.fields.name,
         gownImage: gowns.fields.gownImage,
@@ -31,7 +31,7 @@ exports.createPages = async ({ actions }) => {
   allStores.data.items.forEach((store) => {
     createPage ({
       path: `/store/${store.fields.slug}`,
-      component: path.resolve('src/components/mockComponent.js'),
+      component: path.resolve('src/components/MockComponent/MockComponent.js'),
       context: {
         name: store.fields.name,
         streetAddress: store.fields.streetAddress,

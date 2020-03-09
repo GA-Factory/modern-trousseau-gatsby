@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/fonts.css";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../global/Layout";
@@ -57,7 +56,6 @@ const IndexPage = props => {
                 srcSet
                 srcSetWebp
                 srcWebp
-                tracedSVG
               }
             }
             slideTitle
