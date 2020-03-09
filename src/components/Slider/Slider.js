@@ -50,7 +50,7 @@ export default class ProductSingle extends React.Component {
     this.state = {
       appear: true,
       currentIndex: 0,
-      image: this.props.images.edges[0].node.childImageSharp.fluid,
+      // image: this.props.images.edges[0].node.childImageSharp.fluid,
       key: this.props.images.edges[0].node.id,
       lastIndex: this.props.images.edges.length,
       imageArr: this.props.images.edges

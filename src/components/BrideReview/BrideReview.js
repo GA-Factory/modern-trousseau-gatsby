@@ -54,10 +54,9 @@ const ImageAccompaniment = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     height: 100%;
     width: 100%;
-    padding: 0;
-    margin: 0%;
+    margin: 0;
     justify-content: space-evenly;
-    padding-left: 10px;
+    padding: 0 10px;
   }
 `;
 
@@ -133,10 +132,9 @@ const Review2 = styled.div`
   font-size: 18px;
   line-height: 20px;
   text-align: center;
-  margin: 0 0 8px 2px;
+  margin: 0;
   position: relative;
   @media (min-width: 600px) {
-    margin-left: 5px;
     width: 100%;
   }
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -144,7 +142,6 @@ const Review2 = styled.div`
     width: 95%;
     height: auto;
     position: relative;
-    top: 14px;
   }
 `;
 
@@ -187,7 +184,6 @@ const Review3 = styled.div`
     width: 95%;
     height: auto;
     position: relative;
-    top: 14px;
   }
 `;
 
@@ -255,6 +251,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug1}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>
@@ -280,6 +277,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug2}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>
@@ -305,6 +303,7 @@ const BrideReview = props => {
                   desktopcolor={`${"#000000"}`}
                   family={`${"'Sahitya'"}`}
                   color={`${"#441F0E"}`}
+                  slug={props.slug3}
                 />
               </ButtonPlacer1>
             </ImageAccompaniment>

@@ -8,10 +8,12 @@ const Collection = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+  padding: 25px 10px 25px 10px;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    height: 360px;
-    padding: 30px 10px 10px 10px;
+    max-height: 380px;
+    padding: 35px 10px 35px 10px;
   }
 `;
 
@@ -19,7 +21,7 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   height: auto;
-  padding: 25px 10px 20px;
+  padding: 5px 0px 15px;
   justify-content: space-evenly;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -29,57 +31,18 @@ const Container = styled.div`
   }
 `;
 
-const GownImageMobile1 = styled.img`
-  width: 148px;
-  height: 157px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 260px;
-    height: 267px;
-  }
-`;
-
-const GownImageMobile2 = styled.img`
-  width: 148px;
-  height: 157px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 250px;
-    height: 267px;
-  }
-`;
-
-const GownImageScreen1 = styled.img`
-  width: 120px;
-  height: 150px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 200px;
-    height: 267px;
-  }
-`;
-
-const GownImageScreen2 = styled.img`
-  width: 120px;
-  height: 150px;
-  display: none;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: inline-block;
-    width: 260px;
-    height: 267px;
-  }
-`;
-
-const Title = styled.p`
+const Title = styled.h3`
   text-align: center;
   font-weight: bold;
-  margin-bottom: 15px;
-  font-family: ${props => props.theme.fontStyles.h1Styles.fontStyle};
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 19px;
+  color: #0F1F2F;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
     font-size: 24px;
     margin-top: 10px;
+    font-family: "Raleway", sans-serif;
   }
 `;
 

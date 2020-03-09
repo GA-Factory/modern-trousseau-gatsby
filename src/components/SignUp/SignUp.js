@@ -1,8 +1,34 @@
 import React from "react";
-import "./SignUp.css";
+import styled from "styled-components";
 import PinkButton from "../Button/Button";
 
-import "./SignUp.css";
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
+const H5 = styled.h5`
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+`;
+
+const TextInput = styled.input`
+  background-color: white;
+  width: 155px;
+  padding: 6px 11px;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 5px;
+  border: 1px solid black;
+`;
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -24,11 +50,10 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <h5 className="title">Obsessed with a dress?</h5>
+      <Wrapper>
+        <H5>Obsessed with a dress?</H5>
         <form onSubmit={this.handleSubmit}>
-          <input
-            className="textInput"
+          <TextInput
             type="text"
             placeholder="sign up for updates!"
             value={this.state.value}
@@ -48,7 +73,7 @@ class SignUp extends React.Component {
             desktopwidth={`${"79px"}`}
           />
         </form>
-      </div>
+      </Wrapper>
     );
   }
 }
