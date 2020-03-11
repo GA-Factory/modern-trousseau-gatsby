@@ -49,6 +49,9 @@ const IndexPage = props => {
       allContentfulCarousel(limit: 3) {
         edges {
           node {
+            id
+            buttonLabel
+            slideDescription
             slideImage {
               fluid {
                 base64
@@ -59,8 +62,6 @@ const IndexPage = props => {
               }
             }
             slideTitle
-            buttonLabel
-            slideDescription
           }
         }
       }
@@ -70,7 +71,7 @@ const IndexPage = props => {
     <Layout>
       <NavBar />
       <HeaderNavBar />
-      {/* <Slider data={props.data} /> */}
+      <Slider data={props.data} />
       <Tagline
         headline="Classic Couture. Custom Fit."
         slogan="Where customization meets timeline meets budget."

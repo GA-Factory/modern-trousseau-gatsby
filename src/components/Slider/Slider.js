@@ -50,10 +50,16 @@ export default class ProductSingle extends React.Component {
     this.state = {
       appear: true,
       currentIndex: 0,
-      // image: this.props.images.edges[0].node.childImageSharp.fluid,
-      key: this.props.images.edges[0].node.id,
-      lastIndex: this.props.images.edges.length,
-      imageArr: this.props.images.edges
+      image: this.props.data.allContentfulCarousel.edges[0].node.slideImage
+        .fluid,
+      key: this.props.data.allContentfulCarousel.edges[0].node.id,
+      lastIndex: this.props.data.allContentfulCarousel.edges.length,
+      imageArr: this.props.data.allContentfulCarousel.edges,
+      title: this.props.data.allContentfulCarousel.edges[0].node.slideTitle,
+      description: this.props.data.allContentfulCarousel.edges[0].node
+        .slideDescription,
+      buttonLabel: this.props.data.allContentfulCarousel.edges[0].node
+        .buttonLabel
     };
   }
 
@@ -72,8 +78,11 @@ export default class ProductSingle extends React.Component {
     }
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
-      key: this.props.images.edges[newIndex].node.id
+      image: this.props.data.allContentfulCarousel.edges[newIndex].node.slideImage.fluid,
+      key: this.props.data.allContentfulCarousel.edges[newIndex].node.id,
+      title: this.props.data.allContentfulCarousel.edges[newIndex].node.slideTitle,
+      description: this.props.data.allContentfulCarousel.edges[newIndex].node.slideDescription,
+      buttonLabel: this.props.data.allContentfulCarousel.edges[newIndex].node.buttonLabel
     });
   };
 
@@ -87,8 +96,11 @@ export default class ProductSingle extends React.Component {
 
     this.setState({
       currentIndex: newIndex,
-      image: this.props.images.edges[newIndex].node.childImageSharp.fluid,
-      key: this.props.images.edges[newIndex].node.id
+      image: this.props.data.allContentfulCarousel.edges[newIndex].node.slideImage.fluid,
+      key: this.props.data.allContentfulCarousel.edges[newIndex].node.id,
+      title: this.props.data.allContentfulCarousel.edges[newIndex].node.slideTitle,
+      description: this.props.data.allContentfulCarousel.edges[newIndex].node.slideDescription,
+      buttonLabel: this.props.data.allContentfulCarousel.edges[newIndex].node.buttonLabel
     });
   };
 
