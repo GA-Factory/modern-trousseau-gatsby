@@ -15,7 +15,8 @@ const SliderImage = styled(Image)`
   display: block;
   flex-basis: 750px;
   margin: 25px auto;
-  max-width: 400px;
+  max-width: 100%;
+  height: 400px;
   margin: 25px auto;
 `;
 const ChevronLeft = styled.svg`
