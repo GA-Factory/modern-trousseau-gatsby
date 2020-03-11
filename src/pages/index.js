@@ -79,7 +79,6 @@ const IndexPage = props => {
         title={props.data.contentfulCollection.collectionName}
         data={props.data}
       ></ComponentCollection>
-      <AboutUs />
       <BrideReview
         data={props.data}
         image1={props.data.allContentfulTestimonial.nodes[0].image.fluid}
