@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "./Callie.jpg";
+import Img from "gatsby-image";
+// import Img from "./Callie.jpg";
 
 const AboutSection = styled.section`
   width: 100%;
@@ -22,17 +23,17 @@ const AboutContainer = styled.div`
   align-items: center;
 
   @media (min-width: 900px) {
-      flex-flow: row;
+    flex-flow: row;
   }
-
 `;
 
-const Image = styled.img`
+const OwnerImage = styled(Img)`
   float: right;
   max-width: 100%;
   width: 350px;
   margin: 0;
   padding: 0;
+  display: block;
 `;
 
 const Title = styled.h2`
@@ -98,7 +99,7 @@ const AboutUs = props => {
             worldwide.
           </Text>
         </TextContainer>
-        <Image src={Img} />
+        <OwnerImage fluid={props.image} />
       </AboutContainer>
     </AboutSection>
   );
