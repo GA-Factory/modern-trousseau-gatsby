@@ -2,6 +2,7 @@ import React from "react";
 import Image from "gatsby-image";
 import styled from "styled-components";
 import Dots from "./Dots";
+import HeroCaption from "../Captions/herocaptions";
 
 const SliderImageContainer = styled.div`
   align-items: center;
@@ -10,6 +11,7 @@ const SliderImageContainer = styled.div`
   margin: 0 auto 25px auto;
   max-width: 800px;
   padding-top: 25px;
+  z-index: -1;
 `;
 const SliderImage = styled(Image)`
   display: block;
@@ -122,6 +124,7 @@ export default class ProductSingle extends React.Component {
             </ChevronLeft>
           )}
           <SliderImage fluid={this.state.image} key={this.state.key} />
+          <HeroCaption />
           {this.state.lastIndex > 1 && (
             <ChevronRight
               xmlns="http://www.w3.org/2000/svg"

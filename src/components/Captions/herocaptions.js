@@ -8,22 +8,26 @@ const CaptionContainer = styled.div`
   align-items: flex-start;
   max-width: 100%;
   text-align: left;
-
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  z-index: 10;
+  height: 82px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 480px;
   }
 `
 
 const CaptionTitle = styled.h4`
-  font-family:'Raleway';
+  font-family:'Raleway',sans-serif;
   font-style: normal;
   font-weight: bolder;
   font-size: 18px;
   line-height: 21px;
   color: #fff;
+  display: inline-block;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    ${props => props.theme.fontStyles.h4Styles}
+    font-size: 30px;
+    line-height: 36px;
   }
 `
 
