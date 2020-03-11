@@ -116,7 +116,7 @@ display: none;
 `;
 
 const GownsPage = props => {
-
+  console.log(props.data)
   const cardData = [
     {
       image:
@@ -324,7 +324,7 @@ const GownsPage = props => {
   // ];
 
 
-  
+
   return (
     <Layout>
       <NavBar />
