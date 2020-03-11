@@ -124,7 +124,7 @@ export default class ProductSingle extends React.Component {
             </ChevronLeft>
           )}
           <SliderImage fluid={this.state.image} key={this.state.key} />
-          <HeroCaption />
+          <HeroCaption title={this.props.title} description={this.props.description}/>
           {this.state.lastIndex > 1 && (
             <ChevronRight
               xmlns="http://www.w3.org/2000/svg"
