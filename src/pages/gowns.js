@@ -9,6 +9,7 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image"
 
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
@@ -143,6 +144,16 @@ background-color: ${props => props.theme.colors.primaryPink};
 }
 `;
 
+const ImgStyle = styled(Img)`
+  width: 413.56px;
+  height: 223px;
+  margin: 10px auto;
+  @media screen and (max-width: 425px) {
+    height: 200px;
+    width: 200px;
+  }
+`;
+
 const GownsPage = props => {
   console.log(props.data.allContentfulGowns.edges)
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].collectionName)
@@ -155,7 +166,7 @@ const GownsPage = props => {
   const AllCollectionImages = nodes.map((collectionGowns, index) => (
       <div key={index}>
           <p>{collectionGowns.name}</p>
-          {collectionGowns.image ? <ImgStyle fluid={collectionGowns.image.fluid} /> : null}
+          {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
       </div>
   ))
 
@@ -287,7 +298,7 @@ const cardData4 = []
       </SearchMenuContainer>
       {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
-      <p>{AllCollectionImages}</p>
+      <div>{AllCollectionImages}</div>
         <Link to="/collection">
           <CollectionTitle>
             {
