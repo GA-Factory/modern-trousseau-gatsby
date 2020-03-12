@@ -145,8 +145,8 @@ background-color: ${props => props.theme.colors.primaryPink};
 `;
 
 const ImgStyle = styled(Img)`
-  width: 161px;
-  height: 223px;
+  width: 40px;
+  height: 56px;
   margin: 10px auto;
   @media screen and (max-width: 425px) {
     height: 200px;
@@ -171,6 +171,10 @@ const GownsPage = props => {
           <p>{collectionGowns.name}</p>
           {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
       </div>
+      // const cardData1 = [
+      //   image: {},
+      //   desktopLabel: {}
+      // ]
   ))
   const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
     <div key={index}>
