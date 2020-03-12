@@ -145,7 +145,7 @@ background-color: ${props => props.theme.colors.primaryPink};
 `;
 
 const ImgStyle = styled(Img)`
-  width: 413.56px;
+  width: 161px;
   height: 223px;
   margin: 10px auto;
   @media screen and (max-width: 425px) {
@@ -160,16 +160,36 @@ const GownsPage = props => {
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns)
   
   
-  const nodes = props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
-  console.log(nodes)
+  const nodes1 = props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
+  const nodes2 = props.data.allContentfulGowns.edges[1].node.collections[0].gowns;
+  const nodes3 = props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
+  const nodes4 = props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
+  console.log(nodes1)
 
-  const AllCollectionImages = nodes.map((collectionGowns, index) => (
+  const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
       <div key={index}>
           <p>{collectionGowns.name}</p>
           {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
       </div>
   ))
-
+  const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
+    <div key={index}>
+        <p>{collectionGowns.name}</p>
+        {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
+    </div>
+))
+const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
+  <div key={index}>
+      <p>{collectionGowns.name}</p>
+      {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
+  </div>
+))
+const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
+  <div key={index}>
+      <p>{collectionGowns.name}</p>
+      {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
+  </div>
+))
 
   // <p>{AllCollectionImages}</p>
 
@@ -298,7 +318,10 @@ const cardData4 = []
       </SearchMenuContainer>
       {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
-      <div>{AllCollectionImages}</div>
+      <div>{AllCollectionImages1}</div>
+      <div>{AllCollectionImages2}</div>
+      <div>{AllCollectionImages3}</div>
+      <div>{AllCollectionImages4}</div>
         <Link to="/collection">
           <CollectionTitle>
             {
