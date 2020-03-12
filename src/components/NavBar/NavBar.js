@@ -10,7 +10,7 @@ const NavBar = props => {
       <nav className="nav-bar">
         <div className="mobile-style">
           {/* Replace with burger component when complete */}
-          <Link to="#">
+          <Link to="/">
             <Icons name={["fas", "bars"]} size="lg" />
           </Link>
         </div>
@@ -19,22 +19,22 @@ const NavBar = props => {
           <Logo notag tagline title1="MODERN" title2="trousseau" />
         </div>
         <div className="mobile-style">
-          <Link to="#">
+          <Link to="/">
             <Icons name={["fas", "search"]} size="lg" />
           </Link>
         </div>
         <div className="desktop-style">
-          <Link to="#">
+          <Link to="/">
             <Icons name={["fas", "search"]} />
           </Link>
         </div>
         <div className="desktop-style">
-          <Link to="#">
+          <Link to="/">
             <Icons name={["fas", "map-marker-alt"]} />
           </Link>
         </div>
         <div className="desktop-style">
-          <Link to="#">
+          <Link to="/">
             <Icons name={["far", "user"]} />
           </Link>
         </div>

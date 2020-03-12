@@ -159,24 +159,26 @@ const GownsPage = props => {
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].collectionName)
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns)
   
-  
+  // const cardData1 = [
+  //   image: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.gownImage,
+  //   desktopLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.name
+  // ]
+
+// console.log(cardData1)
+
   const nodes1 = props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
   const nodes2 = props.data.allContentfulGowns.edges[1].node.collections[0].gowns;
   const nodes3 = props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
   const nodes4 = props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
   console.log(nodes1)
 
-  const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
+const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
       <div key={index}>
           <p>{collectionGowns.name}</p>
           {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
       </div>
-      // const cardData1 = [
-      //   image: {},
-      //   desktopLabel: {}
-      // ]
   ))
-  const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
+const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
     <div key={index}>
         <p>{collectionGowns.name}</p>
         {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
@@ -194,8 +196,6 @@ const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
       {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
   </div>
 ))
-
-  // <p>{AllCollectionImages}</p>
 
   const cardData = [
     {
@@ -298,9 +298,9 @@ const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
 
 
 const cardData1 = []
-const cardData2 = []
-const cardData3 = []
-const cardData4 = []
+// const cardData2 = []
+// const cardData3 = []
+// const cardData4 = []
 
   return (
     <Layout>
@@ -320,12 +320,11 @@ const cardData4 = []
           <SearchMenuItems>View Collection</SearchMenuItems>
         </SearchMenu>
       </SearchMenuContainer>
-      {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
-      <div>{AllCollectionImages1}</div>
+      {/* <div>{AllCollectionImages1}</div>
       <div>{AllCollectionImages2}</div>
       <div>{AllCollectionImages3}</div>
-      <div>{AllCollectionImages4}</div>
+      <div>{AllCollectionImages4}</div> */}
         <Link to="/collection">
           <CollectionTitle>
             {
