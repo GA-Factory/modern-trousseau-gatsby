@@ -147,6 +147,21 @@ const GownsPage = props => {
   console.log(props.data.allContentfulGowns.edges)
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].collectionName)
   console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns)
+  
+  
+  const nodes = props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
+  console.log(nodes)
+
+  const AllCollectionImages = nodes.map((collectionGowns, index) => (
+      <div key={index}>
+          <p>{collectionGowns.name}</p>
+          {collectionGowns.image ? <ImgStyle fluid={collectionGowns.image.fluid} /> : null}
+      </div>
+  ))
+
+
+  // <p>{AllCollectionImages}</p>
+
   const cardData = [
     {
       image:
@@ -247,112 +262,6 @@ const GownsPage = props => {
   ];
 
 
-
-
-
-
-  
-
-
-  // const cardData = [
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .name,
-  //     index: 0
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .name,
-  //     index: 1
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .name,
-  //     index: 2
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .name,
-  //     index: 3
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .name,
-  //     index: 4
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .name,
-  //     index: 5
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .name,
-  //     index: 6
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .name,
-  //     index: 7
-  //   }
-  // ];
-
 const cardData1 = []
 const cardData2 = []
 const cardData3 = []
@@ -378,6 +287,7 @@ const cardData4 = []
       </SearchMenuContainer>
       {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
+      <p>{AllCollectionImages}</p>
         <Link to="/collection">
           <CollectionTitle>
             {
