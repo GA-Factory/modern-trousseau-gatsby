@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
@@ -145,7 +144,9 @@ background-color: ${props => props.theme.colors.primaryPink};
 `;
 
 const GownsPage = props => {
-  console.log(props.data)
+  console.log(props.data.allContentfulGowns.edges)
+  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].collectionName)
+  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns)
   const cardData = [
     {
       image:
