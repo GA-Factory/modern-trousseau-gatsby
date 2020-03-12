@@ -9,7 +9,7 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
@@ -27,11 +27,11 @@ export const GownQuery = graphql`
               name
               gownImage {
                 fluid {
-                base64
-                src
-                srcSet
-                srcSetWebp
-                srcWebp
+                  base64
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
                 }
               }
             }
@@ -91,8 +91,8 @@ const SliderAdjuster = styled.div`
 `;
 
 const MobileGridRemoval = styled.div`
-display: none;
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
     flex-direction: column;
   }
@@ -109,7 +109,7 @@ const CollectionsContainer = styled.div`
 `;
 
 const CollectionTitle = styled.p`
-display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-weight: 800;
     display: flex;
@@ -123,25 +123,27 @@ display: none;
 `;
 
 const MobileCollectionTitle = styled.p`
-    font-weight: 800;
-    display: flex;
-    margin-top: 0;
-    padding-left: 2.5%;
-    background-color: white;
-    border-top: 8px solid #fae5dc;
-    background-color: ${props => props.theme.colors.primaryPink};
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  display: none;
+  font-weight: 800;
+  display: flex;
+  margin-top: 0;
+  padding-left: 2.5%;
+  background-color: white;
+  border-top: 8px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
   }
 `;
 
 const CollectionDescription = styled.p`
-font-weight: 800;
-padding-left: 2.5%;
-background-color: ${props => props.theme.colors.primaryPink};
-@media (min-width: ${props => props.theme.breakpoints.tablet}) {
-  background-color: ${props => props.theme.colors.backgroundGray};
-}
+  font-weight: 500;
+  padding-left: 2.5%;
+  border-top: 5px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border-top: 5px solid #e5e5e5;
+    background-color: ${props => props.theme.colors.backgroundGray};
+  }
 `;
 
 const ImgStyle = styled(Img)`
@@ -155,47 +157,69 @@ const ImgStyle = styled(Img)`
 `;
 
 const GownsPage = props => {
-  console.log(props.data.allContentfulGowns.edges)
-  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].collectionName)
-  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns)
-  
+  console.log(props.data.allContentfulGowns.edges);
+  console.log(
+    props.data.allContentfulGowns.edges[0].node.collections[0].collectionName
+  );
+  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns);
+
   // const cardData1 = [
   //   image: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.gownImage,
   //   desktopLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.name
   // ]
 
-// console.log(cardData1)
+  // console.log(cardData1)
 
-  const nodes1 = props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
-  const nodes2 = props.data.allContentfulGowns.edges[1].node.collections[0].gowns;
-  const nodes3 = props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
-  const nodes4 = props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
-  console.log(nodes1)
+  const nodes1 =
+    props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
+  const nodes2 =
+    props.data.allContentfulGowns.edges[1].node.collections[0].gowns;
+  const nodes3 =
+    props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
+  const nodes4 =
+    props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
+  console.log(nodes1);
 
-const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
-      <div key={index}>
-          <p>{collectionGowns.name}</p>
-          {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
-      </div>
-  ))
-const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
+  const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
     <div key={index}>
-        <p>{collectionGowns.name}</p>
-        {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
+      {collectionGowns.gownImage ? (
+        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+        ) : null}
+        <p style={{
+          textAlign: "center",
+        }}>{collectionGowns.name}</p>
     </div>
-))
-const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
-  <div key={index}>
-      <p>{collectionGowns.name}</p>
-      {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
-  </div>
-))
-const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
-  <div key={index}>
-      <p>{collectionGowns.name}</p>
-      {collectionGowns.gownImage ? <ImgStyle fluid={collectionGowns.gownImage.fluid} /> : null}
-  </div>
-))
+  ));
+  const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
+    <div key={index}>
+      {collectionGowns.gownImage ? (
+        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+        ) : null}
+        <p style={{
+          textAlign: "center",
+        }}>{collectionGowns.name}</p>
+    </div>
+  ));
+  const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
+    <div key={index}>
+      {collectionGowns.gownImage ? (
+        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+        ) : null}
+        <p style={{
+          textAlign: "center",
+        }}>{collectionGowns.name}</p>
+    </div>
+  ));
+  const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
+    <div key={index}>
+      {collectionGowns.gownImage ? (
+        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+        ) : null}
+        <p style={{
+          textAlign: "center",
+        }}>{collectionGowns.name}</p>
+    </div>
+  ));
 
   const cardData = [
     {
@@ -296,11 +320,10 @@ const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
     }
   ];
 
-
-const cardData1 = []
-// const cardData2 = []
-// const cardData3 = []
-// const cardData4 = []
+  const cardData1 = [];
+  const cardData2 = [];
+  const cardData3 = [];
+  const cardData4 = [];
 
   return (
     <Layout>
@@ -321,10 +344,10 @@ const cardData1 = []
         </SearchMenu>
       </SearchMenuContainer>
       <CollectionsContainer>
-      {/* <div>{AllCollectionImages1}</div>
+        <div>{AllCollectionImages1}</div>
       <div>{AllCollectionImages2}</div>
       <div>{AllCollectionImages3}</div>
-      <div>{AllCollectionImages4}</div> */}
+      <div>{AllCollectionImages4}</div>
         <Link to="/collection">
           <CollectionTitle>
             {
@@ -338,7 +361,9 @@ const cardData1 = []
                 .collectionName
             }
           </MobileCollectionTitle>
-          <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
+          <CollectionDescription>
+            A description of the theme of the gowns in the collection
+          </CollectionDescription>
         </Link>
         <CollectionList slideData={cardData} title="Classics"></CollectionList>
         <SliderAdjuster>
@@ -355,7 +380,9 @@ const cardData1 = []
                   .collectionName
               }
             </MobileCollectionTitle>
-            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
           </Link>
           <CollectionList
             slideData={cardData}
@@ -363,37 +390,41 @@ const cardData1 = []
           ></CollectionList>
         </SliderAdjuster>
         <MobileGridRemoval>
-        <SliderAdjuster>
-          <Link to="/collection">
-            <CollectionTitle>
-              {
-                props.data.allContentfulGowns.edges[2].node.collections[0]
-                .collectionName
-              }
-            </CollectionTitle>
-            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
-          </Link>
-          <CollectionList
-            slideData={cardData}
-            title="Classics"
+          <SliderAdjuster>
+            <Link to="/collection">
+              <CollectionTitle>
+                {
+                  props.data.allContentfulGowns.edges[2].node.collections[0]
+                    .collectionName
+                }
+              </CollectionTitle>
+              <CollectionDescription>
+                A description of the theme of the gowns in the collection
+              </CollectionDescription>
+            </Link>
+            <CollectionList
+              slideData={cardData}
+              title="Classics"
             ></CollectionList>
-        </SliderAdjuster>
-        <SliderAdjuster>
-          <Link to="/collection">
-            <CollectionTitle>
-              {
-                props.data.allContentfulGowns.edges[3].node.collections[0]
-                .collectionName
-              }
-            </CollectionTitle>
-            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
-          </Link>
-          <CollectionList
-            slideData={cardData}
-            title="Classics"
+          </SliderAdjuster>
+          <SliderAdjuster>
+            <Link to="/collection">
+              <CollectionTitle>
+                {
+                  props.data.allContentfulGowns.edges[3].node.collections[0]
+                    .collectionName
+                }
+              </CollectionTitle>
+              <CollectionDescription>
+                A description of the theme of the gowns in the collection
+              </CollectionDescription>
+            </Link>
+            <CollectionList
+              slideData={cardData}
+              title="Classics"
             ></CollectionList>
-        </SliderAdjuster>
-            </MobileGridRemoval>
+          </SliderAdjuster>
+        </MobileGridRemoval>
       </CollectionsContainer>
       <Footer />
     </Layout>
@@ -401,31 +432,3 @@ const cardData1 = []
 };
 
 export default GownsPage;
-
-//-------------------------------------------
-
-//  DATA I NEED IS FETCHED WITH QUERY BELOW
-
-// export const carouselImageQuery =
-// graphql`
-// query MyQuery {
-//   allContentfulGowns {
-//     group(field: id) {
-//       nodes {
-//         collections {
-//           collectionName
-//           gowns {
-//             gownImage {
-//               title
-//               file {
-//                 fileName
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// `
