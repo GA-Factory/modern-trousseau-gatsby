@@ -39,6 +39,7 @@ const Button = styled.div`
     background-color: #e5e5e5;
     border: 0;
     margin: 0;
+    margin-top: 24%;
     font-size: 36px;
     height: 100%;
   }
@@ -75,7 +76,6 @@ const ButtonIcon = styled.p`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
-    margin-top: 1300%;
   }
 `;
 
