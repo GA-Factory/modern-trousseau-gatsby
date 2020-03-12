@@ -157,11 +157,11 @@ const ImgStyle = styled(Img)`
 `;
 
 const GownsPage = props => {
-  console.log(props.data.allContentfulGowns.edges);
-  console.log(
-    props.data.allContentfulGowns.edges[0].node.collections[0].collectionName
-  );
-  console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns);
+  // console.log(props.data.allContentfulGowns.edges);
+  // console.log(
+  //   props.data.allContentfulGowns.edges[0].node.collections[0].collectionName
+  // );
+  // console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns);
 
   // const cardData1 = [
   //   image: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.gownImage,
@@ -187,14 +187,20 @@ const GownsPage = props => {
         ) : null}
         <p style={{
           textAlign: "center",
-        }}>{collectionGowns.name}</p>
+        }}
+        >{collectionGowns.name}</p>
     </div>
   ));
+        
+  console.log(AllCollectionImages1)
+  const dataSet = [AllCollectionImages1]
+  console.log(dataSet[0])
+
   const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
     <div key={index}>
-      {collectionGowns.gownImage ? (
+      {/* {collectionGowns.gownImage ? (
         <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null}
+        ) : null} */}
         <p style={{
           textAlign: "center",
         }}>{collectionGowns.name}</p>
@@ -202,9 +208,9 @@ const GownsPage = props => {
   ));
   const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
     <div key={index}>
-      {collectionGowns.gownImage ? (
+      {/* {collectionGowns.gownImage ? (
         <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null}
+        ) : null} */}
         <p style={{
           textAlign: "center",
         }}>{collectionGowns.name}</p>
@@ -212,9 +218,9 @@ const GownsPage = props => {
   ));
   const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
     <div key={index}>
-      {collectionGowns.gownImage ? (
+      {/* {collectionGowns.gownImage ? (
         <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null}
+        ) : null} */}
         <p style={{
           textAlign: "center",
         }}>{collectionGowns.name}</p>
