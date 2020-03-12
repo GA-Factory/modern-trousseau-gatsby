@@ -122,6 +122,19 @@ display: none;
   }
 `;
 
+const MobileCollectionTitle = styled.p`
+    font-weight: 800;
+    display: flex;
+    margin-top: 0;
+    padding-left: 2.5%;
+    background-color: white;
+    border-top: 8px solid #fae5dc;
+    background-color: ${props => props.theme.colors.primaryPink};
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  display: none;
+  }
+`;
+
 const CollectionDescription = styled.p`
 font-weight: 800;
 padding-left: 2.5%;
@@ -368,6 +381,12 @@ const GownsPage = props => {
                 .collectionName
             }
           </CollectionTitle>
+          <MobileCollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[0].node.collections[0]
+                .collectionName
+            }
+          </MobileCollectionTitle>
           <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
         </Link>
         <CollectionList slideData={cardData} title="Classics"></CollectionList>
@@ -379,6 +398,12 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
+            <MobileCollectionTitle>
+              {
+                props.data.allContentfulGowns.edges[1].node.collections[0]
+                  .collectionName
+              }
+            </MobileCollectionTitle>
             <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
           </Link>
           <CollectionList
