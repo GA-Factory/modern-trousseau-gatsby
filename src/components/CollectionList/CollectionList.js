@@ -101,8 +101,14 @@ const MobileText = styled.p`
   font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
 `;
 
+const MobileGridContainer = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+`
+
 const MobileImageContainer = styled.div`
-  width: 50%;
+  width: 100%;
   height: auto;
   background-color: ${props => props.theme.colors.primaryPink};
 `;
@@ -289,6 +295,7 @@ class CollectionList extends React.Component {
         </DesktopCard>
 
         <MobileCard>
+          <MobileGridContainer>
           <MobileImageContainer>
             <MobileImage src={this.state.properties[0].image}></MobileImage>
             <MobileText>{this.state.properties[0].desktopLabel}</MobileText>
@@ -297,6 +304,15 @@ class CollectionList extends React.Component {
             <MobileImage src={this.state.properties[1].image}></MobileImage>
             <MobileText>{this.state.properties[1].desktopLabel}</MobileText>
           </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.properties[2].image}></MobileImage>
+            <MobileText>{this.state.properties[2].desktopLabel}</MobileText>
+          </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.properties[3].image}></MobileImage>
+            <MobileText>{this.state.properties[3].desktopLabel}</MobileText>
+          </MobileImageContainer>
+          </MobileGridContainer>
         </MobileCard>
       </div>
     );

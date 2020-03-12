@@ -90,6 +90,14 @@ const SliderAdjuster = styled.div`
   }
 `;
 
+const MobileGridRemoval = styled.div`
+display: none;
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 const CollectionsContainer = styled.div`
   border-top: 2px solid #fae5dc;
   background-color: ${props => props.theme.colors.backgroundGray};
@@ -378,12 +386,13 @@ const GownsPage = props => {
             title="Classics"
           ></CollectionList>
         </SliderAdjuster>
+        <MobileGridRemoval>
         <SliderAdjuster>
           <Link to="/collection">
             <CollectionTitle>
               {
                 props.data.allContentfulGowns.edges[2].node.collections[0]
-                  .collectionName
+                .collectionName
               }
             </CollectionTitle>
             <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
@@ -391,14 +400,14 @@ const GownsPage = props => {
           <CollectionList
             slideData={cardData}
             title="Classics"
-          ></CollectionList>
+            ></CollectionList>
         </SliderAdjuster>
         <SliderAdjuster>
           <Link to="/collection">
             <CollectionTitle>
               {
                 props.data.allContentfulGowns.edges[3].node.collections[0]
-                  .collectionName
+                .collectionName
               }
             </CollectionTitle>
             <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
@@ -406,8 +415,9 @@ const GownsPage = props => {
           <CollectionList
             slideData={cardData}
             title="Classics"
-          ></CollectionList>
+            ></CollectionList>
         </SliderAdjuster>
+            </MobileGridRemoval>
       </CollectionsContainer>
       <Footer />
     </Layout>
