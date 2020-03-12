@@ -110,9 +110,17 @@ display: none;
     padding-left: 2.5%;
     background-color: white;
     border-top: 8px solid #e5e5e5;
-    font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
+`;
+
+const CollectionDescription = styled.p`
+font-weight: 800;
+padding-left: 2.5%;
+background-color: ${props => props.theme.colors.primaryPink};
+@media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  background-color: ${props => props.theme.colors.backgroundGray};
+}
 `;
 
 const GownsPage = props => {
@@ -352,6 +360,7 @@ const GownsPage = props => {
                 .collectionName
             }
           </CollectionTitle>
+          <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
         </Link>
         <CollectionList slideData={cardData} title="Classics"></CollectionList>
         <SliderAdjuster>
@@ -362,6 +371,7 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
+            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
           </Link>
           <CollectionList
             slideData={cardData}
@@ -376,6 +386,7 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
+            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
           </Link>
           <CollectionList
             slideData={cardData}
@@ -390,6 +401,7 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
+            <CollectionDescription>A description of the theme of the gowns in the collection</CollectionDescription>
           </Link>
           <CollectionList
             slideData={cardData}
