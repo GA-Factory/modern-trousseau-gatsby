@@ -353,7 +353,10 @@ const GownsPage = props => {
   //   }
   // ];
 
-
+const cardData1 = []
+const cardData2 = []
+const cardData3 = []
+const cardData4 = []
 
   return (
     <Layout>
