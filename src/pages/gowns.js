@@ -79,7 +79,14 @@ const LogoContainer = styled.div`
 `;
 
 const GownHeaderContainer = styled.div`
+width: 100%;
+display: flex;
+padding: 0 30%;
   border-top: 25px solid ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const SliderAdjuster = styled.div`
@@ -146,6 +153,24 @@ const CollectionDescription = styled.p`
   }
 `;
 
+const Button = styled.div`
+  display: flex;
+  background-color: ${props => props.theme.colors.primaryPink};
+  border: 0;
+  margin: 0;
+  font-size: 36px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const ButtonIcon = styled.p`
+  display: flex;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
 const GownsPage = props => {
   const nodes1 =
     props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
@@ -157,16 +182,16 @@ const GownsPage = props => {
     props.data.allContentfulGowns.edges[4].node.collections[0].gowns;
 
   nodes1.forEach((element, i) => {
-    element.index = i
+    element.index = i;
   });
   nodes2.forEach((element, i) => {
-    element.index = i
+    element.index = i;
   });
   nodes3.forEach((element, i) => {
-    element.index = i
+    element.index = i;
   });
   nodes4.forEach((element, i) => {
-    element.index = i
+    element.index = i;
   });
 
   return (
@@ -176,7 +201,13 @@ const GownsPage = props => {
         <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
       <GownHeaderContainer>
+      <Button >
+            <ButtonIcon>&#10094;</ButtonIcon>
+          </Button>
         <GownHeader icon={icon} open={open} />
+        <Button >
+            <ButtonIcon>&#10095;</ButtonIcon>
+          </Button>
       </GownHeaderContainer>
       <NavMenuDesktop />
       <SearchMenuContainer>
@@ -224,10 +255,7 @@ const GownsPage = props => {
               A description of the theme of the gowns in the collection
             </CollectionDescription>
           </Link>
-          <CollectionList
-            slideData={nodes2}
-            title="Classics"
-          ></CollectionList>
+          <CollectionList slideData={nodes2} title="Classics"></CollectionList>
         </SliderAdjuster>
         <MobileGridRemoval>
           <SliderAdjuster>
