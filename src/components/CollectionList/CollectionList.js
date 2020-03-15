@@ -69,7 +69,6 @@ const DesktopSlideText = styled.p`
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-weight: bold;
   font-size: 14px;
-  text-transform: uppercase;
 `;
 
 const ButtonIcon = styled.p`
@@ -96,6 +95,7 @@ const MobileText = styled.p`
   text-align: center;
   margin-top: 16px;
   font-weight: 800;
+  text-transform: uppercase;
   font-family: ${props => props.theme.fontStyles.h3Styles.fontStyle};
   font-size: ${props => props.theme.fontStyles.h3Styles.fontSize};
 `;
