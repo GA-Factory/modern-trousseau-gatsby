@@ -118,7 +118,7 @@ const SliderA = ({ propertyA }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={gownImage} />
+        <SlideImage fluid={gownImage.fluid} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
@@ -130,7 +130,7 @@ const SliderB = ({ propertyB }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={gownImage} />
+        <SlideImage fluid={gownImage.fluid} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
@@ -142,7 +142,7 @@ const SliderC = ({ propertyC }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={gownImage} />
+        <SlideImage fluid={gownImage.fluid} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
@@ -297,19 +297,19 @@ class CollectionList extends React.Component {
         <MobileCard>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[0].gownImage}></MobileImage>
+            <MobileImage fluid={this.state.properties[0].gownImage}></MobileImage>
             <MobileText>{this.state.properties[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[1].gownImage}></MobileImage>
+            <MobileImage fluid={this.state.properties[1].gownImage}></MobileImage>
             <MobileText>{this.state.properties[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[2].gownImage}></MobileImage>
+            <MobileImage fluid={this.state.properties[2].gownImage}></MobileImage>
             <MobileText>{this.state.properties[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[3].gownImage}></MobileImage>
+            <MobileImage fluid={this.state.properties[3].gownImage}></MobileImage>
             <MobileText>{this.state.properties[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>

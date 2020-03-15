@@ -179,6 +179,9 @@ const GownsPage = props => {
   const nodes4 =
     props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
   console.log(nodes1);
+  console.log(nodes2);
+  console.log(nodes3);
+  console.log(nodes4);
 
   const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
     <div key={index}>
@@ -190,9 +193,11 @@ const GownsPage = props => {
           textAlign: "center"
         }}
       >
-      <p>{index}</p>
         {collectionGowns.name}
       </p>
+      <p style={{
+          textAlign: "center"
+        }}>{index}</p>
     </div>
   ));
 
@@ -354,7 +359,7 @@ const GownsPage = props => {
         </SearchMenu>
       </SearchMenuContainer>
       <CollectionsContainer>
-        {/* <div>{AllCollectionImages1}</div> */}
+        <div>{AllCollectionImages1}</div>
         {/* <div>{AllCollectionImages2}</div>
       <div>{AllCollectionImages3}</div>
       <div>{AllCollectionImages4}</div> */}
@@ -395,7 +400,7 @@ const GownsPage = props => {
             </CollectionDescription>
           </Link>
           <CollectionList
-            slideData={cardData}
+            slideData={nodes2}
             title="Classics"
           ></CollectionList>
         </SliderAdjuster>
@@ -413,7 +418,7 @@ const GownsPage = props => {
               </CollectionDescription>
             </Link>
             <CollectionList
-              slideData={cardData}
+              slideData={nodes3}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
@@ -430,7 +435,7 @@ const GownsPage = props => {
               </CollectionDescription>
             </Link>
             <CollectionList
-              slideData={cardData}
+              slideData={nodes4}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
