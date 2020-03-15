@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import Img from "gatsby-image";
 
 const DesktopCard = styled.div`
   display: none;
@@ -118,7 +117,6 @@ const SliderA = ({ propertyA }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
@@ -131,7 +129,6 @@ const SliderB = ({ propertyB }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
@@ -144,7 +141,6 @@ const SliderC = ({ propertyC }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
@@ -283,7 +279,6 @@ class CollectionList extends React.Component {
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
-    console.log(this.props.slideData)
     return (
       <div>
         <DesktopCard>

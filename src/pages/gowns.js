@@ -146,16 +146,6 @@ const CollectionDescription = styled.p`
   }
 `;
 
-const ImgStyle = styled(Img)`
-  width: 40px;
-  height: 56px;
-  margin: 10px auto;
-  @media screen and (max-width: 425px) {
-    height: 200px;
-    width: 200px;
-  }
-`;
-
 const GownsPage = props => {
   const nodes1 =
     props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
@@ -179,165 +169,6 @@ const GownsPage = props => {
     element.index = i
   });
 
-  console.log(nodes1)
-
-  const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
-    <div key={index}>
-      {collectionGowns.gownImage ? (
-        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-      ) : null}
-      <p
-        style={{
-          textAlign: "center"
-        }}
-      >
-        {collectionGowns.name}
-      </p>
-      <p style={{
-          textAlign: "center"
-        }}>{index}</p>
-    </div>
-  ));
-
-  console.log(AllCollectionImages1);
-  const dataSet = [AllCollectionImages1];
-  console.log(dataSet[0]);
-
-  // const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
-  //   <div key={index}>
-  //     {collectionGowns.gownImage ? (
-  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-  //       ) : null}
-  //       <p style={{
-  //         textAlign: "center",
-  //       }}>{collectionGowns.name}</p>
-  //   </div>
-  // ));
-  // const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
-  //   <div key={index}>
-  //     {collectionGowns.gownImage ? (
-  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-  //       ) : null}
-  //       <p style={{
-  //         textAlign: "center",
-  //       }}>{collectionGowns.name}</p>
-  //   </div>
-  // ));
-  // const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
-  //   <div key={index}>
-  //     {collectionGowns.gownImage ? (
-  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-  //       ) : null}
-  //       <p style={{
-  //         textAlign: "center",
-  //       }}>{collectionGowns.name}</p>
-  //   </div>
-  // ));
-
-  const cardData = [
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .name,
-      index: 0
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .name,
-      index: 1
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .name,
-      index: 2
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .name,
-      index: 3
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .name,
-      index: 4
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .name,
-      index: 5
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .name,
-      index: 6
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .name,
-      index: 7
-    }
-  ];
-
-  const cardData1 = [];
-  const cardData2 = [];
-  const cardData3 = [];
-  const cardData4 = [];
-
   return (
     <Layout>
       <NavBar />
@@ -357,10 +188,6 @@ const GownsPage = props => {
         </SearchMenu>
       </SearchMenuContainer>
       <CollectionsContainer>
-      {/*  <div>{AllCollectionImages1}</div>
-      <div>{AllCollectionImages2}</div>
-      <div>{AllCollectionImages3}</div>
-      <div>{AllCollectionImages4}</div> */}
         <Link to="/collection">
           <CollectionTitle>
             {
