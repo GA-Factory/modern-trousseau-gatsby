@@ -283,6 +283,7 @@ class CollectionList extends React.Component {
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
+    console.log(this.props.slideData)
     return (
       <div>
         <DesktopCard>

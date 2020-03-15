@@ -157,19 +157,6 @@ const ImgStyle = styled(Img)`
 `;
 
 const GownsPage = props => {
-  // console.log(props.data.allContentfulGowns.edges);
-  // console.log(
-  //   props.data.allContentfulGowns.edges[0].node.collections[0].collectionName
-  // );
-  // console.log(props.data.allContentfulGowns.edges[0].node.collections[0].gowns);
-
-  // const cardData1 = [
-  //   image: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.gownImage,
-  //   desktopLabel: props.data.allContentfulGowns.edges[0].node.collections[0].gowns.name
-  // ]
-
-  // console.log(cardData1)
-
   const nodes1 =
     props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
   const nodes2 =
@@ -178,10 +165,21 @@ const GownsPage = props => {
     props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
   const nodes4 =
     props.data.allContentfulGowns.edges[4].node.collections[0].gowns;
-  console.log(nodes1);
-  console.log(nodes2);
-  console.log(nodes3);
-  console.log(nodes4);
+
+  nodes1.forEach((element, i) => {
+    element.index = i
+  });
+  nodes2.forEach((element, i) => {
+    element.index = i
+  });
+  nodes3.forEach((element, i) => {
+    element.index = i
+  });
+  nodes4.forEach((element, i) => {
+    element.index = i
+  });
+
+  console.log(nodes1)
 
   const AllCollectionImages1 = nodes1.map((collectionGowns, index) => (
     <div key={index}>
