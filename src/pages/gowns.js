@@ -177,7 +177,7 @@ const GownsPage = props => {
   const nodes3 =
     props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
   const nodes4 =
-    props.data.allContentfulGowns.edges[3].node.collections[0].gowns;
+    props.data.allContentfulGowns.edges[4].node.collections[0].gowns;
   console.log(nodes1);
   console.log(nodes2);
   console.log(nodes3);
@@ -359,8 +359,8 @@ const GownsPage = props => {
         </SearchMenu>
       </SearchMenuContainer>
       <CollectionsContainer>
-        <div>{AllCollectionImages1}</div>
-        {/* <div>{AllCollectionImages2}</div>
+      {/*  <div>{AllCollectionImages1}</div>
+      <div>{AllCollectionImages2}</div>
       <div>{AllCollectionImages3}</div>
       <div>{AllCollectionImages4}</div> */}
         <Link to="/collection">
@@ -426,7 +426,7 @@ const GownsPage = props => {
             <Link to="/collection">
               <CollectionTitle>
                 {
-                  props.data.allContentfulGowns.edges[3].node.collections[0]
+                  props.data.allContentfulGowns.edges[4].node.collections[0]
                     .collectionName
                 }
               </CollectionTitle>

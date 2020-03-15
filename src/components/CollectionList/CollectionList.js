@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 const DesktopCard = styled.div`
   display: none;
@@ -8,7 +8,7 @@ const DesktopCard = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-around;
-    padding: 0 12px 0 0;
+    padding: 0 12px;
     background-color: #e5e5e5;
   }
 `;
@@ -118,10 +118,10 @@ const SliderA = ({ propertyA }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
+      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
-      {/* <p>{`${index}`}</p> */}
     </Slide>
   );
 };
@@ -131,10 +131,10 @@ const SliderB = ({ propertyB }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
+      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
-      {/* <p>{`${index}`}</p> */}
     </Slide>
   );
 };
@@ -144,10 +144,10 @@ const SliderC = ({ propertyC }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
+      <p>{`${index}`}</p>
         <SlideImage src={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
-      {/* <p>{`${index}`}</p> */}
     </Slide>
   );
 };
@@ -162,7 +162,7 @@ class CollectionList extends React.Component {
       propertyC: this.props.slideData[2]
     };
   }
-
+  
   prevProperty = () => {
     if (
       this.state.propertyA.index > 0 &&
@@ -300,19 +300,19 @@ class CollectionList extends React.Component {
         <MobileCard>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage fluid={this.state.properties[0].gownImage}></MobileImage>
+            <MobileImage src={this.state.properties[0].gownImage.fluid.src}></MobileImage>
             <MobileText>{this.state.properties[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage fluid={this.state.properties[1].gownImage}></MobileImage>
+            <MobileImage src={this.state.properties[1].gownImage.fluid.src}></MobileImage>
             <MobileText>{this.state.properties[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage fluid={this.state.properties[2].gownImage}></MobileImage>
+            <MobileImage src={this.state.properties[2].gownImage.fluid.src}></MobileImage>
             <MobileText>{this.state.properties[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage fluid={this.state.properties[3].gownImage}></MobileImage>
+            <MobileImage src={this.state.properties[3].gownImage.fluid.src}></MobileImage>
             <MobileText>{this.state.properties[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>
