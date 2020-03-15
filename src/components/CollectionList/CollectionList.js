@@ -118,10 +118,10 @@ const SliderA = ({ propertyA }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage fluid={gownImage} />
+        <SlideImage fluid={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
-        <p>{`${index}`}</p>
       </ImageContainer>
+      <p>{`${index}`}</p>
     </Slide>
   );
 };
@@ -131,9 +131,10 @@ const SliderB = ({ propertyB }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage fluid={gownImage} />
+        <SlideImage fluid={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
+      <p>{`${index}`}</p>
     </Slide>
   );
 };
@@ -143,9 +144,10 @@ const SliderC = ({ propertyC }) => {
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage fluid={gownImage} />
+        <SlideImage fluid={gownImage.fluid.src} />
         <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
+      <p>{`${index}`}</p>
     </Slide>
   );
 };
