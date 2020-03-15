@@ -184,48 +184,52 @@ const GownsPage = props => {
     <div key={index}>
       {collectionGowns.gownImage ? (
         <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null}
-        <p style={{
-          textAlign: "center",
+      ) : null}
+      <p
+        style={{
+          textAlign: "center"
         }}
-        >{collectionGowns.name}</p>
+      >
+      <p>{index}</p>
+        {collectionGowns.name}
+      </p>
     </div>
   ));
-        
-  console.log(AllCollectionImages1)
-  const dataSet = [AllCollectionImages1]
-  console.log(dataSet[0])
 
-  const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
-    <div key={index}>
-      {/* {collectionGowns.gownImage ? (
-        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null} */}
-        <p style={{
-          textAlign: "center",
-        }}>{collectionGowns.name}</p>
-    </div>
-  ));
-  const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
-    <div key={index}>
-      {/* {collectionGowns.gownImage ? (
-        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null} */}
-        <p style={{
-          textAlign: "center",
-        }}>{collectionGowns.name}</p>
-    </div>
-  ));
-  const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
-    <div key={index}>
-      {/* {collectionGowns.gownImage ? (
-        <ImgStyle fluid={collectionGowns.gownImage.fluid} />
-        ) : null} */}
-        <p style={{
-          textAlign: "center",
-        }}>{collectionGowns.name}</p>
-    </div>
-  ));
+  console.log(AllCollectionImages1);
+  const dataSet = [AllCollectionImages1];
+  console.log(dataSet[0]);
+
+  // const AllCollectionImages2 = nodes2.map((collectionGowns, index) => (
+  //   <div key={index}>
+  //     {collectionGowns.gownImage ? (
+  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+  //       ) : null}
+  //       <p style={{
+  //         textAlign: "center",
+  //       }}>{collectionGowns.name}</p>
+  //   </div>
+  // ));
+  // const AllCollectionImages3 = nodes3.map((collectionGowns, index) => (
+  //   <div key={index}>
+  //     {collectionGowns.gownImage ? (
+  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+  //       ) : null}
+  //       <p style={{
+  //         textAlign: "center",
+  //       }}>{collectionGowns.name}</p>
+  //   </div>
+  // ));
+  // const AllCollectionImages4 = nodes4.map((collectionGowns, index) => (
+  //   <div key={index}>
+  //     {collectionGowns.gownImage ? (
+  //       <ImgStyle fluid={collectionGowns.gownImage.fluid} />
+  //       ) : null}
+  //       <p style={{
+  //         textAlign: "center",
+  //       }}>{collectionGowns.name}</p>
+  //   </div>
+  // ));
 
   const cardData = [
     {
@@ -350,10 +354,10 @@ const GownsPage = props => {
         </SearchMenu>
       </SearchMenuContainer>
       <CollectionsContainer>
-        <div>{AllCollectionImages1}</div>
-      <div>{AllCollectionImages2}</div>
+        {/* <div>{AllCollectionImages1}</div> */}
+        {/* <div>{AllCollectionImages2}</div>
       <div>{AllCollectionImages3}</div>
-      <div>{AllCollectionImages4}</div>
+      <div>{AllCollectionImages4}</div> */}
         <Link to="/collection">
           <CollectionTitle>
             {
@@ -371,7 +375,7 @@ const GownsPage = props => {
             A description of the theme of the gowns in the collection
           </CollectionDescription>
         </Link>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
+        <CollectionList slideData={nodes1} title="Classics"></CollectionList>
         <SliderAdjuster>
           <Link to="/collection">
             <CollectionTitle>

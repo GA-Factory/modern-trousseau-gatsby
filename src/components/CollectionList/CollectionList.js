@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 const DesktopCard = styled.div`
   display: none;
@@ -113,36 +114,36 @@ const MobileImageContainer = styled.div`
 `;
 
 const SliderA = ({ propertyA }) => {
-  const { image, mobileLabel, index } = propertyA;
+  const { gownImage, name, index } = propertyA;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+        <SlideImage src={gownImage} />
+        <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
 };
 
 const SliderB = ({ propertyB }) => {
-  const { image, mobileLabel, index } = propertyB;
+  const { gownImage, name, index } = propertyB;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+        <SlideImage src={gownImage} />
+        <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
 };
 
 const SliderC = ({ propertyC }) => {
-  const { image, mobileLabel, index } = propertyC;
+  const { gownImage, name, index } = propertyC;
   return (
     <Slide id={`slide-${index}`}>
       <ImageContainer>
-        <SlideImage src={image} />
-        <DesktopSlideText>{`${mobileLabel}`}</DesktopSlideText>
+        <SlideImage src={gownImage} />
+        <DesktopSlideText>{`${name}`}</DesktopSlideText>
       </ImageContainer>
     </Slide>
   );
@@ -296,20 +297,20 @@ class CollectionList extends React.Component {
         <MobileCard>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[0].image}></MobileImage>
-            <MobileText>{this.state.properties[0].desktopLabel}</MobileText>
+            <MobileImage src={this.state.properties[0].gownImage}></MobileImage>
+            <MobileText>{this.state.properties[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[1].image}></MobileImage>
-            <MobileText>{this.state.properties[1].desktopLabel}</MobileText>
+            <MobileImage src={this.state.properties[1].gownImage}></MobileImage>
+            <MobileText>{this.state.properties[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[2].image}></MobileImage>
-            <MobileText>{this.state.properties[2].desktopLabel}</MobileText>
+            <MobileImage src={this.state.properties[2].gownImage}></MobileImage>
+            <MobileText>{this.state.properties[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[3].image}></MobileImage>
-            <MobileText>{this.state.properties[3].desktopLabel}</MobileText>
+            <MobileImage src={this.state.properties[3].gownImage}></MobileImage>
+            <MobileText>{this.state.properties[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>
         </MobileCard>
