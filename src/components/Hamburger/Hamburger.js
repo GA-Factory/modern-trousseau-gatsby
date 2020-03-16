@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FAIcon from '../Icons/FAIcon';
-import './Hamburger.css';
+// import './Hamburger.css';
 
 
 class Burger extends Component {
