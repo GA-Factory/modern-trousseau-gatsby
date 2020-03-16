@@ -61,7 +61,7 @@ const LiHeader = styled.li`
 `;
 
 const DotSpan = styled.span`
-  @media (min-width: 300px) {
+  @media (max-width: 768px) {
     opacity: 0;
   }
 `;

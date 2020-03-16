@@ -21,6 +21,13 @@ const ImageQuery = styled(Img)`
   height: 600px;
 `;
 
+const NavBarContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
     query contentfulGowns {
@@ -60,7 +67,10 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      <NavBar />
+      <NavBarContainer>
+        <NavBar />
+      </NavBarContainer>
+
       <HeaderNavBar />
       {/* <Slider data={props.data} /> */}
       <Tagline
