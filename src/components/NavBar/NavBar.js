@@ -3,18 +3,20 @@ import { Link } from "gatsby";
 import Icons from "../Icons/FAIcon";
 import "./NavBar.css";
 import Logo from "../FullLogo/Logo";
+import Burger from "../Hamburger/Hamburger";
 
 const NavBar = props => {
   return (
     <>
       <nav className="nav-bar">
+        <Burger></Burger>
         {/* gray menu starts */}
-        <div className="mobile-style">
-          {/* Replace with burger component when complete */}
-          <Link to="#">
+        {/* <div className="mobile-style"> */}
+        {/* Replace with burger component when complete */}
+        {/* <Link to="#">
             <Icons name={["fas", "bars"]} size="lg" />
           </Link>
-        </div>
+        </div> */}
         {/* gray menu ends */}
         <div className="mobile-style">
           {/* Replace with logo component */}
