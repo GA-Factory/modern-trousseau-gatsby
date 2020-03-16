@@ -1,46 +1,107 @@
 import React from "react";
 import { Link } from "gatsby";
+import styled from 'styled-components';
 import Icons from "../Icons/FAIcon";
-import "./NavBar.css";
 import Logo from "../FullLogo/Logo";
+import styled from 'styled-components';
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #E5E5E5;
+  padding: 10px 20px;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+`;
+
+const Desktop = styled.div`
+  padding: 0px 10px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Mobile = styled.div`
+  display: none;
+  padding: 0px 10px;
+  @media screen and (max-width: 768px) {
+    padding-top: 15px;
+    display: block;
+  }
+`;
+
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #E5E5E5;
+  padding: 10px 20px;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+`;
+
+const Desktop = styled.div`
+  padding: 0px 10px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Mobile = styled.div`
+  display: none;
+  padding: 0px 10px;
+  @media screen and (max-width: 768px) {
+    padding-top: 15px;
+    display: block;
+  }
+`;
+
 
 const NavBar = props => {
   return (
     <>
-      <nav className="nav-bar">
-        <div className="mobile-style">
+      <Nav>
+        <Mobile>
           {/* Replace with burger component when complete */}
           <Link to="#">
-            <Icons name={["fas", "bars"]} size="lg" />
+            <Icons name={['fas', 'bars']} size="lg" />
           </Link>
-        </div>
-        <div className="mobile-style">
-          {/* Replace with logo component */}
+        </Mobile>
+        <Mobile>
           <Logo notag tagline title1="MODERN" title2="trousseau" />
-        </div>
-        <div className="mobile-style">
+        </Mobile>
+        <Mobile>
           <Link to="#">
-            <Icons name={["fas", "search"]} size="lg" />
+            <Icons name={['fas', 'search']} size="lg" />
           </Link>
-        </div>
-        <div className="desktop-style">
+        </Mobile>
+        <Desktop>
           <Link to="#">
-            <Icons name={["fas", "search"]} />
+            <Icons name={['fas', 'search']} />
           </Link>
-        </div>
-        <div className="desktop-style">
+        </Desktop>
+        <Desktop>
           <Link to="#">
-            <Icons name={["fas", "map-marker-alt"]} />
+            <Icons name={['fas', 'map-marker-alt']} />
           </Link>
-        </div>
-        <div className="desktop-style">
+        </Desktop>
+        <Desktop>
           <Link to="#">
-            <Icons name={["far", "user"]} />
+            <Icons name={['far', 'user']} />
           </Link>
-        </div>
-      </nav>
+        </Desktop>
+      </Nav>
     </>
   );
 };
+
 
 export default NavBar;

@@ -11,6 +11,7 @@ import OwnerQuote from "../components/owner-quote/owner-quote";
 import ComponentCollection from "../components/component-collection/ComponentCollection";
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
+import AboutUs from "../components/AboutUs/AboutUs"
 
 
 const IndexPage = props => {
@@ -63,6 +64,23 @@ const IndexPage = props => {
             }
             slideTitle
           }
+        }
+      }
+      allContentfulCarousel(limit: 3) {
+        nodes {
+          slideDescription
+          slideTitle
+          buttonLabel
+          slideImage {
+            fluid {
+              base64
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+            }
+          }
+          id
         }
       }
     }

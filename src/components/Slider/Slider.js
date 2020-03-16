@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "gatsby-image";
+import Img from "gatsby-image";
 import styled from "styled-components";
 import Dots from "./Dots";
-import HeroCaption from "../Captions/herocaptions";
+import HeroCaptions from "../Captions/herocaptions"
 
 const SliderImageContainer = styled.div`
   align-items: center;
@@ -13,14 +13,37 @@ const SliderImageContainer = styled.div`
   padding-top: 25px;
   z-index: -1;
 `;
-const SliderImage = styled(Image)`
+const SliderImage = styled(Img)`
   display: block;
   flex-basis: 750px;
   margin: 25px auto;
   max-width: 100%;
-  height: 400px;
-  margin: 25px auto;
+  height: 350px;
+  z-index: -1;
+  position: absolute;
 `;
+
+const CaptionContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 100%;
+  text-align: left;
+  z-index: 10;
+  position: absolute;
+  left: 319px;
+  top: 565px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    max-width: 750px;
+    width: 100%;
+    height: 80px;
+  }
+`;
+
+
 const ChevronLeft = styled.svg`
   cursor: pointer;
   height: 20px;
@@ -46,6 +69,21 @@ const DotContainer = styled.section`
   margin: 10px auto;
 `;
 
+const CaptionTitle = styled.h4`
+  font-family:'Raleway';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  z-index: 10;
+  position: absolute;
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    ${props => props.theme.fontStyles.h4Styles}
+  }
+`
+
 export default class ProductSingle extends React.Component {
   constructor(props) {
     super(props);
@@ -53,16 +91,12 @@ export default class ProductSingle extends React.Component {
     this.state = {
       appear: true,
       currentIndex: 0,
-      image: this.props.data.allContentfulCarousel.edges[0].node.slideImage
-        .fluid,
-      key: this.props.data.allContentfulCarousel.edges[0].node.id,
-      lastIndex: this.props.data.allContentfulCarousel.edges.length,
-      imageArr: this.props.data.allContentfulCarousel.edges,
-      title: this.props.data.allContentfulCarousel.edges[0].node.slideTitle,
-      description: this.props.data.allContentfulCarousel.edges[0].node
-        .slideDescription,
-      buttonLabel: this.props.data.allContentfulCarousel.edges[0].node
-        .buttonLabel
+      description: this.props.data.allContentfulCarousel.nodes[0].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[0].slideTitle,
+      image: this.props.data.allContentfulCarousel.nodes[0].slideImage.fluid,
+      key: this.props.data.allContentfulCarousel.nodes[0].id,
+      lastIndex: this.props.data.allContentfulCarousel.nodes.length,
+      imageArr: this.props.data.allContentfulCarousel.nodes
     };
   }
 
@@ -81,11 +115,10 @@ export default class ProductSingle extends React.Component {
     }
     this.setState({
       currentIndex: newIndex,
-      image: this.props.data.allContentfulCarousel.edges[newIndex].node.slideImage.fluid,
-      key: this.props.data.allContentfulCarousel.edges[newIndex].node.id,
-      title: this.props.data.allContentfulCarousel.edges[newIndex].node.slideTitle,
-      description: this.props.data.allContentfulCarousel.edges[newIndex].node.slideDescription,
-      buttonLabel: this.props.data.allContentfulCarousel.edges[newIndex].node.buttonLabel
+      image: this.props.data.allContentfulCarousel.nodes[newIndex].slideImage.fluid,
+      description: this.props.data.allContentfulCarousel.nodes[newIndex].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[newIndex].slideTitle,
+      key: this.props.data.allContentfulCarousel.nodes[newIndex].id
     });
   };
 
@@ -99,11 +132,10 @@ export default class ProductSingle extends React.Component {
 
     this.setState({
       currentIndex: newIndex,
-      image: this.props.data.allContentfulCarousel.edges[newIndex].node.slideImage.fluid,
-      key: this.props.data.allContentfulCarousel.edges[newIndex].node.id,
-      title: this.props.data.allContentfulCarousel.edges[newIndex].node.slideTitle,
-      description: this.props.data.allContentfulCarousel.edges[newIndex].node.slideDescription,
-      buttonLabel: this.props.data.allContentfulCarousel.edges[newIndex].node.buttonLabel
+      image: this.props.data.allContentfulCarousel.nodes[newIndex].slideImage.fluid,
+      description: this.props.data.allContentfulCarousel.nodes[newIndex].slideDescription,
+      title: this.props.data.allContentfulCarousel.nodes[newIndex].slideTitle,
+      key: this.props.data.allContentfulCarousel.nodes[newIndex].id
     });
   };
 
@@ -124,7 +156,7 @@ export default class ProductSingle extends React.Component {
             </ChevronLeft>
           )}
           <SliderImage fluid={this.state.image} key={this.state.key} />
-          <HeroCaption title={this.props.title} description={this.props.description}/>
+          <HeroCaptions title={this.state.title} description={this.state.description} />
           {this.state.lastIndex > 1 && (
             <ChevronRight
               xmlns="http://www.w3.org/2000/svg"

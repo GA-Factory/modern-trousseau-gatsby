@@ -59,7 +59,7 @@ const HeroCaption = props => {
       <CaptionTitle>{props.title}</CaptionTitle>
       <CaptionSubText>{props.description}</CaptionSubText>
     </CaptionContainer>
-  )
+  );
 };
 
 export default HeroCaption;

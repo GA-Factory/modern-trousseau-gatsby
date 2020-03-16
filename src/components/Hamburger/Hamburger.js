@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import FAIcon from '../Icons/FAIcon';
-import './Hamburger.css';
+// import './Hamburger.css';
 
 
 class Burger extends Component {
