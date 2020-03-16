@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../global/Layout";
 import NavBar from "../components/NavBar/NavBar";
 import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-// import Slider from "../components/Slider/Slider";
+import Slider from "../components/Slider/Slider";
 import Tagline from "../components/Tagline/tagline";
 import HowWeWork from "../components/HowWeWork/howwework";
 import OwnerQuote from "../components/owner-quote/owner-quote";
@@ -33,7 +33,6 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
         }
@@ -47,7 +46,6 @@ const IndexPage = props => {
               srcSet
               srcSetWebp
               srcWebp
-              tracedSVG
             }
           }
           comment {
@@ -56,13 +54,30 @@ const IndexPage = props => {
           }
         }
       }
+      allContentfulCarousel(limit: 3) {
+        nodes {
+          slideDescription
+          slideTitle
+          buttonLabel
+          slideImage {
+            fluid {
+              base64
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+            }
+          }
+          id
+        }
+      }
     }
   `);
   return (
     <Layout>
       <NavBar />
       <HeaderNavBar />
-      {/* <Slider data={props.data} /> */}
+      <Slider data={props.data} />
       <Tagline
         headline="Classic Couture. Custom Fit."
         slogan="Where customization meets timeline meets budget."
