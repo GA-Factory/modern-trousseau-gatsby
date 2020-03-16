@@ -12,7 +12,7 @@ const NavBar = props => {
         <div className="mobile-style">
           {/* Replace with burger component when complete */}
           <Link to="#">
-            <Icons name={["fas", "map-marker-alt"]} size="lg" />
+            <Icons name={["fas", "bars"]} size="lg" />
           </Link>
         </div>
         {/* gray menu ends */}
