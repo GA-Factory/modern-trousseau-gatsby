@@ -107,7 +107,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <span>&#183;</span>
           </LiHeader>
           <LiHeader>
             <Link to="/visit">
@@ -115,7 +115,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <span>&#183;</span>
           </LiHeader>
           <LiHeader>
             <Link to="book-appointment">
@@ -123,7 +123,7 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
-            <span className="header-nav-dots">&#183;</span>
+            <span>&#183;</span>
           </LiHeader>
           <LiHeader>
             <Link to="/about">
