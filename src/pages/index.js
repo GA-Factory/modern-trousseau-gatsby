@@ -14,6 +14,13 @@ import Footer from "../components/Footer/Footer";
 import AboutUs from "../components/AboutUs/AboutUs"
 
 
+const NavBarContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
     query contentfulGowns {
@@ -87,7 +94,10 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      <NavBar />
+      <NavBarContainer>
+        <NavBar />
+      </NavBarContainer>
+
       <HeaderNavBar />
       <Slider data={props.data} />
       <Tagline

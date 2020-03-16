@@ -68,6 +68,7 @@ const Mobile = styled.div`
 const NavBar = props => {
   return (
     <>
+<<<<<<< HEAD
       <Nav>
         <Mobile>
           {/* Replace with burger component when complete */}
@@ -76,6 +77,19 @@ const NavBar = props => {
           </Link>
         </Mobile>
         <Mobile>
+=======
+      <nav className="nav-bar">
+        {/* gray menu starts */}
+        <div className="mobile-style">
+          {/* Replace with burger component when complete */}
+          <Link to="#">
+            <Icons name={["fas", "map-marker-alt"]} size="lg" />
+          </Link>
+        </div>
+        {/* gray menu ends */}
+        <div className="mobile-style">
+          {/* Replace with logo component */}
+>>>>>>> menu-system-186
           <Logo notag tagline title1="MODERN" title2="trousseau" />
         </Mobile>
         <Mobile>

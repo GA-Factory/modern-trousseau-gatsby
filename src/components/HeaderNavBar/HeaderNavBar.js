@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Logo from "../FullLogo/Logo";
 
+<<<<<<< HEAD
 const HeaderNav = styled.nav`
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
@@ -36,11 +37,13 @@ const LiHeader = styled.li`
     padding: 10px;
 `;
 
+=======
+>>>>>>> menu-system-186
 const HeaderNav = styled.nav`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 20px;
   text-align: center;
   background-color: #fae5dc;
   width: 100%;
@@ -62,7 +65,7 @@ const HeaderLogo = styled.div`
   font-size: 64px;
   display: none;
   @media (min-width: 810px) {
-    display:block;
+    display: block;
   }
 `;
 
@@ -93,6 +96,12 @@ const LiHeader = styled.li`
   }
 `;
 
+const DotSpan = styled.span`
+  @media (min-width: 300px) {
+    opacity: 0;
+  }
+`;
+
 const HeaderNavBar = props => {
   return (
     <>
@@ -107,7 +116,11 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
+<<<<<<< HEAD
             <span>&#183;</span>
+=======
+            <DotSpan>&#183;</DotSpan>
+>>>>>>> menu-system-186
           </LiHeader>
           <LiHeader>
             <Link to="/visit">
@@ -115,7 +128,11 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
+<<<<<<< HEAD
             <span>&#183;</span>
+=======
+            <DotSpan>&#183;</DotSpan>
+>>>>>>> menu-system-186
           </LiHeader>
           <LiHeader>
             <Link to="book-appointment">
@@ -123,7 +140,11 @@ const HeaderNavBar = props => {
             </Link>
           </LiHeader>
           <LiHeader>
+<<<<<<< HEAD
             <span>&#183;</span>
+=======
+            <DotSpan>&#183;</DotSpan>
+>>>>>>> menu-system-186
           </LiHeader>
           <LiHeader>
             <Link to="/about">
