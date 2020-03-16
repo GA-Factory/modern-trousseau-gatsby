@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
@@ -10,6 +9,7 @@ import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
@@ -27,11 +27,11 @@ export const GownQuery = graphql`
               name
               gownImage {
                 fluid {
-                base64
-                src
-                srcSet
-                srcSetWebp
-                srcWebp
+                  base64
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
                 }
               }
             }
@@ -79,7 +79,14 @@ const LogoContainer = styled.div`
 `;
 
 const GownHeaderContainer = styled.div`
+width: 100%;
+display: flex;
+padding: 0 30%;
   border-top: 25px solid ${props => props.theme.colors.primaryPink};
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const SliderAdjuster = styled.div`
@@ -87,6 +94,14 @@ const SliderAdjuster = styled.div`
   border-top: 50px solid ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     border-top: 0;
+  }
+`;
+
+const MobileGridRemoval = styled.div`
+  display: none;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -101,7 +116,7 @@ const CollectionsContainer = styled.div`
 `;
 
 const CollectionTitle = styled.p`
-display: none;
+  display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     font-weight: 800;
     display: flex;
@@ -110,218 +125,75 @@ display: none;
     padding-left: 2.5%;
     background-color: white;
     border-top: 8px solid #e5e5e5;
-    font-weight: 22px;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;
 
+const MobileCollectionTitle = styled.p`
+  font-weight: 800;
+  display: flex;
+  margin-top: 0;
+  padding-left: 2.5%;
+  background-color: white;
+  border-top: 8px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const CollectionDescription = styled.p`
+  font-weight: 500;
+  padding-left: 2.5%;
+  border-top: 5px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border-top: 5px solid #e5e5e5;
+    background-color: ${props => props.theme.colors.backgroundGray};
+  }
+`;
+
+const Button = styled.div`
+  display: flex;
+  background-color: ${props => props.theme.colors.primaryPink};
+  border: 0;
+  margin: 0;
+  font-size: 36px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const ButtonIcon = styled.p`
+  display: flex;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
 const GownsPage = props => {
+  const nodes1 =
+    props.data.allContentfulGowns.edges[0].node.collections[0].gowns;
+  const nodes2 =
+    props.data.allContentfulGowns.edges[1].node.collections[0].gowns;
+  const nodes3 =
+    props.data.allContentfulGowns.edges[2].node.collections[0].gowns;
+  const nodes4 =
+    props.data.allContentfulGowns.edges[4].node.collections[0].gowns;
 
-  const cardData = [
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-          .name,
-      index: 0
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-          .name,
-      index: 1
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-          .name,
-      index: 2
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-          .name,
-      index: 3
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-          .name,
-      index: 4
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-          .name,
-      index: 5
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-          .name,
-      index: 6
-    },
-    {
-      image:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .gownImage.fluid.src,
-      mobileLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .name,
-      desktopLabel:
-        props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-          .name,
-      index: 7
-    }
-  ];
+  nodes1.forEach((element, i) => {
+    element.index = i;
+  });
+  nodes2.forEach((element, i) => {
+    element.index = i;
+  });
+  nodes3.forEach((element, i) => {
+    element.index = i;
+  });
+  nodes4.forEach((element, i) => {
+    element.index = i;
+  });
 
-
-
-
-
-
-  
-
-
-  // const cardData = [
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[0]
-  //         .name,
-  //     index: 0
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[1]
-  //         .name,
-  //     index: 1
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[2]
-  //         .name,
-  //     index: 2
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[3]
-  //         .name,
-  //     index: 3
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[4]
-  //         .name,
-  //     index: 4
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[5]
-  //         .name,
-  //     index: 5
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[6]
-  //         .name,
-  //     index: 6
-  //   },
-  //   {
-  //     image:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .gownImage.fluid.src,
-  //     mobileLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .name,
-  //     desktopLabel:
-  //       props.data.allContentfulGowns.edges[0].node.collections[0].gowns[7]
-  //         .name,
-  //     index: 7
-  //   }
-  // ];
   return (
     <Layout>
       <NavBar />
@@ -329,7 +201,13 @@ const GownsPage = props => {
         <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
       <GownHeaderContainer>
+      <Button >
+            <ButtonIcon>&#10094;</ButtonIcon>
+          </Button>
         <GownHeader icon={icon} open={open} />
+        <Button >
+            <ButtonIcon>&#10095;</ButtonIcon>
+          </Button>
       </GownHeaderContainer>
       <NavMenuDesktop />
       <SearchMenuContainer>
@@ -340,7 +218,6 @@ const GownsPage = props => {
           <SearchMenuItems>View Collection</SearchMenuItems>
         </SearchMenu>
       </SearchMenuContainer>
-      {/* <img src='{props.data.allContentfulGowns.edges[0].node.gownImage.file.fileName}'/> */}
       <CollectionsContainer>
         <Link to="/collection">
           <CollectionTitle>
@@ -349,8 +226,17 @@ const GownsPage = props => {
                 .collectionName
             }
           </CollectionTitle>
+          <MobileCollectionTitle>
+            {
+              props.data.allContentfulGowns.edges[0].node.collections[0]
+                .collectionName
+            }
+          </MobileCollectionTitle>
+          <CollectionDescription>
+            A description of the theme of the gowns in the collection
+          </CollectionDescription>
         </Link>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
+        <CollectionList slideData={nodes1} title="Classics"></CollectionList>
         <SliderAdjuster>
           <Link to="/collection">
             <CollectionTitle>
@@ -359,40 +245,54 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
-          </Link>
-          <CollectionList
-            slideData={cardData}
-            title="Classics"
-          ></CollectionList>
-        </SliderAdjuster>
-        <SliderAdjuster>
-          <Link to="/collection">
-            <CollectionTitle>
+            <MobileCollectionTitle>
               {
-                props.data.allContentfulGowns.edges[2].node.collections[0]
+                props.data.allContentfulGowns.edges[1].node.collections[0]
                   .collectionName
               }
-            </CollectionTitle>
+            </MobileCollectionTitle>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
           </Link>
-          <CollectionList
-            slideData={cardData}
-            title="Classics"
-          ></CollectionList>
+          <CollectionList slideData={nodes2} title="Classics"></CollectionList>
         </SliderAdjuster>
-        <SliderAdjuster>
-          <Link to="/collection">
-            <CollectionTitle>
-              {
-                props.data.allContentfulGowns.edges[3].node.collections[0]
-                  .collectionName
-              }
-            </CollectionTitle>
-          </Link>
-          <CollectionList
-            slideData={cardData}
-            title="Classics"
-          ></CollectionList>
-        </SliderAdjuster>
+        <MobileGridRemoval>
+          <SliderAdjuster>
+            <Link to="/collection">
+              <CollectionTitle>
+                {
+                  props.data.allContentfulGowns.edges[2].node.collections[0]
+                    .collectionName
+                }
+              </CollectionTitle>
+              <CollectionDescription>
+                A description of the theme of the gowns in the collection
+              </CollectionDescription>
+            </Link>
+            <CollectionList
+              slideData={nodes3}
+              title="Classics"
+            ></CollectionList>
+          </SliderAdjuster>
+          <SliderAdjuster>
+            <Link to="/collection">
+              <CollectionTitle>
+                {
+                  props.data.allContentfulGowns.edges[4].node.collections[0]
+                    .collectionName
+                }
+              </CollectionTitle>
+              <CollectionDescription>
+                A description of the theme of the gowns in the collection
+              </CollectionDescription>
+            </Link>
+            <CollectionList
+              slideData={nodes4}
+              title="Classics"
+            ></CollectionList>
+          </SliderAdjuster>
+        </MobileGridRemoval>
       </CollectionsContainer>
       <Footer />
     </Layout>
@@ -400,31 +300,3 @@ const GownsPage = props => {
 };
 
 export default GownsPage;
-
-//-------------------------------------------
-
-//  DATA I NEED IS FETCHED WITH QUERY BELOW
-
-// export const carouselImageQuery =
-// graphql`
-// query MyQuery {
-//   allContentfulGowns {
-//     group(field: id) {
-//       nodes {
-//         collections {
-//           collectionName
-//           gowns {
-//             gownImage {
-//               title
-//               file {
-//                 fileName
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// `

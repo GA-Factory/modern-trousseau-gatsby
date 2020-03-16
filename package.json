@@ -33,11 +33,19 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "dotenv": "^8.2.0",
+<<<<<<< HEAD
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.43",
     "gatsby-plugin-manifest": "^2.2.44",
     "gatsby-plugin-offline": "^3.0.37",
     "gatsby-plugin-react-helmet": "^3.1.23",
+=======
+    "gatsby": "^2.19.16",
+    "gatsby-image": "^2.2.43",
+    "gatsby-plugin-manifest": "^2.2.14",
+    "gatsby-plugin-offline": "^3.0.2",
+    "gatsby-plugin-react-helmet": "^3.1.6",
+>>>>>>> MoTro-151-Gown-GraphQL-queries
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.4.7",
     "gatsby-plugin-styled-components": "^3.1.20",
