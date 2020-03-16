@@ -3,6 +3,38 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Logo from "../FullLogo/Logo";
 
+const HeaderNav = styled.nav`
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #FAE5DC;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const HeaderLogo = styled.div`
+    padding: 30px 20px;
+    margin-top: 30px;
+    font-size: 64px;
+`;
+
+const UL = styled.ul`
+    display: flex;
+    flex-flow: row;
+`;
+
+const LiHeader = styled.li`
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+`;
 
 const HeaderNav = styled.nav`
   font-family: "Raleway", sans-serif;
