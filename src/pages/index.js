@@ -11,15 +11,6 @@ import OwnerQuote from "../components/owner-quote/owner-quote";
 import ComponentCollection from "../components/component-collection/ComponentCollection";
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
-import AboutUs from "../components/AboutUs/AboutUs"
-
-
-const NavBarContainer = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
 
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
@@ -94,10 +85,7 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      <NavBarContainer>
-        <NavBar />
-      </NavBarContainer>
-
+      <NavBar />
       <HeaderNavBar />
       <Slider data={props.data} />
       <Tagline
