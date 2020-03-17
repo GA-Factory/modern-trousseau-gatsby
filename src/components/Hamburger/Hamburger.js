@@ -36,16 +36,17 @@ const MenuIcon = styled.button`
   }
 `;
 
-const NavBar = styled.nav`
+const NavBar = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: 90%;
+
   transition: transform 300ms;
   position: absolute;
   top: 0;
   right: 0;
-  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
+
+  transform: ${({ nav }) => (nav ? "translateX(0)" : "scale(0)")};
 `;
 
 const Burger = () => {

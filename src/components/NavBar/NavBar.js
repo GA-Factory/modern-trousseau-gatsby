@@ -9,7 +9,7 @@ const NavBar = props => {
   return (
     <>
       <nav className="nav-bar">
-        <Burger></Burger>
+        <Burger />
         {/* gray menu starts */}
         {/* <div className="mobile-style"> */}
         {/* Replace with burger component when complete */}
