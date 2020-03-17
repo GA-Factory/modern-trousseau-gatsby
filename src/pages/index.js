@@ -21,9 +21,16 @@ const ImageQuery = styled(Img)`
   height: 600px;
 `;
 
+const Div1 = styled.div`
+  display: block;
+  @media (max-width: 820px) {
+    display: none;
+  }
+`;
+
 const NavBarContainer = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     display: block;
   }
 `;
@@ -67,6 +74,9 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
+      <Div1>
+        <HeaderNavBar />
+      </Div1>
       <NavBarContainer>
         <NavBar />
       </NavBarContainer>
