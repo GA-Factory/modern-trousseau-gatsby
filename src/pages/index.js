@@ -71,7 +71,6 @@ const IndexPage = props => {
         <NavBar />
       </NavBarContainer>
 
-      <HeaderNavBar />
       {/* <Slider data={props.data} /> */}
       <Tagline
         headline="Classic Couture. Custom Fit."
