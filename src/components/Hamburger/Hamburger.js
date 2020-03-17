@@ -22,6 +22,17 @@ const MenuIcon = styled.button`
     border-radius: 5px;
     transform-origin: 1px;
     position: relative;
+    transition: opacity 200ms, transform 200ms;
+
+    :first-child {
+      transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
+    }
+    :nth-child(2) {
+      opacity: ${({ nav }) => (nav ? "0" : "1")};
+    }
+    :nth-child(3) {
+      transform: ${({ nav }) => (nav ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
 `;
 
@@ -29,7 +40,8 @@ const NavBar = styled.nav`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 50%;
+  width: 90%;
+  transition: transform 300ms;
   position: absolute;
   top: 0;
   right: 0;
@@ -40,7 +52,7 @@ const Burger = () => {
   const [nav, showNav] = useState(false);
   return (
     <div>
-      <MenuIcon onClick={() => showNav(!nav)}>
+      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div />
         <div />
         <div />

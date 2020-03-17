@@ -28,6 +28,13 @@ const NavBarContainer = styled.div`
   }
 `;
 
+const HeaderNavBarContainer = styled.div`
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
     query contentfulGowns {
@@ -70,7 +77,9 @@ const IndexPage = props => {
       <NavBarContainer>
         <NavBar />
       </NavBarContainer>
-
+      <HeaderNavBarContainer>
+        <HeaderNavBar />
+      </HeaderNavBarContainer>
       {/* <Slider data={props.data} /> */}
       <Tagline
         headline="Classic Couture. Custom Fit."
