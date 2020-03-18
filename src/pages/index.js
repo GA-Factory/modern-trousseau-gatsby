@@ -23,7 +23,7 @@ const ImageQuery = styled(Img)`
 
 const Div1 = styled.div`
   display: block;
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
