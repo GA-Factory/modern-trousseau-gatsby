@@ -40,27 +40,27 @@ const NavBar = props => {
       <Nav>
         <Mobile>
           {/* Replace with burger component when complete */}
-          <Link to="#">
+          <Link to="/">
             <Icons name={['fas', 'bars']} size="lg" />
           </Link>
         </Mobile>
         <Mobile>
-          <Link to="#">
+          <Link to="/">
             <Icons name={['fas', 'search']} size="lg" />
           </Link>
         </Mobile>
         <Desktop>
-          <Link to="#">
+          <Link to="/">
             <Icons name={['fas', 'search']} />
           </Link>
         </Desktop>
         <Desktop>
-          <Link to="#">
+          <Link to="/">
             <Icons name={['fas', 'map-marker-alt']} />
           </Link>
         </Desktop>
         <Desktop>
-          <Link to="#">
+          <Link to="/">
             <Icons name={['far', 'user']} />
           </Link>
         </Desktop>

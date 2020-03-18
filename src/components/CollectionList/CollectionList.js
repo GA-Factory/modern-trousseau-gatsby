@@ -1,5 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import GownHeader from "../GownHeader/GownHeader";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
+
+let icon = faSlidersH;
+library.add(faSlidersH);
 
 const DesktopCard = styled.div`
   display: none;
@@ -13,7 +20,8 @@ const DesktopCard = styled.div`
 `;
 
 const MobileCard = styled.div`
-  display: flex;
+  /* display: flex; */
+  /* flex-direction */
   width: 100%;
   height: 100%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -294,6 +302,7 @@ class CollectionList extends React.Component {
         </DesktopCard>
 
         <MobileCard>
+        {/* <GownHeader icon={icon} open={open} /> */}
           <MobileGridContainer>
           <MobileImageContainer>
             <MobileImage src={this.state.properties[0].gownImage.fluid.src}></MobileImage>
