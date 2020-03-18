@@ -19,21 +19,6 @@ const NavBar = props => {
             <Icons name={["fas", "map-marker-alt"]} size="lg" />
           </Link>
         </div>
-        <div className="desktop-style">
-          <Link to="#">
-            <Icons name={["fas", "search"]} />
-          </Link>
-        </div>
-        <div className="desktop-style">
-          <Link to="#">
-            <Icons name={["fas", "map-marker-alt"]} />
-          </Link>
-        </div>
-        <div className="desktop-style">
-          <Link to="#">
-            <Icons name={["far", "user"]} />
-          </Link>
-        </div>
       </nav>
     </>
   );
