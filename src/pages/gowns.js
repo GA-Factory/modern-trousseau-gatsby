@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
+// import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import GownHeader from "../GownHeader/GownHeader";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
+// import GownHeader from "../GownHeader/GownHeader";
+// import { library } from "@fortawesome/fontawesome-svg-core";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
-let icon = faSlidersH;
-library.add(faSlidersH);
+// let icon = faSlidersH;
+// library.add(faSlidersH);
 
 const DesktopCard = styled.div`
   display: none;
