@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-// import GownHeader from "../GownHeader/GownHeader";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "gatsby";
+import GownHeader from "../GownHeader/GownHeader";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
-// let icon = faSlidersH;
-// library.add(faSlidersH);
+let icon = faSlidersH;
+library.add(faSlidersH);
 
 const DesktopCard = styled.div`
   display: none;
@@ -53,6 +54,25 @@ const Button = styled.div`
   }
 `;
 
+const MobileSliderButtons = styled.div`
+margin-left: auto;
+margin-right: auto;
+display: flex;
+padding: 0 30%;
+background-color: ${props => props.theme.colors.primaryPink};
+`
+
+const MobileButton = styled.div`
+  display: flex;
+  background-color: ${props => props.theme.colors.primaryPink};
+  border: 0;
+  margin: 0;
+  font-size: 36px;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
 const ImageContainer = styled.div`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -83,6 +103,42 @@ const ButtonIcon = styled.p`
   display: none;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: flex;
+  }
+`;
+
+const MobileButtonIcon = styled.p`
+  display: flex;
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const MobileCollectionTitle = styled.p`
+  font-weight: 800;
+  display: flex;
+  margin-top: 0;
+  padding-left: 2.5%;
+  background-color: white;
+  border-top: 8px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const CollectionDescription = styled.p`
+  font-weight: 500;
+  padding-left: 2.5%;
+  border-top: 5px solid #fae5dc;
+  background-color: ${props => props.theme.colors.primaryPink};
+  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    border-top: 5px solid #e5e5e5;
+    background-color: ${props => props.theme.colors.backgroundGray};
   }
 `;
 
@@ -160,7 +216,8 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      properties: this.props.slideData,
+      mobilePropertiesA: this.props.slideData,
+      mobilePropertiesB: this.props.slideDataA,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1],
       propertyC: this.props.slideData[2]
@@ -287,6 +344,8 @@ class CollectionList extends React.Component {
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
+    console.log(this.state.mobilePropertiesA)
+    console.log(this.state.mobilePropertiesB)
     return (
       <div>
         <DesktopCard>
@@ -302,23 +361,69 @@ class CollectionList extends React.Component {
         </DesktopCard>
 
         <MobileCard>
-        {/* <GownHeader icon={icon} open={open} /> */}
+        <MobileSliderButtons>
+        <MobileButton>
+          <MobileButtonIcon>&#10094;</MobileButtonIcon>
+        </MobileButton>
+        <GownHeader icon={icon} open={open} />
+        <MobileButton>
+          <MobileButtonIcon>&#10095;</MobileButtonIcon>
+        </MobileButton>
+        </MobileSliderButtons>
+            <TextContainer>
+          <Link to="/collection">
+          <MobileCollectionTitle>
+            collection title
+          </MobileCollectionTitle>
+        </Link>
+        <CollectionDescription>
+          A description of the theme of the gowns in the collection
+        </CollectionDescription>
+            </TextContainer>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[0].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.properties[0].name}</MobileText>
+            <MobileImage src={this.state.mobilePropertiesA[0].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesA[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[1].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.properties[1].name}</MobileText>
+            <MobileImage src={this.state.mobilePropertiesA[1].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesA[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[2].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.properties[2].name}</MobileText>
+            <MobileImage src={this.state.mobilePropertiesA[2].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesA[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.properties[3].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.properties[3].name}</MobileText>
+            <MobileImage src={this.state.mobilePropertiesA[3].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesA[3].name}</MobileText>
+          </MobileImageContainer>
+          </MobileGridContainer>
+          <TextContainer>
+          <Link to="/collection">
+          <MobileCollectionTitle>
+            collection title
+          </MobileCollectionTitle>
+        </Link>
+        <CollectionDescription>
+          A description of the theme of the gowns in the collection
+        </CollectionDescription>
+            </TextContainer>
+          <MobileGridContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.mobilePropertiesB[0].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesB[0].name}</MobileText>
+          </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.mobilePropertiesB[1].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesB[1].name}</MobileText>
+          </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.mobilePropertiesB[2].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesB[2].name}</MobileText>
+          </MobileImageContainer>
+          <MobileImageContainer>
+            <MobileImage src={this.state.mobilePropertiesB[3].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobilePropertiesB[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>
         </MobileCard>

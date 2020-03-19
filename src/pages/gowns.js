@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
@@ -7,7 +8,6 @@ import NavBar from "../components/NavBar/NavBar";
 import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
-// import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -80,9 +80,9 @@ const LogoContainer = styled.div`
 `;
 
 const GownHeaderContainer = styled.div`
-width: 100%;
-display: flex;
-padding: 0 30%;
+  width: 100%;
+  display: flex;
+  padding: 0 30%;
   border-top: 25px solid ${props => props.theme.colors.primaryPink};
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -144,11 +144,13 @@ const MobileCollectionTitle = styled.p`
 `;
 
 const CollectionDescription = styled.p`
+display: none;
   font-weight: 500;
   padding-left: 2.5%;
   border-top: 5px solid #fae5dc;
   background-color: ${props => props.theme.colors.primaryPink};
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    display: flex;
     border-top: 5px solid #e5e5e5;
     background-color: ${props => props.theme.colors.backgroundGray};
   }
@@ -195,21 +197,28 @@ const GownsPage = props => {
     element.index = i;
   });
 
+  const edges = props.data.allContentfulGowns.edges;
+  // console.log(edges);
+
+  // const[state, useState] = useState({
+
+  // });
+
   return (
     <Layout>
       <NavBar />
       <LogoContainer>
         <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
-      <GownHeaderContainer>
-      <Button >
-            <ButtonIcon>&#10094;</ButtonIcon>
-          </Button>
+      {/* <GownHeaderContainer>
+        <Button>
+          <ButtonIcon>&#10094;</ButtonIcon>
+        </Button>
         <GownHeader icon={icon} open={open} />
-        <Button >
-            <ButtonIcon>&#10095;</ButtonIcon>
-          </Button>
-      </GownHeaderContainer>
+        <Button>
+          <ButtonIcon>&#10095;</ButtonIcon>
+        </Button>
+      </GownHeaderContainer> */}
       <NavMenuDesktop />
       <SearchMenuContainer>
         <SearchMenu>
@@ -227,17 +236,12 @@ const GownsPage = props => {
                 .collectionName
             }
           </CollectionTitle>
-          <MobileCollectionTitle>
-            {
-              props.data.allContentfulGowns.edges[0].node.collections[0]
-                .collectionName
-            }
-          </MobileCollectionTitle>
         </Link>
-          <CollectionDescription>
-            A description of the theme of the gowns in the collection
-          </CollectionDescription>
-        <CollectionList slideData={nodes1} title="Classics"></CollectionList>
+        <CollectionDescription>
+          A description of the theme of the gowns in the collection
+        </CollectionDescription>
+        <CollectionList slideData={nodes1} slideDataA={nodes2} title="Classics"></CollectionList>
+            <MobileGridRemoval>
         <SliderAdjuster>
           <Link to="/collection">
             <CollectionTitle>
@@ -246,19 +250,12 @@ const GownsPage = props => {
                   .collectionName
               }
             </CollectionTitle>
-            <MobileCollectionTitle>
-              {
-                props.data.allContentfulGowns.edges[1].node.collections[0]
-                  .collectionName
-              }
-            </MobileCollectionTitle>
           </Link>
-            <CollectionDescription>
-              A description of the theme of the gowns in the collection
-            </CollectionDescription>
-          <CollectionList slideData={nodes2} title="Classics"></CollectionList>
+          <CollectionDescription>
+            A description of the theme of the gowns in the collection
+          </CollectionDescription>
+          <CollectionList slideData={nodes2} slideDataA={nodes2} title="Classics"></CollectionList>
         </SliderAdjuster>
-        <MobileGridRemoval>
           <SliderAdjuster>
             <Link to="/collection">
               <CollectionTitle>
@@ -268,11 +265,12 @@ const GownsPage = props => {
                 }
               </CollectionTitle>
             </Link>
-              <CollectionDescription>
-                A description of the theme of the gowns in the collection
-              </CollectionDescription>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
             <CollectionList
               slideData={nodes3}
+              slideDataA={nodes2}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
@@ -285,11 +283,12 @@ const GownsPage = props => {
                 }
               </CollectionTitle>
             </Link>
-              <CollectionDescription>
-                A description of the theme of the gowns in the collection
-              </CollectionDescription>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
             <CollectionList
               slideData={nodes4}
+              slideDataA={nodes2}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
