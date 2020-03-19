@@ -248,11 +248,14 @@ const GownsPage = props => {
   console.log(edges[0].gowns[0].name);
   console.log(edges[0].gowns[0].gownImage.fluid.src);
   
-  edges.forEach((element, i) => {
+  console.log(edges);
+  let newArray = edges.slice(2);
+  console.log(newArray);
+  newArray.forEach((element, i) => {
     element.index = i;
   });
-  console.log(edges);
-
+  console.log(newArray);
+  
   // const[state, useState] = useState({
 
   // });
@@ -293,7 +296,7 @@ const GownsPage = props => {
         <CollectionDescription>
           A description of the theme of the gowns in the collection
         </CollectionDescription>
-        <CollectionList slideData={nodes1} slideDataA={nodes2} edges={edges} title="Classics"></CollectionList>
+        <CollectionList slideData={nodes1} slideDataA={nodes2} edges={newArray} title="Classics"></CollectionList>
             <MobileGridRemoval>
         <SliderAdjuster>
           <Link to="/collection">
@@ -307,7 +310,7 @@ const GownsPage = props => {
           <CollectionDescription>
             A description of the theme of the gowns in the collection
           </CollectionDescription>
-          <CollectionList slideData={nodes2} slideDataA={nodes2} edges={edges} title="Classics"></CollectionList>
+          <CollectionList slideData={nodes2} slideDataA={nodes2} edges={newArray} title="Classics"></CollectionList>
         </SliderAdjuster>
           <SliderAdjuster>
             <Link to="/collection">
@@ -324,7 +327,7 @@ const GownsPage = props => {
             <CollectionList
               slideData={nodes3}
               slideDataA={nodes2}
-              edges={edges} 
+              edges={newArray} 
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
@@ -343,7 +346,7 @@ const GownsPage = props => {
             <CollectionList
               slideData={nodes4}
               slideDataA={nodes2}
-              edges={edges} 
+              edges={newArray} 
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
