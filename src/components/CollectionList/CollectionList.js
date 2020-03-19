@@ -67,7 +67,7 @@ const MobileButton = styled.div`
   background-color: ${props => props.theme.colors.primaryPink};
   border: 0;
   margin: 0;
-  font-size: 36px;
+  font-size: 48px;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     display: none;
   }
@@ -357,7 +357,7 @@ class CollectionList extends React.Component {
       this.state.mobileIndexB != 0
      )
      this.setState({
-      mobileIndexA: this.state.mobileIndexA + 9,
+      mobileIndexA: this.props.edges.length - 1,
       mobileIndexB: this.state.mobileIndexB - 1
     })
     if (
@@ -366,33 +366,33 @@ class CollectionList extends React.Component {
      )
      this.setState({
       mobileIndexA: this.state.mobileIndexA - 1,
-      mobileIndexB: this.state.mobileIndexB + 9
+      mobileIndexB: this.props.edges.length - 1
     })
   }
 
   mobileCollectionSliderNext = () => {
     if (
-      this.state.mobileIndexA != 9 &&
-      this.state.mobileIndexB != 9
+      this.state.mobileIndexA != this.props.edges.length - 1 &&
+      this.state.mobileIndexB != this.props.edges.length - 1
      ) 
     this.setState({
       mobileIndexA: this.state.mobileIndexA + 1,
       mobileIndexB: this.state.mobileIndexB + 1
     })
     if (
-      this.state.mobileIndexA != 9 &&
-      this.state.mobileIndexB == 9
+      this.state.mobileIndexA != this.props.edges.length - 1 &&
+      this.state.mobileIndexB == this.props.edges.length - 1
      )
      this.setState({
       mobileIndexA: this.state.mobileIndexA + 1,
-      mobileIndexB: this.state.mobileIndexB - 9
+      mobileIndexB: 0
     })
     if (
-      this.state.mobileIndexA == 9 &&
-      this.state.mobileIndexB != 9
+      this.state.mobileIndexA == this.props.edges.length - 1 &&
+      this.state.mobileIndexB != this.props.edges.length - 1
      )
      this.setState({
-      mobileIndexA: this.state.mobileIndexA - 9,
+      mobileIndexA: 0,
       mobileIndexB: this.state.mobileIndexB + 1
     })
   }

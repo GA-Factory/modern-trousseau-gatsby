@@ -294,12 +294,12 @@ const CollectionPage = () => (
       </DressListItemGrid>
     </SearchMenuContainer>
     <CollectionsContainer>
-      <CollectionList slideData={cardData} title="Classics"></CollectionList>
+      {/* <CollectionList slideData={cardData} title="Classics"></CollectionList> */}
       <SliderAdjuster>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
+        {/* <CollectionList slideData={cardData} title="Classics"></CollectionList> */}
       </SliderAdjuster>
       <SliderAdjuster>
-        <CollectionList slideData={cardData} title="Classics"></CollectionList>
+        {/* <CollectionList slideData={cardData} title="Classics"></CollectionList> */}
       </SliderAdjuster>
     </CollectionsContainer>
     <ButtonContainer>
