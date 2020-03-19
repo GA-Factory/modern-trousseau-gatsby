@@ -348,13 +348,40 @@ class CollectionList extends React.Component {
     }
   };
 
+  mobileCollectionSliderPrev = () => {
+    if (
+      this.state.mobileIndexA != 0 &&
+      this.state.mobileIndexB != 0
+     ) 
+    this.setState({
+      mobileIndexA: this.state.mobileIndexA - 1,
+      mobileIndexB: this.state.mobileIndexB - 1
+    })
+    if (
+      this.state.mobileIndexA == 0 &&
+      this.state.mobileIndexB != 0
+     )
+     this.setState({
+      mobileIndexA: this.state.mobileIndexA + 9,
+      mobileIndexB: this.state.mobileIndexB - 1
+    })
+    if (
+      this.state.mobileIndexA != 0 &&
+      this.state.mobileIndexB == 0
+     )
+     this.setState({
+      mobileIndexA: this.state.mobileIndexA - 1,
+      mobileIndexB: this.state.mobileIndexB + 9
+    })
+    console.log(this.state.mobileIndexA)
+    console.log(this.state.mobileIndexB)
+  }
 
-
-  mobileCollectionSlider = () => {
+  mobileCollectionSliderNext = () => {
     if (
       this.state.mobileIndexA != 9 &&
       this.state.mobileIndexB != 9
-     )
+     ) 
     this.setState({
       mobileIndexA: this.state.mobileIndexA + 1,
       mobileIndexB: this.state.mobileIndexB + 1
@@ -365,15 +392,15 @@ class CollectionList extends React.Component {
      )
      this.setState({
       mobileIndexA: this.state.mobileIndexA + 1,
-      mobileIndexB: 0
+      mobileIndexB: this.state.mobileIndexB - 9
     })
     if (
       this.state.mobileIndexA == 9 &&
       this.state.mobileIndexB != 9
      )
      this.setState({
-      mobileIndexA: 0,
-      mobileIndexB: this.state.mobileIndexA + 1
+      mobileIndexA: this.state.mobileIndexA - 9,
+      mobileIndexB: this.state.mobileIndexB + 1
     })
     console.log(this.state.mobileIndexA)
     console.log(this.state.mobileIndexB)
@@ -399,11 +426,11 @@ class CollectionList extends React.Component {
 
         <MobileCard>
         <MobileSliderButtons>
-        <MobileButton onClick={() => this.mobileCollectionSlider()}>
+        <MobileButton onClick={() => this.mobileCollectionSliderPrev()}>
           <MobileButtonIcon>&#10094;</MobileButtonIcon>
         </MobileButton>
         <GownHeader icon={icon} open={open} />
-        <MobileButton onClick={() => this.mobileCollectionSlider()}>
+        <MobileButton onClick={() => this.mobileCollectionSliderNext()}>
           <MobileButtonIcon>&#10095;</MobileButtonIcon>
         </MobileButton>
         </MobileSliderButtons>
