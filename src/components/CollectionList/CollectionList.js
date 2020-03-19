@@ -216,6 +216,10 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      mobileEdges: this.props.edges,
+
+      // MOBILE EDGES[THIS WILL BE INDEX NUMBER TO CHANGE ON CLICK]
+      
       mobilePropertiesA: this.props.slideData,
       mobilePropertiesB: this.props.slideDataA,
       propertyA: this.props.slideData[0],
@@ -373,7 +377,7 @@ class CollectionList extends React.Component {
             <TextContainer>
           <Link to="/collection">
           <MobileCollectionTitle>
-            collection title
+              {this.state.mobileEdges[0].collectionName}
           </MobileCollectionTitle>
         </Link>
         <CollectionDescription>
@@ -382,26 +386,26 @@ class CollectionList extends React.Component {
             </TextContainer>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesA[0].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesA[0].name}</MobileText>
+          <MobileImage src={this.state.mobileEdges[0].gowns[0].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[0].gowns[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesA[1].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesA[1].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[0].gowns[1].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[0].gowns[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesA[2].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesA[2].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[0].gowns[2].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[0].gowns[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesA[3].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesA[3].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[0].gowns[3].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[0].gowns[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>
           <TextContainer>
           <Link to="/collection">
           <MobileCollectionTitle>
-            collection title
+          {this.state.mobileEdges[1].collectionName}
           </MobileCollectionTitle>
         </Link>
         <CollectionDescription>
@@ -410,20 +414,20 @@ class CollectionList extends React.Component {
             </TextContainer>
           <MobileGridContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesB[0].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesB[0].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[2].gowns[0].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[2].gowns[0].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesB[1].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesB[1].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[2].gowns[1].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[2].gowns[1].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesB[2].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesB[2].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[2].gowns[2].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[2].gowns[2].name}</MobileText>
           </MobileImageContainer>
           <MobileImageContainer>
-            <MobileImage src={this.state.mobilePropertiesB[3].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobilePropertiesB[3].name}</MobileText>
+            <MobileImage src={this.state.mobileEdges[0].gowns[3].gownImage.fluid.src}></MobileImage>
+            <MobileText>{this.state.mobileEdges[2].gowns[3].name}</MobileText>
           </MobileImageContainer>
           </MobileGridContainer>
         </MobileCard>
