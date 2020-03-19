@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import Icons from "../Icons/FAIcon";
-import "./NavBar.css";
 import Logo from "../FullLogo/Logo";
 import Burger from "../Hamburger/Hamburger";
 import styled from "styled-components";
@@ -16,10 +15,8 @@ const NavBarNav = styled.nav`
   padding: 10px 10px;
 `;
 
-const DivMobile = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+const IconWrapper = styled.div`
+  padding-right: 5px;
 `;
 
 const NavBar = props => {
@@ -27,14 +24,12 @@ const NavBar = props => {
     <>
       <NavBarNav>
         <Burger />
-        <DivMobile>
-          <Logo notag tagline title1="MODERN" title2="trousseau" />
-        </DivMobile>
-        <DivMobile>
+        <Logo notag tagline title1="MODERN" title2="trousseau" />
+        <IconWrapper>
           <Link to="/visit">
             <Icons name={["fas", "map-marker-alt"]} size="lg" />
           </Link>
-        </DivMobile>
+        </IconWrapper>
       </NavBarNav>
     </>
   );
