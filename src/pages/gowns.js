@@ -283,7 +283,7 @@ const GownsPage = props => {
         <CollectionDescription>
           A description of the theme of the gowns in the collection
         </CollectionDescription>
-        <CollectionList slideData={nodes1} slideDataA={nodes2} edges={newArray} title="Classics"></CollectionList>
+        <CollectionList slideData={nodes1} edges={newArray} title="Classics"></CollectionList>
             <MobileGridRemoval>
         <SliderAdjuster>
           <Link to="/collection">
@@ -297,7 +297,7 @@ const GownsPage = props => {
           <CollectionDescription>
             A description of the theme of the gowns in the collection
           </CollectionDescription>
-          <CollectionList slideData={nodes2} slideDataA={nodes2} edges={newArray} title="Classics"></CollectionList>
+          <CollectionList slideData={nodes2} edges={newArray} title="Classics"></CollectionList>
         </SliderAdjuster>
           <SliderAdjuster>
             <Link to="/collection">
@@ -313,7 +313,6 @@ const GownsPage = props => {
             </CollectionDescription>
             <CollectionList
               slideData={nodes3}
-              slideDataA={nodes2}
               edges={newArray} 
               title="Classics"
             ></CollectionList>
@@ -332,7 +331,6 @@ const GownsPage = props => {
             </CollectionDescription>
             <CollectionList
               slideData={nodes4}
-              slideDataA={nodes2}
               edges={newArray} 
               title="Classics"
             ></CollectionList>

@@ -219,8 +219,6 @@ class CollectionList extends React.Component {
       mobileIndexA: 0,
       mobileIndexB: 1,
       mobileEdges: this.props.edges,
-      mobilePropertiesA: this.props.slideData,
-      mobilePropertiesB: this.props.slideDataA,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1],
       propertyC: this.props.slideData[2],
