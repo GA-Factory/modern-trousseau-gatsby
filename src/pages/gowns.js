@@ -1,89 +1,52 @@
-// import React from "react";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
-// import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-
-import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
-
-let open = false;
-let icon = faSlidersH;
-
-// export const GownQuery = graphql`
-//   query MyQuery {
-//     allContentfulGowns(limit: 400, sort: { fields: name }) {
-//       edges {
-//         node {
-//           collections {
-//             collectionName
-//             gowns {
-//               name
-//               gownImage {
-//                 fluid {
-//                   base64
-//                   src
-//                   srcSet
-//                   srcSetWebp
-//                   srcWebp
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export const GownQuery = graphql`
-query MyQuery {
-  allContentfulGowns(limit: 40, sort: {fields: name}) {
-    edges {
-      node {
-        collections {
-          collectionName
-          gowns {
-            name
-            gownImage {
-              fluid {
-                base64
-                src
-                srcSet
-                srcSetWebp
-                srcWebp
+  query MyQuery {
+    allContentfulGowns(limit: 40, sort: { fields: name }) {
+      edges {
+        node {
+          collections {
+            collectionName
+            gowns {
+              name
+              gownImage {
+                fluid {
+                  base64
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                }
               }
             }
           }
         }
       }
     }
-  }
-  allContentfulCollection(limit: 40) {
-    nodes {
-      collectionName
-      gowns {
-        name
-        gownImage {
-          fluid {
-            src
+    allContentfulCollection(limit: 40) {
+      nodes {
+        collectionName
+        gowns {
+          name
+          gownImage {
+            fluid {
+              src
+            }
           }
         }
       }
     }
   }
-}
 `;
-
-
-
 
 const SearchMenu = styled.div`
   display: flex;
@@ -120,17 +83,6 @@ const LogoContainer = styled.div`
     padding-top: 50px;
   }
 `;
-
-// const GownHeaderContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   padding: 0 30%;
-//   border-top: 25px solid ${props => props.theme.colors.primaryPink};
-//   background-color: ${props => props.theme.colors.primaryPink};
-//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-//     display: none;
-//   }
-// `;
 
 const SliderAdjuster = styled.div`
   height: 25%;
@@ -172,21 +124,8 @@ const CollectionTitle = styled.p`
   }
 `;
 
-// const MobileCollectionTitle = styled.p`
-//   font-weight: 800;
-//   display: flex;
-//   margin-top: 0;
-//   padding-left: 2.5%;
-//   background-color: white;
-//   border-top: 8px solid #fae5dc;
-//   background-color: ${props => props.theme.colors.primaryPink};
-//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-//     display: none;
-//   }
-// `;
-
 const CollectionDescription = styled.p`
-display: none;
+  display: none;
   font-weight: 500;
   padding-left: 2.5%;
   border-top: 5px solid #fae5dc;
@@ -195,24 +134,6 @@ display: none;
     display: flex;
     border-top: 5px solid #e5e5e5;
     background-color: ${props => props.theme.colors.backgroundGray};
-  }
-`;
-
-const Button = styled.div`
-  display: flex;
-  background-color: ${props => props.theme.colors.primaryPink};
-  border: 0;
-  margin: 0;
-  font-size: 36px;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const ButtonIcon = styled.p`
-  display: flex;
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
   }
 `;
 
@@ -239,7 +160,6 @@ const GownsPage = props => {
     element.index = i;
   });
 
-
   // NEED TO FIX QUERY FOR THIS SPOT HERE
   const edges = props.data.allContentfulCollection.nodes;
   let newArray = edges.slice(2);
@@ -253,15 +173,6 @@ const GownsPage = props => {
       <LogoContainer>
         <Logo notag tagline title1="MODERN" title2="trousseau"></Logo>
       </LogoContainer>
-      {/* <GownHeaderContainer>
-        <Button>
-          <ButtonIcon>&#10094;</ButtonIcon>
-        </Button>
-        <GownHeader icon={icon} open={open} />
-        <Button>
-          <ButtonIcon>&#10095;</ButtonIcon>
-        </Button>
-      </GownHeaderContainer> */}
       <NavMenuDesktop />
       <SearchMenuContainer>
         <SearchMenu>
@@ -283,22 +194,30 @@ const GownsPage = props => {
         <CollectionDescription>
           A description of the theme of the gowns in the collection
         </CollectionDescription>
-        <CollectionList slideData={nodes1} edges={newArray} title="Classics"></CollectionList>
-            <MobileGridRemoval>
-        <SliderAdjuster>
-          <Link to="/collection">
-            <CollectionTitle>
-              {
-                props.data.allContentfulGowns.edges[1].node.collections[0]
-                  .collectionName
-              }
-            </CollectionTitle>
-          </Link>
-          <CollectionDescription>
-            A description of the theme of the gowns in the collection
-          </CollectionDescription>
-          <CollectionList slideData={nodes2} edges={newArray} title="Classics"></CollectionList>
-        </SliderAdjuster>
+        <CollectionList
+          slideData={nodes1}
+          edges={newArray}
+          title="Classics"
+        ></CollectionList>
+        <MobileGridRemoval>
+          <SliderAdjuster>
+            <Link to="/collection">
+              <CollectionTitle>
+                {
+                  props.data.allContentfulGowns.edges[1].node.collections[0]
+                    .collectionName
+                }
+              </CollectionTitle>
+            </Link>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
+            <CollectionList
+              slideData={nodes2}
+              edges={newArray}
+              title="Classics"
+            ></CollectionList>
+          </SliderAdjuster>
           <SliderAdjuster>
             <Link to="/collection">
               <CollectionTitle>
@@ -313,7 +232,7 @@ const GownsPage = props => {
             </CollectionDescription>
             <CollectionList
               slideData={nodes3}
-              edges={newArray} 
+              edges={newArray}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>
@@ -331,7 +250,7 @@ const GownsPage = props => {
             </CollectionDescription>
             <CollectionList
               slideData={nodes4}
-              edges={newArray} 
+              edges={newArray}
               title="Classics"
             ></CollectionList>
           </SliderAdjuster>

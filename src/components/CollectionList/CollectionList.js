@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import GownHeader from "../GownHeader/GownHeader";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 let icon = faSlidersH;
@@ -21,8 +20,6 @@ const DesktopCard = styled.div`
 `;
 
 const MobileCard = styled.div`
-  /* display: flex; */
-  /* flex-direction */
   width: 100%;
   height: 100%;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -55,12 +52,12 @@ const Button = styled.div`
 `;
 
 const MobileSliderButtons = styled.div`
-margin-left: auto;
-margin-right: auto;
-display: flex;
-padding: 0 30%;
-background-color: ${props => props.theme.colors.primaryPink};
-`
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 0 30%;
+  background-color: ${props => props.theme.colors.primaryPink};
+`;
 
 const MobileButton = styled.div`
   display: flex;
@@ -116,7 +113,7 @@ const MobileButtonIcon = styled.p`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 const MobileCollectionTitle = styled.p`
   font-weight: 800;
@@ -165,10 +162,10 @@ const MobileText = styled.p`
 `;
 
 const MobileGridContainer = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+`;
 
 const MobileImageContainer = styled.div`
   width: 100%;
@@ -221,10 +218,10 @@ class CollectionList extends React.Component {
       mobileEdges: this.props.edges,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1],
-      propertyC: this.props.slideData[2],
+      propertyC: this.props.slideData[2]
     };
   }
-  
+
   prevProperty = () => {
     if (
       this.state.propertyA.index > 0 &&
@@ -344,58 +341,49 @@ class CollectionList extends React.Component {
   };
 
   mobileCollectionSliderPrev = () => {
-    if (
-      this.state.mobileIndexA != 0 &&
-      this.state.mobileIndexB != 0
-     ) 
-    this.setState({
-      mobileIndexA: this.state.mobileIndexA - 1,
-      mobileIndexB: this.state.mobileIndexB - 1
-    })
-    if (
-      this.state.mobileIndexA == 0 &&
-      this.state.mobileIndexB != 0
-     )
-     this.setState({
-      mobileIndexA: this.props.edges.length - 1,
-      mobileIndexB: this.state.mobileIndexB - 1
-    })
-    if (
-      this.state.mobileIndexA != 0 &&
-      this.state.mobileIndexB == 0
-     )
-     this.setState({
-      mobileIndexA: this.state.mobileIndexA - 1,
-      mobileIndexB: this.props.edges.length - 1
-    })
-  }
+    if (this.state.mobileIndexA != 0 && this.state.mobileIndexB != 0)
+      this.setState({
+        mobileIndexA: this.state.mobileIndexA - 1,
+        mobileIndexB: this.state.mobileIndexB - 1
+      });
+    if (this.state.mobileIndexA == 0 && this.state.mobileIndexB != 0)
+      this.setState({
+        mobileIndexA: this.props.edges.length - 1,
+        mobileIndexB: this.state.mobileIndexB - 1
+      });
+    if (this.state.mobileIndexA != 0 && this.state.mobileIndexB == 0)
+      this.setState({
+        mobileIndexA: this.state.mobileIndexA - 1,
+        mobileIndexB: this.props.edges.length - 1
+      });
+  };
 
   mobileCollectionSliderNext = () => {
     if (
       this.state.mobileIndexA != this.props.edges.length - 1 &&
       this.state.mobileIndexB != this.props.edges.length - 1
-     ) 
-    this.setState({
-      mobileIndexA: this.state.mobileIndexA + 1,
-      mobileIndexB: this.state.mobileIndexB + 1
-    })
+    )
+      this.setState({
+        mobileIndexA: this.state.mobileIndexA + 1,
+        mobileIndexB: this.state.mobileIndexB + 1
+      });
     if (
       this.state.mobileIndexA != this.props.edges.length - 1 &&
       this.state.mobileIndexB == this.props.edges.length - 1
-     )
-     this.setState({
-      mobileIndexA: this.state.mobileIndexA + 1,
-      mobileIndexB: 0
-    })
+    )
+      this.setState({
+        mobileIndexA: this.state.mobileIndexA + 1,
+        mobileIndexB: 0
+      });
     if (
       this.state.mobileIndexA == this.props.edges.length - 1 &&
       this.state.mobileIndexB != this.props.edges.length - 1
-     )
-     this.setState({
-      mobileIndexA: 0,
-      mobileIndexB: this.state.mobileIndexB + 1
-    })
-  }
+    )
+      this.setState({
+        mobileIndexA: 0,
+        mobileIndexB: this.state.mobileIndexB + 1
+      });
+  };
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
@@ -414,70 +402,126 @@ class CollectionList extends React.Component {
         </DesktopCard>
 
         <MobileCard>
-        <MobileSliderButtons>
-        <MobileButton onClick={() => this.mobileCollectionSliderPrev()}>
-          <MobileButtonIcon>&#10094;</MobileButtonIcon>
-        </MobileButton>
-        <GownHeader icon={icon} open={open} />
-        <MobileButton onClick={() => this.mobileCollectionSliderNext()}>
-          <MobileButtonIcon>&#10095;</MobileButtonIcon>
-        </MobileButton>
-        </MobileSliderButtons>
-            <TextContainer>
-          <Link to="/collection">
-          <MobileCollectionTitle>
-              {this.state.mobileEdges[this.state.mobileIndexA].collectionName}
-          </MobileCollectionTitle>
-        </Link>
-        <CollectionDescription>
-          A description of the theme of the gowns in the collection
-        </CollectionDescription>
-            </TextContainer>
+          <MobileSliderButtons>
+            <MobileButton onClick={() => this.mobileCollectionSliderPrev()}>
+              <MobileButtonIcon>&#10094;</MobileButtonIcon>
+            </MobileButton>
+            <GownHeader icon={icon} open={open} />
+            <MobileButton onClick={() => this.mobileCollectionSliderNext()}>
+              <MobileButtonIcon>&#10095;</MobileButtonIcon>
+            </MobileButton>
+          </MobileSliderButtons>
+          <TextContainer>
+            <Link to="/collection">
+              <MobileCollectionTitle>
+                {this.state.mobileEdges[this.state.mobileIndexA].collectionName}
+              </MobileCollectionTitle>
+            </Link>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
+          </TextContainer>
           <MobileGridContainer>
-          <MobileImageContainer>
-          <MobileImage src={this.state.mobileEdges[this.state.mobileIndexA].gowns[0].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexA].gowns[0].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexA].gowns[1].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexA].gowns[1].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexA].gowns[2].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexA].gowns[2].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexA].gowns[3].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexA].gowns[3].name}</MobileText>
-          </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexA].gowns[0]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexA].gowns[0].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexA].gowns[1]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexA].gowns[1].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexA].gowns[2]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexA].gowns[2].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexA].gowns[3]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexA].gowns[3].name}
+              </MobileText>
+            </MobileImageContainer>
           </MobileGridContainer>
           <TextContainer>
-          <Link to="/collection">
-          <MobileCollectionTitle>
-          {this.state.mobileEdges[this.state.mobileIndexB].collectionName}
-          </MobileCollectionTitle>
-        </Link>
-        <CollectionDescription>
-          A description of the theme of the gowns in the collection
-        </CollectionDescription>
-            </TextContainer>
+            <Link to="/collection">
+              <MobileCollectionTitle>
+                {this.state.mobileEdges[this.state.mobileIndexB].collectionName}
+              </MobileCollectionTitle>
+            </Link>
+            <CollectionDescription>
+              A description of the theme of the gowns in the collection
+            </CollectionDescription>
+          </TextContainer>
           <MobileGridContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexB].gowns[0].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexB].gowns[0].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexB].gowns[1].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexB].gowns[1].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexB].gowns[2].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexB].gowns[2].name}</MobileText>
-          </MobileImageContainer>
-          <MobileImageContainer>
-            <MobileImage src={this.state.mobileEdges[this.state.mobileIndexB].gowns[3].gownImage.fluid.src}></MobileImage>
-            <MobileText>{this.state.mobileEdges[this.state.mobileIndexB].gowns[3].name}</MobileText>
-          </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexB].gowns[0]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexB].gowns[0].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexB].gowns[1]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexB].gowns[1].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexB].gowns[2]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexB].gowns[2].name}
+              </MobileText>
+            </MobileImageContainer>
+            <MobileImageContainer>
+              <MobileImage
+                src={
+                  this.state.mobileEdges[this.state.mobileIndexB].gowns[3]
+                    .gownImage.fluid.src
+                }
+              ></MobileImage>
+              <MobileText>
+                {this.state.mobileEdges[this.state.mobileIndexB].gowns[3].name}
+              </MobileText>
+            </MobileImageContainer>
           </MobileGridContainer>
         </MobileCard>
       </div>
