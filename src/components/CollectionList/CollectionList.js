@@ -344,8 +344,8 @@ class CollectionList extends React.Component {
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
-    console.log(this.state.mobilePropertiesA)
-    console.log(this.state.mobilePropertiesB)
+    // console.log(this.state.mobilePropertiesA)
+    // console.log(this.state.mobilePropertiesB)
     return (
       <div>
         <DesktopCard>

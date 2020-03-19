@@ -5,7 +5,7 @@ import Logo from "../components/FullLogo/Logo";
 import NavMenuDesktop from "../components/NavMenu/NavMenuDesktop";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
-import GownHeader from "../components/GownHeader/GownHeader";
+// import GownHeader from "../components/GownHeader/GownHeader";
 import CollectionList from "../components/CollectionList/CollectionList";
 import Layout from "../global/Layout";
 import { Link } from "gatsby";
@@ -17,23 +17,48 @@ import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 let open = false;
 let icon = faSlidersH;
 
+// export const GownQuery = graphql`
+//   query MyQuery {
+//     allContentfulGowns(limit: 400, sort: { fields: name }) {
+//       edges {
+//         node {
+//           collections {
+//             collectionName
+//             gowns {
+//               name
+//               gownImage {
+//                 fluid {
+//                   base64
+//                   src
+//                   srcSet
+//                   srcSetWebp
+//                   srcWebp
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
 export const GownQuery = graphql`
-  query MyQuery {
-    allContentfulGowns(limit: 400, sort: { fields: name }) {
-      edges {
-        node {
-          collections {
-            collectionName
-            gowns {
-              name
-              gownImage {
-                fluid {
-                  base64
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
+query MyQuery {
+  allContentfulGowns(limit: 40, sort: {fields: name}) {
+    edges {
+      node {
+        collections {
+          collectionName
+          gowns {
+            name
+            gownImage {
+              fluid {
+                base64
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
               }
             }
           }
@@ -41,7 +66,24 @@ export const GownQuery = graphql`
       }
     }
   }
+  allContentfulCollection(limit: 40) {
+    nodes {
+      collectionName
+      gowns {
+        name
+        gownImage {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  }
+}
 `;
+
+
+
 
 const SearchMenu = styled.div`
   display: flex;
@@ -197,8 +239,12 @@ const GownsPage = props => {
     element.index = i;
   });
 
-  const edges = props.data.allContentfulGowns.edges;
-  // console.log(edges);
+  const edges = props.data.allContentfulCollection.nodes;
+  console.log(edges);
+  console.log(edges[0]);
+  console.log(edges[0].gowns);
+  // console.log(edges[0].gowns);
+
 
   // const[state, useState] = useState({
 
