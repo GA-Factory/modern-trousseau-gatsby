@@ -13,16 +13,18 @@ const MenuIcon = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+
   z-index: 5;
+  padding-left: 5px;
 
   div {
-    width: 1.5rem;
+    width: 1.4rem;
     height: 0.2rem;
     background: black;
     border-radius: 5px;
-    transform-origin: 1px;
+    transform-origin: 0.3px;
     position: relative;
-    transition: opacity 200ms, transform 200ms;
+    transition: opacity 200ms, transform 300ms;
 
     :first-child {
       transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
@@ -38,14 +40,13 @@ const MenuIcon = styled.button`
 
 const NavBar = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 90%;
-
+  flex-direction: row;
+  width: 95%;
+  height: 30%;
   transition: transform 300ms;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-
   transform: ${({ nav }) => (nav ? "translateX(0)" : "scale(0)")};
 `;
 
