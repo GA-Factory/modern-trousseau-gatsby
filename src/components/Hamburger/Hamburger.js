@@ -50,6 +50,11 @@ const NavBar = styled.div`
   transform: ${({ nav }) => (nav ? "translateX(0)" : "scale(0)")};
 `;
 
+const DivHeaderNavBar = styled.div`
+  display: block;
+  flex-flow: row;
+`;
+
 const Burger = () => {
   const [nav, showNav] = useState(false);
   return (
@@ -60,7 +65,9 @@ const Burger = () => {
         <div />
       </MenuIcon>
       <NavBar nav={nav}>
-        <HeaderNavBar />
+        <DivHeaderNavBar>
+          <HeaderNavBar />
+        </DivHeaderNavBar>
       </NavBar>
     </div>
   );
