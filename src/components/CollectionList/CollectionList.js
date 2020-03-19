@@ -216,17 +216,14 @@ class CollectionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      mobileIndexA: 0,
+      mobileIndexB: 1,
       mobileEdges: this.props.edges,
-
-      // MOBILE EDGES[THIS WILL BE INDEX NUMBER TO CHANGE ON CLICK]
-
       mobilePropertiesA: this.props.slideData,
       mobilePropertiesB: this.props.slideDataA,
       propertyA: this.props.slideData[0],
       propertyB: this.props.slideData[1],
       propertyC: this.props.slideData[2],
-      mobileIndexA: 0,
-      mobileIndexB: 1
     };
   }
   
@@ -373,8 +370,6 @@ class CollectionList extends React.Component {
       mobileIndexA: this.state.mobileIndexA - 1,
       mobileIndexB: this.state.mobileIndexB + 9
     })
-    console.log(this.state.mobileIndexA)
-    console.log(this.state.mobileIndexB)
   }
 
   mobileCollectionSliderNext = () => {
@@ -402,14 +397,10 @@ class CollectionList extends React.Component {
       mobileIndexA: this.state.mobileIndexA - 9,
       mobileIndexB: this.state.mobileIndexB + 1
     })
-    console.log(this.state.mobileIndexA)
-    console.log(this.state.mobileIndexB)
   }
 
   render() {
     const { propertyA, propertyB, propertyC } = this.state;
-    // console.log(this.state.mobilePropertiesA)
-    // console.log(this.state.mobilePropertiesB)
     return (
       <div>
         <DesktopCard>

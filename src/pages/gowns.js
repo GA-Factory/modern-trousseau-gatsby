@@ -121,16 +121,16 @@ const LogoContainer = styled.div`
   }
 `;
 
-const GownHeaderContainer = styled.div`
-  width: 100%;
-  display: flex;
-  padding: 0 30%;
-  border-top: 25px solid ${props => props.theme.colors.primaryPink};
-  background-color: ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
+// const GownHeaderContainer = styled.div`
+//   width: 100%;
+//   display: flex;
+//   padding: 0 30%;
+//   border-top: 25px solid ${props => props.theme.colors.primaryPink};
+//   background-color: ${props => props.theme.colors.primaryPink};
+//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+//     display: none;
+//   }
+// `;
 
 const SliderAdjuster = styled.div`
   height: 25%;
@@ -172,18 +172,18 @@ const CollectionTitle = styled.p`
   }
 `;
 
-const MobileCollectionTitle = styled.p`
-  font-weight: 800;
-  display: flex;
-  margin-top: 0;
-  padding-left: 2.5%;
-  background-color: white;
-  border-top: 8px solid #fae5dc;
-  background-color: ${props => props.theme.colors.primaryPink};
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
+// const MobileCollectionTitle = styled.p`
+//   font-weight: 800;
+//   display: flex;
+//   margin-top: 0;
+//   padding-left: 2.5%;
+//   background-color: white;
+//   border-top: 8px solid #fae5dc;
+//   background-color: ${props => props.theme.colors.primaryPink};
+//   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+//     display: none;
+//   }
+// `;
 
 const CollectionDescription = styled.p`
 display: none;
@@ -239,26 +239,13 @@ const GownsPage = props => {
     element.index = i;
   });
 
+
+  // NEED TO FIX QUERY FOR THIS SPOT HERE
   const edges = props.data.allContentfulCollection.nodes;
-  console.log(edges);
-  console.log(edges[0]);
-  console.log(edges[0].gowns);
-  console.log(edges[1].gowns);
-  console.log(edges[2].gowns);
-  console.log(edges[0].gowns[0].name);
-  console.log(edges[0].gowns[0].gownImage.fluid.src);
-  
-  console.log(edges);
   let newArray = edges.slice(2);
-  console.log(newArray);
   newArray.forEach((element, i) => {
     element.index = i;
   });
-  console.log(newArray);
-  
-  // const[state, useState] = useState({
-
-  // });
 
   return (
     <Layout>
