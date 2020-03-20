@@ -1,21 +1,19 @@
 import React, { Component, useState } from "react";
 import styled from "styled-components";
-import HeaderNavBar from "../HeaderNavBar/HeaderNavBar";
+import HeaderNavBarMobile from "../HeaderNavBarMobile/HeaderNavBarMobile";
 
 const MenuIcon = styled.button`
-  top: 2rem;
-  left: 2rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.5rem;
   height: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
-
   z-index: 5;
-  padding-left: 5px;
 
   div {
     width: 1.4rem;
@@ -38,21 +36,16 @@ const MenuIcon = styled.button`
   }
 `;
 
-const NavBar = styled.div`
+const NavBar = styled.nav`
   display: flex;
-  flex-direction: row;
-  width: 95%;
-  height: 30%;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
   transition: transform 300ms;
   position: fixed;
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "scale(0)")};
-`;
-
-const DivHeaderNavBar = styled.div`
-  display: block;
-  flex-flow: row;
 `;
 
 const Burger = () => {
@@ -65,9 +58,7 @@ const Burger = () => {
         <div />
       </MenuIcon>
       <NavBar nav={nav}>
-        <DivHeaderNavBar>
-          <HeaderNavBar />
-        </DivHeaderNavBar>
+        <HeaderNavBarMobile />
       </NavBar>
     </div>
   );
