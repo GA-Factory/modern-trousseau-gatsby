@@ -14,6 +14,8 @@ const MenuIcon = styled.button`
   border: none;
   cursor: pointer;
   z-index: 5;
+  padding-bottom: 4px;
+  
 
   div {
     width: 1.4rem;
@@ -39,8 +41,11 @@ const MenuIcon = styled.button`
 const NavBar = styled.nav`
   display: flex;
   flex-direction: column;
+
+  align-content: space-around;
+
   width: 100%;
-  height: 100vh;
+ 
   transition: transform 300ms;
   position: fixed;
   top: 0;

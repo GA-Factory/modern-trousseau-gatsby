@@ -10,8 +10,16 @@ const UL = styled.ul`
   line-height: 20px;
   text-align: center;
   background-color: #fae5dc;
-
-  padding: 20px;
+  // #b08be8
+  // #8bafe8
+  // #609490
+  // #34eb86
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  height: 100vh;
+  position: sticky;
 
   a {
     text-decoration: none;
@@ -22,24 +30,28 @@ const UL = styled.ul`
   }
 `;
 
+const PTag = styled.p`
+  padding: 20px;
+`;
+
 const HeaderNavBarMobile = props => {
   return (
     <>
       <UL>
         <Link to="/gowns">
-          <p>OUR GOWNS</p>
+          <PTag>OUR GOWNS</PTag>
         </Link>
 
         <Link to="/visit">
-          <p>VISIT US</p>
+          <PTag>VISIT US</PTag>
         </Link>
 
         <Link to="book-appointment">
-          <p>BOOK AN APPOINTMENT</p>
+          <PTag>BOOK AN APPOINTMENT</PTag>
         </Link>
 
         <Link to="/about">
-          <p>ABOUT US</p>
+          <PTag>ABOUT US</PTag>
         </Link>
       </UL>
     </>
