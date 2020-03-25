@@ -3,53 +3,24 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Logo from "../FullLogo/Logo";
 
-const HeaderNav = styled.nav`
+const UL = styled.ul`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 20px;
   text-align: center;
   background-color: #fae5dc;
-  width: 100%;
-  height: 100%;
-  padding: 20px 0;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  // #b08be8
+  // #8bafe8
+  // #609490
+  // #34eb86
+  padding: 100px;
   display: flex;
-  @media (min-width: 810px) {
-    padding: 0;
-    height: auto;
-    display: flex;
-  }
-`;
-const HeaderLogo = styled.div`
-  padding: 30px 20px;
-  margin-top: 30px;
-  font-size: 64px;
-  display: none;
-  @media (min-width: 810px) {
-    display: block;
-  }
-`;
-
-const UL = styled.ul`
-  display: flex;
-  flex-flow: column;
-  @media (min-width: 810px) {
-    flex-flow: row;
-  }
-`;
-
-const LiHeader = styled.li`
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  @media (min-width: 810px) {
-    flex-flow: row;
-  }
+  flex-direction: column;
+  align-content: space-around;
+  height: 100vh;
+  position: sticky;
+  z-index: 30;
 
   a {
     text-decoration: none;
@@ -60,52 +31,34 @@ const LiHeader = styled.li`
   }
 `;
 
-const DotSpan = styled.span`
-  @media (max-width: 805px) {
-    opacity: 0;
-  }
+const PTag = styled.p`
+  padding: 20px;
 `;
+
+const UlTag = styled.ul``;
 
 const HeaderNavBar = props => {
   return (
     <>
-      <HeaderNav>
-        <HeaderLogo>
-          <Logo notag tagline title1="MODERN" title2="trousseau" />
-        </HeaderLogo>
-        <UL>
-          <LiHeader>
-            <Link to="/gowns">
-              <p>OUR GOWNS</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="/visit">
-              <p>VISIT US</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="book-appointment">
-              <p>BOOK AN APPOINTMENT</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="/about">
-              <p>ABOUT US</p>
-            </Link>
-          </LiHeader>
-        </UL>
-      </HeaderNav>
+      <UL>
+        <Link to="/gowns">
+          <PTag>OUR GOWNS</PTag>
+        </Link>
+
+        <Link to="/visit">
+          <PTag>VISIT US</PTag>
+        </Link>
+
+        <Link to="book-appointment">
+          <PTag>BOOK AN APPOINTMENT</PTag>
+        </Link>
+
+        <Link to="/about">
+          <PTag>ABOUT US</PTag>
+        </Link>
+      </UL>
     </>
   );
 };
+
 export default HeaderNavBar;

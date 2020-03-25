@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import styled from "styled-components";
-import HeaderNavBarMobile from "../HeaderNavBarMobile/HeaderNavBarMobile";
+import HeaderNavBar from "../HeaderNavBar/HeaderNavBar";
 
 const MenuIcon = styled.button`
   position: sticky;
@@ -60,7 +60,7 @@ const Burger = () => {
         <div />
       </MenuIcon>
       <NavBar nav={nav}>
-        <HeaderNavBarMobile />
+        <HeaderNavBar />
       </NavBar>
     </div>
   );
