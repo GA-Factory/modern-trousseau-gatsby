@@ -17,7 +17,7 @@ const HeaderNav = styled.nav`
   justify-content: center;
   align-items: center;
   display: flex;
-  @media (min-width: 810px) {
+  @media (min-width: 768px) {
     padding: 0;
     height: auto;
     display: flex;
@@ -28,7 +28,7 @@ const HeaderLogo = styled.div`
   margin-top: 30px;
   font-size: 64px;
   display: none;
-  @media (min-width: 810px) {
+  @media (min-width: 768px) {
     display: block;
   }
 `;
@@ -36,7 +36,7 @@ const HeaderLogo = styled.div`
 const UL = styled.ul`
   display: flex;
   flex-flow: column;
-  @media (min-width: 810px) {
+  @media (min-width: 768px) {
     flex-flow: row;
   }
 `;
@@ -47,7 +47,7 @@ const LiHeader = styled.li`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  @media (min-width: 810px) {
+  @media (min-width: 768px) {
     flex-flow: row;
   }
 

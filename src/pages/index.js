@@ -30,7 +30,7 @@ const Div1 = styled.div`
 
 const NavBarContainer = styled.div`
   display: none;
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     display: block;
   }
 `;
