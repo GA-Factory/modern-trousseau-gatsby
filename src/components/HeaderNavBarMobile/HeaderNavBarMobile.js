@@ -41,6 +41,9 @@ const HeaderNavBarMobile = props => {
   return (
     <>
       <UL>
+        <Link to="/">
+          <PTag>HOME</PTag>
+        </Link>
         <Link to="/gowns">
           <PTag>OUR GOWNS</PTag>
         </Link>
