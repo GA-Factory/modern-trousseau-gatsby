@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeaderNavBarMobile from "../HeaderNavBarMobile/HeaderNavBarMobile";
 
 const MenuIcon = styled.button`
-  position: fixed;
+  position: sticky;
   top: 1rem;
   left: 1rem;
   display: flex;
@@ -15,7 +15,6 @@ const MenuIcon = styled.button`
   cursor: pointer;
   z-index: 5;
   padding-bottom: 4px;
-  
 
   div {
     width: 1.4rem;
@@ -41,11 +40,9 @@ const MenuIcon = styled.button`
 const NavBar = styled.nav`
   display: flex;
   flex-direction: column;
-
   align-content: space-around;
-
   width: 100%;
- 
+  z-index: 2;
   transition: transform 300ms;
   position: fixed;
   top: 0;

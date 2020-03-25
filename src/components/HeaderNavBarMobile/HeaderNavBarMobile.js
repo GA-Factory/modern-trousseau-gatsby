@@ -20,6 +20,7 @@ const UL = styled.ul`
   align-content: space-around;
   height: 100vh;
   position: sticky;
+  z-index: 1000;
 
   a {
     text-decoration: none;
@@ -33,6 +34,8 @@ const UL = styled.ul`
 const PTag = styled.p`
   padding: 20px;
 `;
+
+const UlTag = styled.ul``;
 
 const HeaderNavBarMobile = props => {
   return (
