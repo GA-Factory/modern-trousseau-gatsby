@@ -9,6 +9,7 @@ const NavBarNav = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin: 0 auto;
   align-items: center;
   background-color: #e5e5e5;
   padding: 10px 10px;
