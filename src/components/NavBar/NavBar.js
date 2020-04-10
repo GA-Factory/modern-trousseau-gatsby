@@ -3,6 +3,22 @@ import { Link } from "gatsby";
 import styled from 'styled-components';
 import Icons from "../Icons/FAIcon";
 import Logo from "../FullLogo/Logo";
+import Burger from "../Hamburger/Hamburger";
+import styled from "styled-components";
+
+const NavBarNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #e5e5e5;
+  padding: 10px 10px;
+`;
+
+const IconWrapper = styled.div`
+  padding-right: 5px;
+`;
 
 const Nav = styled.nav`
   display: flex;
@@ -37,34 +53,15 @@ const Mobile = styled.div`
 const NavBar = props => {
   return (
     <>
-      <Nav>
-        <Mobile>
-          {/* Replace with burger component when complete */}
-          <Link to="/">
-            <Icons name={['fas', 'bars']} size="lg" />
+      <NavBarNav>
+        <Burger />
+        <Logo notag tagline title1="MODERN" title2="trousseau" />
+        <IconWrapper>
+          <Link to="/visit">
+            <Icons name={["fas", "map-marker-alt"]} size="lg" />
           </Link>
-        </Mobile>
-        <Mobile>
-          <Link to="/">
-            <Icons name={['fas', 'search']} size="lg" />
-          </Link>
-        </Mobile>
-        <Desktop>
-          <Link to="/">
-            <Icons name={['fas', 'search']} />
-          </Link>
-        </Desktop>
-        <Desktop>
-          <Link to="/">
-            <Icons name={['fas', 'map-marker-alt']} />
-          </Link>
-        </Desktop>
-        <Desktop>
-          <Link to="/">
-            <Icons name={['far', 'user']} />
-          </Link>
-        </Desktop>
-      </Nav>
+        </IconWrapper>
+      </NavBarNav>
     </>
   );
 };

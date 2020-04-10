@@ -12,6 +12,26 @@ import ComponentCollection from "../components/component-collection/ComponentCol
 import BrideReview from "../components/BrideReview/BrideReview";
 import Footer from "../components/Footer/Footer";
 
+const ImageQuery = styled(Img)`
+  display: block;
+  width: 50%;
+  height: 600px;
+`;
+
+const Div1 = styled.div`
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const NavBarContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const IndexPage = props => {
   const collectioninfo = useStaticQuery(graphql`
     query contentfulGowns {
@@ -85,9 +105,14 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      <NavBar />
-      <HeaderNavBar />
+      <Div1>
+        <HeaderNavBar />
+      </Div1>
+      <NavBarContainer>
+        <NavBar />
+      </NavBarContainer>
       <Slider data={props.data} />
+
       <Tagline
         headline="Classic Couture. Custom Fit."
         slogan="Where customization meets timeline meets budget."
