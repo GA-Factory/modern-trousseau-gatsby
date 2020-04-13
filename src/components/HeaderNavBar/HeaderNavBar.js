@@ -1,7 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import Logo from "../FullLogo/Logo";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import Logo from '../FullLogo/Logo';
+
+const HeaderContainer = styled.div`
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const HeaderNav = styled.nav`
   font-family: "Raleway", sans-serif;
@@ -66,9 +73,8 @@ const DotSpan = styled.span`
   }
 `;
 
-const HeaderNavBar = props => {
-  return (
-    <>
+const HeaderNavBar = () => (
+    <HeaderContainer>
       <HeaderNav>
         <HeaderLogo>
           <Logo notag tagline title1="MODERN" title2="trousseau" />
@@ -105,7 +111,6 @@ const HeaderNavBar = props => {
           </LiHeader>
         </UL>
       </HeaderNav>
-    </>
+    </HeaderContainer>
   );
-};
 export default HeaderNavBar;

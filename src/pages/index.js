@@ -1,38 +1,22 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Layout from "../global/Layout";
-import NavBar from "../components/NavBar/NavBar";
-import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-import Slider from "../components/Slider/Slider";
-import Tagline from "../components/Tagline/tagline";
-import HowWeWork from "../components/HowWeWork/howwework";
-import OwnerQuote from "../components/owner-quote/owner-quote";
-import ComponentCollection from "../components/component-collection/ComponentCollection";
-import BrideReview from "../components/BrideReview/BrideReview";
-import Footer from "../components/Footer/Footer";
 
-const ImageQuery = styled(Img)`
-  display: block;
-  width: 50%;
-  height: 600px;
-`;
+import Layout from '../global/Layout';
+import NavBar from '../components/NavBar/NavBar';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import Slider from '../components/Slider/Slider';
+import Tagline from '../components/Tagline/tagline';
+import HowWeWork from '../components/HowWeWork/howwework';
+import OwnerQuote from '../components/owner-quote/owner-quote';
+import ComponentCollection from
+'../components/component-collection/ComponentCollection';
+import BrideReview from '../components/BrideReview/BrideReview';
+import Footer from '../components/Footer/Footer';
 
-const Div1 = styled.div`
-  display: block;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 
-const NavBarContainer = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
-const IndexPage = props => {
+const IndexPage = (props) => {
+  // eslint-disable-next-line no-unused-vars
   const collectioninfo = useStaticQuery(graphql`
     query contentfulGowns {
       contentfulCollection(collectionName: { eq: "Fall 2020" }) {
@@ -105,12 +89,8 @@ const IndexPage = props => {
   `);
   return (
     <Layout>
-      <Div1>
-        <HeaderNavBar />
-      </Div1>
-      <NavBarContainer>
+      <HeaderNavBar />
         <NavBar />
-      </NavBarContainer>
       <Slider data={props.data} />
 
       <Tagline
@@ -126,7 +106,7 @@ const IndexPage = props => {
       <ComponentCollection
         title={props.data.contentfulCollection.collectionName}
         data={props.data}
-      ></ComponentCollection>
+      />
       <BrideReview
         data={props.data}
         image1={props.data.allContentfulTestimonial.nodes[0].image.fluid}
