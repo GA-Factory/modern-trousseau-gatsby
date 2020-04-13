@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Icons from "../Icons/FAIcon";
 import Logo from "../FullLogo/Logo";
 import Burger from "../Hamburger/Hamburger";
-import styled from "styled-components";
+
 
 const NavBarNav = styled.nav`
   display: flex;
