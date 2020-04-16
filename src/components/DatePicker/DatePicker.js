@@ -22,7 +22,7 @@ const DateInput = styled.input`
   background: rgba(68, 31, 14, 0.2);
 `;
 
-const DatePicker = props => {
+const DatePicker1 = props => {
   return (
     <div>
       <DatePicker className="date-picker" for="requested-date-input">
