@@ -5,6 +5,7 @@ import Layout from "../global/Layout";
 import Footer from "../components/Footer/Footer";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
+import BookApptHeaderMobile from '../components/BookApptHeaderMobile/BookApptHeaderMobile';
 
 const About = props => {
   const aboutInfo = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const About = props => {
     <Layout>
       <NavBar />
       <HeaderNavBar />
+      <BookApptHeaderMobile />
       <Footer />
     </Layout>
   );
