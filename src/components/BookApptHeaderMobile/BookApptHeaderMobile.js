@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Icons from '../Icons/FAIcon';
 
@@ -88,13 +88,10 @@ const DatePicked = ({ date, location, time }) => (
   </InfoView>
 );
 
-const BookApptHeaderMobile = () => {
-  const { dateSelected, setDateSelected } = useState('false');
-  return (
+const BookApptHeaderMobile = ({ dateSelected }) => (
     <PinkContainer>
       {dateSelected ? <DatePicked /> : <DefaultInfo /> }
     </PinkContainer>
   );
-};
 
 export default BookApptHeaderMobile;
