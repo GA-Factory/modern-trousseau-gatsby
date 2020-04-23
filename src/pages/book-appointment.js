@@ -3,7 +3,6 @@ import Layout from '../global/Layout';
 import NavBar from '../components/NavBar/NavBar';
 import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
 import Footer from '../components/Footer/Footer';
-import DatePicker from '../components/DatePicker/DatePicker';
 
 
 const AppointmentPage = () => (
@@ -11,7 +10,6 @@ const AppointmentPage = () => (
     <HeaderNavBar />
     <NavBar />
     <p>book-appointment page. this sign is for testing purposes</p>
-    <DatePicker label="Requested Date*" name="Requested Date" />
     {/* <SelectDropdown /> does not work */}
     {/* <TextInput />
     <form
