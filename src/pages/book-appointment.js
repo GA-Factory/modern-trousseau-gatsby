@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../global/Layout';
 import NavBar from '../components/NavBar/NavBar';
 import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import BookApptForm from '../components/BookApptForm/BookApptForm';
 import Footer from '../components/Footer/Footer';
 
 
@@ -10,6 +11,7 @@ const AppointmentPage = () => (
     <HeaderNavBar />
     <NavBar />
     <p>book-appointment page. this sign is for testing purposes</p>
+    <BookApptForm />
     {/* <SelectDropdown /> does not work */}
     {/* <TextInput />
     <form
