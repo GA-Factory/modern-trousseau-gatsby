@@ -1,12 +1,11 @@
-import React from "react";
-import Layout from "../global/Layout";
-import NavBar from "../components/NavBar/NavBar";
-import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-import Footer from "../components/Footer/Footer";
-import SelectDropdown from "../components/SelectDropdown/SelectDropdown";
-import TextInput from "../components/TextInput/TextInput";
+import React from 'react';
+import Layout from '../global/Layout';
+import NavBar from '../components/NavBar/NavBar';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import Footer from '../components/Footer/Footer';
+import SelectDropdown from '../components/SelectDropdown/SelectDropdown';
+import TextInput from '../components/TextInput/TextInput';
 
-import styled from "styled-components";
 
 const AppointmentPage = props => (
   <Layout>
@@ -14,7 +13,7 @@ const AppointmentPage = props => (
     <NavBar />
     <p>book-appointment page. this sign is for testing purposes</p>
     {/* <SelectDropdown /> does not work */}
-    <TextInput />
+    {/* <TextInput />
     <form
       name="first name"
       method="post"
@@ -23,7 +22,7 @@ const AppointmentPage = props => (
     >
       <input name="first name" placeholder="First name" type="text" />
       <button>NAme</button>
-    </form>
+    </form> */}
     <Footer />
   </Layout>
 );
