@@ -1,42 +1,52 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-const DatePicker = styled.label`
+const DatePickerLabel = styled.label`
   display: block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 10px;
 `;
 
 const DateInput = styled.input`
-  box-shadow: 5px 10px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  margin: 0.4rem 0;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  padding: 5px;
+  margin: 0;
   background: rgba(68, 31, 14, 0.2);
+  border: none;
 `;
 
-const DatePicker1 = props => {
+const DatePicker = () => {
+  const [date, setDate] = useState('');
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setDate(e.target.value);
+  };
+
   return (
     <div>
-      <DatePicker className="date-picker" for="requested-date-input">
-        {props.label}
-      </DatePicker>
+      <DatePickerLabel htmlFor="requested-date-input">
+        Requested Date*
+      </DatePickerLabel>
       <DateInput
         type="date"
-        className="requested-date-input"
-        name={props.name}
-        value={props.value}
-        min={props.min}
-        step={props.step}
-        max={props.max}
-        onChange={props.onChange}
+        required
+        name="Requested-Date"
+        value={date}
+        min="February 29, 2020"
+        step="1"
+        max="December 31, 2030"
+        onChange={handleChange}
       />
     </div>
   );
