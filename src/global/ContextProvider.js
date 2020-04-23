@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 
-const BookApptContext = React.createContext([{}, () => { }]);
+export const BookApptContext = React.createContext([{}, () => { }]);
 
 const BookApptProvider = ({ children }) => {
-    const [state, setState] = useState({});
+    const [state, setState] = useState({
+        location: '',
+        date: '',
+        time: '',
+        guests: null,
+        fullName: '',
+        phoneNumber: null,
+        email: '',
+        weddingDate: '',
+        tryon: false,
+        gownBudget: '',
+        hearAboutUs: '',
+        recieveUpdates: false,
+        anythingElse: '',
+    });
     return (
         <BookApptContext.Provider value={[state, setState]}>
             {children}
@@ -11,4 +25,8 @@ const BookApptProvider = ({ children }) => {
     );
 };
 
-export { BookApptContext, BookApptProvider };
+export default ({ element }) => (
+    <BookApptProvider>
+        {element}
+    </BookApptProvider>
+);
