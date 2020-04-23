@@ -30,27 +30,23 @@ const locationArr = [
     'Washington, DC',
 ];
 
+
 const BookApptForm = () => (
-    <>
-        <Form
-          name="book-appointment form"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-            <Header>Book Appointment</Header>
-            <SelectDropdown title="Select Flagship" option={locationArr} />
-            <DatePicker
-              label="Requested Date*"
-              name="Requested Date"
-              value="November 11"
-              min="February 29, 2020"
-              step="1"
-              max="December 31, 2030"
-            />
-            <TextInput />
-        </Form>
-    </>
+    <Form
+      name="book-appointment form"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+        <Header>Book Appointment</Header>
+        <SelectDropdown title="Select Flagship" option={locationArr} />
+        <DatePicker
+          label="Requested Date*"
+          name="Requested Date"
+          value="November 11"
+        />
+        <TextInput />
+    </Form>
 );
 
 
