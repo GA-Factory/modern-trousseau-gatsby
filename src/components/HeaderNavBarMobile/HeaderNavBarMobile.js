@@ -48,7 +48,7 @@ const HeaderNavBarMobile = props => {
           <PTag>VISIT US</PTag>
         </Link>
 
-        <Link to="book-appointment">
+        <Link to="/book-appointment">
           <PTag>BOOK AN APPOINTMENT</PTag>
         </Link>
 
