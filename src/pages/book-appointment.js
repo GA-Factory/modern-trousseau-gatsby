@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import NavBar from '../components/NavBar/NavBar';
 import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
 import Footer from '../components/Footer/Footer';
-import GrayButton from '../components/BookApptButtons/GrayButton';
+import LargeGrayButton from '../components/BookApptButtons/LargeGrayButton';
 
 
 const AppointmentPage = () => (
@@ -11,7 +11,7 @@ const AppointmentPage = () => (
     <>
       <HeaderNavBar />
       <NavBar />
-      <GrayButton buttonText="Next" />
+      <LargeGrayButton buttonText="Yes" clicked="true" />
       <Footer />
     </>
   </Layout>
