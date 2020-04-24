@@ -1,12 +1,12 @@
-import React from "react";
-import NavBar from "../components/NavBar/NavBar";
-import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
-import Layout from "../global/Layout";
-import Footer from "../components/Footer/Footer";
-import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import NavBar from '../components/NavBar/NavBar';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import Layout from '../global/Layout';
+import AboutUs from '../components/AboutUs/AboutUs';
+import Footer from '../components/Footer/Footer';
 
-const About = props => {
+const About = ({ data }) => {
   const aboutInfo = useStaticQuery(graphql`
     query AboutQuery {
       contentfulAsset(file: { fileName: { eq: "Callie.jpg" } }) {
@@ -27,6 +27,7 @@ const About = props => {
     <Layout>
       <NavBar />
       <HeaderNavBar />
+      <AboutUs data={data} />
       <Footer />
     </Layout>
   );
