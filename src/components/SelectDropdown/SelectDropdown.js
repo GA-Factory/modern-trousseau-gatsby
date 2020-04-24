@@ -1,11 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Icons from "../Icons/FAIcon";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Icons from '../Icons/FAIcon';
 
 const DropdownSection = styled.div`
-  font-family: "";
+  font-family: "Raleway";
   background-color: ${props => props.theme.colors.backgroundGray};
   color: ${props => props.theme.colors.nearBlack};
+  display: block;
+  width:100%;
+  max-width: 410px;
 `;
 
 const SelectionDiv = styled.div`
@@ -26,16 +29,16 @@ const Chevrons = styled(Icons)`
 `;
 
 const Selected = styled.ul`
-  width: 184px;
-  padding: 0 5px;
+  width: 100%;
+  padding: 0 10px;
   position: relative;
   &:first-child {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     font-family: "Raleway";
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   @media only screen and (min-width: 600px) {
@@ -50,16 +53,17 @@ const Selected = styled.ul`
 
 const Items = styled.li`
   z-index: 1;
-  padding: 5px;
+  padding: 5px 10px;
   font-family: "Raleway";
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 
   &:hover {
     color: white;
     background-color: ${props => props.theme.colors.darkGray};
+    cursor: pointer;
   }
 
   @media only screen and (min-width: 600px) {
@@ -67,8 +71,8 @@ const Items = styled.li`
     font-family: "Raleway";
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
   }
 `;
 
@@ -78,33 +82,31 @@ class SelectDropdown extends Component {
 
     this.state = {
       title: this.props.title,
-      active: false
+      active: false,
     };
   }
 
   toggle = () => {
-    this.setState(prevState => ({
-      active: !prevState.active
+    this.setState((prevState) => ({
+      active: !prevState.active,
     }));
   };
 
-  select = e => {
+  select = (e) => {
     e.preventDefault();
     this.setState({
-      title: e.target.title
+      title: e.target.title,
     });
     this.toggle();
   };
 
   render() {
-    let selections = this.props.option;
-    let Dropdown = selections.map((item, index) => {
-      return (
-        <Items key={index} title={item} onClick={this.select}>
+    const selections = this.props.option;
+    const Dropdown = selections.map((item) => (
+        <Items key={item} title={item} onClick={this.select}>
           {item}
         </Items>
-      );
-    });
+      ));
 
     return (
       <DropdownSection>
@@ -113,8 +115,8 @@ class SelectDropdown extends Component {
             <SelectionDiv>
               {this.state.title}
               <UpDownChevronBox>
-                <Chevrons name={["fas", "chevron-up"]} size="xs" />
-                <Chevrons name={["fas", "chevron-down"]} size="xs" />
+                <Chevrons name={['fas', 'chevron-up']} size="xs" />
+                <Chevrons name={['fas', 'chevron-down']} size="xs" />
               </UpDownChevronBox>
             </SelectionDiv>
           </Selected>
