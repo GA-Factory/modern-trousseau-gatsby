@@ -9,44 +9,44 @@ import Layout from "../global/Layout";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 
-// export const GownQuery = graphql`
-//   query MyQuery {
-//     allContentfulGowns(limit: 40, sort: { fields: name }) {
-//       edges {
-//         node {
-//           collections {
-//             collectionName
-//             gowns {
-//               name
-//               gownImage {
-//                 fluid {
-//                   base64
-//                   src
-//                   srcSet
-//                   srcSetWebp
-//                   srcWebp
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     allContentfulCollection(limit: 40) {
-//       nodes {
-//         collectionName
-//         gowns {
-//           name
-//           gownImage {
-//             fluid {
-//               src
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const GownQuery = graphql`
+  query MyQuery {
+    allContentfulGowns(limit: 40, sort: { fields: name }) {
+      edges {
+        node {
+          collections {
+            collectionName
+            gowns {
+              name
+              gownImage {
+                fluid {
+                  base64
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allContentfulCollection(limit: 40) {
+      nodes {
+        collectionName
+        gowns {
+          name
+          gownImage {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const SearchMenu = styled.div`
   display: flex;

@@ -15,44 +15,44 @@ import { Link } from "gatsby";
 
 // import cardData from "./Gowns"
 
-export const GownQuery = graphql`
-  query MyQuery {
-    allContentfulGowns(limit: 40, sort: { fields: name }) {
-      edges {
-        node {
-          collections {
-            collectionName
-            gowns {
-              name
-              gownImage {
-                fluid {
-                  base64
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    allContentfulCollection(limit: 40) {
-      nodes {
-        collectionName
-        gowns {
-          name
-          gownImage {
-            fluid {
-              src
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const GownQuery = graphql`
+//   query MyQuery {
+//     allContentfulGowns(limit: 40, sort: { fields: name }) {
+//       edges {
+//         node {
+//           collections {
+//             collectionName
+//             gowns {
+//               name
+//               gownImage {
+//                 fluid {
+//                   base64
+//                   src
+//                   srcSet
+//                   srcSetWebp
+//                   srcWebp
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//     allContentfulCollection(limit: 40) {
+//       nodes {
+//         collectionName
+//         gowns {
+//           name
+//           gownImage {
+//             fluid {
+//               src
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 
 import imageFile1 from "../assets/images/Fall-2020-1.png";
