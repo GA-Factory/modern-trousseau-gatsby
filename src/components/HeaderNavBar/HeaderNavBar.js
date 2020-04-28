@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Logo from '../FullLogo/Logo';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import Logo from "../FullLogo/Logo";
 
 const HeaderContainer = styled.div`
   display: block;
@@ -74,43 +74,43 @@ const DotSpan = styled.span`
 `;
 
 const HeaderNavBar = () => (
-    <HeaderContainer>
-      <HeaderNav>
-        <HeaderLogo>
-          <Logo notag tagline title1="MODERN" title2="trousseau" />
-        </HeaderLogo>
-        <UL>
-          <LiHeader>
-            <Link to="/gowns">
-              <p>OUR GOWNS</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="/visit">
-              <p>VISIT US</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="book-appointment">
-              <p>BOOK AN APPOINTMENT</p>
-            </Link>
-          </LiHeader>
-          <LiHeader>
-            <DotSpan>&#183;</DotSpan>
-          </LiHeader>
-          <LiHeader>
-            <Link to="/about">
-              <p>ABOUT US</p>
-            </Link>
-          </LiHeader>
-        </UL>
-      </HeaderNav>
-    </HeaderContainer>
-  );
+  <HeaderContainer>
+    <HeaderNav>
+      <HeaderLogo>
+        <Logo notag tagline title1="MODERN" title2="trousseau" />
+      </HeaderLogo>
+      <UL>
+        <LiHeader>
+          <Link to="/gowns">
+            <p>OUR GOWNS</p>
+          </Link>
+        </LiHeader>
+        <LiHeader>
+          <DotSpan>&#183;</DotSpan>
+        </LiHeader>
+        <LiHeader>
+          <Link to="/visit">
+            <p>VISIT US</p>
+          </Link>
+        </LiHeader>
+        <LiHeader>
+          <DotSpan>&#183;</DotSpan>
+        </LiHeader>
+        <LiHeader>
+          <Link to="/book-appointment">
+            <p>BOOK AN APPOINTMENT</p>
+          </Link>
+        </LiHeader>
+        <LiHeader>
+          <DotSpan>&#183;</DotSpan>
+        </LiHeader>
+        <LiHeader>
+          <Link to="/about">
+            <p>ABOUT US</p>
+          </Link>
+        </LiHeader>
+      </UL>
+    </HeaderNav>
+  </HeaderContainer>
+);
 export default HeaderNavBar;
