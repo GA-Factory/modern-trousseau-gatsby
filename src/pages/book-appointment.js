@@ -7,21 +7,11 @@ import Footer from '../components/Footer/Footer';
 
 const AppointmentPage = () => (
   <Layout>
-    <HeaderNavBar />
-    <NavBar />
-    <p>book-appointment page. this sign is for testing purposes</p>
-    {/* <SelectDropdown /> does not work */}
-    {/* <TextInput />
-    <form
-      name="first name"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input name="first name" placeholder="First name" type="text" />
-      <button>NAme</button>
-    </form> */}
-    <Footer />
+    <>
+      <HeaderNavBar />
+      <NavBar />
+      <Footer />
+    </>
   </Layout>
 );
 
