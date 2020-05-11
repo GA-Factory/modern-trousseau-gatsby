@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+import BookApptProvider from './src/global/ContextProvider';
+
+// eslint-disable-next-line import/prefer-default-export
+export const wrapRootElement = BookApptProvider;

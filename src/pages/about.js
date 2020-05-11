@@ -7,7 +7,7 @@ import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import BookApptHeaderMobile from '../components/BookApptHeaderMobile/BookApptHeaderMobile';
 
-const About = props => {
+const About = ({ data }) => {
   const aboutInfo = useStaticQuery(graphql`
     query AboutQuery {
       contentfulAsset(file: { fileName: { eq: "Callie.jpg" } }) {
