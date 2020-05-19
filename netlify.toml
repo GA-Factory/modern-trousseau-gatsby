@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build:gatsby"
+  command = "npm build:gatsby"
   publish = "public"
 
 [context.storybook]
